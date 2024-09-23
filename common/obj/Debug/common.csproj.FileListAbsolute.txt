@@ -1,0 +1,10 @@
+C:\Users\informatica\source\repos\Proyecto\common\bin\Debug\common.dll.config
+C:\Users\informatica\source\repos\Proyecto\common\bin\Debug\common.dll
+C:\Users\informatica\source\repos\Proyecto\common\bin\Debug\common.pdb
+C:\Users\informatica\source\repos\Proyecto\common\bin\Debug\DataLayer.dll
+C:\Users\informatica\source\repos\Proyecto\common\bin\Debug\DataLayer.pdb
+C:\Users\informatica\source\repos\Proyecto\common\obj\Debug\common.csproj.AssemblyReference.cache
+C:\Users\informatica\source\repos\Proyecto\common\obj\Debug\common.csproj.CoreCompileInputs.cache
+C:\Users\informatica\source\repos\Proyecto\common\obj\Debug\common.csproj.Up2Date
+C:\Users\informatica\source\repos\Proyecto\common\obj\Debug\common.dll
+C:\Users\informatica\source\repos\Proyecto\common\obj\Debug\common.pdb
