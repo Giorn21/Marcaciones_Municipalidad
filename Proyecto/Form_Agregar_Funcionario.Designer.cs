@@ -51,7 +51,6 @@
             this.lbl_Rut = new System.Windows.Forms.Label();
             this.tabP_Horarios = new System.Windows.Forms.TabPage();
             this.cbox_IdDispositivo = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.tbc_Agregar_Funcionario.SuspendLayout();
             this.tabP_Datos_Personales.SuspendLayout();
             this.SuspendLayout();
@@ -299,21 +298,11 @@
             this.cbox_IdDispositivo.Size = new System.Drawing.Size(176, 24);
             this.cbox_IdDispositivo.TabIndex = 22;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(557, 35);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Form_Agregar_Funcionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.tbc_Agregar_Funcionario);
             this.Controls.Add(this.btn_Volver);
             this.Name = "Form_Agregar_Funcionario";
@@ -352,6 +341,5 @@
         private System.Windows.Forms.ComboBox cbox_Tipo_Cargo;
         private System.Windows.Forms.Button btn_Registro;
         private System.Windows.Forms.ComboBox cbox_IdDispositivo;
-        private System.Windows.Forms.Button button1;
     }
 }
