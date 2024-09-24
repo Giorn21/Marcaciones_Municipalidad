@@ -49,7 +49,9 @@
     <Compile Include="BL\clsAgregar_Funcionarios.cs" />
     <Compile Include="BL\clsVerFuncionarios.cs" />
     <Compile Include="BL\clsLoginUser.cs" />
-    <Compile Include="Models\DatosFuncionarios.cs" />
+    <Compile Include="BL\clsVerDisp_Funcionario.cs" />
+    <Compile Include="BL\clsVer_Dispositivos.cs" />
+    <Compile Include="Models\AgregarDatos.cs" />
     <Compile Include="Models\Dispositivo.cs" />
     <Compile Include="Models\Disp_Funcionario.cs" />
     <Compile Include="Models\Funcionario.cs" />

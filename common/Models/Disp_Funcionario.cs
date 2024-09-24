@@ -8,6 +8,7 @@ namespace common
 {
     public class Disp_Funcionario
     {
+       
        public int IdDispositivo { get; set; }
        public int IdEmpleado { get; set; }
        public int Privilegio { get; set; }
