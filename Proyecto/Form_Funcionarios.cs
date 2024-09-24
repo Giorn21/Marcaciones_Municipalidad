@@ -21,7 +21,7 @@ namespace Proyecto
         //texto con Informacion de que debe agregar para el BUSCAR_TEXTBOX
         private string placeholderText = "Buscar por RUT o Nombre";
 
-        
+
 
         public Form_Funcionarios()
         {

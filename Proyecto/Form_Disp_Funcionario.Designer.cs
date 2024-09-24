@@ -29,8 +29,11 @@
         private void InitializeComponent()
         {
             this.btn_Volver = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dtv_Disp_Funcionarios = new System.Windows.Forms.DataGridView();
+            this.Col_IdDispositivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_IdEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Sync = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dtv_Disp_Funcionarios)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Volver
@@ -44,25 +47,45 @@
             this.btn_Volver.UseVisualStyleBackColor = true;
             this.btn_Volver.Click += new System.EventHandler(this.btn_Volver_Click);
             // 
-            // dataGridView1
+            // dtv_Disp_Funcionarios
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 98);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 9;
+            this.dtv_Disp_Funcionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtv_Disp_Funcionarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Col_IdDispositivo,
+            this.col_IdEmpleado,
+            this.col_Sync});
+            this.dtv_Disp_Funcionarios.Location = new System.Drawing.Point(12, 98);
+            this.dtv_Disp_Funcionarios.Name = "dtv_Disp_Funcionarios";
+            this.dtv_Disp_Funcionarios.Size = new System.Drawing.Size(776, 340);
+            this.dtv_Disp_Funcionarios.TabIndex = 9;
             // 
-            // Disp_Funcionario
+            // Col_IdDispositivo
+            // 
+            this.Col_IdDispositivo.HeaderText = "ID Dispositivo";
+            this.Col_IdDispositivo.Name = "Col_IdDispositivo";
+            // 
+            // col_IdEmpleado
+            // 
+            this.col_IdEmpleado.HeaderText = "ID Empleado";
+            this.col_IdEmpleado.Name = "col_IdEmpleado";
+            // 
+            // col_Sync
+            // 
+            this.col_Sync.HeaderText = "Sync";
+            this.col_Sync.Name = "col_Sync";
+            // 
+            // Form_Disp_Funcionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtv_Disp_Funcionarios);
             this.Controls.Add(this.btn_Volver);
-            this.Name = "Disp_Funcionario";
+            this.Name = "Form_Disp_Funcionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Disp_Funcionario";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Home_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtv_Disp_Funcionarios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -70,6 +93,9 @@
         #endregion
 
         private System.Windows.Forms.Button btn_Volver;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtv_Disp_Funcionarios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Col_IdDispositivo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_IdEmpleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_Sync;
     }
 }

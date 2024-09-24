@@ -123,7 +123,7 @@
             // 
             // Col_Nombre
             // 
-            this.Col_Nombre.HeaderText = "Nombre";
+            this.Col_Nombre.HeaderText = "Nombres";
             this.Col_Nombre.Name = "Col_Nombre";
             // 
             // Col_ApellidoPaterno
