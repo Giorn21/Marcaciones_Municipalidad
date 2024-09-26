@@ -352,7 +352,7 @@ namespace DataLayer
         /// Guarda el comando para el seteo de parámetros y la posterior ejecución.
         /// </summary>
         /// <param name="sentenciaSQL">La sentencia SQL con el formato: SENTENCIA [param = @param,]</param>
-        public void CrearComando(string sentenciaSQL)
+        public DbCommand CrearComando(string sentenciaSQL)
         {
             this.comando = factory.CreateCommand();
             this.comando.Connection = this.conexion;
@@ -362,6 +362,7 @@ namespace DataLayer
             {
                 this.comando.Transaction = this.transaccion;
             }
+            return comando;
         }
 
 

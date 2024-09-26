@@ -51,10 +51,12 @@
     <Compile Include="BL\clsLoginUser.cs" />
     <Compile Include="BL\clsVerDisp_Funcionario.cs" />
     <Compile Include="BL\clsVer_Dispositivos.cs" />
+    <Compile Include="BL\clsVer_Horarios.cs" />
     <Compile Include="Models\AgregarDatos.cs" />
     <Compile Include="Models\Dispositivo.cs" />
     <Compile Include="Models\Disp_Funcionario.cs" />
     <Compile Include="Models\Funcionario.cs" />
+    <Compile Include="Models\Horario.cs" />
     <Compile Include="Models\LoginUser.cs" />
     <Compile Include="Models\Logs.cs" />
     <Compile Include="Models\Marcaciones.cs" />
