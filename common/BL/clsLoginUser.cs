@@ -14,7 +14,7 @@ namespace common
     {
         readonly BaseDatos DB = new BaseDatos();
 
-        LoginUser current = null;
+        LoginUser loginUser = null;
 
         
 
@@ -29,7 +29,7 @@ namespace common
 
         #region Tipo Datos
         #endregion
-
+        // servidor de base de datos
         #region Metodos Publicos
 
         private string usuario;
@@ -47,15 +47,16 @@ namespace common
             this.usuario = Credenciales.Usuario;
             this.host = Credenciales.Host;
         }
-        #endregion
+        #endregion 
 
 
         public List<LoginUser> Get(System.String user, System.String contrasena)
         {
-            var oLst = new List<LoginUser>();
+            var LoginUsers = new List<LoginUser>();
             DB.Conectar();
             try
             {
+                //Ejecutamos el sp con parametros
                 DB.CrearComando("sp_LoginUser @Usuario, @contrasena");
                 DB.AsignarParametroCadena("@Usuario", user);
                 DB.AsignarParametroCadena("@contrasena", contrasena);
@@ -63,6 +64,7 @@ namespace common
 
                 DbDataReader dr = DB.EjecutarConsulta();
 
+                // los resultados se cargan
                 DataTable dt = new DataTable();
                 dt.TableName = MethodBase.GetCurrentMethod().DeclaringType.Name;
                 dt.Load(dr);
@@ -75,19 +77,21 @@ namespace common
                     this.toxml = writer.ToString();
                 }
 
+                // Se leen los datos y se crean objetos para cada fila.
                 DataTableReader reader = new DataTableReader(dt);
-
                 if (reader == null)
                 {
                     this.count = 0;
                     return null;
                 }
+                // Lee cada fila del lector
                 while (reader.Read())
                 {
                     try
                     {
-                        current = ReadDataRow(reader);
-                        oLst.Add(current);
+                        // Llama a ReadDataRow para procesar la fila y guarda en current
+                        loginUser = ReadDataRow(reader);
+                        LoginUsers.Add(loginUser);
                     }
                     catch (Exception)
                     {
@@ -95,7 +99,7 @@ namespace common
                     }
                 }
                 reader.Close();
-                return oLst;
+                return LoginUsers;
             }
             catch (BaseDatosException ex)
             {
@@ -106,28 +110,21 @@ namespace common
                 DB.Desconectar();
             }
         }
-
-
         private LoginUser ReadDataRow(DataTableReader reader)
         {
 
-            current = null;
+            loginUser = null;
 
             var e = new LoginUser()
             {
-
+                //Asigna los datos y verifica si son nulos 
                 Id = reader.IsDBNull(reader.GetOrdinal("Id")) ? 0 : reader.GetInt32(reader.GetOrdinal("Id")),
                 User = reader.IsDBNull(reader.GetOrdinal("Usuario")) ? "" : reader.GetString(reader.GetOrdinal("Usuario")),
                 contrasena = reader.IsDBNull(reader.GetOrdinal("Contrasena")) ? "" : reader.GetString(reader.GetOrdinal("Contrasena")),
 
             };
-
-            this.current = e;
-
-
-          
+            this.loginUser = e;
             return (LoginUser)e;
-
         }
     }
 }

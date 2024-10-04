@@ -76,17 +76,17 @@
     <Compile Include="Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Funcionarios.cs">
+    <Compile Include="Form_VerFuncionarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Funcionarios.Designer.cs">
-      <DependentUpon>Form_Funcionarios.cs</DependentUpon>
+    <Compile Include="Form_VerFuncionarios.Designer.cs">
+      <DependentUpon>Form_VerFuncionarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Marcaciones.cs">
+    <Compile Include="Form_VerMarcaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Marcaciones.Designer.cs">
-      <DependentUpon>Form_Marcaciones.cs</DependentUpon>
+    <Compile Include="Form_VerMarcaciones.Designer.cs">
+      <DependentUpon>Form_VerMarcaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Menu.cs">
       <SubType>Form</SubType>
@@ -99,6 +99,18 @@
     </Compile>
     <Compile Include="Form_Opciones.Designer.cs">
       <DependentUpon>Form_Opciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Agregar_Marcacion_Manual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Agregar_Marcacion_Manual.Designer.cs">
+      <DependentUpon>Form_Agregar_Marcacion_Manual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_VerMarcacion_Manual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_VerMarcacion_Manual.Designer.cs">
+      <DependentUpon>Form_VerMarcacion_Manual.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -119,20 +131,26 @@
     <EmbeddedResource Include="Form_Disp_Funcionario.resx">
       <DependentUpon>Form_Disp_Funcionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Funcionarios.resx">
-      <DependentUpon>Form_Funcionarios.cs</DependentUpon>
+    <EmbeddedResource Include="Form_VerFuncionarios.resx">
+      <DependentUpon>Form_VerFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Marcaciones.resx">
-      <DependentUpon>Form_Marcaciones.cs</DependentUpon>
+    <EmbeddedResource Include="Form_VerMarcaciones.resx">
+      <DependentUpon>Form_VerMarcaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Agregar_Marcacion_Manual.resx">
+      <DependentUpon>Form_Agregar_Marcacion_Manual.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Menu.resx">
       <DependentUpon>Form_Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Opciones.resx">
       <DependentUpon>Form_Opciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_VerMarcacion_Manual.resx">
+      <DependentUpon>Form_VerMarcacion_Manual.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

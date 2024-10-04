@@ -1,6 +1,6 @@
 ﻿namespace Proyecto
 {
-    partial class Form_Funcionarios
+    partial class Form_VerFuncionarios
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.dtv_BaseDatos = new System.Windows.Forms.DataGridView();
-            this.lbl_Buscador = new System.Windows.Forms.Label();
-            this.txt_Buscador = new System.Windows.Forms.TextBox();
-            this.btn_Agregar = new System.Windows.Forms.Button();
-            this.btn_Volver = new System.Windows.Forms.Button();
             this.Col_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Col_Rut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Col_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,7 +38,13 @@
             this.col_Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_TipoContrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_IdCargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_IdUnidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_IdDispositivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbl_Buscador = new System.Windows.Forms.Label();
+            this.txt_Buscador = new System.Windows.Forms.TextBox();
+            this.btn_Agregar = new System.Windows.Forms.Button();
+            this.btn_Volver = new System.Windows.Forms.Button();
+            this.btn_desvincular = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtv_BaseDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,14 +61,81 @@
             this.col_Email,
             this.col_TipoContrato,
             this.col_IdCargo,
+            this.col_IdUnidad,
             this.col_IdDispositivo});
             this.dtv_BaseDatos.Location = new System.Drawing.Point(12, 135);
             this.dtv_BaseDatos.Name = "dtv_BaseDatos";
-            this.dtv_BaseDatos.Size = new System.Drawing.Size(998, 356);
+            this.dtv_BaseDatos.ReadOnly = true;
+            this.dtv_BaseDatos.Size = new System.Drawing.Size(1050, 356);
             this.dtv_BaseDatos.TabIndex = 0;
             this.dtv_BaseDatos.AlternatingRowsDefaultCellStyleChanged += new System.EventHandler(this.txt_Buscador_TextChanged);
-            this.dtv_BaseDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtv_BaseDatos_CellContentClick);
             this.dtv_BaseDatos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtv_BaseDatos_CellDoubleClick);
+            // 
+            // Col_Id
+            // 
+            this.Col_Id.HeaderText = "IdEmpleado";
+            this.Col_Id.Name = "Col_Id";
+            this.Col_Id.ReadOnly = true;
+            // 
+            // Col_Rut
+            // 
+            this.Col_Rut.HeaderText = "Rut";
+            this.Col_Rut.Name = "Col_Rut";
+            this.Col_Rut.ReadOnly = true;
+            // 
+            // Col_Nombre
+            // 
+            this.Col_Nombre.HeaderText = "Nombres";
+            this.Col_Nombre.Name = "Col_Nombre";
+            this.Col_Nombre.ReadOnly = true;
+            // 
+            // Col_ApellidoPaterno
+            // 
+            this.Col_ApellidoPaterno.HeaderText = "Apellido Paterno";
+            this.Col_ApellidoPaterno.Name = "Col_ApellidoPaterno";
+            this.Col_ApellidoPaterno.ReadOnly = true;
+            // 
+            // Col_ApellidoMaterno
+            // 
+            this.Col_ApellidoMaterno.HeaderText = "Apellido Materno";
+            this.Col_ApellidoMaterno.Name = "Col_ApellidoMaterno";
+            this.Col_ApellidoMaterno.ReadOnly = true;
+            // 
+            // col_Foto
+            // 
+            this.col_Foto.HeaderText = "Foto";
+            this.col_Foto.Name = "col_Foto";
+            this.col_Foto.ReadOnly = true;
+            // 
+            // col_Email
+            // 
+            this.col_Email.HeaderText = "Email";
+            this.col_Email.Name = "col_Email";
+            this.col_Email.ReadOnly = true;
+            // 
+            // col_TipoContrato
+            // 
+            this.col_TipoContrato.HeaderText = "Tipo de Contrato";
+            this.col_TipoContrato.Name = "col_TipoContrato";
+            this.col_TipoContrato.ReadOnly = true;
+            // 
+            // col_IdCargo
+            // 
+            this.col_IdCargo.HeaderText = "Cargo";
+            this.col_IdCargo.Name = "col_IdCargo";
+            this.col_IdCargo.ReadOnly = true;
+            // 
+            // col_IdUnidad
+            // 
+            this.col_IdUnidad.HeaderText = "Unidad";
+            this.col_IdUnidad.Name = "col_IdUnidad";
+            this.col_IdUnidad.ReadOnly = true;
+            // 
+            // col_IdDispositivo
+            // 
+            this.col_IdDispositivo.HeaderText = "ID Dispositivo";
+            this.col_IdDispositivo.Name = "col_IdDispositivo";
+            this.col_IdDispositivo.ReadOnly = true;
             // 
             // lbl_Buscador
             // 
@@ -77,7 +146,6 @@
             this.lbl_Buscador.Size = new System.Drawing.Size(34, 25);
             this.lbl_Buscador.TabIndex = 1;
             this.lbl_Buscador.Text = "🔎";
-            this.lbl_Buscador.Click += new System.EventHandler(this.label1_Click);
             // 
             // txt_Buscador
             // 
@@ -91,12 +159,12 @@
             // 
             // btn_Agregar
             // 
-            this.btn_Agregar.Location = new System.Drawing.Point(906, 99);
+            this.btn_Agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Agregar.Location = new System.Drawing.Point(257, 90);
             this.btn_Agregar.Name = "btn_Agregar";
-            this.btn_Agregar.Size = new System.Drawing.Size(80, 22);
+            this.btn_Agregar.Size = new System.Drawing.Size(98, 32);
             this.btn_Agregar.TabIndex = 5;
             this.btn_Agregar.Text = "Agregar";
-            this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_Agregar.UseVisualStyleBackColor = true;
             this.btn_Agregar.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -111,67 +179,29 @@
             this.btn_Volver.UseVisualStyleBackColor = true;
             this.btn_Volver.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
-            // Col_Id
+            // btn_desvincular
             // 
-            this.Col_Id.HeaderText = "IdEmpleado";
-            this.Col_Id.Name = "Col_Id";
+            this.btn_desvincular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_desvincular.Location = new System.Drawing.Point(936, 92);
+            this.btn_desvincular.Name = "btn_desvincular";
+            this.btn_desvincular.Size = new System.Drawing.Size(106, 32);
+            this.btn_desvincular.TabIndex = 8;
+            this.btn_desvincular.Text = "Desvincular ";
+            this.btn_desvincular.UseVisualStyleBackColor = true;
+            this.btn_desvincular.Click += new System.EventHandler(this.btn_desvincular_Click);
             // 
-            // Col_Rut
-            // 
-            this.Col_Rut.HeaderText = "Rut";
-            this.Col_Rut.Name = "Col_Rut";
-            // 
-            // Col_Nombre
-            // 
-            this.Col_Nombre.HeaderText = "Nombres";
-            this.Col_Nombre.Name = "Col_Nombre";
-            // 
-            // Col_ApellidoPaterno
-            // 
-            this.Col_ApellidoPaterno.HeaderText = "Apellido Paterno";
-            this.Col_ApellidoPaterno.Name = "Col_ApellidoPaterno";
-            // 
-            // Col_ApellidoMaterno
-            // 
-            this.Col_ApellidoMaterno.HeaderText = "Apellido Materno";
-            this.Col_ApellidoMaterno.Name = "Col_ApellidoMaterno";
-            // 
-            // col_Foto
-            // 
-            this.col_Foto.HeaderText = "Foto";
-            this.col_Foto.Name = "col_Foto";
-            // 
-            // col_Email
-            // 
-            this.col_Email.HeaderText = "Email";
-            this.col_Email.Name = "col_Email";
-            // 
-            // col_TipoContrato
-            // 
-            this.col_TipoContrato.HeaderText = "Tipo de Contrato";
-            this.col_TipoContrato.Name = "col_TipoContrato";
-            // 
-            // col_IdCargo
-            // 
-            this.col_IdCargo.HeaderText = "ID Cargo";
-            this.col_IdCargo.Name = "col_IdCargo";
-            // 
-            // col_IdDispositivo
-            // 
-            this.col_IdDispositivo.HeaderText = "ID Dispositivo";
-            this.col_IdDispositivo.Name = "col_IdDispositivo";
-            // 
-            // Form_Funcionarios
+            // Form_VerFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1022, 503);
+            this.ClientSize = new System.Drawing.Size(1074, 503);
+            this.Controls.Add(this.btn_desvincular);
             this.Controls.Add(this.btn_Volver);
             this.Controls.Add(this.btn_Agregar);
             this.Controls.Add(this.txt_Buscador);
             this.Controls.Add(this.lbl_Buscador);
             this.Controls.Add(this.dtv_BaseDatos);
-            this.Name = "Form_Funcionarios";
+            this.Name = "Form_VerFuncionarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Funcionarios";
             this.Load += new System.EventHandler(this.Home_Load);
@@ -197,6 +227,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_TipoContrato;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_IdCargo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_IdUnidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_IdDispositivo;
+        private System.Windows.Forms.Button btn_desvincular;
     }
 }

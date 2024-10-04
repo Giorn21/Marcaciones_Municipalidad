@@ -67,33 +67,35 @@ namespace common
             // Método para dividir el RUT y obtener el IdEmpleado
             public bool ProcesarRut(string rut)
             {
-                // Verificar que el RUT contenga un guion
+                //Verificadores
                 if (!rut.Contains("-"))
                 {
                     throw new ArgumentException("Formato de RUT incorrecto.");
                 }
 
-                // Separar el RUT en partes
                 string[] partesRut = rut.Split('-');
                 if (partesRut.Length != 2)
                 {
                     throw new ArgumentException("RUT no tiene un dígito verificador.");
                 }
-
-                // Verificar que la parte numérica sea válida
                 if (!int.TryParse(partesRut[0], out int idEmpleado))
                 {
                     throw new ArgumentException("La parte numérica del RUT no es válida.");
                 }
 
-                // Asignar valores a las propiedades de la clase DatosFuncionario
-                DatosFuncionario.IdEmpleado = idEmpleado;
-                DatosFuncionario.Rut = rut; // Guardar el RUT completo en el formato IdEmpleado-DígitoVerificador
+                // Validar el dígito verificador (debe ser un número o la letra 'K')
+                string digitoVerificador = partesRut[1].ToUpper();
+                if (digitoVerificador.Length != 1 || (!char.IsDigit(digitoVerificador[0]) && digitoVerificador != "K"))
+                {
+                    throw new ArgumentException("El dígito verificador no es válido.");
+                }
 
-                return true; // Validación exitosa
+                DatosFuncionario.IdEmpleado = idEmpleado;
+                DatosFuncionario.Rut = rut; 
+
+                return true; 
             }
 
-            // Validación básica del correo electrónico
             public bool ValidarCorreo(string correo)
             {
                 if (!correo.Contains("@"))
@@ -101,11 +103,11 @@ namespace common
                     throw new ArgumentException("Correo electrónico no válido. Debe incluir '@'.");
                 }
 
-                DatosFuncionario.CorreoElectronico = correo; // Asignar correo a la propiedad
+                DatosFuncionario.CorreoElectronico = correo;
                 return true;
             }
 
-            // Métodos para cargar datos del ComboBox y seleccionar el valor
+            //cargar datos del ComboBox y seleccionar el valor
             public void SeleccionarTipoContrato(int tipoContratoId)
             {
                 DatosFuncionario.TipoContrato = tipoContratoId;
@@ -126,21 +128,21 @@ namespace common
                 DatosFuncionario.IdDispositivo = dispositivoId;
             }
 
-            // Método para registrar el usuario en la base de datos
+            public void SeleccionarHorario(int Horario) 
+            {
+                DatosFuncionario.IdHorario = Horario;
+            }
+
             public bool RegistrarUsuario()
             {
                 try
                 {
-                    // Conectar a la base de datos
+                    
                     DB.Conectar();
-
-                    // Crear comando
                     DbCommand cmd = DB.CrearComando("sp_AgregarFuncionarioContratoDispositivo");
-
-                    // Establecer el tipo de comando a procedimiento almacenado
                     cmd.CommandType = CommandType.StoredProcedure;
 
-                    // Añadir parámetros utilizando las propiedades de la clase AgregarDatos
+                    // Añadir parámetros
                     cmd.Parameters.Add(new SqlParameter("@IdEmpleado", SqlDbType.Int) { Value = DatosFuncionario.IdEmpleado });
                     cmd.Parameters.Add(new SqlParameter("@Rut", SqlDbType.VarChar) { Value = DatosFuncionario.Rut });
                     cmd.Parameters.Add(new SqlParameter("@Nombres", SqlDbType.VarChar) { Value = DatosFuncionario.Nombre });
@@ -151,20 +153,19 @@ namespace common
                     cmd.Parameters.Add(new SqlParameter("@IdCargo", SqlDbType.Int) { Value = DatosFuncionario.TipoCargo });
                     cmd.Parameters.Add(new SqlParameter("@IdUnidad", SqlDbType.Int) { Value = DatosFuncionario.IdUnidad });
                     cmd.Parameters.Add(new SqlParameter("@IdDispositivo", SqlDbType.Int) { Value = DatosFuncionario.IdDispositivo });
+                    cmd.Parameters.Add(new SqlParameter("@IdHorario", SqlDbType.Int) { Value = DatosFuncionario.IdHorario }); 
+                    cmd.Parameters.Add(new SqlParameter("@Desde", SqlDbType.DateTime) { Value = DatosFuncionario.Fecha });  
 
-                    // Ejecutar el procedimiento almacenado
                     cmd.ExecuteNonQuery();
 
-                    return true; // Si todo sale bien
+                    return true; 
                 }
                 catch (Exception ex)
                 {
-                    // Manejo de excepciones
                     throw new Exception("Error al registrar el usuario: " + ex.Message);
                 }
                 finally
                 {
-                    // Cerrar la conexión
                     DB.Desconectar();
                 }
             }

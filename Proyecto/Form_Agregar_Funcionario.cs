@@ -1,4 +1,5 @@
 ﻿using common;
+using common.BL;
 using Microsoft.CSharp.RuntimeBinder;
 using System;
 using System.Collections.Generic;
@@ -11,12 +12,15 @@ using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.ConstrainedExecution;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static common.clsAgregar_Funcionarios;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Text.RegularExpressions;
+using System.Reflection.Emit;
 
 namespace Proyecto
 {
@@ -27,17 +31,20 @@ namespace Proyecto
             InitializeComponent();
             // Suscribir al evento KeyPress del TextBox
             txt_Rut.KeyPress += new KeyPressEventHandler(txt_Rut_KeyPress);
+
         }
 
         private void btn_Volver_Click(object sender, EventArgs e)
         {
-            Form_Funcionarios funcionarios = new Form_Funcionarios();
+            Form_VerFuncionarios funcionarios = new Form_VerFuncionarios();
             funcionarios.Show();
             this.Close();
         }
 
         private void Form_Agregar_Funcionario_Load(object sender, EventArgs e)
         {
+            lbl_FechaTiempoReal.Text = DateTime.Now.ToString("dd/MM/yyyy");
+
             dataGridView1.Columns.Clear();
             dataGridView1.AutoGenerateColumns = false;
 
@@ -47,156 +54,64 @@ namespace Proyecto
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Hora entrada en la tarde", DataPropertyName = "EntradaTarde" });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Hora salida en la tarde", DataPropertyName = "SalidaTarde" });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Tolerancia entrada", DataPropertyName = "ToleranciaEntrada" });
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Tolerancia salida", DataPropertyName = "ToleranciaSalida" });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Total de horas trabajadas", DataPropertyName = "TotalHoras" });
 
-            // Cargar datos en el ComboBox de Tipo de Contrato
-            var tiposContratos = new Dictionary<int, string>
+            // Crear una instancia de la clase ComboBoxLoader
+            // Llamar al método para cargar los datos en el ComboBox
+            clsDatos_De_cboxsAgregar Datos_Contratos = new clsDatos_De_cboxsAgregar();
+            Datos_Contratos.CargarTiposContratos(cbox_Tipo_Contrato);
+
+            // Verificar que el ComboBox tenga items después de cargar los datos
+            if (cbox_Tipo_Contrato.Items.Count > 0)
             {
-                { 1, "Código del Trabajo" },
-                { 5, "Plazo Fijo" },
-                { 6, "Reemplazo" },
-                { 7, "Indefinidos" },
-                { 10, "Honorarios" }
-            };
+                cbox_Tipo_Contrato.SelectedIndex = 0; // Selecciona el primer elemento si es necesario
+            }
 
-            cbox_Tipo_Contrato.DataSource = new BindingSource(tiposContratos, null);
-            cbox_Tipo_Contrato.DisplayMember = "Value";
-            cbox_Tipo_Contrato.ValueMember = "Key";
 
-            // Cargar datos Tipo Cargo
-            var TipoCargo = new Dictionary<int, string>
+            clsDatos_De_cboxsAgregar Datos_cargo = new clsDatos_De_cboxsAgregar();
+            Datos_cargo.CargarTipoCargo(cbox_Tipo_Cargo);
+            if (cbox_Tipo_Cargo.Items.Count > 0)
             {
-                { 0, "No configurado" },
-                { 1, "Administrativo" },
-                { 15, "Ingeniero en informática" },
-                { 16, "Desarrollo" }
+                cbox_Tipo_Cargo.SelectedIndex = 0; // Selecciona el primer elemento si es necesario
+            }
 
-            };
 
-            cbox_Tipo_Cargo.DataSource = new BindingSource(TipoCargo, null);
-            cbox_Tipo_Cargo.DisplayMember = "Value";
-            cbox_Tipo_Cargo.ValueMember = "Key";
-
-            // Cargar datos de Cargo
-            var Cargo = new Dictionary<int, string>
+            clsDatos_De_cboxsAgregar Datos_unidad = new clsDatos_De_cboxsAgregar();
+            Datos_unidad.CargarTipoUnidad(cbox_IdUnidad);
+            if (cbox_IdUnidad.Items.Count > 0)
             {
-                { 1, "Administración" },
-                { 2, "Remuneraciones" },
-                { 3, "Adquisiciones" },
-                { 4, "Movilización" },
-                { 5, "Mantención" },
-                { 6, "Tesorería" },
-                { 7, "INFORMATICA" },
-                { 8, "D.A.S.M."},
-                { 9, "CECOSF MILLALEMU" },
-                { 10, "CENTRO DE ESTERILIZACION" },
-                { 11, "CENTRO PODOLOGICO SUR" },
-                { 12, "CESFAM LA GRANJA" },
-                { 13, "CESFAM MALAQUIAS CONCHA" },
-                { 14, "CESFAM PADRE ESTEBAN GUMUSCIO" },
-                { 15, "CONST PADRE ESTEBAN GUMUCIO" },
-                { 16, "COSAM "},
-                { 17, "DIRECCION DE SALUD"},
-                { 18, "DROGUERIA"} ,
-                { 19, "HIPOTERAPIA"},
-                { 20, "PODOLOGICO GRANJA"},
-                { 21, "SAPU DENTAL"},
-                { 22, "UAPO"},
-                { 23, "CENTRO SALUD MENTAL"},
-                { 24, "CONST.PADRE ESTEBAN GUMUCIO"},
-                { 25, "CECOSF SAN GREGORIO"},
-                { 26, "PROMOCION DE SALUD"},
-                { 27, "AMBULANCIAS Y CONSULTORIOS"},
-                { 28, "CECOSF YUNGAY"},
-                { 29, "CCR VIDA BUENA"},
-                { 30, "DROGUERÍA"},
-                { 31, "CCR SAN GREGORIO"},
-                { 32, "CECOSF VILLA LA SERENA"},
-                { 33, "CESFAM GRANJA SUR"},
-                { 34, "CCR LA GRANJA"},
-                { 35, "FARMACIA COMUNAL"},
-                { 36, "CESFAM PADRE ESTEBAN GUMUCIO"}
+                cbox_IdUnidad.SelectedIndex = 0; // Selecciona el primer elemento si es necesario
+            }
 
-            };
-
-            cbox_IdUnidad.DataSource = new BindingSource(Cargo, null);
-            cbox_IdUnidad.DisplayMember = "Value";
-            cbox_IdUnidad.ValueMember = "Key";
-
-            // Cargar Datos de Dispositivo
-            var dispositivos = new Dictionary<int, string>
+            clsDatos_De_cboxsAgregar Datos_dispositivo = new clsDatos_De_cboxsAgregar();
+            Datos_dispositivo.CargarDispositvos(cbox_IdDispositivo);
+            if (cbox_IdDispositivo.Items.Count > 0)
             {
-                { 1, "uFace800" }
-                // Agrega los demás dispositivos si es necesario...
-            };
+                cbox_IdDispositivo.SelectedIndex = 0; // Selecciona el primer elemento si es necesario
+            }
 
-            cbox_IdDispositivo.DataSource = new BindingSource(dispositivos, null);
-            cbox_IdDispositivo.DisplayMember = "Value";
-            cbox_IdDispositivo.ValueMember = "Key";
-
-
-            var Horarios = new Dictionary<int, string>
+            clsDatos_De_cboxsAgregar Datos_Horarios = new clsDatos_De_cboxsAgregar();
+            Datos_Horarios.CargarHorarios(cbox_Horarios);
+            if (cbox_Horarios.Items.Count > 0)
             {
-                { 1, "HORARIO NORMAL 1 44 HRS " },
-                { 2, "HORARIO NORMAL 2 44 HRS " },
-                { 3, "HORARIO NORMAL 3 44 HRS " },
-                { 4, "HORARIO 4  - 44HRS " },
-                { 5, "HORARIO 5 - 44 HRS " },
-                { 6, "HORARIO 6- 22HRS " },
-                { 7, "HORARIO 7 - 44HRS " },
-                { 8, "HORARIO 8 - 44HRS "},
-                { 9, "HORARIO 9  - 44HRS " },
-                { 10, "HORARIO 10  - 44HRS " },
-                { 11, "HORARIO 11 - 44HRS " },
-                { 12, "HORARIO 12 - 44HRS " },
-                { 13, "HORARIO 13 - 44HRS " },
-                { 14, "HORARIO 14 - 33HRS " },
-                { 15, "HORARIO 15 - 44HRS " },
-                { 16, "HORARIO 16 - 44HRS "},
-                { 17, "HORARIO 17 - 44HRS "},
-                { 18, "HORARIO 18 - 44HRS "} ,
-                { 19, "HORARIO 19 - 44HRS "},
-                { 20, "HORARIO 20 - 44HRS "},
-                { 21, "HORARIO 21 - 44HRS "},
-                { 22, "HORARIO 22 - 44HRS "},
-                { 23, "HORARIO 23 - 44HRS "},
-                { 24, "HORARIO 24 - 33HRS "},
-                { 25, "HORARIO 25 - 44HRS "},
-                { 26, "HORARIO 26 - 22HRS "},
-                { 27, "HORARIO 27 - 33HRS "},
-                { 28, "HORARIO 28 - 33HRS "},
-                { 29, "HORARIO 29 - 44HRS "},
-                { 30, "HORARIO 30 - 44HRS "},
-                { 31, "HORARIO 31 - 22HRS "},
-                { 32, "HORARIO 32 - 22HRS "},
-                { 33, "HORARIO 33 - 30HRS "},
-                { 34, "HORARIO 34 - 44HRS "},
-                { 35, "HORARIO 35 - 44HRS "},
-                { 36, "HORARIO 36 - 44HRS "},
-                { 37, "HORARIO 37 - 33HRS "},
-                { 38, "HORARIO 38 - 44HRS "},
-                { 39, "HORARIO 39 - 40HRS "},
-                { 40, "HORARIO 40 - 22HRS "},
-                { 41, "HORARIO 41 - 22HRS "},
-                { 42, "HORARIO 42 - 44HRS "},
-                { 43, "HORARIO 43 - 44HRS "},
-                { 44, "HORARIO 44 - 44HRS "},
-                { 45, "HORARIO 45 - 44HRS "},
-                { 46, "HORARIO 46 - 11HRS "},
-                { 47, "HORARIO 47 - 18HRS "},
-            };
+                cbox_Horarios.SelectedIndex = 0; // Selecciona el primer elemento si es necesario
+            }
 
-            comboBox3.DataSource = new BindingSource(Horarios, null);
-            comboBox3.DisplayMember = "Value";
-            comboBox3.ValueMember = "Key";
 
             //Limpia las Combobox al inicar el formulario
-            cbox_Tipo_Contrato.Text = "";
-            cbox_Tipo_Cargo.Text = "";
-            cbox_IdUnidad.Text = "";
-            cbox_IdDispositivo.Text = "";
-            comboBox3.Text = "";
+            cbox_Tipo_Contrato.SelectedIndex = -1;
+            cbox_Tipo_Cargo.SelectedIndex = -1;
+            cbox_IdUnidad.SelectedIndex = -1;
+            cbox_IdDispositivo.SelectedIndex = -1;
+            cbox_Horarios.SelectedIndex = -1;
+
+            if (cbox_Horarios.SelectedIndex == -1)
+            {
+                // Limpia el DataGridView
+                dataGridView1.DataSource = null; // Esto elimina la fuente de datos
+                dataGridView1.Rows.Clear();       // Esto elimina todas las filas
+            }
+
         }
 
         private void txt_Rut_TextChanged(object sender, EventArgs e)
@@ -206,63 +121,33 @@ namespace Proyecto
 
         private void btn_Registro_Click(object sender, EventArgs e)
         {
-            if (txt_Rut.Text == "" || txt_Nombre.Text == "" || txt_Apellido_Paterno.Text == "" || txt_Apellido_Materno.Text == "" || txt_Email.Text == "" || cbox_Tipo_Contrato.Text == "" || cbox_Tipo_Cargo.Text == "" || cbox_IdUnidad.Text == "" || cbox_IdDispositivo.Text == "" || comboBox3.Text == "") 
+            if (txt_Rut.Text == "" || txt_Nombre.Text == "" || txt_Apellido_Paterno.Text == "" || txt_Apellido_Materno.Text == "" || txt_Email.Text == "" || cbox_Tipo_Contrato.Text == "" || cbox_Tipo_Cargo.Text == "" || cbox_IdUnidad.Text == "" || cbox_IdDispositivo.Text == "")
             {
-                MessageBox.Show("llene todas las casillas");
+                MessageBox.Show("!ALERTA¡ : Rellene todas las casillas");
 
                 return;
-            }
-            string rutCompleto = txt_Rut.Text.Trim(); // Obtenemos el texto del TextBox
-            if (!txt_Email.Text.Contains("@"))
+            } else if (cbox_Horarios.Text == "") 
             {
-                MessageBox.Show("Correo electrónico no válido. Debe incluir '@'.");
-
-                return;
+                MessageBox.Show("!ALERTA¡ : Elija una Horario para el Funcionario");
             }
-            if (comboBox3.Text.Contains(""))
-            {
-                MessageBox.Show("Elija el tipo de Horario del Usuario");
-                return;
-            }
-            if (rutCompleto.Contains("-"))
-            {
-                string[] partesRut = rutCompleto.Split('-');
-                string idEmpleado = partesRut[0]; // Parte numérica antes del guion
-                string dv = partesRut[1]; // Dígito verificador (puede ser k)
-                                          // Asegúrate de almacenar idEmpleado y rutCompleto en la base de datos
-                return;
-            }
-            else
-            {
-                MessageBox.Show("Formato de RUT incorrecto. Debe incluir guion.");
-               
-            }
-
-
-            // Crear una instancia de clsInsertarFuncionario
+            // iniciamos la instancia de clsInsertarFuncionario
             clsInsertarFuncionario nuevoUsuario = new clsInsertarFuncionario();
 
             try
             {
-                // Procesar y validar RUT
+
                 nuevoUsuario.ProcesarRut(txt_Rut.Text);
-
-                // Validar correo electrónico
                 nuevoUsuario.ValidarCorreo(txt_Email.Text);
-                
-
-                // Asignar los valores adicionales de los TextBox
                 nuevoUsuario.DatosFuncionario.Nombre = txt_Nombre.Text;
                 nuevoUsuario.DatosFuncionario.ApellidoPaterno = txt_Apellido_Paterno.Text;
                 nuevoUsuario.DatosFuncionario.ApellidoMaterno = txt_Apellido_Materno.Text;
-
-                // Obtener y asignar los valores seleccionados en las ComboBox
                 nuevoUsuario.SeleccionarTipoContrato((int)cbox_Tipo_Contrato.SelectedValue);
                 nuevoUsuario.SeleccionarTipoCargo((int)cbox_Tipo_Cargo.SelectedValue);
                 nuevoUsuario.SeleccionarUnidad((int)cbox_IdUnidad.SelectedValue);
                 nuevoUsuario.SeleccionarDispositivo((int)cbox_IdDispositivo.SelectedValue);
+                nuevoUsuario.SeleccionarHorario((int)cbox_Horarios.SelectedValue);
+                nuevoUsuario.DatosFuncionario.Fecha = DateTime.Now;
 
-                // Registrar el usuario en la base de datos
                 if (nuevoUsuario.RegistrarUsuario())
                 {
                     MessageBox.Show("Usuario registrado exitosamente.");
@@ -272,6 +157,7 @@ namespace Proyecto
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
+                return; 
             }
 
             // Limpia las casillas cuando se logra registrar un usuario
@@ -280,21 +166,18 @@ namespace Proyecto
             txt_Apellido_Paterno.Clear();
             txt_Apellido_Materno.Clear();
             txt_Email.Clear();
-            cbox_Tipo_Contrato.Items.Clear();
-            cbox_Tipo_Cargo.Items.Clear();
-            cbox_IdUnidad.Items.Clear();
-            cbox_IdDispositivo.Items.Clear();
-            comboBox3.Text = "";
-        }
+            cbox_Tipo_Contrato.SelectedIndex = -1;
+            cbox_Tipo_Cargo.SelectedIndex = -1;
+            cbox_IdUnidad.SelectedIndex = -1;
+            cbox_IdDispositivo.SelectedIndex = -1;
+            cbox_Horarios.SelectedIndex = -1;
 
-        private void txt_Id_Dispositivo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_Hora_Salida_M_Click(object sender, EventArgs e)
-        {
-
+            if (cbox_Horarios.SelectedIndex == -1)
+            {
+                // Limpia el DataGridView
+                dataGridView1.DataSource = null; 
+                dataGridView1.Rows.Clear();       
+            }
         }
 
         private void txt_Email_TextChanged(object sender, EventArgs e)
@@ -304,30 +187,22 @@ namespace Proyecto
 
         private void cbox_Tipo_Contrato_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            // Obtener el ID del Tipo de Contrato seleccionado
-            int tipoContratoSeleccionado = ((KeyValuePair<int, string>)cbox_Tipo_Contrato.SelectedItem).Key;
+           
         }
 
         private void cbox_Tipo_Cargo_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-            // Obtener el ID de la Unidad seleccionada
-            int idUnidadSeleccionada = ((KeyValuePair<int, string>)cbox_Tipo_Cargo.SelectedItem).Key;
         }
 
         private void cbox_IdUnidad_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ;
-            // Obtener el ID de la Unidad seleccionada
-            int idUnidadSeleccionada = ((KeyValuePair<int, string>)cbox_IdUnidad.SelectedItem).Key;
+        { 
+
         }
 
         private void cbox_IdDispositivo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            // Obtener el ID del dispositivo seleccionado
-            int idDispositivoSeleccionado = ((KeyValuePair<int, string>)cbox_IdDispositivo.SelectedItem).Key;
+
         }
 
         private void btn_Limpiar_Click(object sender, EventArgs e)
@@ -337,11 +212,18 @@ namespace Proyecto
             txt_Apellido_Paterno.Clear();
             txt_Apellido_Materno.Clear();
             txt_Email.Clear();
-            cbox_Tipo_Contrato.Text = "";
-            cbox_Tipo_Cargo.Text = "";
-            cbox_IdUnidad.Text = "";
-            cbox_IdDispositivo.Text = "";
-            comboBox3.Text = "";
+            cbox_Tipo_Contrato.SelectedIndex = -1;
+            cbox_Tipo_Cargo.SelectedIndex = -1;
+            cbox_IdUnidad.SelectedIndex = -1;
+            cbox_IdDispositivo.SelectedIndex = -1;
+            cbox_Horarios.SelectedIndex = -1;
+
+            if (cbox_Horarios.SelectedIndex == -1)
+            {
+                // Limpia el DataGridView
+                dataGridView1.DataSource = null; 
+                dataGridView1.Rows.Clear();       
+            }
 
         }
 
@@ -353,30 +235,18 @@ namespace Proyecto
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox3.SelectedItem != null)
+            if (cbox_Horarios.SelectedItem != null)
             {
-                // Asumiendo que el item es un KeyValuePair<int, string>
-                if (comboBox3.SelectedItem is KeyValuePair<int, string> selectedPair)
+                // Comprobar si el ítem es un KeyValuePair<int, string>
+                if (cbox_Horarios.SelectedItem is KeyValuePair<int, string> selectedPair)
                 {
+                    // Acceder al Key, que contiene el IdHorario
                     int selectedId = selectedPair.Key;
                     ActualizarDataGridView(selectedId);
                 }
-                // Alternativamente, si es un objeto personalizado
-                else
-                {
-                    dynamic item = comboBox3.SelectedItem; // Asignar el objeto como dynamic
-                    try
-                    {
-                        int selectedId = item.IdHorario; // Acceder a la propiedad del objeto dynamic
-                        ActualizarDataGridView(selectedId);
-                    }
-                    catch (RuntimeBinderException ex)
-                    {
-                        MessageBox.Show("Error al acceder a la propiedad IdHorario: " + ex.Message);
-                    }
-                }
             }
         }
+        
 
         private void ActualizarDataGridView(int idHorario)
         {
@@ -403,15 +273,14 @@ namespace Proyecto
 
         private void txt_Rut_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Verificar si la tecla presionada es un número o el signo menos
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '-')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '-' && e.KeyChar != 'K' && e.KeyChar != 'k')
             {
-                e.Handled = true; // Ignorar el carácter
+                e.Handled = true; 
             }
-            // Permitir solo un signo menos al inicio
-            if (e.KeyChar == '-' && txt_Rut.Text.Length < 8)
+
+            if (e.KeyChar == '-' && txt_Rut.Text.Contains("-"))
             {
-                e.Handled = true; // Ignorar el signo menos si hay otros caracteres
+                e.Handled = true; 
             }
         }
     }

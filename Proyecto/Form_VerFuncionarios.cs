@@ -14,82 +14,76 @@ using System.Windows.Forms;
 
 namespace Proyecto
 {
-    public partial class Form_Funcionarios : Form
+    public partial class Form_VerFuncionarios : Form
     {
         List<Funcionario> funcionarios = new List<Funcionario>();
 
-        //texto con Informacion de que debe agregar para el BUSCAR_TEXTBOX
-        private string placeholderText = "Buscar por RUT o Nombre";
-
-
-
-        public Form_Funcionarios()
+       
+        public Form_VerFuncionarios()
         {
             InitializeComponent();
         }
 
-        private clsVerFuncionarios clsDataGrid = new clsVerFuncionarios();
+        private clsVerFuncionarios verFuncionarios = new clsVerFuncionarios();
 
         private void Home_Load(object sender, EventArgs e)
         {
-            //el DataGridView se ajusta a la cantidad de datos
+            //se ajusta a la cantidad de datos
             this.dtv_BaseDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            // Asignar el texto de ejemplo
-            // Cambiar el color para que parezca un placeholder
             txt_Buscador.Text = placeholderText;
             txt_Buscador.ForeColor = Color.Gray;
 
             try
             {
-                // Obtener la lista de funcionarios
-                funcionarios = clsDataGrid.ObtenerFuncionarios();
-
-                // Limpiar las filas existentes, pero sin modificar las columnas
+                funcionarios = verFuncionarios.ObtenerFuncionarios();
                 dtv_BaseDatos.Rows.Clear();
 
-                // Iterar sobre la lista de funcionarios y agregar cada uno al DataGridView
-                foreach (var funcionario in funcionarios)
+                foreach (var f in funcionarios)
                 {
-                    // Crear una nueva fila basada en las columnas ya existentes en el DataGridView
+
                     DataGridViewRow row = new DataGridViewRow();
                     row.CreateCells(dtv_BaseDatos);
 
                     // Asignar valores a las celdas correspondientes
-                    row.Cells[0].Value = funcionario.IdEmpleado;
-                    row.Cells[1].Value = funcionario.Rut;
-                    row.Cells[2].Value = funcionario.Nombres;
-                    row.Cells[3].Value = funcionario.ApellidoPaterno;
-                    row.Cells[4].Value = funcionario.ApellidoMaterno;
-                    row.Cells[5].Value = funcionario.Foto;
-                    row.Cells[6].Value = funcionario.Email;
-                    row.Cells[7].Value = funcionario.Contrato;
-                    row.Cells[8].Value = funcionario.Cargo;
-                    row.Cells[9].Value = funcionario.IdDispositivo;
+                    row.Cells[0].Value = f.IdEmpleado;
+                    row.Cells[1].Value = f.Rut;
+                    row.Cells[2].Value = f.Nombres;
+                    row.Cells[3].Value = f.ApellidoPaterno;
+                    row.Cells[4].Value = f.ApellidoMaterno;
+                    row.Cells[5].Value = f.Foto;
+                    row.Cells[6].Value = f.Email;
+                    row.Cells[7].Value = f.Contrato;
+                    row.Cells[8].Value = f.Cargo;
+                    row.Cells[9].Value = f.Unidad;
+                    row.Cells[10].Value = f.IdDispositivo;
                     
-
-                    // Agregar la fila al DataGridView
                     dtv_BaseDatos.Rows.Add(row);
                 }
             }
             catch (Exception ex)
             {
-                // Manejo de errores
                 MessageBox.Show("Error al cargar los datos: " + ex.Message);
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        private int IdEmpleado;
 
         private void dtv_BaseDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
             if (e.RowIndex >= 0)
             {
-                
+
+                DataGridViewRow row = dtv_BaseDatos.Rows[e.RowIndex];
+
+                if (row.Cells[0].Value != null)
+                {
+                    IdEmpleado = Convert.ToInt32(row.Cells[0].Value);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo encontrar el valor de IdEmpleado en la fila seleccionada.");
+                }
             }
         }
 
@@ -102,38 +96,38 @@ namespace Proyecto
 
         private void FiltrarFuncionarios(string filtro)
         {
-            // Convertir el filtro a minúsculas para hacer la búsqueda insensible a mayúsculas/minúsculas
+            //minúsculas 
             filtro = filtro.ToLower();
 
-            // Filtrar la lista de funcionarios, buscando tanto por RUT como por Nombres
+            //buscandor RUT o Nombres
             var resultado = funcionarios.Where(f => f.Rut.ToLower().Contains(filtro) || f.Nombres.ToLower().Contains(filtro)).ToList();
-
-            // Limpiar las filas existentes (sin afectar las columnas)
             dtv_BaseDatos.Rows.Clear();
 
-            // Iterar sobre los funcionarios filtrados
-            foreach (var f in resultado)
+            foreach (var R in resultado)
             {
-                // Crear una nueva fila basada en las columnas existentes
+                // Crear una nueva fila
                 DataGridViewRow row = new DataGridViewRow();
                 row.CreateCells(dtv_BaseDatos);
 
-                // Asignar valores a las celdas correspondientes
-                row.Cells[0].Value = f.IdEmpleado;
-                row.Cells[1].Value = f.Rut;
-                row.Cells[2].Value = f.Nombres;
-                row.Cells[3].Value = f.ApellidoPaterno;
-                row.Cells[4].Value = f.ApellidoMaterno;
-                row.Cells[5].Value = f.Foto;
-                row.Cells[6].Value = f.Email;
-                row.Cells[7].Value = f.Contrato;
-                row.Cells[8].Value = f.Cargo;
-                row.Cells[9].Value = f.IdDispositivo;
+                row.Cells[0].Value = R.IdEmpleado;
+                row.Cells[1].Value = R.Rut;
+                row.Cells[2].Value = R.Nombres;
+                row.Cells[3].Value = R.ApellidoPaterno;
+                row.Cells[4].Value = R.ApellidoMaterno;
+                row.Cells[5].Value = R.Foto;
+                row.Cells[6].Value = R.Email;
+                row.Cells[7].Value = R.Contrato;
+                row.Cells[8].Value = R.Cargo;
+                row.Cells[9].Value = R.Unidad;
+                row.Cells[10].Value = R.IdDispositivo;
 
-                // Agregar la fila al DataGridView
                 dtv_BaseDatos.Rows.Add(row);
             }
         }
+
+
+        //texto con Informacion 
+        private string placeholderText = "Buscar por RUT o Nombre";
 
         private void txt_Buscador_TextChanged(object sender, EventArgs e)
         {
@@ -142,19 +136,18 @@ namespace Proyecto
             {
                 return;
             }
-            // Si hay al menos un carácter en el cuadro de búsqueda
+            // busca en base al primer caracter en adelante
             if (txt_Buscador.TextLength >= 1)
             {
                 FiltrarFuncionarios(txt_Buscador.Text);
             }
             else
             {
-                // Desenlazar la fuente de datos antes de asignar la lista original
+                // Desenlazar la fuente 
                 dtv_BaseDatos.DataSource = null;
-
                 dtv_BaseDatos.Rows.Clear();
 
-                // Volver a mostrar todos los datos
+                // Vuelve a mostrar los datos
                 foreach (var f in funcionarios)
                 {
                     DataGridViewRow row = new DataGridViewRow();
@@ -169,17 +162,12 @@ namespace Proyecto
                     row.Cells[6].Value = f.Email;
                     row.Cells[7].Value = f.Contrato;
                     row.Cells[8].Value = f.Cargo;
-                    row.Cells[9].Value = f.IdDispositivo;
+                    row.Cells[9].Value = f.Unidad;
+                    row.Cells[10].Value = f.IdDispositivo;
 
                     dtv_BaseDatos.Rows.Add(row);
                 }
             }
-        }
-
-
-        private void dtv_BaseDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
         }
 
         private void txt_Buscador_Enter(object sender, EventArgs e)
@@ -206,5 +194,47 @@ namespace Proyecto
             menu.Show();
             this.Close();
         }
+
+        private void btn_desvincular_Click(object sender, EventArgs e)
+        {
+            if (IdEmpleado > 0)
+            {
+                // Mensaje de advertencia
+                DialogResult result = MessageBox.Show(
+                    "¿Estás seguro de que deseas desvincular a este funcionario?",
+                    "Confirmación de Desvinculación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+
+                // Si el usuario hace clic en "Sí", se procede con la desvinculación
+                if (result == DialogResult.Yes)
+                {
+                    clsDesvincularFuncionario funcionarioManager = new clsDesvincularFuncionario();
+                    DateTime fechaDesvinculacion = DateTime.Now;
+
+                    try
+                    {
+                        if (funcionarioManager.DesvincularFuncionario(IdEmpleado, fechaDesvinculacion))
+                        {
+                            MessageBox.Show("Funcionario desvinculado exitosamente.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+                else
+                {
+                    // Si el usuario hace clic en "No", no se realiza la desvinculación
+                    MessageBox.Show("Desvinculación cancelada.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecciona un funcionario para desvincular.");
+            }
+        }
+
     }
 }

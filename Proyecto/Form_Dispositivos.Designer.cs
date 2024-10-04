@@ -30,7 +30,6 @@
         {
             this.btn_Volver = new System.Windows.Forms.Button();
             this.dtv_Dispositivos = new System.Windows.Forms.DataGridView();
-            this.lbl_Titulo = new System.Windows.Forms.Label();
             this.col_IdDispositivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_IP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,6 +39,7 @@
             this.col_UploadFlag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_LastActivityLog = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_LastActivityOP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbl_Titulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtv_Dispositivos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,8 +69,63 @@
             this.col_LastActivityOP});
             this.dtv_Dispositivos.Location = new System.Drawing.Point(12, 128);
             this.dtv_Dispositivos.Name = "dtv_Dispositivos";
+            this.dtv_Dispositivos.ReadOnly = true;
             this.dtv_Dispositivos.Size = new System.Drawing.Size(869, 310);
             this.dtv_Dispositivos.TabIndex = 9;
+            // 
+            // col_IdDispositivo
+            // 
+            this.col_IdDispositivo.HeaderText = "ID Dispositivo";
+            this.col_IdDispositivo.Name = "col_IdDispositivo";
+            this.col_IdDispositivo.ReadOnly = true;
+            // 
+            // col_Descripcion
+            // 
+            this.col_Descripcion.HeaderText = "Descripcion";
+            this.col_Descripcion.Name = "col_Descripcion";
+            this.col_Descripcion.ReadOnly = true;
+            // 
+            // col_IP
+            // 
+            this.col_IP.HeaderText = "IP";
+            this.col_IP.Name = "col_IP";
+            this.col_IP.ReadOnly = true;
+            // 
+            // col_Mac
+            // 
+            this.col_Mac.HeaderText = "MAC";
+            this.col_Mac.Name = "col_Mac";
+            this.col_Mac.ReadOnly = true;
+            // 
+            // col_Ubicacino
+            // 
+            this.col_Ubicacino.HeaderText = "Ubicacino";
+            this.col_Ubicacino.Name = "col_Ubicacino";
+            this.col_Ubicacino.ReadOnly = true;
+            // 
+            // col_PushProtocol
+            // 
+            this.col_PushProtocol.HeaderText = "PushProtocol";
+            this.col_PushProtocol.Name = "col_PushProtocol";
+            this.col_PushProtocol.ReadOnly = true;
+            // 
+            // col_UploadFlag
+            // 
+            this.col_UploadFlag.HeaderText = "UploadFlag";
+            this.col_UploadFlag.Name = "col_UploadFlag";
+            this.col_UploadFlag.ReadOnly = true;
+            // 
+            // col_LastActivityLog
+            // 
+            this.col_LastActivityLog.HeaderText = "Última actividad";
+            this.col_LastActivityLog.Name = "col_LastActivityLog";
+            this.col_LastActivityLog.ReadOnly = true;
+            // 
+            // col_LastActivityOP
+            // 
+            this.col_LastActivityOP.HeaderText = "ultima actualizacion";
+            this.col_LastActivityOP.Name = "col_LastActivityOP";
+            this.col_LastActivityOP.ReadOnly = true;
             // 
             // lbl_Titulo
             // 
@@ -81,51 +136,6 @@
             this.lbl_Titulo.Size = new System.Drawing.Size(218, 42);
             this.lbl_Titulo.TabIndex = 10;
             this.lbl_Titulo.Text = "Dispositivos";
-            // 
-            // col_IdDispositivo
-            // 
-            this.col_IdDispositivo.HeaderText = "ID Dispositivo";
-            this.col_IdDispositivo.Name = "col_IdDispositivo";
-            // 
-            // col_Descripcion
-            // 
-            this.col_Descripcion.HeaderText = "Descripcion";
-            this.col_Descripcion.Name = "col_Descripcion";
-            // 
-            // col_IP
-            // 
-            this.col_IP.HeaderText = "IP";
-            this.col_IP.Name = "col_IP";
-            // 
-            // col_Mac
-            // 
-            this.col_Mac.HeaderText = "MAC";
-            this.col_Mac.Name = "col_Mac";
-            // 
-            // col_Ubicacino
-            // 
-            this.col_Ubicacino.HeaderText = "Ubicacino";
-            this.col_Ubicacino.Name = "col_Ubicacino";
-            // 
-            // col_PushProtocol
-            // 
-            this.col_PushProtocol.HeaderText = "PushProtocol";
-            this.col_PushProtocol.Name = "col_PushProtocol";
-            // 
-            // col_UploadFlag
-            // 
-            this.col_UploadFlag.HeaderText = "UploadFlag";
-            this.col_UploadFlag.Name = "col_UploadFlag";
-            // 
-            // col_LastActivityLog
-            // 
-            this.col_LastActivityLog.HeaderText = "Última actividad";
-            this.col_LastActivityLog.Name = "col_LastActivityLog";
-            // 
-            // col_LastActivityOP
-            // 
-            this.col_LastActivityOP.HeaderText = "ultima actualizacion";
-            this.col_LastActivityOP.Name = "col_LastActivityOP";
             // 
             // Form_Dispositivos
             // 

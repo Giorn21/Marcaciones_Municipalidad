@@ -17,6 +17,7 @@ namespace common
         public string Email { get; set; }
         public string Contrato { get; set; }
         public string Cargo { get; set; }
+        public string Unidad { get; set; }
         public int IdDispositivo { get; set; }
 
     }

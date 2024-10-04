@@ -127,7 +127,10 @@ namespace common
                             D_EntradaTarde = reader["D_EntradaTarde"] != DBNull.Value ? (TimeSpan)reader["D_EntradaTarde"] : TimeSpan.Zero,
                             D_SalidaTarde = reader["D_SalidaTarde"] != DBNull.Value ? (TimeSpan)reader["D_SalidaTarde"] : TimeSpan.Zero,
                             D_ToleranciaEntrada = reader["D_ToleranciaEntrada"] != DBNull.Value ? Convert.ToInt32(reader["D_ToleranciaEntrada"]) : 0,
-                            D_ToleranciaSalida = reader["D_ToleranciaSalida"] != DBNull.Value ? Convert.ToInt32(reader["D_ToleranciaSalida"]) : 0
+                            D_ToleranciaSalida = reader["D_ToleranciaSalida"] != DBNull.Value ? Convert.ToInt32(reader["D_ToleranciaSalida"]) : 0,
+
+                            // Total de Horas semanales
+                            TotalHorasSemanales = reader["TotalHorasSemanales"] != DBNull.Value ? Convert.ToInt32(reader["TotalHorasSemanales"]) : 0
                         };
                     }
                 }
@@ -139,7 +142,7 @@ namespace common
         // Método para obtener los datos y llenar el DataTable formateado
         public DataTable ObtenerHorarioFormateado(int idHorario)
         {
-            Horario horario = ObtenerHorario(idHorario);  // Obtener datos del objeto Horario
+            Horario horario = ObtenerHorario(idHorario);  
             DataTable dtFormatted = new DataTable();
             dtFormatted.Columns.Add("Dia");
             dtFormatted.Columns.Add("EntradaMañana");
@@ -151,7 +154,6 @@ namespace common
 
             if (horario != null)
             {
-                // Agregar las filas para cada día con el cálculo de horas trabajadas
                 dtFormatted.Rows.Add("Lunes",
                     horario.L_EntradaMañana,
                     horario.L_SalidaMañana,
@@ -237,13 +239,13 @@ namespace common
                             horario.D_SalidaTarde.ToString()));
 
                 // Mostrar el total de horas semanales
-                dtFormatted.Rows.Add("Total", "--->", "--->", "--->", "--->", "--->", "Total Horas Semanales Aquí");
+                dtFormatted.Rows.Add("Total Horas Semanales", "--->", "--->", "--->", "--->", "--->", horario.TotalHorasSemanales);
             }
 
             return dtFormatted;
         }       
 
-        // Método para calcular las horas trabajadas
+        //calcula la horas trabajadas
         public TimeSpan CalcularHorasTrabajadas(string entradaMañana, string salidaMañana, string entradaTarde, string salidaTarde)
         {
             TimeSpan totalHoras = TimeSpan.Zero;

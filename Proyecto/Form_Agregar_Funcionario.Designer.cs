@@ -52,11 +52,14 @@
             this.tabP_Horarios = new System.Windows.Forms.TabPage();
             this.lbl_Horario_Titulo = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbox_Horarios = new System.Windows.Forms.ComboBox();
             this.lbl_Asignar_Horario = new System.Windows.Forms.Label();
             this.btn_Registro = new System.Windows.Forms.Button();
             this.sgM1DataSet1 = new Proyecto.SGM1DataSet();
             this.btn_Limpiar = new System.Windows.Forms.Button();
+            this.lbl_Titulo = new System.Windows.Forms.Label();
+            this.lbl_FechaTiempoReal = new System.Windows.Forms.Label();
+            this.lbl_Fecha = new System.Windows.Forms.Label();
             this.tbc_Agregar_Funcionario.SuspendLayout();
             this.tabP_Datos_Personales.SuspendLayout();
             this.tabP_Horarios.SuspendLayout();
@@ -67,7 +70,7 @@
             // btn_Volver
             // 
             this.btn_Volver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Volver.Location = new System.Drawing.Point(12, 405);
+            this.btn_Volver.Location = new System.Drawing.Point(12, 461);
             this.btn_Volver.Name = "btn_Volver";
             this.btn_Volver.Size = new System.Drawing.Size(74, 33);
             this.btn_Volver.TabIndex = 0;
@@ -80,10 +83,10 @@
             this.tbc_Agregar_Funcionario.Controls.Add(this.tabP_Datos_Personales);
             this.tbc_Agregar_Funcionario.Controls.Add(this.tabP_Horarios);
             this.tbc_Agregar_Funcionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbc_Agregar_Funcionario.Location = new System.Drawing.Point(12, 12);
+            this.tbc_Agregar_Funcionario.Location = new System.Drawing.Point(12, 68);
             this.tbc_Agregar_Funcionario.Name = "tbc_Agregar_Funcionario";
             this.tbc_Agregar_Funcionario.SelectedIndex = 0;
-            this.tbc_Agregar_Funcionario.Size = new System.Drawing.Size(1081, 347);
+            this.tbc_Agregar_Funcionario.Size = new System.Drawing.Size(1081, 378);
             this.tbc_Agregar_Funcionario.TabIndex = 1;
             this.tbc_Agregar_Funcionario.Tag = "";
             // 
@@ -111,7 +114,7 @@
             this.tabP_Datos_Personales.Location = new System.Drawing.Point(4, 25);
             this.tabP_Datos_Personales.Name = "tabP_Datos_Personales";
             this.tabP_Datos_Personales.Padding = new System.Windows.Forms.Padding(3);
-            this.tabP_Datos_Personales.Size = new System.Drawing.Size(1073, 318);
+            this.tabP_Datos_Personales.Size = new System.Drawing.Size(1073, 349);
             this.tabP_Datos_Personales.TabIndex = 0;
             this.tabP_Datos_Personales.Text = "Datos Personales";
             // 
@@ -122,7 +125,7 @@
             this.cbox_IdUnidad.FormattingEnabled = true;
             this.cbox_IdUnidad.Items.AddRange(new object[] {
             "Seleccione un dato"});
-            this.cbox_IdUnidad.Location = new System.Drawing.Point(786, 137);
+            this.cbox_IdUnidad.Location = new System.Drawing.Point(785, 151);
             this.cbox_IdUnidad.Name = "cbox_IdUnidad";
             this.cbox_IdUnidad.Size = new System.Drawing.Size(176, 24);
             this.cbox_IdUnidad.TabIndex = 23;
@@ -135,7 +138,7 @@
             this.cbox_IdDispositivo.FormattingEnabled = true;
             this.cbox_IdDispositivo.Items.AddRange(new object[] {
             "Seleccione un dato"});
-            this.cbox_IdDispositivo.Location = new System.Drawing.Point(786, 242);
+            this.cbox_IdDispositivo.Location = new System.Drawing.Point(785, 256);
             this.cbox_IdDispositivo.Name = "cbox_IdDispositivo";
             this.cbox_IdDispositivo.Size = new System.Drawing.Size(176, 24);
             this.cbox_IdDispositivo.TabIndex = 22;
@@ -148,7 +151,7 @@
             this.cbox_Tipo_Cargo.FormattingEnabled = true;
             this.cbox_Tipo_Cargo.Items.AddRange(new object[] {
             "Seleccione un dato"});
-            this.cbox_Tipo_Cargo.Location = new System.Drawing.Point(786, 38);
+            this.cbox_Tipo_Cargo.Location = new System.Drawing.Point(785, 52);
             this.cbox_Tipo_Cargo.Name = "cbox_Tipo_Cargo";
             this.cbox_Tipo_Cargo.Size = new System.Drawing.Size(176, 24);
             this.cbox_Tipo_Cargo.TabIndex = 21;
@@ -161,7 +164,7 @@
             this.cbox_Tipo_Contrato.FormattingEnabled = true;
             this.cbox_Tipo_Contrato.Items.AddRange(new object[] {
             "Seleccione un dato"});
-            this.cbox_Tipo_Contrato.Location = new System.Drawing.Point(435, 242);
+            this.cbox_Tipo_Contrato.Location = new System.Drawing.Point(434, 256);
             this.cbox_Tipo_Contrato.Name = "cbox_Tipo_Contrato";
             this.cbox_Tipo_Contrato.Size = new System.Drawing.Size(176, 24);
             this.cbox_Tipo_Contrato.TabIndex = 20;
@@ -171,7 +174,7 @@
             // 
             this.lbl_Id_Dispositivo.AutoSize = true;
             this.lbl_Id_Dispositivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Id_Dispositivo.Location = new System.Drawing.Point(783, 223);
+            this.lbl_Id_Dispositivo.Location = new System.Drawing.Point(782, 237);
             this.lbl_Id_Dispositivo.Name = "lbl_Id_Dispositivo";
             this.lbl_Id_Dispositivo.Size = new System.Drawing.Size(90, 16);
             this.lbl_Id_Dispositivo.TabIndex = 18;
@@ -181,7 +184,7 @@
             // 
             this.lbl_Id_Unidad.AutoSize = true;
             this.lbl_Id_Unidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Id_Unidad.Location = new System.Drawing.Point(783, 118);
+            this.lbl_Id_Unidad.Location = new System.Drawing.Point(782, 132);
             this.lbl_Id_Unidad.Name = "lbl_Id_Unidad";
             this.lbl_Id_Unidad.Size = new System.Drawing.Size(44, 16);
             this.lbl_Id_Unidad.TabIndex = 16;
@@ -191,7 +194,7 @@
             // 
             this.lbl_Cargo.AutoSize = true;
             this.lbl_Cargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Cargo.Location = new System.Drawing.Point(783, 19);
+            this.lbl_Cargo.Location = new System.Drawing.Point(782, 33);
             this.lbl_Cargo.Name = "lbl_Cargo";
             this.lbl_Cargo.Size = new System.Drawing.Size(94, 16);
             this.lbl_Cargo.TabIndex = 14;
@@ -201,7 +204,7 @@
             // 
             this.lbl_Tipo_Contrato.AutoSize = true;
             this.lbl_Tipo_Contrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Tipo_Contrato.Location = new System.Drawing.Point(432, 223);
+            this.lbl_Tipo_Contrato.Location = new System.Drawing.Point(431, 237);
             this.lbl_Tipo_Contrato.Name = "lbl_Tipo_Contrato";
             this.lbl_Tipo_Contrato.Size = new System.Drawing.Size(109, 16);
             this.lbl_Tipo_Contrato.TabIndex = 12;
@@ -209,7 +212,7 @@
             // 
             // txt_Email
             // 
-            this.txt_Email.Location = new System.Drawing.Point(435, 137);
+            this.txt_Email.Location = new System.Drawing.Point(434, 151);
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(176, 22);
             this.txt_Email.TabIndex = 11;
@@ -219,7 +222,7 @@
             // 
             this.lbl_Email.AutoSize = true;
             this.lbl_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Email.Location = new System.Drawing.Point(432, 118);
+            this.lbl_Email.Location = new System.Drawing.Point(431, 132);
             this.lbl_Email.Name = "lbl_Email";
             this.lbl_Email.Size = new System.Drawing.Size(163, 16);
             this.lbl_Email.TabIndex = 10;
@@ -227,7 +230,7 @@
             // 
             // txt_Apellido_Materno
             // 
-            this.txt_Apellido_Materno.Location = new System.Drawing.Point(431, 40);
+            this.txt_Apellido_Materno.Location = new System.Drawing.Point(430, 54);
             this.txt_Apellido_Materno.Name = "txt_Apellido_Materno";
             this.txt_Apellido_Materno.Size = new System.Drawing.Size(176, 22);
             this.txt_Apellido_Materno.TabIndex = 7;
@@ -236,7 +239,7 @@
             // 
             this.lbl_Apellido_Materno.AutoSize = true;
             this.lbl_Apellido_Materno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Apellido_Materno.Location = new System.Drawing.Point(428, 19);
+            this.lbl_Apellido_Materno.Location = new System.Drawing.Point(427, 33);
             this.lbl_Apellido_Materno.Name = "lbl_Apellido_Materno";
             this.lbl_Apellido_Materno.Size = new System.Drawing.Size(109, 16);
             this.lbl_Apellido_Materno.TabIndex = 6;
@@ -244,7 +247,7 @@
             // 
             // txt_Apellido_Paterno
             // 
-            this.txt_Apellido_Paterno.Location = new System.Drawing.Point(73, 242);
+            this.txt_Apellido_Paterno.Location = new System.Drawing.Point(72, 256);
             this.txt_Apellido_Paterno.Name = "txt_Apellido_Paterno";
             this.txt_Apellido_Paterno.Size = new System.Drawing.Size(168, 22);
             this.txt_Apellido_Paterno.TabIndex = 5;
@@ -253,7 +256,7 @@
             // 
             this.lbl_Apellido_Paterno.AutoSize = true;
             this.lbl_Apellido_Paterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Apellido_Paterno.Location = new System.Drawing.Point(70, 223);
+            this.lbl_Apellido_Paterno.Location = new System.Drawing.Point(69, 237);
             this.lbl_Apellido_Paterno.Name = "lbl_Apellido_Paterno";
             this.lbl_Apellido_Paterno.Size = new System.Drawing.Size(107, 16);
             this.lbl_Apellido_Paterno.TabIndex = 4;
@@ -261,7 +264,7 @@
             // 
             // txt_Nombre
             // 
-            this.txt_Nombre.Location = new System.Drawing.Point(73, 137);
+            this.txt_Nombre.Location = new System.Drawing.Point(72, 151);
             this.txt_Nombre.Name = "txt_Nombre";
             this.txt_Nombre.Size = new System.Drawing.Size(168, 22);
             this.txt_Nombre.TabIndex = 3;
@@ -270,7 +273,7 @@
             // 
             this.lbl_Nombre.AutoSize = true;
             this.lbl_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Nombre.Location = new System.Drawing.Point(70, 118);
+            this.lbl_Nombre.Location = new System.Drawing.Point(69, 132);
             this.lbl_Nombre.Name = "lbl_Nombre";
             this.lbl_Nombre.Size = new System.Drawing.Size(56, 16);
             this.lbl_Nombre.TabIndex = 2;
@@ -278,18 +281,17 @@
             // 
             // txt_Rut
             // 
-            this.txt_Rut.Location = new System.Drawing.Point(73, 40);
+            this.txt_Rut.Location = new System.Drawing.Point(72, 54);
             this.txt_Rut.Name = "txt_Rut";
             this.txt_Rut.Size = new System.Drawing.Size(168, 22);
             this.txt_Rut.TabIndex = 1;
-            this.txt_Rut.TextChanged += new System.EventHandler(this.txt_Rut_TextChanged);
             this.txt_Rut.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Rut_KeyPress);
             // 
             // lbl_Rut
             // 
             this.lbl_Rut.AutoSize = true;
             this.lbl_Rut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Rut.Location = new System.Drawing.Point(70, 21);
+            this.lbl_Rut.Location = new System.Drawing.Point(69, 35);
             this.lbl_Rut.Name = "lbl_Rut";
             this.lbl_Rut.Size = new System.Drawing.Size(27, 16);
             this.lbl_Rut.TabIndex = 0;
@@ -300,12 +302,12 @@
             this.tabP_Horarios.BackColor = System.Drawing.Color.LightGray;
             this.tabP_Horarios.Controls.Add(this.lbl_Horario_Titulo);
             this.tabP_Horarios.Controls.Add(this.dataGridView1);
-            this.tabP_Horarios.Controls.Add(this.comboBox3);
+            this.tabP_Horarios.Controls.Add(this.cbox_Horarios);
             this.tabP_Horarios.Controls.Add(this.lbl_Asignar_Horario);
             this.tabP_Horarios.Location = new System.Drawing.Point(4, 25);
             this.tabP_Horarios.Name = "tabP_Horarios";
             this.tabP_Horarios.Padding = new System.Windows.Forms.Padding(3);
-            this.tabP_Horarios.Size = new System.Drawing.Size(1073, 318);
+            this.tabP_Horarios.Size = new System.Drawing.Size(1073, 349);
             this.tabP_Horarios.TabIndex = 1;
             this.tabP_Horarios.Text = "Horarios";
             this.tabP_Horarios.Click += new System.EventHandler(this.tabP_Horarios_Click);
@@ -314,7 +316,7 @@
             // 
             this.lbl_Horario_Titulo.AutoSize = true;
             this.lbl_Horario_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Horario_Titulo.Location = new System.Drawing.Point(6, 71);
+            this.lbl_Horario_Titulo.Location = new System.Drawing.Point(290, 11);
             this.lbl_Horario_Titulo.Name = "lbl_Horario_Titulo";
             this.lbl_Horario_Titulo.Size = new System.Drawing.Size(103, 31);
             this.lbl_Horario_Titulo.TabIndex = 44;
@@ -323,25 +325,25 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 105);
+            this.dataGridView1.Location = new System.Drawing.Point(290, 45);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(727, 207);
+            this.dataGridView1.Size = new System.Drawing.Size(743, 254);
             this.dataGridView1.TabIndex = 43;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // comboBox3
+            // cbox_Horarios
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(12, 34);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(309, 24);
-            this.comboBox3.TabIndex = 3;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.cbox_Horarios.FormattingEnabled = true;
+            this.cbox_Horarios.Location = new System.Drawing.Point(24, 35);
+            this.cbox_Horarios.Name = "cbox_Horarios";
+            this.cbox_Horarios.Size = new System.Drawing.Size(242, 24);
+            this.cbox_Horarios.TabIndex = 3;
+            this.cbox_Horarios.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // lbl_Asignar_Horario
             // 
             this.lbl_Asignar_Horario.AutoSize = true;
-            this.lbl_Asignar_Horario.Location = new System.Drawing.Point(9, 15);
+            this.lbl_Asignar_Horario.Location = new System.Drawing.Point(21, 16);
             this.lbl_Asignar_Horario.Name = "lbl_Asignar_Horario";
             this.lbl_Asignar_Horario.Size = new System.Drawing.Size(101, 16);
             this.lbl_Asignar_Horario.TabIndex = 2;
@@ -351,7 +353,7 @@
             // btn_Registro
             // 
             this.btn_Registro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Registro.Location = new System.Drawing.Point(949, 365);
+            this.btn_Registro.Location = new System.Drawing.Point(952, 460);
             this.btn_Registro.Name = "btn_Registro";
             this.btn_Registro.Size = new System.Drawing.Size(118, 34);
             this.btn_Registro.TabIndex = 2;
@@ -367,7 +369,7 @@
             // btn_Limpiar
             // 
             this.btn_Limpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Limpiar.Location = new System.Drawing.Point(781, 376);
+            this.btn_Limpiar.Location = new System.Drawing.Point(855, 471);
             this.btn_Limpiar.Name = "btn_Limpiar";
             this.btn_Limpiar.Size = new System.Drawing.Size(68, 23);
             this.btn_Limpiar.TabIndex = 3;
@@ -375,11 +377,44 @@
             this.btn_Limpiar.UseVisualStyleBackColor = true;
             this.btn_Limpiar.Click += new System.EventHandler(this.btn_Limpiar_Click);
             // 
+            // lbl_Titulo
+            // 
+            this.lbl_Titulo.AutoSize = true;
+            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.Location = new System.Drawing.Point(440, 9);
+            this.lbl_Titulo.Name = "lbl_Titulo";
+            this.lbl_Titulo.Size = new System.Drawing.Size(210, 31);
+            this.lbl_Titulo.TabIndex = 4;
+            this.lbl_Titulo.Text = "Ingresar usuario";
+            // 
+            // lbl_FechaTiempoReal
+            // 
+            this.lbl_FechaTiempoReal.AutoSize = true;
+            this.lbl_FechaTiempoReal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_FechaTiempoReal.Location = new System.Drawing.Point(960, 49);
+            this.lbl_FechaTiempoReal.Name = "lbl_FechaTiempoReal";
+            this.lbl_FechaTiempoReal.Size = new System.Drawing.Size(75, 16);
+            this.lbl_FechaTiempoReal.TabIndex = 5;
+            this.lbl_FechaTiempoReal.Text = "date Fecha";
+            // 
+            // lbl_Fecha
+            // 
+            this.lbl_Fecha.AutoSize = true;
+            this.lbl_Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Fecha.Location = new System.Drawing.Point(959, 25);
+            this.lbl_Fecha.Name = "lbl_Fecha";
+            this.lbl_Fecha.Size = new System.Drawing.Size(64, 24);
+            this.lbl_Fecha.TabIndex = 6;
+            this.lbl_Fecha.Text = "Fecha";
+            // 
             // Form_Agregar_Funcionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1105, 450);
+            this.ClientSize = new System.Drawing.Size(1105, 506);
+            this.Controls.Add(this.lbl_Fecha);
+            this.Controls.Add(this.lbl_FechaTiempoReal);
+            this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.btn_Volver);
             this.Controls.Add(this.btn_Limpiar);
             this.Controls.Add(this.tbc_Agregar_Funcionario);
@@ -396,6 +431,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sgM1DataSet1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -425,10 +461,13 @@
         private System.Windows.Forms.ComboBox cbox_IdDispositivo;
         private SGM1DataSet sgM1DataSet1;
         private System.Windows.Forms.ComboBox cbox_IdUnidad;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbox_Horarios;
         private System.Windows.Forms.Label lbl_Asignar_Horario;
         private System.Windows.Forms.Button btn_Limpiar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lbl_Horario_Titulo;
+        private System.Windows.Forms.Label lbl_Titulo;
+        private System.Windows.Forms.Label lbl_FechaTiempoReal;
+        private System.Windows.Forms.Label lbl_Fecha;
     }
 }

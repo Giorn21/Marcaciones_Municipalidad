@@ -18,5 +18,7 @@ namespace common
         public int TipoCargo { get; set; }
         public int IdUnidad { get; set; }
         public int IdDispositivo { get; set; }
+        public int IdHorario { get; set; }
+        public DateTime Fecha { get; set; }
     }
 }

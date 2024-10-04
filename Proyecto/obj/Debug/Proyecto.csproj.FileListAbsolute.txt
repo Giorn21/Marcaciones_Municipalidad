@@ -17,8 +17,10 @@ C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_Agre
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_App_Logs.resources
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_Dispositivos.resources
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_Disp_Funcionario.resources
-C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_Funcionarios.resources
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_Login.resources
-C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_Marcaciones.resources
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_Menu.resources
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_Opciones.resources
+C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_VerMarcacion_Manual.resources
+C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_VerMarcaciones.resources
+C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_Agregar_Marcacion_Manual.resources
+C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_VerFuncionarios.resources

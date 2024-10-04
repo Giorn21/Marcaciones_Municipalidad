@@ -40,7 +40,7 @@
             // 
             this.lbl_usuario.AutoSize = true;
             this.lbl_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_usuario.Location = new System.Drawing.Point(24, 79);
+            this.lbl_usuario.Location = new System.Drawing.Point(14, 60);
             this.lbl_usuario.Name = "lbl_usuario";
             this.lbl_usuario.Size = new System.Drawing.Size(54, 16);
             this.lbl_usuario.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             this.lbl_pass.AutoSize = true;
             this.lbl_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_pass.Location = new System.Drawing.Point(24, 156);
+            this.lbl_pass.Location = new System.Drawing.Point(14, 129);
             this.lbl_pass.Name = "lbl_pass";
             this.lbl_pass.Size = new System.Drawing.Size(76, 16);
             this.lbl_pass.TabIndex = 1;
@@ -59,7 +59,7 @@
             // btn_login
             // 
             this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_login.Location = new System.Drawing.Point(99, 253);
+            this.btn_login.Location = new System.Drawing.Point(17, 204);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(75, 23);
             this.btn_login.TabIndex = 2;
@@ -69,22 +69,22 @@
             // 
             // txt_Usuario
             // 
-            this.txt_Usuario.Location = new System.Drawing.Point(27, 107);
+            this.txt_Usuario.Location = new System.Drawing.Point(17, 79);
             this.txt_Usuario.Name = "txt_Usuario";
-            this.txt_Usuario.Size = new System.Drawing.Size(187, 20);
+            this.txt_Usuario.Size = new System.Drawing.Size(219, 20);
             this.txt_Usuario.TabIndex = 3;
             // 
             // txt_Contrasena
             // 
-            this.txt_Contrasena.Location = new System.Drawing.Point(27, 200);
+            this.txt_Contrasena.Location = new System.Drawing.Point(17, 148);
             this.txt_Contrasena.Name = "txt_Contrasena";
             this.txt_Contrasena.PasswordChar = '*';
-            this.txt_Contrasena.Size = new System.Drawing.Size(187, 20);
+            this.txt_Contrasena.Size = new System.Drawing.Size(219, 20);
             this.txt_Contrasena.TabIndex = 4;
             // 
             // btn_Cerrar
             // 
-            this.btn_Cerrar.Location = new System.Drawing.Point(219, 297);
+            this.btn_Cerrar.Location = new System.Drawing.Point(188, 253);
             this.btn_Cerrar.Name = "btn_Cerrar";
             this.btn_Cerrar.Size = new System.Drawing.Size(75, 23);
             this.btn_Cerrar.TabIndex = 5;
@@ -92,20 +92,22 @@
             this.btn_Cerrar.UseVisualStyleBackColor = true;
             this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click);
             // 
-            // Login
+            // Form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(306, 332);
+            this.ClientSize = new System.Drawing.Size(266, 279);
             this.Controls.Add(this.btn_Cerrar);
             this.Controls.Add(this.txt_Contrasena);
             this.Controls.Add(this.txt_Usuario);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.lbl_pass);
             this.Controls.Add(this.lbl_usuario);
-            this.Name = "Login";
+            this.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.Name = "Form_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.TransparencyKey = System.Drawing.Color.Black;
             this.ResumeLayout(false);
             this.PerformLayout();
 

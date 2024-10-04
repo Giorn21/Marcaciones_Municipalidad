@@ -20,7 +20,7 @@ namespace Proyecto
         private void btn_Funcionarios_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form_Funcionarios Form2 = new Form_Funcionarios();
+            Form_VerFuncionarios Form2 = new Form_VerFuncionarios();
             Form2.Show();
         }
 
@@ -52,7 +52,7 @@ namespace Proyecto
 
         private void btn_Marcaciones_Click(object sender, EventArgs e)
         {
-            Form_Marcaciones marcaciones = new Form_Marcaciones();
+            Form_VerMarcaciones marcaciones = new Form_VerMarcaciones();
             marcaciones.Show();
             this.Close();
         }
@@ -68,6 +68,13 @@ namespace Proyecto
         {
             Form_Opciones opciones = new Form_Opciones();
             opciones.Show();
+            this.Close();
+        }
+
+        private void btn_AgregarMarcaciones_Click(object sender, EventArgs e)
+        {
+            Form_VerMarcacion_Manual VerMarcacionManual = new Form_VerMarcacion_Manual();
+            VerMarcacionManual.Show();
             this.Close();
         }
     }

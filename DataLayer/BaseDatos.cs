@@ -10,12 +10,12 @@ namespace DataLayer
 {
     public class BaseDatos
     {
-        string passPhrase      = "Pa55pr@se";  // can be any string
-        string saltValue       = "s@1tV@lue";  // can be any string
-        string hashAlgorithm   = "SHA1";       // can be "MD5"
-        int passwordIterations = 2;            // can be any number
-        string initVector      = "@1B2c3D4e5F6g7H8"; // must be 16 bytes
-        int keySize            = 256; // can be 192 or 128
+        string passPhrase      = "Pa55pr@se";  
+        string saltValue       = "s@1tV@lue";  
+        string hashAlgorithm   = "SHA1";       
+        int passwordIterations = 2;            
+        string initVector      = "@1B2c3D4e5F6g7H8"; 
+        int keySize            = 256; 
 
         private DbConnection conexion = null;
         private DbCommand comando = null;
@@ -489,6 +489,11 @@ namespace DataLayer
                 arrayList.AddRange(rsaCryptoServiceProvider.Decrypt(encryptedBytes, true));
             }
             return Encoding.UTF32.GetString(arrayList.ToArray(Type.GetType("System.Byte")) as byte[]);
+        }
+
+        public void AgregarParametro(string v, string rut)
+        {
+            throw new NotImplementedException();
         }
         #endregion
 

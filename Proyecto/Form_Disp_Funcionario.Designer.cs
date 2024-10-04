@@ -56,6 +56,7 @@
             this.col_Sync});
             this.dtv_Disp_Funcionarios.Location = new System.Drawing.Point(12, 98);
             this.dtv_Disp_Funcionarios.Name = "dtv_Disp_Funcionarios";
+            this.dtv_Disp_Funcionarios.ReadOnly = true;
             this.dtv_Disp_Funcionarios.Size = new System.Drawing.Size(776, 340);
             this.dtv_Disp_Funcionarios.TabIndex = 9;
             // 
@@ -63,16 +64,19 @@
             // 
             this.Col_IdDispositivo.HeaderText = "ID Dispositivo";
             this.Col_IdDispositivo.Name = "Col_IdDispositivo";
+            this.Col_IdDispositivo.ReadOnly = true;
             // 
             // col_IdEmpleado
             // 
             this.col_IdEmpleado.HeaderText = "ID Empleado";
             this.col_IdEmpleado.Name = "col_IdEmpleado";
+            this.col_IdEmpleado.ReadOnly = true;
             // 
             // col_Sync
             // 
             this.col_Sync.HeaderText = "Sync";
             this.col_Sync.Name = "col_Sync";
+            this.col_Sync.ReadOnly = true;
             // 
             // Form_Disp_Funcionario
             // 
