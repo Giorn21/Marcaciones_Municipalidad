@@ -61,7 +61,7 @@
             this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.Location = new System.Drawing.Point(17, 204);
             this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(75, 23);
+            this.btn_login.Size = new System.Drawing.Size(82, 23);
             this.btn_login.TabIndex = 2;
             this.btn_login.Text = "Login";
             this.btn_login.UseVisualStyleBackColor = true;
@@ -71,7 +71,7 @@
             // 
             this.txt_Usuario.Location = new System.Drawing.Point(17, 79);
             this.txt_Usuario.Name = "txt_Usuario";
-            this.txt_Usuario.Size = new System.Drawing.Size(219, 20);
+            this.txt_Usuario.Size = new System.Drawing.Size(226, 20);
             this.txt_Usuario.TabIndex = 3;
             // 
             // txt_Contrasena
@@ -79,12 +79,12 @@
             this.txt_Contrasena.Location = new System.Drawing.Point(17, 148);
             this.txt_Contrasena.Name = "txt_Contrasena";
             this.txt_Contrasena.PasswordChar = '*';
-            this.txt_Contrasena.Size = new System.Drawing.Size(219, 20);
+            this.txt_Contrasena.Size = new System.Drawing.Size(226, 20);
             this.txt_Contrasena.TabIndex = 4;
             // 
             // btn_Cerrar
             // 
-            this.btn_Cerrar.Location = new System.Drawing.Point(188, 253);
+            this.btn_Cerrar.Location = new System.Drawing.Point(209, 273);
             this.btn_Cerrar.Name = "btn_Cerrar";
             this.btn_Cerrar.Size = new System.Drawing.Size(75, 23);
             this.btn_Cerrar.TabIndex = 5;
@@ -96,7 +96,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(266, 279);
+            this.ClientSize = new System.Drawing.Size(285, 298);
             this.Controls.Add(this.btn_Cerrar);
             this.Controls.Add(this.txt_Contrasena);
             this.Controls.Add(this.txt_Usuario);

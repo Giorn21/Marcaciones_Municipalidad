@@ -24,15 +24,10 @@ namespace Proyecto
             InitializeComponent();
         }
 
-        private clsVerFuncionarios verFuncionarios = new clsVerFuncionarios();
-
-        private void Home_Load(object sender, EventArgs e)
+        private void CargarDatos()
         {
-            //se ajusta a la cantidad de datos
-            this.dtv_BaseDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-            txt_Buscador.Text = placeholderText;
-            txt_Buscador.ForeColor = Color.Gray;
+            // Ajusta a la cantidad de datos
+            dtv_BaseDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             try
             {
@@ -41,7 +36,6 @@ namespace Proyecto
 
                 foreach (var f in funcionarios)
                 {
-
                     DataGridViewRow row = new DataGridViewRow();
                     row.CreateCells(dtv_BaseDatos);
 
@@ -57,7 +51,7 @@ namespace Proyecto
                     row.Cells[8].Value = f.Cargo;
                     row.Cells[9].Value = f.Unidad;
                     row.Cells[10].Value = f.IdDispositivo;
-                    
+
                     dtv_BaseDatos.Rows.Add(row);
                 }
             }
@@ -67,24 +61,15 @@ namespace Proyecto
             }
         }
 
-        private int IdEmpleado;
 
-        private void dtv_BaseDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private clsVerFuncionarios verFuncionarios = new clsVerFuncionarios();
+
+        private void Home_Load(object sender, EventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
+            txt_Buscador.Text = placeholderText;
+            txt_Buscador.ForeColor = Color.Gray;
 
-                DataGridViewRow row = dtv_BaseDatos.Rows[e.RowIndex];
-
-                if (row.Cells[0].Value != null)
-                {
-                    IdEmpleado = Convert.ToInt32(row.Cells[0].Value);
-                }
-                else
-                {
-                    MessageBox.Show("No se pudo encontrar el valor de IdEmpleado en la fila seleccionada.");
-                }
-            }
+            CargarDatos();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -195,6 +180,9 @@ namespace Proyecto
             this.Close();
         }
 
+
+        private int IdEmpleado;
+
         private void btn_desvincular_Click(object sender, EventArgs e)
         {
             if (IdEmpleado > 0)
@@ -206,7 +194,7 @@ namespace Proyecto
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Warning);
 
-                // Si el usuario hace clic en "Sí", se procede con la desvinculación
+                // Si el usuario hace clic en "SI"
                 if (result == DialogResult.Yes)
                 {
                     clsDesvincularFuncionario funcionarioManager = new clsDesvincularFuncionario();
@@ -217,6 +205,8 @@ namespace Proyecto
                         if (funcionarioManager.DesvincularFuncionario(IdEmpleado, fechaDesvinculacion))
                         {
                             MessageBox.Show("Funcionario desvinculado exitosamente.");
+                            CargarDatos();
+                       
                         }
                     }
                     catch (Exception ex)
@@ -226,7 +216,7 @@ namespace Proyecto
                 }
                 else
                 {
-                    // Si el usuario hace clic en "No", no se realiza la desvinculación
+                    // Si el usuario hace clic en "No"
                     MessageBox.Show("Desvinculación cancelada.");
                 }
             }
@@ -236,5 +226,22 @@ namespace Proyecto
             }
         }
 
+        private void dtv_BaseDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+
+                DataGridViewRow row = dtv_BaseDatos.Rows[e.RowIndex];
+
+                if (row.Cells[0].Value != null)
+                {
+                    IdEmpleado = Convert.ToInt32(row.Cells[0].Value);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo encontrar el valor de IdEmpleado en la fila seleccionada.");
+                }
+            }
+        }
     }
 }

@@ -49,6 +49,8 @@
             // 
             // dtv_Disp_Funcionarios
             // 
+            this.dtv_Disp_Funcionarios.AllowUserToAddRows = false;
+            this.dtv_Disp_Funcionarios.AllowUserToDeleteRows = false;
             this.dtv_Disp_Funcionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtv_Disp_Funcionarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Col_IdDispositivo,

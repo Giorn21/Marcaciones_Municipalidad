@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             this.dtv_Marcaciones_Manuales = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.TSM_Registro = new System.Windows.Forms.ToolStripMenuItem();
-            this.TSM_Nuevo = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_Volver = new System.Windows.Forms.Button();
-            this.txt_Buscador = new System.Windows.Forms.TextBox();
-            this.lbl_Buscador = new System.Windows.Forms.Label();
             this.col_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,12 +36,20 @@
             this.col_Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_TipoMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Comentario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_Volver = new System.Windows.Forms.Button();
+            this.txt_Buscador = new System.Windows.Forms.TextBox();
+            this.lbl_Buscador = new System.Windows.Forms.Label();
+            this.TSM_Registro = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM_Nuevo = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             ((System.ComponentModel.ISupportInitialize)(this.dtv_Marcaciones_Manuales)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtv_Marcaciones_Manuales
             // 
+            this.dtv_Marcaciones_Manuales.AllowUserToAddRows = false;
+            this.dtv_Marcaciones_Manuales.AllowUserToDeleteRows = false;
             this.dtv_Marcaciones_Manuales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtv_Marcaciones_Manuales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_ID,
@@ -61,61 +63,6 @@
             this.dtv_Marcaciones_Manuales.Name = "dtv_Marcaciones_Manuales";
             this.dtv_Marcaciones_Manuales.Size = new System.Drawing.Size(776, 270);
             this.dtv_Marcaciones_Manuales.TabIndex = 0;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TSM_Registro});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // TSM_Registro
-            // 
-            this.TSM_Registro.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TSM_Nuevo});
-            this.TSM_Registro.Name = "TSM_Registro";
-            this.TSM_Registro.Size = new System.Drawing.Size(59, 20);
-            this.TSM_Registro.Text = "registro";
-            // 
-            // TSM_Nuevo
-            // 
-            this.TSM_Nuevo.Name = "TSM_Nuevo";
-            this.TSM_Nuevo.Size = new System.Drawing.Size(124, 22);
-            this.TSM_Nuevo.Text = "NUEVO +";
-            this.TSM_Nuevo.Click += new System.EventHandler(this.TSM_Nuevo_Click);
-            // 
-            // btn_Volver
-            // 
-            this.btn_Volver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Volver.Location = new System.Drawing.Point(12, 410);
-            this.btn_Volver.Name = "btn_Volver";
-            this.btn_Volver.Size = new System.Drawing.Size(80, 31);
-            this.btn_Volver.TabIndex = 2;
-            this.btn_Volver.Text = "Volver";
-            this.btn_Volver.UseVisualStyleBackColor = true;
-            this.btn_Volver.Click += new System.EventHandler(this.btn_Volver_Click);
-            // 
-            // txt_Buscador
-            // 
-            this.txt_Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Buscador.Location = new System.Drawing.Point(51, 82);
-            this.txt_Buscador.Name = "txt_Buscador";
-            this.txt_Buscador.Size = new System.Drawing.Size(154, 22);
-            this.txt_Buscador.TabIndex = 4;
-            this.txt_Buscador.TextChanged += new System.EventHandler(this.txt_Buscador_TextChanged);
-            // 
-            // lbl_Buscador
-            // 
-            this.lbl_Buscador.AutoSize = true;
-            this.lbl_Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Buscador.Location = new System.Drawing.Point(11, 80);
-            this.lbl_Buscador.Name = "lbl_Buscador";
-            this.lbl_Buscador.Size = new System.Drawing.Size(34, 25);
-            this.lbl_Buscador.TabIndex = 3;
-            this.lbl_Buscador.Text = "🔎";
             // 
             // col_ID
             // 
@@ -152,6 +99,63 @@
             this.col_Comentario.HeaderText = "Comentario";
             this.col_Comentario.Name = "col_Comentario";
             // 
+            // btn_Volver
+            // 
+            this.btn_Volver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Volver.Location = new System.Drawing.Point(12, 410);
+            this.btn_Volver.Name = "btn_Volver";
+            this.btn_Volver.Size = new System.Drawing.Size(80, 31);
+            this.btn_Volver.TabIndex = 2;
+            this.btn_Volver.Text = "Volver";
+            this.btn_Volver.UseVisualStyleBackColor = true;
+            this.btn_Volver.Click += new System.EventHandler(this.btn_Volver_Click);
+            // 
+            // txt_Buscador
+            // 
+            this.txt_Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Buscador.Location = new System.Drawing.Point(51, 82);
+            this.txt_Buscador.Name = "txt_Buscador";
+            this.txt_Buscador.Size = new System.Drawing.Size(202, 22);
+            this.txt_Buscador.TabIndex = 4;
+            this.txt_Buscador.TextChanged += new System.EventHandler(this.txt_Buscador_TextChanged);
+            this.txt_Buscador.Enter += new System.EventHandler(this.txt_Buscador_Enter);
+            this.txt_Buscador.Leave += new System.EventHandler(this.txt_Buscador_Leave);
+            // 
+            // lbl_Buscador
+            // 
+            this.lbl_Buscador.AutoSize = true;
+            this.lbl_Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Buscador.Location = new System.Drawing.Point(11, 80);
+            this.lbl_Buscador.Name = "lbl_Buscador";
+            this.lbl_Buscador.Size = new System.Drawing.Size(34, 25);
+            this.lbl_Buscador.TabIndex = 3;
+            this.lbl_Buscador.Text = "🔎";
+            // 
+            // TSM_Registro
+            // 
+            this.TSM_Registro.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSM_Nuevo});
+            this.TSM_Registro.Name = "TSM_Registro";
+            this.TSM_Registro.Size = new System.Drawing.Size(59, 20);
+            this.TSM_Registro.Text = "registro";
+            // 
+            // TSM_Nuevo
+            // 
+            this.TSM_Nuevo.Name = "TSM_Nuevo";
+            this.TSM_Nuevo.Size = new System.Drawing.Size(180, 22);
+            this.TSM_Nuevo.Text = "NUEVO +";
+            this.TSM_Nuevo.Click += new System.EventHandler(this.TSM_Nuevo_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSM_Registro});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
             // Form_VerMarcacion_Manual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,9 +182,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dtv_Marcaciones_Manuales;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem TSM_Registro;
-        private System.Windows.Forms.ToolStripMenuItem TSM_Nuevo;
         private System.Windows.Forms.Button btn_Volver;
         private System.Windows.Forms.TextBox txt_Buscador;
         private System.Windows.Forms.Label lbl_Buscador;
@@ -191,5 +192,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Hora;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_TipoMarca;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Comentario;
+        private System.Windows.Forms.ToolStripMenuItem TSM_Registro;
+        private System.Windows.Forms.ToolStripMenuItem TSM_Nuevo;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }

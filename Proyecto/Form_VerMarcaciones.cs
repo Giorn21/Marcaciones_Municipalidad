@@ -60,7 +60,7 @@ namespace Proyecto
             this.Close();
         }
 
-        private string placeholderText = "Buscar por ID";
+        private string placeholderText = "Buscar por RUT o Nombre";
 
         private void txt_Buscador_TextChanged(object sender, EventArgs e)
         {
@@ -137,10 +137,6 @@ namespace Proyecto
 
                 dtv_Marcaciones.Rows.Add(row);
             }
-        }
-        private void txt_Buscador_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
         }
        
 

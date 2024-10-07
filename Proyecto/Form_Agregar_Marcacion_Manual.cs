@@ -18,16 +18,12 @@ namespace Proyecto
         {
             InitializeComponent();
         }
-        public AgregarDatos DatosMarcasManuales { get; private set; }
-
         private void btn_Salir_Click(object sender, EventArgs e)
         {
             Form_VerMarcacion_Manual MarcacionesManual = new Form_VerMarcacion_Manual();
             MarcacionesManual.Show();
             this.Close();
         }
-
-
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
             if (txt_ID.Text == "" || txt_Hora.Text == "")
@@ -38,6 +34,11 @@ namespace Proyecto
             else if (rbtn_Entrada.Checked == false && rbtn_Salida.Checked == false)
             {
                 MessageBox.Show("MARQUE UNA OPCION");
+                return;
+            }
+            else if (rtxt_Comentario.Text == "") 
+            {
+                MessageBox.Show("DEBE INGRESAR UN COMENTARIO EXPLICATIVO");
                 return;
             }
 
@@ -58,28 +59,6 @@ namespace Proyecto
             rbtn_Salida.Checked = false;
             
         }
-
-        private void rbtn_Entrada_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_ID_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txt_Hora_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
         private void txt_Hora_TextChanged(object sender, EventArgs e)
         {
             if (txt_Hora.Text.Length == 4 && !txt_Hora.Text.Contains(":"))
@@ -91,6 +70,20 @@ namespace Proyecto
             {
                 txt_Hora.Text = txt_Hora.Text.Replace(":", "");
                 txt_Hora.SelectionStart = txt_Hora.Text.Length;
+            }
+        }
+        private void txt_ID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        private void txt_Hora_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }

@@ -11,10 +11,6 @@ namespace common
 {
     public class clsVerMacacionesManuales
     {
-        readonly BaseDatos DB = new BaseDatos();
-
-        Marcaciones current = null;
-
         #region Propiedades;
         string toxml;
         int count;
@@ -48,6 +44,9 @@ namespace common
         }
         #endregion
 
+        readonly BaseDatos DB = new BaseDatos();
+
+        Marcaciones current = null;
         public List<Marcaciones> ObtenerMarcacionesManuales()
         {
             var marcaciones = new List<Marcaciones>();
@@ -85,7 +84,7 @@ namespace common
             }
             finally
             {
-                DB.Desconectar();  // Cierra la conexión
+                DB.Desconectar();
             }
         }
     }

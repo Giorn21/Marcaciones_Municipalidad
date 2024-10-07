@@ -32,6 +32,9 @@ namespace Proyecto
 
         private void Form_VerMarcacion_Manual_Load(object sender, EventArgs e)
         {
+            txt_Buscador.Text = placeholderText;
+            txt_Buscador.ForeColor = Color.Gray;
+
             this.dtv_Marcaciones_Manuales.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             try
@@ -68,7 +71,26 @@ namespace Proyecto
             menu.Show();
             this.Close();
         }
-        private string placeholderText = "Buscar por ID";
+
+        private void txt_Buscador_Enter(object sender, EventArgs e)
+        {
+            if (txt_Buscador.Text == placeholderText)
+            {
+                txt_Buscador.Text = "";
+                txt_Buscador.ForeColor = Color.Black;
+            }
+        }
+
+        private void txt_Buscador_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_Buscador.Text))
+            {
+                txt_Buscador.Text = placeholderText;
+                txt_Buscador.ForeColor = Color.Gray;
+            }
+        }
+
+        private string placeholderText = "Buscar por RUT o Nombre";
 
         private void txt_Buscador_TextChanged(object sender, EventArgs e)
         {

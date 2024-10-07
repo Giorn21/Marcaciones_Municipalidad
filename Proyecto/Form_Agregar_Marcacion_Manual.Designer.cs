@@ -126,7 +126,6 @@
             this.rbtn_Entrada.TabStop = true;
             this.rbtn_Entrada.Text = "Entrada";
             this.rbtn_Entrada.UseVisualStyleBackColor = true;
-            this.rbtn_Entrada.CheckedChanged += new System.EventHandler(this.rbtn_Entrada_CheckedChanged);
             // 
             // btn_Salir
             // 

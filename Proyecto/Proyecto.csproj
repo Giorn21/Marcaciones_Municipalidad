@@ -114,11 +114,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SGM1DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SGM1DataSet.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form_Agregar_Funcionario.resx">
       <DependentUpon>Form_Agregar_Funcionario.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,17 +166,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="SGM1DataSet.xsc">
-      <DependentUpon>SGM1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="SGM1DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SGM1DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SGM1DataSet.xss">
-      <DependentUpon>SGM1DataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -190,6 +174,10 @@
     <ProjectReference Include="..\common\common.csproj">
       <Project>{c782bb0c-c604-409b-a72a-7d51d51b7825}</Project>
       <Name>common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{e92fbbaa-992f-4b73-8232-0f702cd5e679}</Project>
+      <Name>DataLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -50,6 +50,8 @@
             // 
             // dtv_BaseDatos
             // 
+            this.dtv_BaseDatos.AllowUserToAddRows = false;
+            this.dtv_BaseDatos.AllowUserToDeleteRows = false;
             this.dtv_BaseDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtv_BaseDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Col_Id,
@@ -66,10 +68,11 @@
             this.dtv_BaseDatos.Location = new System.Drawing.Point(12, 135);
             this.dtv_BaseDatos.Name = "dtv_BaseDatos";
             this.dtv_BaseDatos.ReadOnly = true;
+            this.dtv_BaseDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtv_BaseDatos.Size = new System.Drawing.Size(1050, 356);
             this.dtv_BaseDatos.TabIndex = 0;
             this.dtv_BaseDatos.AlternatingRowsDefaultCellStyleChanged += new System.EventHandler(this.txt_Buscador_TextChanged);
-            this.dtv_BaseDatos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtv_BaseDatos_CellDoubleClick);
+            this.dtv_BaseDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtv_BaseDatos_CellContentClick);
             // 
             // Col_Id
             // 
@@ -151,7 +154,7 @@
             // 
             this.txt_Buscador.Location = new System.Drawing.Point(54, 97);
             this.txt_Buscador.Name = "txt_Buscador";
-            this.txt_Buscador.Size = new System.Drawing.Size(154, 20);
+            this.txt_Buscador.Size = new System.Drawing.Size(172, 20);
             this.txt_Buscador.TabIndex = 2;
             this.txt_Buscador.TextChanged += new System.EventHandler(this.txt_Buscador_TextChanged);
             this.txt_Buscador.Enter += new System.EventHandler(this.txt_Buscador_Enter);

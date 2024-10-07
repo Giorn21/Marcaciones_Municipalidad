@@ -129,6 +129,7 @@ namespace Proyecto
             } else if (cbox_Horarios.Text == "") 
             {
                 MessageBox.Show("!ALERTA¡ : Elija una Horario para el Funcionario");
+                return;
             }
             // iniciamos la instancia de clsInsertarFuncionario
             clsInsertarFuncionario nuevoUsuario = new clsInsertarFuncionario();

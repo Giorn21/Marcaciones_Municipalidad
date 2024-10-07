@@ -72,6 +72,7 @@ namespace common
             catch (Exception ex)
             {
                 MessageBox.Show("Error al agregar la marcación manual: " + ex.Message);
+
             }
             finally
             {

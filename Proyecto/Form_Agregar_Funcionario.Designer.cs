@@ -55,7 +55,6 @@
             this.cbox_Horarios = new System.Windows.Forms.ComboBox();
             this.lbl_Asignar_Horario = new System.Windows.Forms.Label();
             this.btn_Registro = new System.Windows.Forms.Button();
-            this.sgM1DataSet1 = new Proyecto.SGM1DataSet();
             this.btn_Limpiar = new System.Windows.Forms.Button();
             this.lbl_Titulo = new System.Windows.Forms.Label();
             this.lbl_FechaTiempoReal = new System.Windows.Forms.Label();
@@ -64,7 +63,6 @@
             this.tabP_Datos_Personales.SuspendLayout();
             this.tabP_Horarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sgM1DataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Volver
@@ -363,8 +361,6 @@
             // 
             // sgM1DataSet1
             // 
-            this.sgM1DataSet1.DataSetName = "SGM1DataSet";
-            this.sgM1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btn_Limpiar
             // 
@@ -429,7 +425,6 @@
             this.tabP_Horarios.ResumeLayout(false);
             this.tabP_Horarios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sgM1DataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -459,7 +454,6 @@
         private System.Windows.Forms.ComboBox cbox_Tipo_Cargo;
         private System.Windows.Forms.Button btn_Registro;
         private System.Windows.Forms.ComboBox cbox_IdDispositivo;
-        private SGM1DataSet sgM1DataSet1;
         private System.Windows.Forms.ComboBox cbox_IdUnidad;
         private System.Windows.Forms.ComboBox cbox_Horarios;
         private System.Windows.Forms.Label lbl_Asignar_Horario;

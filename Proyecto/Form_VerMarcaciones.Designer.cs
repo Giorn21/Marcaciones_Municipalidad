@@ -30,14 +30,14 @@
         {
             this.btn_Volver = new System.Windows.Forms.Button();
             this.dtv_Marcaciones = new System.Windows.Forms.DataGridView();
-            this.txt_Buscador = new System.Windows.Forms.TextBox();
-            this.lbl_Buscador = new System.Windows.Forms.Label();
             this.col_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_TipoMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_Buscador = new System.Windows.Forms.TextBox();
+            this.lbl_Buscador = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtv_Marcaciones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,6 +54,8 @@
             // 
             // dtv_Marcaciones
             // 
+            this.dtv_Marcaciones.AllowUserToAddRows = false;
+            this.dtv_Marcaciones.AllowUserToDeleteRows = false;
             this.dtv_Marcaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtv_Marcaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_ID,
@@ -67,28 +69,6 @@
             this.dtv_Marcaciones.ReadOnly = true;
             this.dtv_Marcaciones.Size = new System.Drawing.Size(776, 267);
             this.dtv_Marcaciones.TabIndex = 9;
-            // 
-            // txt_Buscador
-            // 
-            this.txt_Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Buscador.Location = new System.Drawing.Point(48, 25);
-            this.txt_Buscador.Name = "txt_Buscador";
-            this.txt_Buscador.Size = new System.Drawing.Size(180, 22);
-            this.txt_Buscador.TabIndex = 11;
-            this.txt_Buscador.TextChanged += new System.EventHandler(this.txt_Buscador_TextChanged);
-            this.txt_Buscador.Enter += new System.EventHandler(this.txt_Buscador_Enter);
-            this.txt_Buscador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Buscador_KeyPress);
-            this.txt_Buscador.Leave += new System.EventHandler(this.txt_Buscador_Leave);
-            // 
-            // lbl_Buscador
-            // 
-            this.lbl_Buscador.AutoSize = true;
-            this.lbl_Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Buscador.Location = new System.Drawing.Point(8, 23);
-            this.lbl_Buscador.Name = "lbl_Buscador";
-            this.lbl_Buscador.Size = new System.Drawing.Size(34, 25);
-            this.lbl_Buscador.TabIndex = 10;
-            this.lbl_Buscador.Text = "🔎";
             // 
             // col_ID
             // 
@@ -125,6 +105,27 @@
             this.col_TipoMarca.HeaderText = "Marcaciones";
             this.col_TipoMarca.Name = "col_TipoMarca";
             this.col_TipoMarca.ReadOnly = true;
+            // 
+            // txt_Buscador
+            // 
+            this.txt_Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Buscador.Location = new System.Drawing.Point(48, 25);
+            this.txt_Buscador.Name = "txt_Buscador";
+            this.txt_Buscador.Size = new System.Drawing.Size(180, 22);
+            this.txt_Buscador.TabIndex = 11;
+            this.txt_Buscador.TextChanged += new System.EventHandler(this.txt_Buscador_TextChanged);
+            this.txt_Buscador.Enter += new System.EventHandler(this.txt_Buscador_Enter);
+            this.txt_Buscador.Leave += new System.EventHandler(this.txt_Buscador_Leave);
+            // 
+            // lbl_Buscador
+            // 
+            this.lbl_Buscador.AutoSize = true;
+            this.lbl_Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Buscador.Location = new System.Drawing.Point(8, 23);
+            this.lbl_Buscador.Name = "lbl_Buscador";
+            this.lbl_Buscador.Size = new System.Drawing.Size(34, 25);
+            this.lbl_Buscador.TabIndex = 10;
+            this.lbl_Buscador.Text = "🔎";
             // 
             // Form_VerMarcaciones
             // 
