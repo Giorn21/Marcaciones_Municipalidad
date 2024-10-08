@@ -61,6 +61,7 @@
             this.dtv_Disp_Funcionarios.ReadOnly = true;
             this.dtv_Disp_Funcionarios.Size = new System.Drawing.Size(776, 340);
             this.dtv_Disp_Funcionarios.TabIndex = 9;
+            this.dtv_Disp_Funcionarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtv_Disp_Funcionarios_CellContentClick);
             // 
             // Col_IdDispositivo
             // 

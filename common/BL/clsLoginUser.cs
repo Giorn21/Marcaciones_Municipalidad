@@ -113,8 +113,6 @@ namespace common
         private LoginUser ReadDataRow(DataTableReader reader)
         {
 
-            loginUser = null;
-
             var e = new LoginUser()
             {
                 //Asigna los datos y verifica si son nulos 

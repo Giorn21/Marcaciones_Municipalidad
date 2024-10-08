@@ -26,38 +26,51 @@ namespace Proyecto
         }
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
-            if (txt_ID.Text == "" || txt_Hora.Text == "")
+            clsAgregar_LogsApp logs = new clsAgregar_LogsApp();
+            try
             {
-                MessageBox.Show("POR FAVOR LLENE LAS CASILLAS DE ID Y HORA.");
+                if (txt_ID.Text == "" || txt_Hora.Text == "")
+                {
+                    MessageBox.Show("POR FAVOR LLENE LAS CASILLAS DE ID Y HORA.");
+                    return;
+                }
+                else if (rbtn_Entrada.Checked == false && rbtn_Salida.Checked == false)
+                {
+                    MessageBox.Show("MARQUE UNA OPCION");
+                    return;
+                }
+                else if (rtxt_Comentario.Text == "")
+                {
+                    MessageBox.Show("DEBE INGRESAR UN COMENTARIO EXPLICATIVO");
+                    return;
+                }
+                
+                clsAgregar_TipoMarcasManual marcasManual = new clsAgregar_TipoMarcasManual();
+
+                int id = Convert.ToInt32(txt_ID.Text);
+                DateTime fecha = Convert.ToDateTime(DTP_Fecha.Text);
+                TimeSpan hora = TimeSpan.Parse(txt_Hora.Text);
+                bool tipoMarca = rbtn_Entrada.Checked ? true : false;
+                string comentario = rtxt_Comentario.Text;
+
+                string Usuario = LoginUser.Usuario;
+                logs.InsertarLog("Marca Manual", "Marc Nuevo", Usuario, "Se a agregado una Marcacion Manual.");
+
+                marcasManual.InsertarMarcacionManual(id, fecha, hora, tipoMarca, comentario);
+
+                txt_ID.Clear();
+                txt_Hora.Clear();
+                rtxt_Comentario.Clear();
+                rbtn_Entrada.Checked = false;
+                rbtn_Salida.Checked = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                string Usuario = LoginUser.Usuario;
+                logs.InsertarLog("Marca Manual", "Err_Marc", Usuario, ex.Message);
                 return;
             }
-            else if (rbtn_Entrada.Checked == false && rbtn_Salida.Checked == false)
-            {
-                MessageBox.Show("MARQUE UNA OPCION");
-                return;
-            }
-            else if (rtxt_Comentario.Text == "") 
-            {
-                MessageBox.Show("DEBE INGRESAR UN COMENTARIO EXPLICATIVO");
-                return;
-            }
-
-            clsAgregar_TipoMarcasManual marcasManual = new clsAgregar_TipoMarcasManual();
-
-            int id = Convert.ToInt32(txt_ID.Text);
-            DateTime fecha = Convert.ToDateTime(DTP_Fecha.Text);
-            TimeSpan hora = TimeSpan.Parse(txt_Hora.Text);
-            bool tipoMarca = rbtn_Entrada.Checked ? true : false;
-            string comentario = rtxt_Comentario.Text;
-
-            marcasManual.InsertarMarcacionManual(id, fecha, hora, tipoMarca, comentario);
-
-            txt_ID.Clear();
-            txt_Hora.Clear();
-            rtxt_Comentario.Clear();
-            rbtn_Entrada.Checked = false;
-            rbtn_Salida.Checked = false;
-            
         }
         private void txt_Hora_TextChanged(object sender, EventArgs e)
         {

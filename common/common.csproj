@@ -48,17 +48,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\clsAgregar_Funcionarios.cs" />
+    <Compile Include="BL\clsAgregar_LogsApp.cs" />
     <Compile Include="BL\clsAgregar_TipoMarcasManual.cs" />
+    <Compile Include="BL\clsBuscadorLogs.cs" />
     <Compile Include="BL\clsBuscarFuncionarios.cs" />
     <Compile Include="BL\clsDatos_De_cboxsAgregar.cs" />
     <Compile Include="BL\clsDesvincularFuncionario.cs" />
-    <Compile Include="BL\clsVerFuncionarios.cs" />
+    <Compile Include="BL\clsVer_Funcionarios.cs" />
     <Compile Include="BL\clsLoginUser.cs" />
-    <Compile Include="BL\clsVerDisp_Funcionario.cs" />
-    <Compile Include="BL\clsVerMarcaciones.cs" />
+    <Compile Include="BL\clsVer_Disp_Funcionario.cs" />
+    <Compile Include="BL\clsVer_Marcaciones.cs" />
     <Compile Include="BL\clsVer_Dispositivos.cs" />
     <Compile Include="BL\clsVer_Horarios.cs" />
-    <Compile Include="BL\clsVerMacacionesManuales.cs" />
+    <Compile Include="BL\clsVer_MacacionesManuales.cs" />
+    <Compile Include="BL\clsVer_LogsApp.cs" />
     <Compile Include="Models\AgregarDatos.cs" />
     <Compile Include="Models\Dispositivo.cs" />
     <Compile Include="Models\Disp_Funcionario.cs" />

@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.5.3.4\lib\net46\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog.Database, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.Database.5.3.4\lib\net46\NLog.Database.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,6 +66,12 @@
     </Compile>
     <Compile Include="Form_App_Logs.Designer.cs">
       <DependentUpon>Form_App_Logs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_buscador_Logs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_buscador_Logs.Designer.cs">
+      <DependentUpon>Form_buscador_Logs.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Dispositivos.cs">
       <SubType>Form</SubType>
@@ -120,6 +135,9 @@
     <EmbeddedResource Include="Form_App_Logs.resx">
       <DependentUpon>Form_App_Logs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_buscador_Logs.resx">
+      <DependentUpon>Form_buscador_Logs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Dispositivos.resx">
       <DependentUpon>Form_Dispositivos.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +175,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

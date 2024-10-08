@@ -11,5 +11,8 @@ namespace common
         public int Id { get; set; }
         public string User { get; set; }
         public string contrasena { get; set; }
+
+        //dato global para todos los formularios
+        public static string Usuario { get; set; }
     }
 }

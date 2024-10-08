@@ -12,7 +12,7 @@ using System.Runtime.Remoting.Contexts;
 namespace common
 {
 
-    public class clsVerDisp_Funcionario
+    public class clsVer_Disp_Funcionario
     {
         readonly BaseDatos DB = new BaseDatos();
         Disp_Funcionario current = null;
@@ -43,7 +43,7 @@ namespace common
 
         public List<Disp_Funcionario> DataSource { get; set; }
 
-        public clsVerDisp_Funcionario()
+        public clsVer_Disp_Funcionario()
         {
             this.usuario = Credenciales.Usuario;
             this.host = Credenciales.Host;

@@ -9,13 +9,11 @@ using System.Threading.Tasks;
 
 namespace common
 {
-    public class clsVerFuncionarios
+    public class clsVer_Funcionarios
     {
         readonly BaseDatos DB = new BaseDatos();
 
         Funcionario current = null;
-
-
 
         #region Propiedades;
         string toxml;
@@ -43,7 +41,7 @@ namespace common
 
         public List<Funcionario> DataSource { get; set; }
 
-        public clsVerFuncionarios()
+        public clsVer_Funcionarios()
         {
             this.usuario = Credenciales.Usuario;
             this.host = Credenciales.Host;

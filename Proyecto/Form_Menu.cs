@@ -59,8 +59,8 @@ namespace Proyecto
 
         private void btn_App_Logs_Click(object sender, EventArgs e)
         {
-            Form_App_Logs app_Logs = new Form_App_Logs();
-            app_Logs.Show();
+            Form_buscador_Logs form_Buscador_Logs = new Form_buscador_Logs();
+            form_Buscador_Logs.Show();
             this.Close();
         }
 

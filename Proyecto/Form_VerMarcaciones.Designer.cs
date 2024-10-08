@@ -69,6 +69,7 @@
             this.dtv_Marcaciones.ReadOnly = true;
             this.dtv_Marcaciones.Size = new System.Drawing.Size(776, 267);
             this.dtv_Marcaciones.TabIndex = 9;
+            this.dtv_Marcaciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtv_Marcaciones_CellContentClick);
             // 
             // col_ID
             // 

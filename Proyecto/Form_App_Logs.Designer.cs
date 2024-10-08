@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.btn_Volver = new System.Windows.Forms.Button();
+            this.dtv_LogsApp = new System.Windows.Forms.DataGridView();
+            this.col_Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Proceso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Accion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Host = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dtv_LogsApp)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Volver
@@ -42,15 +50,63 @@
             this.btn_Volver.UseVisualStyleBackColor = true;
             this.btn_Volver.Click += new System.EventHandler(this.btn_Volver_Click);
             // 
-            // App_Logs
+            // dtv_LogsApp
+            // 
+            this.dtv_LogsApp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtv_LogsApp.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.col_Fecha,
+            this.col_Proceso,
+            this.col_Accion,
+            this.col_Descripcion,
+            this.col_Usuario,
+            this.col_Host});
+            this.dtv_LogsApp.Location = new System.Drawing.Point(12, 152);
+            this.dtv_LogsApp.Name = "dtv_LogsApp";
+            this.dtv_LogsApp.Size = new System.Drawing.Size(776, 286);
+            this.dtv_LogsApp.TabIndex = 10;
+            // 
+            // col_Fecha
+            // 
+            this.col_Fecha.HeaderText = "Fecha";
+            this.col_Fecha.Name = "col_Fecha";
+            // 
+            // col_Proceso
+            // 
+            this.col_Proceso.HeaderText = "Proceso";
+            this.col_Proceso.Name = "col_Proceso";
+            // 
+            // col_Accion
+            // 
+            this.col_Accion.HeaderText = "Accion";
+            this.col_Accion.Name = "col_Accion";
+            // 
+            // col_Descripcion
+            // 
+            this.col_Descripcion.HeaderText = "Descripcion";
+            this.col_Descripcion.Name = "col_Descripcion";
+            // 
+            // col_Usuario
+            // 
+            this.col_Usuario.HeaderText = "Usuario";
+            this.col_Usuario.Name = "col_Usuario";
+            // 
+            // col_Host
+            // 
+            this.col_Host.HeaderText = "Host";
+            this.col_Host.Name = "col_Host";
+            // 
+            // Form_App_Logs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dtv_LogsApp);
             this.Controls.Add(this.btn_Volver);
-            this.Name = "App_Logs";
+            this.Name = "Form_App_Logs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "App_Logs";
+            this.Load += new System.EventHandler(this.Form_App_Logs_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtv_LogsApp)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -58,5 +114,12 @@
         #endregion
 
         private System.Windows.Forms.Button btn_Volver;
+        private System.Windows.Forms.DataGridView dtv_LogsApp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_Proceso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_Accion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_Usuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_Host;
     }
 }

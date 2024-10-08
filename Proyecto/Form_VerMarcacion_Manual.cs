@@ -14,7 +14,7 @@ namespace Proyecto
     public partial class Form_VerMarcacion_Manual : Form
     {
 
-        private clsVerMacacionesManuales verMarcacionesManuales = new clsVerMacacionesManuales();
+        private clsVer_MacacionesManuales verMarcacionesManuales = new clsVer_MacacionesManuales();
 
         List<Marcaciones> marcaciones = new List<Marcaciones>();
 

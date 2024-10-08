@@ -15,7 +15,7 @@ namespace Proyecto
     {
         List<Disp_Funcionario> Disp_funcionarios = new List<Disp_Funcionario>();
 
-        private clsVerDisp_Funcionario clsDataGrid = new clsVerDisp_Funcionario();
+        private clsVer_Disp_Funcionario clsDataGrid = new clsVer_Disp_Funcionario();
 
         public Form_Disp_Funcionario()
         {
@@ -65,6 +65,11 @@ namespace Proyecto
             Form_Menu menu = new Form_Menu();
             menu.Show();
             this.Close();
+        }
+
+        private void dtv_Disp_Funcionarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

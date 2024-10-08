@@ -14,7 +14,7 @@ namespace Proyecto
 {
     public partial class Form_Login : Form
     {
-        
+        clsAgregar_LogsApp logs = new clsAgregar_LogsApp();
         public Form_Login()
         {
             InitializeComponent();
@@ -38,16 +38,20 @@ namespace Proyecto
 
             string user = txt_Usuario.Text;
             string contrasena = txt_Contrasena.Text;
-
+            LoginUser.Usuario = txt_Usuario.Text;
 
             if (login.Get(user, contrasena).Count == 1)
             {
+                
+                logs.InsertarLog("ControlAcceso", "Login", user, "El usuario se ha conectado correctamente.");
+
                 this.Hide();
                 Form_Menu Menu = new Form_Menu();
                 Menu.Show(); ;
             }
             else
             {
+                logs.InsertarLog("ControlAcceso", "ErrLog", user, "Credencial invalida. Pass Usada: " + contrasena);
                 MessageBox.Show("Usuario o contraseña incorrectos.");
             }
 

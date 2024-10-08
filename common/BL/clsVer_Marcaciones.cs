@@ -10,7 +10,7 @@ using System.Security.Cryptography;
 
 namespace common
 {
-    public class clsVerMarcaciones
+    public class clsVer_Marcaciones
     {
         readonly BaseDatos DB = new BaseDatos();
 
@@ -42,7 +42,7 @@ namespace common
 
         public List<Marcaciones> DataSource { get; set; }
 
-        public clsVerMarcaciones()
+        public clsVer_Marcaciones()
         {
             this.usuario = Credenciales.Usuario;
             this.host = Credenciales.Host;

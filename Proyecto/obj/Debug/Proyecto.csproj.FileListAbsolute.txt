@@ -24,3 +24,8 @@ C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_VerM
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_VerMarcaciones.resources
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_Agregar_Marcacion_Manual.resources
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_VerFuncionarios.resources
+C:\Users\informatica\source\repos\Proyecto\Proyecto\bin\Debug\NLog.Database.dll
+C:\Users\informatica\source\repos\Proyecto\Proyecto\bin\Debug\NLog.dll
+C:\Users\informatica\source\repos\Proyecto\Proyecto\bin\Debug\NLog.xml
+C:\Users\informatica\source\repos\Proyecto\Proyecto\bin\Debug\NLog.Database.xml
+C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_buscador_Logs.resources

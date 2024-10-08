@@ -10,9 +10,10 @@ namespace common
     {
         public int IdLog { get; set; }
         public DateTime Fecha { get; set; }
+        public string Proceso { get; set; }
         public string Accion { get; set; }
         public string Usuario { get; set; }
-        public string SourceDevice { get; set; }
-        public string Glosa { get; set; }
+        public string Descripcion { get; set; }
+        public string Host { get; set; }
     }
 }

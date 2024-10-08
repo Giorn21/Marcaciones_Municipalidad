@@ -62,7 +62,7 @@ namespace Proyecto
         }
 
 
-        private clsVerFuncionarios verFuncionarios = new clsVerFuncionarios();
+        private clsVer_Funcionarios verFuncionarios = new clsVer_Funcionarios();
 
         private void Home_Load(object sender, EventArgs e)
         {

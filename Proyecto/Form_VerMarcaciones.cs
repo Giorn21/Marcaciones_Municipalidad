@@ -10,7 +10,7 @@ namespace Proyecto
 {
     public partial class Form_VerMarcaciones : Form
     {
-        private clsVerMarcaciones verMarcaciones = new clsVerMarcaciones();
+        private clsVer_Marcaciones verMarcaciones = new clsVer_Marcaciones();
 
         List<Marcaciones> marcaciones = new List<Marcaciones>();
 
@@ -138,7 +138,10 @@ namespace Proyecto
                 dtv_Marcaciones.Rows.Add(row);
             }
         }
-       
 
+        private void dtv_Marcaciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

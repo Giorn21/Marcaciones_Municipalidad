@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace common
 {
-    public class clsVerMacacionesManuales
+    public class clsVer_MacacionesManuales
     {
         #region Propiedades;
         string toxml;
@@ -37,7 +37,7 @@ namespace common
 
         public List<Marcaciones> DataSource { get; set; }
 
-        public clsVerMacacionesManuales()
+        public clsVer_MacacionesManuales()
         {
             this.usuario = Credenciales.Usuario;
             this.host = Credenciales.Host;

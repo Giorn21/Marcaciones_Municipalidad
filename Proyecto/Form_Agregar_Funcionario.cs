@@ -26,6 +26,7 @@ namespace Proyecto
 {
     public partial class Form_Agregar_Funcionario : Form
     {
+        
         public Form_Agregar_Funcionario()
         {
             InitializeComponent();
@@ -133,6 +134,7 @@ namespace Proyecto
             }
             // iniciamos la instancia de clsInsertarFuncionario
             clsInsertarFuncionario nuevoUsuario = new clsInsertarFuncionario();
+            clsAgregar_LogsApp logs = new clsAgregar_LogsApp();
 
             try
             {
@@ -152,12 +154,16 @@ namespace Proyecto
                 if (nuevoUsuario.RegistrarUsuario())
                 {
                     MessageBox.Show("Usuario registrado exitosamente.");
+                    string Usuario = LoginUser.Usuario;
+                    logs.InsertarLog("Funcioanrio", "Agr Nuevo", Usuario, "Se a agregado un nuevo funcionario a la base de datos.");
                 }
                 
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
+                string Usuario = LoginUser.Usuario;
+                logs.InsertarLog("Funcioanrio", "Err_Agr", Usuario, ex.Message);
                 return; 
             }
 

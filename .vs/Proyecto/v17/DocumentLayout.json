@@ -3,12 +3,136 @@
   "WorkspaceRootPath": "C:\\Users\\informatica\\source\\repos\\Proyecto\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_agregar_marcacion_manual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_agregar_marcacion_manual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|c:\\users\\informatica\\source\\repos\\proyecto\\proyecto\\form_buscador_logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_buscador_logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|c:\\users\\informatica\\source\\repos\\proyecto\\proyecto\\form_buscador_logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_buscador_logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_agregar_marcacion_manual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_agregar_marcacion_manual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|c:\\users\\informatica\\source\\repos\\proyecto\\common\\bl\\clsver_logsapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|solutionrelative:common\\bl\\clsver_logsapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|c:\\users\\informatica\\source\\repos\\proyecto\\proyecto\\form_app_logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_app_logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_app_logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_app_logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|c:\\users\\informatica\\source\\repos\\proyecto\\common\\models\\logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|solutionrelative:common\\models\\logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E92FBBAA-992F-4B73-8232-0F702CD5E679}|DataLayer\\DataLayer.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\datalayer\\basedatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E92FBBAA-992F-4B73-8232-0F702CD5E679}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\basedatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\bl\\clsloginuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|solutionrelative:common\\bl\\clsloginuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|c:\\users\\informatica\\source\\repos\\proyecto\\common\\bl\\clsver_funcionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|solutionrelative:common\\bl\\clsver_funcionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_verfuncionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_verfuncionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_verfuncionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_verfuncionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_vermarcaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_vermarcaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_vermarcaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_vermarcaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|c:\\users\\informatica\\source\\repos\\proyecto\\common\\bl\\clsver_marcaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|solutionrelative:common\\bl\\clsver_marcaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_dispositivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_dispositivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|c:\\users\\informatica\\source\\repos\\proyecto\\proyecto\\form_disp_funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_disp_funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_disp_funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_disp_funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|c:\\users\\informatica\\source\\repos\\proyecto\\common\\bl\\clsver_macacionesmanuales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|solutionrelative:common\\bl\\clsver_macacionesmanuales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\bl\\clsdesvincularfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|solutionrelative:common\\bl\\clsdesvincularfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|c:\\users\\informatica\\source\\repos\\proyecto\\common\\bl\\clsver_horarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|solutionrelative:common\\bl\\clsver_horarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|c:\\users\\informatica\\source\\repos\\proyecto\\common\\bl\\clsagregar_logsapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|solutionrelative:common\\bl\\clsagregar_logsapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_vermarcacion_manual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_vermarcacion_manual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\bl\\clsbuscarfuncionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|solutionrelative:common\\bl\\clsbuscarfuncionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|c:\\users\\informatica\\source\\repos\\proyecto\\common\\bl\\clsver_disp_funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|solutionrelative:common\\bl\\clsver_disp_funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|c:\\users\\informatica\\source\\repos\\proyecto\\common\\models\\loginuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|solutionrelative:common\\models\\loginuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|c:\\users\\informatica\\source\\repos\\proyecto\\proyecto\\form_agregar_marcacion_manual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_agregar_marcacion_manual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_agregar_funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_agregar_funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_agregar_funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_agregar_funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|c:\\users\\informatica\\source\\repos\\proyecto\\proyecto\\form_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\bl\\clsagregar_tipomarcasmanual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,92 +147,28 @@
       "RelativeMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|solutionrelative:common\\models\\marcaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_vermarcacion_manual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_vermarcacion_manual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_vermarcacion_manual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_vermarcacion_manual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_verfuncionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_verfuncionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_vermarcaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_vermarcaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|c:\\users\\informatica\\source\\repos\\proyecto\\proyecto\\form_verfuncionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_verfuncionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_verfuncionarios.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_verfuncionarios.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_vermarcaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_vermarcaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\bl\\clsvermacacionesmanuales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|solutionrelative:common\\bl\\clsvermacacionesmanuales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|c:\\users\\informatica\\source\\repos\\proyecto\\proyecto\\form_agregar_funcionario.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_agregar_funcionario.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_agregar_funcionario.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|c:\\users\\informatica\\source\\repos\\proyecto\\common\\bl\\clsver_dispositivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\bl\\clsver_dispositivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|solutionrelative:common\\bl\\clsver_dispositivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\bl\\clsloginuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|solutionrelative:common\\bl\\clsloginuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_opciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_opciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_dispositivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_dispositivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_disp_funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_disp_funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_agregar_funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_agregar_funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\bl\\clsverfuncionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|solutionrelative:common\\bl\\clsverfuncionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\bl\\clsbuscarfuncionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|solutionrelative:common\\bl\\clsbuscarfuncionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_agregar_funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_agregar_funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\bl\\clsdesvincularfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|solutionrelative:common\\bl\\clsdesvincularfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\bl\\clsdatos_de_cboxsagregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|solutionrelative:common\\bl\\clsdatos_de_cboxsagregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_app_logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_app_logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\models\\agregardatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -117,56 +177,26 @@
     {
       "AbsoluteMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\models\\funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|solutionrelative:common\\models\\funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\bl\\clsvermarcaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C782BB0C-C604-409B-A72A-7D51D51B7825}|common\\common.csproj|solutionrelative:common\\bl\\clsvermarcaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E92FBBAA-992F-4B73-8232-0F702CD5E679}|DataLayer\\DataLayer.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\datalayer\\basedatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E92FBBAA-992F-4B73-8232-0F702CD5E679}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\basedatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "DockedHeight": 216,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "clsBuscarFuncionarios.cs",
-              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsBuscarFuncionarios.cs",
-              "RelativeDocumentMoniker": "common\\BL\\clsBuscarFuncionarios.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsBuscarFuncionarios.cs",
-              "RelativeToolTip": "common\\BL\\clsBuscarFuncionarios.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T18:25:44.334Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Form_VerFuncionarios.cs",
               "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerFuncionarios.cs",
               "RelativeDocumentMoniker": "Proyecto\\Form_VerFuncionarios.cs",
               "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerFuncionarios.cs",
               "RelativeToolTip": "Proyecto\\Form_VerFuncionarios.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAArwEEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAM4AAAAAAAAAAAAqwOYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-01T19:59:36.455Z",
               "IsPinned": true,
@@ -174,17 +204,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Form_VerMarcacion_Manual.cs",
-              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerMarcacion_Manual.cs",
-              "RelativeDocumentMoniker": "Proyecto\\Form_VerMarcacion_Manual.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerMarcacion_Manual.cs",
-              "RelativeToolTip": "Proyecto\\Form_VerMarcacion_Manual.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAWwJMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "Form_App_Logs.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_App_Logs.cs",
+              "RelativeDocumentMoniker": "Proyecto\\Form_App_Logs.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_App_Logs.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto\\Form_App_Logs.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T13:57:41.782Z",
+              "WhenOpened": "2024-10-03T12:57:07.41Z",
               "IsPinned": true,
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form_buscador_Logs.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_buscador_Logs.cs",
+              "RelativeDocumentMoniker": "Proyecto\\Form_buscador_Logs.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_buscador_Logs.cs*",
+              "RelativeToolTip": "Proyecto\\Form_buscador_Logs.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T19:09:25.563Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form_buscador_Logs.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_buscador_Logs.cs",
+              "RelativeDocumentMoniker": "Proyecto\\Form_buscador_Logs.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_buscador_Logs.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "Proyecto\\Form_buscador_Logs.cs [Dise\u00F1o]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T19:08:09.202Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Bookmark",
@@ -192,107 +246,83 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "clsAgregar_TipoMarcasManual.cs",
-              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsAgregar_TipoMarcasManual.cs",
-              "RelativeDocumentMoniker": "common\\BL\\clsAgregar_TipoMarcasManual.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsAgregar_TipoMarcasManual.cs",
-              "RelativeToolTip": "common\\BL\\clsAgregar_TipoMarcasManual.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwE4AAAAhAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "clsVer_LogsApp.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsVer_LogsApp.cs",
+              "RelativeDocumentMoniker": "common\\BL\\clsVer_LogsApp.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsVer_LogsApp.cs",
+              "RelativeToolTip": "common\\BL\\clsVer_LogsApp.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAqwDYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T15:47:44.658Z",
+              "WhenOpened": "2024-10-08T16:15:30.258Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Form_Menu.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Menu.cs",
+              "RelativeDocumentMoniker": "Proyecto\\Form_Menu.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Menu.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "Proyecto\\Form_Menu.cs [Dise\u00F1o]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T12:43:14.127Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form_Menu.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Menu.cs",
+              "RelativeDocumentMoniker": "Proyecto\\Form_Menu.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Menu.cs*",
+              "RelativeToolTip": "Proyecto\\Form_Menu.cs*",
+              "ViewState": "AgIAACcAAAAAAAAAAAAUwD0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T13:15:24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form_App_Logs.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_App_Logs.cs",
+              "RelativeDocumentMoniker": "Proyecto\\Form_App_Logs.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_App_Logs.cs",
+              "RelativeToolTip": "Proyecto\\Form_App_Logs.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAEQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T16:14:17.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BaseDatos.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\DataLayer\\BaseDatos.cs",
+              "RelativeDocumentMoniker": "DataLayer\\BaseDatos.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\DataLayer\\BaseDatos.cs",
+              "RelativeToolTip": "DataLayer\\BaseDatos.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAMwHcBAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T19:55:26.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Form_Agregar_Marcacion_Manual.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Agregar_Marcacion_Manual.cs",
               "RelativeDocumentMoniker": "Proyecto\\Form_Agregar_Marcacion_Manual.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Agregar_Marcacion_Manual.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Proyecto\\Form_Agregar_Marcacion_Manual.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Agregar_Marcacion_Manual.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "Proyecto\\Form_Agregar_Marcacion_Manual.cs [Dise\u00F1o]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-02T19:53:08.88Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form_Agregar_Marcacion_Manual.cs",
-              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Agregar_Marcacion_Manual.cs",
-              "RelativeDocumentMoniker": "Proyecto\\Form_Agregar_Marcacion_Manual.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Agregar_Marcacion_Manual.cs",
-              "RelativeToolTip": "Proyecto\\Form_Agregar_Marcacion_Manual.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAEwC8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T12:49:33.796Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "clsAgregar_Funcionarios.cs",
-              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsAgregar_Funcionarios.cs",
-              "RelativeDocumentMoniker": "common\\BL\\clsAgregar_Funcionarios.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsAgregar_Funcionarios.cs",
-              "RelativeToolTip": "common\\BL\\clsAgregar_Funcionarios.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAmwFwAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T19:40:07.94Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Marcaciones.cs",
-              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\Models\\Marcaciones.cs",
-              "RelativeDocumentMoniker": "common\\Models\\Marcaciones.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\Models\\Marcaciones.cs",
-              "RelativeToolTip": "common\\Models\\Marcaciones.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAqwAsAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T18:17:43.251Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Form_VerMarcacion_Manual.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerMarcacion_Manual.cs",
-              "RelativeDocumentMoniker": "Proyecto\\Form_VerMarcacion_Manual.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerMarcacion_Manual.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Proyecto\\Form_VerMarcacion_Manual.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T13:55:07.717Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Form_Login.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Login.cs",
-              "RelativeDocumentMoniker": "Proyecto\\Form_Login.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Login.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Proyecto\\Form_Login.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T18:02:48.303Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Form_VerFuncionarios.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerFuncionarios.cs",
-              "RelativeDocumentMoniker": "Proyecto\\Form_VerFuncionarios.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerFuncionarios.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Proyecto\\Form_VerFuncionarios.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T19:04:58.36Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "Form_VerMarcaciones.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerMarcaciones.cs",
               "RelativeDocumentMoniker": "Proyecto\\Form_VerMarcaciones.cs",
@@ -304,97 +334,71 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Form_VerFuncionarios.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerFuncionarios.Designer.cs",
-              "RelativeDocumentMoniker": "Proyecto\\Form_VerFuncionarios.Designer.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerFuncionarios.Designer.cs",
-              "RelativeToolTip": "Proyecto\\Form_VerFuncionarios.Designer.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAWwEUAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T19:52:43.049Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Form_VerMarcaciones.cs",
-              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerMarcaciones.cs",
-              "RelativeDocumentMoniker": "Proyecto\\Form_VerMarcaciones.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerMarcaciones.cs",
-              "RelativeToolTip": "Proyecto\\Form_VerMarcaciones.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAArwGkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T13:23:29.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "clsVerMacacionesManuales.cs",
-              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsVerMacacionesManuales.cs",
-              "RelativeDocumentMoniker": "common\\BL\\clsVerMacacionesManuales.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsVerMacacionesManuales.cs",
-              "RelativeToolTip": "common\\BL\\clsVerMacacionesManuales.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwDEAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T14:37:47.445Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Form_Agregar_Funcionario.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Agregar_Funcionario.Designer.cs",
-              "RelativeDocumentMoniker": "Proyecto\\Form_Agregar_Funcionario.Designer.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Agregar_Funcionario.Designer.cs",
-              "RelativeToolTip": "Proyecto\\Form_Agregar_Funcionario.Designer.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAEEAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T13:36:33.909Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "clsVer_Dispositivos.cs",
-              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsVer_Dispositivos.cs",
-              "RelativeDocumentMoniker": "common\\BL\\clsVer_Dispositivos.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsVer_Dispositivos.cs",
-              "RelativeToolTip": "common\\BL\\clsVer_Dispositivos.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T13:57:44.042Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 10,
               "Title": "clsLoginUser.cs",
               "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsLoginUser.cs",
               "RelativeDocumentMoniker": "common\\BL\\clsLoginUser.cs",
               "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsLoginUser.cs",
               "RelativeToolTip": "common\\BL\\clsLoginUser.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAQwGsAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAgwHcAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T18:26:17.342Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Form_Opciones.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Opciones.cs",
-              "RelativeDocumentMoniker": "Proyecto\\Form_Opciones.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Opciones.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Proyecto\\Form_Opciones.cs [Dise\u00F1o]",
+              "DocumentIndex": 8,
+              "Title": "Logs.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\Models\\Logs.cs",
+              "RelativeDocumentMoniker": "common\\Models\\Logs.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\Models\\Logs.cs",
+              "RelativeToolTip": "common\\Models\\Logs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T15:40:47.196Z",
+              "WhenOpened": "2024-10-08T18:05:14.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Form_VerMarcaciones.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerMarcaciones.cs",
+              "RelativeDocumentMoniker": "Proyecto\\Form_VerMarcaciones.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerMarcaciones.cs",
+              "RelativeToolTip": "Proyecto\\Form_VerMarcaciones.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAADwv48AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T13:23:29.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Form_VerFuncionarios.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerFuncionarios.cs",
+              "RelativeDocumentMoniker": "Proyecto\\Form_VerFuncionarios.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerFuncionarios.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto\\Form_VerFuncionarios.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T19:04:58.36Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 11,
+              "Title": "clsVer_Funcionarios.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsVer_Funcionarios.cs",
+              "RelativeDocumentMoniker": "common\\BL\\clsVer_Funcionarios.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsVer_Funcionarios.cs",
+              "RelativeToolTip": "common\\BL\\clsVer_Funcionarios.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T12:16:57.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "Form_Dispositivos.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Dispositivos.cs",
               "RelativeDocumentMoniker": "Proyecto\\Form_Dispositivos.cs",
@@ -403,6 +407,45 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T12:57:26.147Z",
               "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "clsVer_Marcaciones.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsVer_Marcaciones.cs",
+              "RelativeDocumentMoniker": "common\\BL\\clsVer_Marcaciones.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsVer_Marcaciones.cs",
+              "RelativeToolTip": "common\\BL\\clsVer_Marcaciones.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T18:24:06.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Form_Disp_Funcionario.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Disp_Funcionario.cs",
+              "RelativeDocumentMoniker": "Proyecto\\Form_Disp_Funcionario.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Disp_Funcionario.cs",
+              "RelativeToolTip": "Proyecto\\Form_Disp_Funcionario.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T18:19:15.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "clsVer_MacacionesManuales.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsVer_MacacionesManuales.cs",
+              "RelativeDocumentMoniker": "common\\BL\\clsVer_MacacionesManuales.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsVer_MacacionesManuales.cs",
+              "RelativeToolTip": "common\\BL\\clsVer_MacacionesManuales.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAiwEMAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T14:37:47.445Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -418,7 +461,124 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
+              "Title": "clsDesvincularFuncionario.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsDesvincularFuncionario.cs",
+              "RelativeDocumentMoniker": "common\\BL\\clsDesvincularFuncionario.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsDesvincularFuncionario.cs",
+              "RelativeToolTip": "common\\BL\\clsDesvincularFuncionario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T15:52:26.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "clsVer_Horarios.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsVer_Horarios.cs",
+              "RelativeDocumentMoniker": "common\\BL\\clsVer_Horarios.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsVer_Horarios.cs",
+              "RelativeToolTip": "common\\BL\\clsVer_Horarios.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T16:31:06.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "clsAgregar_LogsApp.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsAgregar_LogsApp.cs",
+              "RelativeDocumentMoniker": "common\\BL\\clsAgregar_LogsApp.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsAgregar_LogsApp.cs",
+              "RelativeToolTip": "common\\BL\\clsAgregar_LogsApp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T13:58:46.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Form_VerMarcacion_Manual.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerMarcacion_Manual.cs",
+              "RelativeDocumentMoniker": "Proyecto\\Form_VerMarcacion_Manual.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerMarcacion_Manual.cs",
+              "RelativeToolTip": "Proyecto\\Form_VerMarcacion_Manual.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAWwJMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T13:57:41.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "clsBuscarFuncionarios.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsBuscarFuncionarios.cs",
+              "RelativeDocumentMoniker": "common\\BL\\clsBuscarFuncionarios.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsBuscarFuncionarios.cs",
+              "RelativeToolTip": "common\\BL\\clsBuscarFuncionarios.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T18:25:44.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "clsVer_Disp_Funcionario.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsVer_Disp_Funcionario.cs",
+              "RelativeDocumentMoniker": "common\\BL\\clsVer_Disp_Funcionario.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsVer_Disp_Funcionario.cs",
+              "RelativeToolTip": "common\\BL\\clsVer_Disp_Funcionario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T16:27:27.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "LoginUser.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\Models\\LoginUser.cs",
+              "RelativeDocumentMoniker": "common\\Models\\LoginUser.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\Models\\LoginUser.cs",
+              "RelativeToolTip": "common\\Models\\LoginUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T15:05:29.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Form_Agregar_Marcacion_Manual.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Agregar_Marcacion_Manual.cs",
+              "RelativeDocumentMoniker": "Proyecto\\Form_Agregar_Marcacion_Manual.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Agregar_Marcacion_Manual.cs*",
+              "RelativeToolTip": "Proyecto\\Form_Agregar_Marcacion_Manual.cs*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAEYAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T12:49:33.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Form_Agregar_Funcionario.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Agregar_Funcionario.cs",
+              "RelativeDocumentMoniker": "Proyecto\\Form_Agregar_Funcionario.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Agregar_Funcionario.cs",
+              "RelativeToolTip": "Proyecto\\Form_Agregar_Funcionario.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAAAKEAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T12:02:06.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
               "Title": "Form_Agregar_Funcionario.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Agregar_Funcionario.cs",
               "RelativeDocumentMoniker": "Proyecto\\Form_Agregar_Funcionario.cs",
@@ -430,33 +590,134 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "clsVerFuncionarios.cs",
-              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsVerFuncionarios.cs",
-              "RelativeDocumentMoniker": "common\\BL\\clsVerFuncionarios.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsVerFuncionarios.cs",
-              "RelativeToolTip": "common\\BL\\clsVerFuncionarios.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 31,
+              "Title": "Form_Login.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Login.cs",
+              "RelativeDocumentMoniker": "Proyecto\\Form_Login.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Login.cs",
+              "RelativeToolTip": "Proyecto\\Form_Login.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAqwCgAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T12:16:57.568Z",
+              "WhenOpened": "2024-10-08T14:25:56.307Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Form_Agregar_Funcionario.cs",
-              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Agregar_Funcionario.cs",
-              "RelativeDocumentMoniker": "Proyecto\\Form_Agregar_Funcionario.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Agregar_Funcionario.cs",
-              "RelativeToolTip": "Proyecto\\Form_Agregar_Funcionario.cs",
-              "ViewState": "AgIAAKgAAAAAAAAAAAApwIMAAAAXAAAAAAAAAA==",
+              "DocumentIndex": 32,
+              "Title": "Form_Login.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Login.cs",
+              "RelativeDocumentMoniker": "Proyecto\\Form_Login.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Login.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto\\Form_Login.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T12:02:06.295Z",
+              "WhenOpened": "2024-10-02T18:02:48.303Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "clsAgregar_TipoMarcasManual.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsAgregar_TipoMarcasManual.cs",
+              "RelativeDocumentMoniker": "common\\BL\\clsAgregar_TipoMarcasManual.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsAgregar_TipoMarcasManual.cs",
+              "RelativeToolTip": "common\\BL\\clsAgregar_TipoMarcasManual.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAD0AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T15:47:44.658Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 34,
+              "Title": "clsAgregar_Funcionarios.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsAgregar_Funcionarios.cs",
+              "RelativeDocumentMoniker": "common\\BL\\clsAgregar_Funcionarios.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsAgregar_Funcionarios.cs",
+              "RelativeToolTip": "common\\BL\\clsAgregar_Funcionarios.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAAAFwAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T19:40:07.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Marcaciones.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\Models\\Marcaciones.cs",
+              "RelativeDocumentMoniker": "common\\Models\\Marcaciones.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\Models\\Marcaciones.cs",
+              "RelativeToolTip": "common\\Models\\Marcaciones.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwAsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T18:17:43.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Form_VerMarcacion_Manual.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerMarcacion_Manual.cs",
+              "RelativeDocumentMoniker": "Proyecto\\Form_VerMarcacion_Manual.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerMarcacion_Manual.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto\\Form_VerMarcacion_Manual.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T13:55:07.717Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Form_VerFuncionarios.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerFuncionarios.Designer.cs",
+              "RelativeDocumentMoniker": "Proyecto\\Form_VerFuncionarios.Designer.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerFuncionarios.Designer.cs",
+              "RelativeToolTip": "Proyecto\\Form_VerFuncionarios.Designer.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAWwEUAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T19:52:43.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Form_Agregar_Funcionario.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Agregar_Funcionario.Designer.cs",
+              "RelativeDocumentMoniker": "Proyecto\\Form_Agregar_Funcionario.Designer.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Agregar_Funcionario.Designer.cs",
+              "RelativeToolTip": "Proyecto\\Form_Agregar_Funcionario.Designer.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T13:36:33.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "clsVer_Dispositivos.cs",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsVer_Dispositivos.cs",
+              "RelativeDocumentMoniker": "common\\BL\\clsVer_Dispositivos.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsVer_Dispositivos.cs",
+              "RelativeToolTip": "common\\BL\\clsVer_Dispositivos.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T13:57:44.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Form_Opciones.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Opciones.cs",
+              "RelativeDocumentMoniker": "Proyecto\\Form_Opciones.cs",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Opciones.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto\\Form_Opciones.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T15:40:47.196Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
               "Title": "clsDatos_De_cboxsAgregar.cs",
               "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsDatos_De_cboxsAgregar.cs",
               "RelativeDocumentMoniker": "common\\BL\\clsDatos_De_cboxsAgregar.cs",
@@ -469,32 +730,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "clsDesvincularFuncionario.cs",
-              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsDesvincularFuncionario.cs",
-              "RelativeDocumentMoniker": "common\\BL\\clsDesvincularFuncionario.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsDesvincularFuncionario.cs",
-              "RelativeToolTip": "common\\BL\\clsDesvincularFuncionario.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAEkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T15:52:26.797Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Form_App_Logs.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_App_Logs.cs",
-              "RelativeDocumentMoniker": "Proyecto\\Form_App_Logs.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_App_Logs.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Proyecto\\Form_App_Logs.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T12:57:07.41Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 43,
               "Title": "Funcionario.cs",
               "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\Models\\Funcionario.cs",
               "RelativeDocumentMoniker": "common\\Models\\Funcionario.cs",
@@ -507,7 +743,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 42,
               "Title": "AgregarDatos.cs",
               "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\Models\\AgregarDatos.cs",
               "RelativeDocumentMoniker": "common\\Models\\AgregarDatos.cs",
@@ -517,57 +753,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-04T14:59:25.537Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "clsVerMarcaciones.cs",
-              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsVerMarcaciones.cs",
-              "RelativeDocumentMoniker": "common\\BL\\clsVerMarcaciones.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\common\\BL\\clsVerMarcaciones.cs",
-              "RelativeToolTip": "common\\BL\\clsVerMarcaciones.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAjwEoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T18:24:06.092Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Form_Menu.cs",
-              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Menu.cs",
-              "RelativeDocumentMoniker": "Proyecto\\Form_Menu.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Menu.cs",
-              "RelativeToolTip": "Proyecto\\Form_Menu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T13:15:24Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "BaseDatos.cs",
-              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\DataLayer\\BaseDatos.cs",
-              "RelativeDocumentMoniker": "DataLayer\\BaseDatos.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\DataLayer\\BaseDatos.cs",
-              "RelativeToolTip": "DataLayer\\BaseDatos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMEBAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T19:55:26.947Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Form_Menu.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Menu.cs",
-              "RelativeDocumentMoniker": "Proyecto\\Form_Menu.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_Menu.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Proyecto\\Form_Menu.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T12:43:14.127Z",
-              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }
