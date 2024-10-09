@@ -198,12 +198,19 @@ namespace DataLayer
             param.DbType = System.Data.DbType.String;
             param.Direction = ParameterDirection.Input;
             param.ParameterName = nombre;
-            param.Size = valor.Length;
-            param.Value = valor;
+
+            // Verificar si el valor es nulo
+            if (valor == null)
+            {
+                param.Value = DBNull.Value; // Asigna DBNull si el valor es null
+            }
+            else
+            {
+                param.Size = valor.Length; // Establece el tamaño solo si el valor no es nulo
+                param.Value = valor; // Asigna el valor
+            }
 
             comando.Parameters.Add(param);
-
-            // AsignarParametro(nombre, "'", valor);
         }
 
         /// <summary>
@@ -491,9 +498,29 @@ namespace DataLayer
             return Encoding.UTF32.GetString(arrayList.ToArray(Type.GetType("System.Byte")) as byte[]);
         }
 
-        public void AgregarParametro(string v, string rut)
+        public void AgregarParametro(string nombre, object valor)
         {
-            throw new NotImplementedException();
+            // Asegúrate de que la conexión está abierta
+            if (conexion == null || conexion.State != ConnectionState.Open)
+            {
+                throw new InvalidOperationException("La conexión no está abierta.");
+            }
+
+            // Verificar que el comando está inicializado
+            if (comando == null)
+            {
+                throw new InvalidOperationException("El comando no está inicializado.");
+            }
+
+            // Crear un nuevo parámetro
+            DbParameter parametro = comando.CreateParameter();
+            parametro.ParameterName = nombre;
+
+            // Asignar el valor (usa DBNull.Value si el valor es null o vacío)
+            parametro.Value = valor ?? DBNull.Value;
+
+            // Agregar el parámetro al comando
+            comando.Parameters.Add(parametro);
         }
         #endregion
 

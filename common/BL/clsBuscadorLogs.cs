@@ -6,59 +6,71 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace common
 {
     public class clsBuscadorLogs
     {
-        private BaseDatos DB = new BaseDatos();
-
-        public List<Logs> BuscarLogs(DateTime desde, DateTime hasta, string proceso = null, string descripcion = null, string usuario = null)
+        public class clsBuscarLogs
         {
-            var logsList = new List<Logs>();
+            private BaseDatos DB;
 
-            try
+            public clsBuscarLogs()
             {
-                // Crear comando para ejecutar el procedimiento almacenado
-                DB.CrearComando("sp_buscador_Logs");
+                DB = new BaseDatos();
+            }
 
-                // Asignar parámetros
-                DB.AgregarParametro("@Desde", desde.ToString("dd-MM-yyyy"));
-                DB.AgregarParametro("@Hasta", hasta.ToString("dd-MM-yyyy"));
-                DB.AgregarParametro("@Proceso", (string)(proceso ?? (object)DBNull.Value.ToString()));
-                DB.AgregarParametro("@Descripcion", (string)(descripcion ?? (object)DBNull.Value.ToString()));
-                DB.AgregarParametro("@Usuario", (string)(usuario ?? (object)DBNull.Value.ToString()));
-
-                // Ejecutar consulta
-                DbDataReader dr = DB.EjecutarConsulta();
-                DataTable dt = new DataTable();
-                dt.Load(dr);
-
-                foreach (DataRow row in dt.Rows)
+            public List<Logs> BuscarLogs(DateTime desde, DateTime hasta, string proceso, string descripcion, string usuario)
+            {
+                var logsList = new List<Logs>();
+                try
                 {
-                    Logs logApp = new Logs
+                    // Asegúrate de que la conexión esté abierta
+                    DB.Conectar();
+                    DB.CrearComando("sp_buscador_Logs @Desde, @Hasta, @Proceso, @Descripcion, @Usuario");
+
+                    // Añadir los parámetros al comando
+                    DB.AsignarParametroFecha("@Desde", desde);
+                    DB.AsignarParametroFecha("@Hasta", hasta);
+                    DB.AsignarParametroCadena("@Proceso", proceso);
+                    DB.AsignarParametroCadena("@Descripcion", descripcion);
+                    DB.AsignarParametroCadena("@Usuario", usuario);
+
+
+                    // Ejecutar la consulta
+                    using (DbDataReader dr = DB.EjecutarConsulta())
                     {
-                        Fecha = row["Fecha"] != DBNull.Value ? Convert.ToDateTime(row["Fecha"]) : DateTime.MinValue,
-                        Proceso = row["Proceso"] != DBNull.Value ? row["Proceso"].ToString() : "Sin Proceso",
-                        Accion = row["Accion"] != DBNull.Value ? row["Accion"].ToString() : "Sin Acción",
-                        Usuario = row["Usuario"] != DBNull.Value ? row["Usuario"].ToString() : "Desconocido",
-                        Descripcion = row["Descripcion"] != DBNull.Value ? row["Descripcion"].ToString() : "Sin Descripción",
-                        Host = row["Host"] != DBNull.Value ? row["Host"].ToString() : "Sin Host"
-                    };
+                        while (dr.Read())
+                        {
+                            Logs logApp = new Logs
+                            {
+                                Fecha = dr["Fecha"] != DBNull.Value ? Convert.ToDateTime(dr["Fecha"]) : DateTime.MinValue,
+                                Proceso = dr["Proceso"] != DBNull.Value ? dr["Proceso"].ToString() : "Sin Proceso",
+                                Accion = dr["Accion"] != DBNull.Value ? dr["Accion"].ToString() : "Sin Acción",
+                                Usuario = dr["Usuario"] != DBNull.Value ? dr["Usuario"].ToString() : "Desconocido",
+                                Descripcion = dr["Descripcion"] != DBNull.Value ? dr["Descripcion"].ToString() : "Sin Descripción",
+                                Host = dr["Host"] != DBNull.Value ? dr["Host"].ToString() : "Sin Host"
+                            };
 
-                    logsList.Add(logApp);
+                            logsList.Add(logApp);
+                        }
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error al buscar logs: " + ex.Message);
-            }
-            finally
-            {
-                DB.Desconectar();
-            }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al buscar logs: " + ex.Message);
+                    // En caso de error, puedes decidir si retornar una lista vacía o loguear el error
+                }
+                finally
+                {
+                    // Asegúrate de desconectar la base de datos
+                    DB.Desconectar();
+                }
 
-            return logsList;
+                return logsList;
+            }
         }
     }
 }

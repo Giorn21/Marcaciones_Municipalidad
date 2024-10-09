@@ -32,7 +32,6 @@
             this.txt_Descripcion = new System.Windows.Forms.TextBox();
             this.cbox_Proceso = new System.Windows.Forms.ComboBox();
             this.cbox_Usuario = new System.Windows.Forms.ComboBox();
-            this.DTP_Desde = new System.Windows.Forms.DateTimePicker();
             this.btn_Aceptar = new System.Windows.Forms.Button();
             this.btn_Cancelar = new System.Windows.Forms.Button();
             this.btn_FullDate = new System.Windows.Forms.Button();
@@ -42,6 +41,7 @@
             this.lbl_Proceso = new System.Windows.Forms.Label();
             this.lbl_Descripcion = new System.Windows.Forms.Label();
             this.lbl_Usuario = new System.Windows.Forms.Label();
+            this.DTP_Desde = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // lbl_Titulo
@@ -56,7 +56,7 @@
             // 
             // txt_Descripcion
             // 
-            this.txt_Descripcion.Location = new System.Drawing.Point(51, 207);
+            this.txt_Descripcion.Location = new System.Drawing.Point(51, 214);
             this.txt_Descripcion.Name = "txt_Descripcion";
             this.txt_Descripcion.Size = new System.Drawing.Size(200, 20);
             this.txt_Descripcion.TabIndex = 1;
@@ -64,7 +64,7 @@
             // cbox_Proceso
             // 
             this.cbox_Proceso.FormattingEnabled = true;
-            this.cbox_Proceso.Location = new System.Drawing.Point(51, 154);
+            this.cbox_Proceso.Location = new System.Drawing.Point(51, 161);
             this.cbox_Proceso.Name = "cbox_Proceso";
             this.cbox_Proceso.Size = new System.Drawing.Size(200, 21);
             this.cbox_Proceso.TabIndex = 2;
@@ -72,17 +72,10 @@
             // cbox_Usuario
             // 
             this.cbox_Usuario.FormattingEnabled = true;
-            this.cbox_Usuario.Location = new System.Drawing.Point(51, 262);
+            this.cbox_Usuario.Location = new System.Drawing.Point(51, 269);
             this.cbox_Usuario.Name = "cbox_Usuario";
             this.cbox_Usuario.Size = new System.Drawing.Size(200, 21);
             this.cbox_Usuario.TabIndex = 3;
-            // 
-            // DTP_Desde
-            // 
-            this.DTP_Desde.Location = new System.Drawing.Point(51, 59);
-            this.DTP_Desde.Name = "DTP_Desde";
-            this.DTP_Desde.Size = new System.Drawing.Size(200, 20);
-            this.DTP_Desde.TabIndex = 17;
             // 
             // btn_Aceptar
             // 
@@ -93,6 +86,7 @@
             this.btn_Aceptar.TabIndex = 18;
             this.btn_Aceptar.Text = "Iniciar";
             this.btn_Aceptar.UseVisualStyleBackColor = false;
+            this.btn_Aceptar.Click += new System.EventHandler(this.btn_Aceptar_Click);
             // 
             // btn_Cancelar
             // 
@@ -114,10 +108,11 @@
             this.btn_FullDate.TabIndex = 20;
             this.btn_FullDate.Text = "Ver todos los Datos";
             this.btn_FullDate.UseVisualStyleBackColor = false;
+            this.btn_FullDate.Click += new System.EventHandler(this.btn_FullDate_Click);
             // 
             // DTP_Hasta
             // 
-            this.DTP_Hasta.Location = new System.Drawing.Point(51, 98);
+            this.DTP_Hasta.Location = new System.Drawing.Point(51, 107);
             this.DTP_Hasta.Name = "DTP_Hasta";
             this.DTP_Hasta.Size = new System.Drawing.Size(200, 20);
             this.DTP_Hasta.TabIndex = 21;
@@ -134,7 +129,7 @@
             // lbl_Hasta
             // 
             this.lbl_Hasta.AutoSize = true;
-            this.lbl_Hasta.Location = new System.Drawing.Point(12, 104);
+            this.lbl_Hasta.Location = new System.Drawing.Point(12, 113);
             this.lbl_Hasta.Name = "lbl_Hasta";
             this.lbl_Hasta.Size = new System.Drawing.Size(35, 13);
             this.lbl_Hasta.TabIndex = 23;
@@ -143,7 +138,7 @@
             // lbl_Proceso
             // 
             this.lbl_Proceso.AutoSize = true;
-            this.lbl_Proceso.Location = new System.Drawing.Point(48, 138);
+            this.lbl_Proceso.Location = new System.Drawing.Point(48, 145);
             this.lbl_Proceso.Name = "lbl_Proceso";
             this.lbl_Proceso.Size = new System.Drawing.Size(46, 13);
             this.lbl_Proceso.TabIndex = 24;
@@ -152,7 +147,7 @@
             // lbl_Descripcion
             // 
             this.lbl_Descripcion.AutoSize = true;
-            this.lbl_Descripcion.Location = new System.Drawing.Point(48, 191);
+            this.lbl_Descripcion.Location = new System.Drawing.Point(48, 198);
             this.lbl_Descripcion.Name = "lbl_Descripcion";
             this.lbl_Descripcion.Size = new System.Drawing.Size(63, 13);
             this.lbl_Descripcion.TabIndex = 25;
@@ -161,11 +156,18 @@
             // lbl_Usuario
             // 
             this.lbl_Usuario.AutoSize = true;
-            this.lbl_Usuario.Location = new System.Drawing.Point(48, 246);
+            this.lbl_Usuario.Location = new System.Drawing.Point(48, 253);
             this.lbl_Usuario.Name = "lbl_Usuario";
             this.lbl_Usuario.Size = new System.Drawing.Size(43, 13);
             this.lbl_Usuario.TabIndex = 26;
             this.lbl_Usuario.Text = "Usuario";
+            // 
+            // DTP_Desde
+            // 
+            this.DTP_Desde.Location = new System.Drawing.Point(51, 59);
+            this.DTP_Desde.Name = "DTP_Desde";
+            this.DTP_Desde.Size = new System.Drawing.Size(200, 20);
+            this.DTP_Desde.TabIndex = 17;
             // 
             // Form_buscador_Logs
             // 
@@ -189,6 +191,7 @@
             this.Name = "Form_buscador_Logs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_buscador_Logs";
+            this.Load += new System.EventHandler(this.Form_buscador_Logs_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,7 +203,6 @@
         private System.Windows.Forms.TextBox txt_Descripcion;
         private System.Windows.Forms.ComboBox cbox_Proceso;
         private System.Windows.Forms.ComboBox cbox_Usuario;
-        private System.Windows.Forms.DateTimePicker DTP_Desde;
         private System.Windows.Forms.Button btn_Aceptar;
         private System.Windows.Forms.Button btn_Cancelar;
         private System.Windows.Forms.Button btn_FullDate;
@@ -210,5 +212,6 @@
         private System.Windows.Forms.Label lbl_Proceso;
         private System.Windows.Forms.Label lbl_Descripcion;
         private System.Windows.Forms.Label lbl_Usuario;
+        private System.Windows.Forms.DateTimePicker DTP_Desde;
     }
 }

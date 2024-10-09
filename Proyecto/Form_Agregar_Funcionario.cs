@@ -59,7 +59,7 @@ namespace Proyecto
 
             // Crear una instancia de la clase ComboBoxLoader
             // Llamar al método para cargar los datos en el ComboBox
-            clsDatos_De_cboxsAgregar Datos_Contratos = new clsDatos_De_cboxsAgregar();
+            clsDatos_cboxsAgrFuncionario Datos_Contratos = new clsDatos_cboxsAgrFuncionario();
             Datos_Contratos.CargarTiposContratos(cbox_Tipo_Contrato);
 
             // Verificar que el ComboBox tenga items después de cargar los datos
@@ -69,7 +69,7 @@ namespace Proyecto
             }
 
 
-            clsDatos_De_cboxsAgregar Datos_cargo = new clsDatos_De_cboxsAgregar();
+            clsDatos_cboxsAgrFuncionario Datos_cargo = new clsDatos_cboxsAgrFuncionario();
             Datos_cargo.CargarTipoCargo(cbox_Tipo_Cargo);
             if (cbox_Tipo_Cargo.Items.Count > 0)
             {
@@ -77,21 +77,21 @@ namespace Proyecto
             }
 
 
-            clsDatos_De_cboxsAgregar Datos_unidad = new clsDatos_De_cboxsAgregar();
+            clsDatos_cboxsAgrFuncionario Datos_unidad = new clsDatos_cboxsAgrFuncionario();
             Datos_unidad.CargarTipoUnidad(cbox_IdUnidad);
             if (cbox_IdUnidad.Items.Count > 0)
             {
                 cbox_IdUnidad.SelectedIndex = 0; // Selecciona el primer elemento si es necesario
             }
 
-            clsDatos_De_cboxsAgregar Datos_dispositivo = new clsDatos_De_cboxsAgregar();
+            clsDatos_cboxsAgrFuncionario Datos_dispositivo = new clsDatos_cboxsAgrFuncionario();
             Datos_dispositivo.CargarDispositvos(cbox_IdDispositivo);
             if (cbox_IdDispositivo.Items.Count > 0)
             {
                 cbox_IdDispositivo.SelectedIndex = 0; // Selecciona el primer elemento si es necesario
             }
 
-            clsDatos_De_cboxsAgregar Datos_Horarios = new clsDatos_De_cboxsAgregar();
+            clsDatos_cboxsAgrFuncionario Datos_Horarios = new clsDatos_cboxsAgrFuncionario();
             Datos_Horarios.CargarHorarios(cbox_Horarios);
             if (cbox_Horarios.Items.Count > 0)
             {

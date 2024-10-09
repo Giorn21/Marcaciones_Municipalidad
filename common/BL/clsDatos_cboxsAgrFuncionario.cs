@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace common.BL
 {
-    public class clsDatos_De_cboxsAgregar
+    public class clsDatos_cboxsAgrFuncionario
     {
         // Método para cargar los tipos de contrato en el ComboBox
         public void CargarTiposContratos(ComboBox cboxTipoContrato)

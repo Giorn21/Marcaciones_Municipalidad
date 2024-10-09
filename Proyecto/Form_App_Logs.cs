@@ -16,10 +16,11 @@ namespace Proyecto
         private clsVer_LogsApp VerLogsApp = new clsVer_LogsApp();
 
         List<Logs> LogsApp = new List<Logs>();
-        public Form_App_Logs()
+
+        public Form_App_Logs(List<Logs> logs)
         {
             InitializeComponent();
-
+            this.LogsApp = logs;
         }
 
         private void Form_App_Logs_Load(object sender, EventArgs e)
@@ -31,40 +32,28 @@ namespace Proyecto
         {
             dtv_LogsApp.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            try
+            dtv_LogsApp.Rows.Clear();
+            foreach (var log in LogsApp)
             {
-                LogsApp = VerLogsApp.Ver_LogsApp();
-                dtv_LogsApp.Rows.Clear();
+                DataGridViewRow row = new DataGridViewRow();
+                row.CreateCells(dtv_LogsApp);
 
-                foreach (var log in LogsApp)
-                {
-                    DataGridViewRow row = new DataGridViewRow();
-                    row.CreateCells(dtv_LogsApp);
+                // Asignar valores a las celdas correspondientes
+                row.Cells[0].Value = log.Fecha.ToString("dd/MM/yyyy HH:mm:ss");
+                row.Cells[1].Value = log.Proceso;
+                row.Cells[2].Value = log.Accion;
+                row.Cells[3].Value = log.Descripcion;
+                row.Cells[4].Value = log.Usuario;
+                row.Cells[5].Value = log.Host;
 
-                    // Asignar valores a las celdas correspondientes
-                    row.Cells[0].Value = log.Fecha.ToString("dd/MM/yyyy HH:mm:ss");
-                    row.Cells[1].Value = log.Proceso;
-                    row.Cells[2].Value = log.Accion;
-                    row.Cells[3].Value = log.Descripcion;
-                    row.Cells[4].Value = log.Usuario;
-                    row.Cells[5].Value = log.Host;
-
-                    dtv_LogsApp.Rows.Add(row);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar los datos: " + ex.Message);
+                dtv_LogsApp.Rows.Add(row);
             }
         }
-
         private void btn_Volver_Click(object sender, EventArgs e)
         {
-            Form_Menu menu = new Form_Menu();
-            menu.Show();
+            Form_buscador_Logs buscador_Logs = new Form_buscador_Logs();
+            buscador_Logs.Show();
             this.Close();
-        }
-
-        
+        }  
     }
 }

@@ -52,7 +52,8 @@
     <Compile Include="BL\clsAgregar_TipoMarcasManual.cs" />
     <Compile Include="BL\clsBuscadorLogs.cs" />
     <Compile Include="BL\clsBuscarFuncionarios.cs" />
-    <Compile Include="BL\clsDatos_De_cboxsAgregar.cs" />
+    <Compile Include="BL\clsDatos_cboxBuscadorLogs.cs" />
+    <Compile Include="BL\clsDatos_cboxsAgrFuncionario.cs" />
     <Compile Include="BL\clsDesvincularFuncionario.cs" />
     <Compile Include="BL\clsVer_Funcionarios.cs" />
     <Compile Include="BL\clsLoginUser.cs" />
