@@ -185,6 +185,8 @@ namespace Proyecto
 
         private void btn_desvincular_Click(object sender, EventArgs e)
         {
+            clsAgregar_LogsApp logs = new clsAgregar_LogsApp();
+
             if (IdEmpleado > 0)
             {
                 // Mensaje de advertencia
@@ -205,13 +207,16 @@ namespace Proyecto
                         if (funcionarioManager.DesvincularFuncionario(IdEmpleado, fechaDesvinculacion))
                         {
                             MessageBox.Show("Funcionario desvinculado exitosamente.");
+                            string Usuario = LoginUser.Usuario;
+                            logs.InsertarLog("Funcionarios", "Desv Fun", Usuario, "Se a desvinculado un Funcionario");
                             CargarDatos();
-                       
                         }
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("Error: " + ex.Message);
+                        string Usuario = LoginUser.Usuario;
+                        logs.InsertarLog("Funcionarios", "ErrDesv", Usuario, ex.Message);
                     }
                 }
                 else

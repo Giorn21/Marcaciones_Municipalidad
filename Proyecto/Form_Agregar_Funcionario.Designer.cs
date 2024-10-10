@@ -127,7 +127,6 @@
             this.cbox_IdUnidad.Name = "cbox_IdUnidad";
             this.cbox_IdUnidad.Size = new System.Drawing.Size(176, 24);
             this.cbox_IdUnidad.TabIndex = 23;
-            this.cbox_IdUnidad.SelectedIndexChanged += new System.EventHandler(this.cbox_IdUnidad_SelectedIndexChanged);
             // 
             // cbox_IdDispositivo
             // 
@@ -140,7 +139,6 @@
             this.cbox_IdDispositivo.Name = "cbox_IdDispositivo";
             this.cbox_IdDispositivo.Size = new System.Drawing.Size(176, 24);
             this.cbox_IdDispositivo.TabIndex = 22;
-            this.cbox_IdDispositivo.SelectedIndexChanged += new System.EventHandler(this.cbox_IdDispositivo_SelectedIndexChanged);
             // 
             // cbox_Tipo_Cargo
             // 
@@ -153,7 +151,6 @@
             this.cbox_Tipo_Cargo.Name = "cbox_Tipo_Cargo";
             this.cbox_Tipo_Cargo.Size = new System.Drawing.Size(176, 24);
             this.cbox_Tipo_Cargo.TabIndex = 21;
-            this.cbox_Tipo_Cargo.SelectedIndexChanged += new System.EventHandler(this.cbox_Tipo_Cargo_SelectedIndexChanged);
             // 
             // cbox_Tipo_Contrato
             // 
@@ -166,7 +163,6 @@
             this.cbox_Tipo_Contrato.Name = "cbox_Tipo_Contrato";
             this.cbox_Tipo_Contrato.Size = new System.Drawing.Size(176, 24);
             this.cbox_Tipo_Contrato.TabIndex = 20;
-            this.cbox_Tipo_Contrato.SelectedIndexChanged += new System.EventHandler(this.cbox_Tipo_Contrato_SelectedIndexChanged);
             // 
             // lbl_Id_Dispositivo
             // 
@@ -214,7 +210,6 @@
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(176, 22);
             this.txt_Email.TabIndex = 11;
-            this.txt_Email.TextChanged += new System.EventHandler(this.txt_Email_TextChanged);
             // 
             // lbl_Email
             // 
@@ -308,7 +303,6 @@
             this.tabP_Horarios.Size = new System.Drawing.Size(1073, 349);
             this.tabP_Horarios.TabIndex = 1;
             this.tabP_Horarios.Text = "Horarios";
-            this.tabP_Horarios.Click += new System.EventHandler(this.tabP_Horarios_Click);
             // 
             // lbl_Horario_Titulo
             // 
@@ -327,7 +321,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(743, 254);
             this.dataGridView1.TabIndex = 43;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // cbox_Horarios
             // 
@@ -346,7 +339,6 @@
             this.lbl_Asignar_Horario.Size = new System.Drawing.Size(101, 16);
             this.lbl_Asignar_Horario.TabIndex = 2;
             this.lbl_Asignar_Horario.Text = "Asignar Horario";
-            this.lbl_Asignar_Horario.Click += new System.EventHandler(this.lbl_Asignar_Horario_Click);
             // 
             // btn_Registro
             // 
@@ -358,9 +350,6 @@
             this.btn_Registro.Text = "Registar Usuario";
             this.btn_Registro.UseVisualStyleBackColor = true;
             this.btn_Registro.Click += new System.EventHandler(this.btn_Registro_Click);
-            // 
-            // sgM1DataSet1
-            // 
             // 
             // btn_Limpiar
             // 

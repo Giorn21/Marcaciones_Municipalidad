@@ -115,11 +115,6 @@ namespace Proyecto
 
         }
 
-        private void txt_Rut_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btn_Registro_Click(object sender, EventArgs e)
         {
             if (txt_Rut.Text == "" || txt_Nombre.Text == "" || txt_Apellido_Paterno.Text == "" || txt_Apellido_Materno.Text == "" || txt_Email.Text == "" || cbox_Tipo_Contrato.Text == "" || cbox_Tipo_Cargo.Text == "" || cbox_IdUnidad.Text == "" || cbox_IdDispositivo.Text == "")
@@ -132,9 +127,10 @@ namespace Proyecto
                 MessageBox.Show("!ALERTA¡ : Elija una Horario para el Funcionario");
                 return;
             }
-            // iniciamos la instancia de clsInsertarFuncionario
+
             clsInsertarFuncionario nuevoUsuario = new clsInsertarFuncionario();
             clsAgregar_LogsApp logs = new clsAgregar_LogsApp();
+
 
             try
             {
@@ -155,7 +151,7 @@ namespace Proyecto
                 {
                     MessageBox.Show("Usuario registrado exitosamente.");
                     string Usuario = LoginUser.Usuario;
-                    logs.InsertarLog("Funcioanrio", "Agr Nuevo", Usuario, "Se a agregado un nuevo funcionario a la base de datos.");
+                    logs.InsertarLog("funcionarios", "Agr Nuevo", Usuario, "Se a agregado un nuevo funcionario a la base de datos.");
                 }
                 
             }
@@ -163,7 +159,7 @@ namespace Proyecto
             {
                 MessageBox.Show("Error: " + ex.Message);
                 string Usuario = LoginUser.Usuario;
-                logs.InsertarLog("Funcioanrio", "Err_Agr", Usuario, ex.Message);
+                logs.InsertarLog("funcionarios", "Err_Agr", Usuario, ex.Message);
                 return; 
             }
 
@@ -185,31 +181,6 @@ namespace Proyecto
                 dataGridView1.DataSource = null; 
                 dataGridView1.Rows.Clear();       
             }
-        }
-
-        private void txt_Email_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void cbox_Tipo_Contrato_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void cbox_Tipo_Cargo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void cbox_IdUnidad_SelectedIndexChanged(object sender, EventArgs e)
-        { 
-
-        }
-
-        private void cbox_IdDispositivo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_Limpiar_Click(object sender, EventArgs e)
@@ -234,12 +205,6 @@ namespace Proyecto
 
         }
 
-        private void tabP_Horarios_Click(object sender, EventArgs e)
-        {
-
-        }
-        
-
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbox_Horarios.SelectedItem != null)
@@ -253,7 +218,6 @@ namespace Proyecto
                 }
             }
         }
-        
 
         private void ActualizarDataGridView(int idHorario)
         {
@@ -265,16 +229,6 @@ namespace Proyecto
 
                 // Asignar la tabla formateada al DataGridView
             dataGridView1.DataSource = dtFormatted;
-            
-        }
-
-        private void lbl_Asignar_Horario_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
             
         }
 

@@ -26,6 +26,7 @@ namespace Proyecto
         private void Form_App_Logs_Load(object sender, EventArgs e)
         {
             CargarDatos();
+            check_Login.Checked = true;
         }
 
         private void CargarDatos()
@@ -54,6 +55,39 @@ namespace Proyecto
             Form_buscador_Logs buscador_Logs = new Form_buscador_Logs();
             buscador_Logs.Show();
             this.Close();
-        }  
+        }
+
+        private void check_Login_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check_Login.Checked)
+            {
+                // Llamamos a la función para ocultar procesos de login
+                FiltrarLoginEnDataGridView(true);
+            }
+            else
+            {
+                // Si no está marcado, mostramos todas las filas
+                FiltrarLoginEnDataGridView(false);
+            }
+        }
+        private void FiltrarLoginEnDataGridView(bool ocultarLogin)
+        {
+            foreach (DataGridViewRow fila in dtv_LogsApp.Rows)
+            {
+
+                if (ocultarLogin)
+                {
+
+                    if (fila.Cells["col_Accion"].Value != null && fila.Cells["col_Accion"].Value.ToString().ToLower().Contains("login"))
+                    {
+                        fila.Visible = false;
+                    }
+                }
+                else
+                {
+                    fila.Visible = true;
+                }
+            }
+        }
     }
 }

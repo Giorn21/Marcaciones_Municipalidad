@@ -51,7 +51,6 @@
     <Compile Include="BL\clsAgregar_LogsApp.cs" />
     <Compile Include="BL\clsAgregar_TipoMarcasManual.cs" />
     <Compile Include="BL\clsBuscadorLogs.cs" />
-    <Compile Include="BL\clsBuscarFuncionarios.cs" />
     <Compile Include="BL\clsDatos_cboxBuscadorLogs.cs" />
     <Compile Include="BL\clsDatos_cboxsAgrFuncionario.cs" />
     <Compile Include="BL\clsDesvincularFuncionario.cs" />
