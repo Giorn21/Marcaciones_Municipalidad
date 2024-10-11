@@ -1,4 +1,5 @@
 ﻿using common;
+using NLog.Filters;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,21 +31,26 @@ namespace Proyecto
             this.Close();
         }
 
-        private void Form_VerMarcacion_Manual_Load(object sender, EventArgs e)
+        private void CargarDatosMarcacionesManuales(string filtro = null)
         {
-            txt_Buscador.Text = placeholderText;
-            txt_Buscador.ForeColor = Color.Gray;
-
-            this.dtv_Marcaciones_Manuales.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtv_Marcaciones_Manuales.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             try
             {
+                // Obtener las marcaciones manuales
                 marcaciones = verMarcacionesManuales.ObtenerMarcacionesManuales();
+
+                // Filtrar si hay un filtro proporcionado
+                if (!string.IsNullOrEmpty(filtro))
+                {
+                    marcaciones = marcaciones.Where(M => M.ID.ToString().Contains(filtro) || M.Nombre.ToLower().Contains(filtro)).ToList();
+                }
+
                 dtv_Marcaciones_Manuales.Rows.Clear();
 
+                // Llenar el DataGridView con las marcaciones obtenidas
                 foreach (var M in marcaciones)
                 {
-
                     DataGridViewRow row = new DataGridViewRow();
                     row.CreateCells(dtv_Marcaciones_Manuales);
 
@@ -63,6 +69,14 @@ namespace Proyecto
             {
                 MessageBox.Show("Error al cargar los datos: " + ex.Message);
             }
+        }
+
+        private void Form_VerMarcacion_Manual_Load(object sender, EventArgs e)
+        {
+            txt_Buscador.Text = placeholderText;
+            txt_Buscador.ForeColor = Color.Gray;
+
+            CargarDatosMarcacionesManuales();
         }
 
         private void btn_Volver_Click(object sender, EventArgs e)
@@ -101,52 +115,11 @@ namespace Proyecto
 
             if (txt_Buscador.TextLength >= 1)
             {
-                FiltrarMarcanciones(txt_Buscador.Text);
+                CargarDatosMarcacionesManuales(txt_Buscador.Text);
             }
             else
             {
-
-                dtv_Marcaciones_Manuales.Rows.Clear();
-
-                // Cargar todos los datos de nuevo
-                foreach (var M in marcaciones)
-                {
-                    DataGridViewRow row = new DataGridViewRow();
-                    row.CreateCells(dtv_Marcaciones_Manuales);
-
-                    row.Cells[0].Value = M.ID;
-                    row.Cells[1].Value = M.Nombre;
-                    row.Cells[2].Value = M.Apellido;
-                    row.Cells[3].Value = M.fecha;
-                    row.Cells[4].Value = M.hora;
-                    row.Cells[5].Value = M.TipoMarca;
-                    row.Cells[6].Value = M.Comentario;
-
-                    dtv_Marcaciones_Manuales.Rows.Add(row);
-                }
-            }
-        }
-        private void FiltrarMarcanciones(string filtro)
-        {
-            var resultado = marcaciones.Where(M => M.ID.ToString().Contains(filtro) || M.Nombre.ToLower().Contains(filtro)).ToList();
-            dtv_Marcaciones_Manuales.Rows.Clear();
-
-            foreach (var R in resultado)
-            {
-                // Crear una nueva fila
-                DataGridViewRow row = new DataGridViewRow();
-                row.CreateCells(dtv_Marcaciones_Manuales);
-
-                // Asignar valores a las celdas
-                row.Cells[0].Value = R.ID;
-                row.Cells[1].Value = R.Nombre;
-                row.Cells[2].Value = R.Apellido;
-                row.Cells[3].Value = R.fecha;
-                row.Cells[4].Value = R.hora;
-                row.Cells[5].Value = R.TipoMarca;
-                row.Cells[6].Value = R.Comentario;
-
-                dtv_Marcaciones_Manuales.Rows.Add(row);
+                CargarDatosMarcacionesManuales(); 
             }
         }
     }

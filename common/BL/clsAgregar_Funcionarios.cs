@@ -107,31 +107,12 @@ namespace common
                 return true;
             }
 
-            //cargar datos del ComboBox y seleccionar el valor
-            public void SeleccionarTipoContrato(int tipoContratoId)
-            {
-                DatosFuncionario.TipoContrato = tipoContratoId;
-            }
-
-            public void SeleccionarTipoCargo(int tipoCargoId)
-            {
-                DatosFuncionario.TipoCargo = tipoCargoId;
-            }
-
-            public void SeleccionarUnidad(int unidadId)
-            {
-                DatosFuncionario.IdUnidad = unidadId;
-            }
-
-            public void SeleccionarDispositivo(int dispositivoId)
-            {
-                DatosFuncionario.IdDispositivo = dispositivoId;
-            }
-
-            public void SeleccionarHorario(int Horario) 
-            {
-                DatosFuncionario.IdHorario = Horario;
-            }
+            //cargar Combobox
+            public void SeleccionarTipoContrato(int tipoContratoId) => DatosFuncionario.TipoContrato = tipoContratoId;
+            public void SeleccionarTipoCargo(int tipoCargoId) => DatosFuncionario.TipoCargo = tipoCargoId;
+            public void SeleccionarUnidad(int unidadId) => DatosFuncionario.IdUnidad = unidadId;
+            public void SeleccionarDispositivo(int dispositivoId) => DatosFuncionario.IdDispositivo = dispositivoId;
+            public void SeleccionarHorario(int horario) => DatosFuncionario.IdHorario = horario;
 
             public bool RegistrarUsuario()
             {

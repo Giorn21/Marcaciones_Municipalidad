@@ -1,4 +1,5 @@
 ﻿using common;
+using NLog.Filters;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,14 +25,23 @@ namespace Proyecto
             InitializeComponent();
         }
 
-        private void CargarDatos()
+        private void CargarDatos(string filtro = null)
         {
-            // Ajusta a la cantidad de datos
             dtv_BaseDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             try
             {
+                // Obtener la lista de funcionarios
                 funcionarios = verFuncionarios.ObtenerFuncionarios();
+
+                // Filtrar si hay un filtro proporcionado
+                if (!string.IsNullOrEmpty(filtro))
+                {
+                    funcionarios = funcionarios
+                    .Where(f => f.Rut.ToLower().Contains(filtro) || f.Nombres.ToLower().Contains(filtro))
+                    .ToList();
+                }
+
                 dtv_BaseDatos.Rows.Clear();
 
                 foreach (var f in funcionarios)
@@ -79,79 +89,24 @@ namespace Proyecto
             this.Close();
         }
 
-        private void FiltrarFuncionarios(string filtro)
-        {
-            //minúsculas 
-            filtro = filtro.ToLower();
-
-            //buscandor RUT o Nombres
-            var resultado = funcionarios.Where(f => f.Rut.ToLower().Contains(filtro) || f.Nombres.ToLower().Contains(filtro)).ToList();
-            dtv_BaseDatos.Rows.Clear();
-
-            foreach (var R in resultado)
-            {
-                // Crear una nueva fila
-                DataGridViewRow row = new DataGridViewRow();
-                row.CreateCells(dtv_BaseDatos);
-
-                row.Cells[0].Value = R.IdEmpleado;
-                row.Cells[1].Value = R.Rut;
-                row.Cells[2].Value = R.Nombres;
-                row.Cells[3].Value = R.ApellidoPaterno;
-                row.Cells[4].Value = R.ApellidoMaterno;
-                row.Cells[5].Value = R.Foto;
-                row.Cells[6].Value = R.Email;
-                row.Cells[7].Value = R.Contrato;
-                row.Cells[8].Value = R.Cargo;
-                row.Cells[9].Value = R.Unidad;
-                row.Cells[10].Value = R.IdDispositivo;
-
-                dtv_BaseDatos.Rows.Add(row);
-            }
-        }
-
-
         //texto con Informacion 
         private string placeholderText = "Buscar por RUT o Nombre";
 
         private void txt_Buscador_TextChanged(object sender, EventArgs e)
         {
 
-            if (txt_Buscador.Text == placeholderText) 
+            if (txt_Buscador.Text == placeholderText)
             {
                 return;
             }
-            // busca en base al primer caracter en adelante
+
             if (txt_Buscador.TextLength >= 1)
             {
-                FiltrarFuncionarios(txt_Buscador.Text);
+                CargarDatos(txt_Buscador.Text);
             }
             else
             {
-                // Desenlazar la fuente 
-                dtv_BaseDatos.DataSource = null;
-                dtv_BaseDatos.Rows.Clear();
-
-                // Vuelve a mostrar los datos
-                foreach (var f in funcionarios)
-                {
-                    DataGridViewRow row = new DataGridViewRow();
-                    row.CreateCells(dtv_BaseDatos);
-
-                    row.Cells[0].Value = f.IdEmpleado;
-                    row.Cells[1].Value = f.Rut;
-                    row.Cells[2].Value = f.Nombres;
-                    row.Cells[3].Value = f.ApellidoPaterno;
-                    row.Cells[4].Value = f.ApellidoMaterno;
-                    row.Cells[5].Value = f.Foto;
-                    row.Cells[6].Value = f.Email;
-                    row.Cells[7].Value = f.Contrato;
-                    row.Cells[8].Value = f.Cargo;
-                    row.Cells[9].Value = f.Unidad;
-                    row.Cells[10].Value = f.IdDispositivo;
-
-                    dtv_BaseDatos.Rows.Add(row);
-                }
+                CargarDatos();
             }
         }
 
@@ -221,7 +176,6 @@ namespace Proyecto
                 }
                 else
                 {
-                    // Si el usuario hace clic en "No"
                     MessageBox.Show("Desvinculación cancelada.");
                 }
             }

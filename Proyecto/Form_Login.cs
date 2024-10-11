@@ -43,7 +43,7 @@ namespace Proyecto
             if (login.Get(user, contrasena).Count == 1)
             {
                 
-                logs.InsertarLog("ControlAcceso", "Login", user, "El usuario se ha conectado correctamente.");
+                //logs.InsertarLog("ControlAcceso", "Login", user, "El usuario se ha conectado correctamente.");
 
                 this.Hide();
                 Form_Menu Menu = new Form_Menu();

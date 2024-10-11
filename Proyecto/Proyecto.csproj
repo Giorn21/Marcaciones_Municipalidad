@@ -109,12 +109,6 @@
     <Compile Include="Form_Menu.Designer.cs">
       <DependentUpon>Form_Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Opciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_Opciones.Designer.cs">
-      <DependentUpon>Form_Opciones.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form_Agregar_Marcacion_Manual.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,9 +152,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Menu.resx">
       <DependentUpon>Form_Menu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_Opciones.resx">
-      <DependentUpon>Form_Opciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_VerMarcacion_Manual.resx">
       <DependentUpon>Form_VerMarcacion_Manual.cs</DependentUpon>

@@ -114,9 +114,6 @@ namespace Proyecto
                 txt_Buscador.ForeColor = Color.Gray;
             }
         }
-
-       
-
         private void FiltrarMarcanciones(string filtro)
         {
             var resultado = marcaciones.Where(M => M.ID.ToString().Contains(filtro) || M.Nombre.ToLower().Contains(filtro)).ToList();
@@ -137,11 +134,6 @@ namespace Proyecto
 
                 dtv_Marcaciones.Rows.Add(row);
             }
-        }
-
-        private void dtv_Marcaciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

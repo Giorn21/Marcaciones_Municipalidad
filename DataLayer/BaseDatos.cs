@@ -5,6 +5,7 @@ using System.Data.Common;
 using System.Configuration;
 using System.Security.Cryptography;
 using System.Collections;
+using System.Data.SqlClient;
 
 namespace DataLayer
 {
@@ -521,6 +522,11 @@ namespace DataLayer
 
             // Agregar el parámetro al comando
             comando.Parameters.Add(parametro);
+        }
+
+        public DbDataAdapter CrearDataAdapter(DbCommand cmd)
+        {
+            return new SqlDataAdapter((SqlCommand)cmd);
         }
         #endregion
 

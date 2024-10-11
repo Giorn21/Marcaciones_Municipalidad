@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbl_TituloMenu = new System.Windows.Forms.Label();
             this.btn_Funcionarios = new System.Windows.Forms.Button();
             this.btn_Disp_Funcionarios = new System.Windows.Forms.Button();
@@ -35,10 +36,17 @@
             this.btn_Marcaciones = new System.Windows.Forms.Button();
             this.btn_App_Logs = new System.Windows.Forms.Button();
             this.btn_Salir = new System.Windows.Forms.Button();
-            this.btn_Opciones = new System.Windows.Forms.Button();
             this.btn_AgregarMarcaciones = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_Opciones = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoHorarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoBiomeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_TituloMenu
@@ -116,17 +124,6 @@
             this.btn_Salir.UseVisualStyleBackColor = true;
             this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
-            // btn_Opciones
-            // 
-            this.btn_Opciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Opciones.Location = new System.Drawing.Point(526, 12);
-            this.btn_Opciones.Name = "btn_Opciones";
-            this.btn_Opciones.Size = new System.Drawing.Size(47, 48);
-            this.btn_Opciones.TabIndex = 8;
-            this.btn_Opciones.Text = "⚙️";
-            this.btn_Opciones.UseVisualStyleBackColor = true;
-            this.btn_Opciones.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btn_AgregarMarcaciones
             // 
             this.btn_AgregarMarcaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -148,14 +145,67 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // btn_Opciones
+            // 
+            this.btn_Opciones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Opciones.ContextMenuStrip = this.contextMenuStrip1;
+            this.btn_Opciones.Location = new System.Drawing.Point(498, 28);
+            this.btn_Opciones.Name = "btn_Opciones";
+            this.btn_Opciones.Size = new System.Drawing.Size(75, 23);
+            this.btn_Opciones.TabIndex = 11;
+            this.btn_Opciones.Text = "Opciones";
+            this.btn_Opciones.UseVisualStyleBackColor = true;
+            this.btn_Opciones.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Opciones_MouseDown);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2,
+            this.toolStripMenuItem3,
+            this.toolStripMenuItem4,
+            this.tipoHorarioToolStripMenuItem,
+            this.tipoBiomeToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(159, 114);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(158, 22);
+            this.toolStripMenuItem2.Text = "Tipo Marca";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(158, 22);
+            this.toolStripMenuItem3.Text = "Tipo Contraro";
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(158, 22);
+            this.toolStripMenuItem4.Text = "Tipo Unidad";
+            // 
+            // tipoHorarioToolStripMenuItem
+            // 
+            this.tipoHorarioToolStripMenuItem.Name = "tipoHorarioToolStripMenuItem";
+            this.tipoHorarioToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.tipoHorarioToolStripMenuItem.Text = "Tipo Horario";
+            // 
+            // tipoBiomeToolStripMenuItem
+            // 
+            this.tipoBiomeToolStripMenuItem.Name = "tipoBiomeToolStripMenuItem";
+            this.tipoBiomeToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.tipoBiomeToolStripMenuItem.Text = "Tipo Biometrico";
+            // 
             // Form_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(585, 389);
-            this.Controls.Add(this.btn_AgregarMarcaciones);
             this.Controls.Add(this.btn_Opciones);
+            this.Controls.Add(this.btn_AgregarMarcaciones);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_Salir);
             this.Controls.Add(this.btn_App_Logs);
@@ -169,6 +219,7 @@
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,7 +235,13 @@
         private System.Windows.Forms.Button btn_App_Logs;
         private System.Windows.Forms.Button btn_Salir;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btn_Opciones;
         private System.Windows.Forms.Button btn_AgregarMarcaciones;
+        private System.Windows.Forms.Button btn_Opciones;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem tipoHorarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoBiomeToolStripMenuItem;
     }
 }

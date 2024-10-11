@@ -57,8 +57,6 @@ namespace Proyecto
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Tolerancia entrada", DataPropertyName = "ToleranciaEntrada" });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Total de horas trabajadas", DataPropertyName = "TotalHoras" });
 
-            // Crear una instancia de la clase ComboBoxLoader
-            // Llamar al método para cargar los datos en el ComboBox
             clsDatos_cboxsAgrFuncionario Datos_Contratos = new clsDatos_cboxsAgrFuncionario();
             Datos_Contratos.CargarTiposContratos(cbox_Tipo_Contrato);
 
@@ -73,7 +71,7 @@ namespace Proyecto
             Datos_cargo.CargarTipoCargo(cbox_Tipo_Cargo);
             if (cbox_Tipo_Cargo.Items.Count > 0)
             {
-                cbox_Tipo_Cargo.SelectedIndex = 0; // Selecciona el primer elemento si es necesario
+                cbox_Tipo_Cargo.SelectedIndex = 0; 
             }
 
 
@@ -81,21 +79,21 @@ namespace Proyecto
             Datos_unidad.CargarTipoUnidad(cbox_IdUnidad);
             if (cbox_IdUnidad.Items.Count > 0)
             {
-                cbox_IdUnidad.SelectedIndex = 0; // Selecciona el primer elemento si es necesario
+                cbox_IdUnidad.SelectedIndex = 0; 
             }
 
             clsDatos_cboxsAgrFuncionario Datos_dispositivo = new clsDatos_cboxsAgrFuncionario();
-            Datos_dispositivo.CargarDispositvos(cbox_IdDispositivo);
+            Datos_dispositivo.CargarDispositivos(cbox_IdDispositivo);
             if (cbox_IdDispositivo.Items.Count > 0)
             {
-                cbox_IdDispositivo.SelectedIndex = 0; // Selecciona el primer elemento si es necesario
+                cbox_IdDispositivo.SelectedIndex = 0; 
             }
 
             clsDatos_cboxsAgrFuncionario Datos_Horarios = new clsDatos_cboxsAgrFuncionario();
             Datos_Horarios.CargarHorarios(cbox_Horarios);
             if (cbox_Horarios.Items.Count > 0)
             {
-                cbox_Horarios.SelectedIndex = 0; // Selecciona el primer elemento si es necesario
+                cbox_Horarios.SelectedIndex = 0; 
             }
 
 
@@ -108,9 +106,8 @@ namespace Proyecto
 
             if (cbox_Horarios.SelectedIndex == -1)
             {
-                // Limpia el DataGridView
-                dataGridView1.DataSource = null; // Esto elimina la fuente de datos
-                dataGridView1.Rows.Clear();       // Esto elimina todas las filas
+                dataGridView1.DataSource = null; 
+                dataGridView1.Rows.Clear();       
             }
 
         }
@@ -159,7 +156,7 @@ namespace Proyecto
             {
                 MessageBox.Show("Error: " + ex.Message);
                 string Usuario = LoginUser.Usuario;
-                logs.InsertarLog("funcionarios", "Err_Agr", Usuario, ex.Message);
+                logs.InsertarLog("funcionarios", "Err Agr", Usuario, ex.Message);
                 return; 
             }
 
@@ -209,27 +206,25 @@ namespace Proyecto
         {
             if (cbox_Horarios.SelectedItem != null)
             {
-                // Comprobar si el ítem es un KeyValuePair<int, string>
-                if (cbox_Horarios.SelectedItem is KeyValuePair<int, string> selectedPair)
+                if (cbox_Horarios.SelectedValue is int selectedIdHorario)
                 {
-                    // Acceder al Key, que contiene el IdHorario
-                    int selectedId = selectedPair.Key;
-                    ActualizarDataGridView(selectedId);
+
+                    ActualizarDataGridView(selectedIdHorario);
                 }
             }
         }
 
         private void ActualizarDataGridView(int idHorario)
         {
-            
+
             clsVer_Horarios horarioManager = new clsVer_Horarios();
 
-                // Obtener la tabla formateada con los datos del horario
+            // Obtener la tabla formateada con los datos del horario
             DataTable dtFormatted = horarioManager.ObtenerHorarioFormateado(idHorario);
 
-                // Asignar la tabla formateada al DataGridView
+            // Asignar la tabla formateada al DataGridView
             dataGridView1.DataSource = dtFormatted;
-            
+
         }
 
         private void txt_Rut_KeyPress(object sender, KeyPressEventArgs e)

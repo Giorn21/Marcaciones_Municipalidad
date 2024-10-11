@@ -15,12 +15,9 @@ namespace common
     {
         public class clsBuscarLogs
         {
-            private BaseDatos DB;
+            private BaseDatos DB = new BaseDatos();
 
-            public clsBuscarLogs()
-            {
-                DB = new BaseDatos();
-            }
+      
 
             public List<Logs> BuscarLogs(DateTime desde, DateTime hasta, string proceso, string descripcion, string usuario)
             {
@@ -61,11 +58,9 @@ namespace common
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error al buscar logs: " + ex.Message);
-                    // En caso de error, puedes decidir si retornar una lista vacía o loguear el error
                 }
                 finally
                 {
-                    // Asegúrate de desconectar la base de datos
                     DB.Desconectar();
                 }
 
