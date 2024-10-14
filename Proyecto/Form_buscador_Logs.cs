@@ -86,7 +86,7 @@ namespace Proyecto
 
         private void Form_buscador_Logs_Load(object sender, EventArgs e)
         {
-            DTP_Desde.Value = new DateTime(2024, 9, 30, 8, 0, 0); 
+            DTP_Desde.Value = DateTime.Now.Date; 
             DTP_Hasta.Value = DateTime.Now; 
 
             try

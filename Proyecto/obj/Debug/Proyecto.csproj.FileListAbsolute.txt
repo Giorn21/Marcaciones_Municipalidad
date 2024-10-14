@@ -28,3 +28,7 @@ C:\Users\informatica\source\repos\Proyecto\Proyecto\bin\Debug\NLog.dll
 C:\Users\informatica\source\repos\Proyecto\Proyecto\bin\Debug\NLog.xml
 C:\Users\informatica\source\repos\Proyecto\Proyecto\bin\Debug\NLog.Database.xml
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_buscador_Logs.resources
+C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_VerBiometria.resources
+C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_VerMarcas.resources
+C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_VerContrato.resources
+C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_UPD_Contrato.resources

@@ -54,6 +54,7 @@
     <Compile Include="BL\clsDatos_cboxBuscadorLogs.cs" />
     <Compile Include="BL\clsDatos_cboxsAgrFuncionario.cs" />
     <Compile Include="BL\clsDesvincularFuncionario.cs" />
+    <Compile Include="BL\clsVer_TipoBiometria.cs" />
     <Compile Include="BL\clsVer_Funcionarios.cs" />
     <Compile Include="BL\clsLoginUser.cs" />
     <Compile Include="BL\clsVer_Disp_Funcionario.cs" />
@@ -62,7 +63,12 @@
     <Compile Include="BL\clsVer_Horarios.cs" />
     <Compile Include="BL\clsVer_MacacionesManuales.cs" />
     <Compile Include="BL\clsVer_LogsApp.cs" />
+    <Compile Include="BL\clsVer_TipoContrato.cs" />
+    <Compile Include="BL\clsVer_TipoMarca.cs" />
+    <Compile Include="BL\clsVer_TipoUnidad.cs" />
+    <Compile Include="BL\cls_UPD_TipoContrato.cs" />
     <Compile Include="Models\AgregarDatos.cs" />
+    <Compile Include="Models\TipoBiometria.cs" />
     <Compile Include="Models\Dispositivo.cs" />
     <Compile Include="Models\Disp_Funcionario.cs" />
     <Compile Include="Models\Funcionario.cs" />
@@ -70,6 +76,9 @@
     <Compile Include="Models\LoginUser.cs" />
     <Compile Include="Models\Logs.cs" />
     <Compile Include="Models\Marcaciones.cs" />
+    <Compile Include="Models\TipoContrato.cs" />
+    <Compile Include="Models\TipoMarca.cs" />
+    <Compile Include="Models\TipoUnida.cs" />
     <Compile Include="Prueba.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tools\Credenciales.cs" />

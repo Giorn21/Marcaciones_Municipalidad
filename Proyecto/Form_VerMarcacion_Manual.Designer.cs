@@ -61,6 +61,7 @@
             this.col_Comentario});
             this.dtv_Marcaciones_Manuales.Location = new System.Drawing.Point(12, 118);
             this.dtv_Marcaciones_Manuales.Name = "dtv_Marcaciones_Manuales";
+            this.dtv_Marcaciones_Manuales.ReadOnly = true;
             this.dtv_Marcaciones_Manuales.Size = new System.Drawing.Size(776, 270);
             this.dtv_Marcaciones_Manuales.TabIndex = 0;
             // 
@@ -68,36 +69,43 @@
             // 
             this.col_ID.HeaderText = "ID Funcionario";
             this.col_ID.Name = "col_ID";
+            this.col_ID.ReadOnly = true;
             // 
             // col_Nombre
             // 
             this.col_Nombre.HeaderText = "Nombre";
             this.col_Nombre.Name = "col_Nombre";
+            this.col_Nombre.ReadOnly = true;
             // 
             // col_Apellido
             // 
             this.col_Apellido.HeaderText = "Apellido";
             this.col_Apellido.Name = "col_Apellido";
+            this.col_Apellido.ReadOnly = true;
             // 
             // col_Fecha
             // 
             this.col_Fecha.HeaderText = "Fecha";
             this.col_Fecha.Name = "col_Fecha";
+            this.col_Fecha.ReadOnly = true;
             // 
             // col_Hora
             // 
             this.col_Hora.HeaderText = "Hora";
             this.col_Hora.Name = "col_Hora";
+            this.col_Hora.ReadOnly = true;
             // 
             // col_TipoMarca
             // 
             this.col_TipoMarca.HeaderText = "TipoMarca";
             this.col_TipoMarca.Name = "col_TipoMarca";
+            this.col_TipoMarca.ReadOnly = true;
             // 
             // col_Comentario
             // 
             this.col_Comentario.HeaderText = "Comentario";
             this.col_Comentario.Name = "col_Comentario";
+            this.col_Comentario.ReadOnly = true;
             // 
             // btn_Volver
             // 
@@ -142,7 +150,7 @@
             // TSM_Nuevo
             // 
             this.TSM_Nuevo.Name = "TSM_Nuevo";
-            this.TSM_Nuevo.Size = new System.Drawing.Size(180, 22);
+            this.TSM_Nuevo.Size = new System.Drawing.Size(124, 22);
             this.TSM_Nuevo.Text = "NUEVO +";
             this.TSM_Nuevo.Click += new System.EventHandler(this.TSM_Nuevo_Click);
             // 

@@ -47,7 +47,7 @@ namespace common
             this.host = Credenciales.Host;
         }
         #endregion
-       
+
         public List<Logs> Ver_LogsApp()
         {
             var logsList = new List<Logs>();

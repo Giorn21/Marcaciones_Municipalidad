@@ -91,6 +91,30 @@
     <Compile Include="Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_UPD_Contrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_UPD_Contrato.Designer.cs">
+      <DependentUpon>Form_UPD_Contrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_UPD_Unidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_UPD_Unidad.Designer.cs">
+      <DependentUpon>Form_UPD_Unidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_VerContrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_VerContrato.Designer.cs">
+      <DependentUpon>Form_VerContrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_VerBiometria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_VerBiometria.Designer.cs">
+      <DependentUpon>Form_VerBiometria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_VerFuncionarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +145,18 @@
     <Compile Include="Form_VerMarcacion_Manual.Designer.cs">
       <DependentUpon>Form_VerMarcacion_Manual.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_VerMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_VerMarcas.Designer.cs">
+      <DependentUpon>Form_VerMarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_VerUnidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_VerUnidad.Designer.cs">
+      <DependentUpon>Form_VerUnidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Agregar_Funcionario.resx">
@@ -137,6 +173,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Disp_Funcionario.resx">
       <DependentUpon>Form_Disp_Funcionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_UPD_Contrato.resx">
+      <DependentUpon>Form_UPD_Contrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_VerContrato.resx">
+      <DependentUpon>Form_VerContrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_VerBiometria.resx">
+      <DependentUpon>Form_VerBiometria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_VerFuncionarios.resx">
       <DependentUpon>Form_VerFuncionarios.cs</DependentUpon>
@@ -155,6 +200,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_VerMarcacion_Manual.resx">
       <DependentUpon>Form_VerMarcacion_Manual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_VerMarcas.resx">
+      <DependentUpon>Form_VerMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_VerUnidad.resx">
+      <DependentUpon>Form_VerUnidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

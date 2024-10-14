@@ -17,8 +17,6 @@ namespace common
         {
             private BaseDatos DB = new BaseDatos();
 
-      
-
             public List<Logs> BuscarLogs(DateTime desde, DateTime hasta, string proceso, string descripcion, string usuario)
             {
                 var logsList = new List<Logs>();

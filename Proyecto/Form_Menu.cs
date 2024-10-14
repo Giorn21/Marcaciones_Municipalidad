@@ -25,7 +25,6 @@ namespace Proyecto
         private void Menu_Load(object sender, EventArgs e)
         {
 
-            btn_Opciones.MouseDown += new MouseEventHandler(btn_Opciones_MouseDown);
         }
         private void btn_Salir_Click(object sender, EventArgs e)
         {
@@ -63,23 +62,32 @@ namespace Proyecto
             VerMarcacionManual.Show();
             this.Close();
         }
-        private void Form_MouseDown(object sender, MouseEventArgs e)
+        private void btn_Opciones_Click_1(object sender, EventArgs e)
         {
-            
+       
+            Button btn = (Button)sender;
+            contextMenuStrip1.Show(btn, new Point(-90, 25));
+           
         }
-        private void btn_Opciones_Click(object sender, EventArgs e)
+        private void tipoBiomeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.MouseDown += new MouseEventHandler(Form_MouseDown);
+            Form_VerBiometria biometria = new Form_VerBiometria();
+            biometria.Show();
+            this.Close();
+        }
 
-        }
-        private void btn_Opciones_MouseDown(object sender, MouseEventArgs e)
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            // Verifica si el botón izquierdo del ratón fue presionado
-            if (e.Button == MouseButtons.Left)
-            {
-                // Muestra el menú contextual en la posición del ratón
-                contextMenuStrip1.Show(this, btn_Opciones.Location);
-            }
+            Form_VerMarcas Marcas = new Form_VerMarcas();
+            Marcas.Show();
+            this.Close();
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            Form_VerContrato tipoContrato = new Form_VerContrato();
+            tipoContrato.Show();
+            this.Close();
         }
     }
 }

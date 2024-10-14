@@ -1,0 +1,53 @@
+﻿using common.BL;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Proyecto
+{
+    public partial class Form_UPD_Contrato : Form
+    {
+        public Form_UPD_Contrato()
+        {
+            InitializeComponent();
+        }
+
+        public void CargarDatos(int TipoContrato, string descripcion)
+        {
+            txt_TipoContrato.Text = TipoContrato.ToString();
+            txt_Descripcion.Text = descripcion;
+        }
+
+        private void btn_Salir_Click(object sender, EventArgs e)
+        {
+            Form_VerContrato contrato = new Form_VerContrato();
+            contrato.Show();
+            this.Close();
+        }
+
+        private void btn_Acualizar_Click(object sender, EventArgs e)
+        {
+            int TipoContrato = Convert.ToInt32(txt_TipoContrato.Text);
+            string nuevaDescripcion = txt_Descripcion.Text;
+
+            cls_UPD_TipoContrato actualizarContrato = new cls_UPD_TipoContrato();
+            bool exito = actualizarContrato.ActualizarTipoContrato(TipoContrato, nuevaDescripcion);
+
+            if (exito)
+            {
+                MessageBox.Show("Contrato actualizado correctamente.");
+                this.Close(); 
+            }
+            else
+            {
+                MessageBox.Show("Error al actualizar el contrato.");
+            }
+        }
+    }
+}

@@ -18,8 +18,8 @@ namespace Proyecto
     public partial class Form_VerFuncionarios : Form
     {
         List<Funcionario> funcionarios = new List<Funcionario>();
+        private clsVer_Funcionarios verFuncionarios = new clsVer_Funcionarios();
 
-       
         public Form_VerFuncionarios()
         {
             InitializeComponent();
@@ -70,9 +70,6 @@ namespace Proyecto
                 MessageBox.Show("Error al cargar los datos: " + ex.Message);
             }
         }
-
-
-        private clsVer_Funcionarios verFuncionarios = new clsVer_Funcionarios();
 
         private void Home_Load(object sender, EventArgs e)
         {

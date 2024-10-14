@@ -30,13 +30,13 @@
         {
             this.btn_Volver = new System.Windows.Forms.Button();
             this.dtv_LogsApp = new System.Windows.Forms.DataGridView();
-            this.check_Login = new System.Windows.Forms.CheckBox();
             this.col_Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Proceso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Accion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Host = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.check_Login = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtv_LogsApp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,8 +65,45 @@
             this.col_Host});
             this.dtv_LogsApp.Location = new System.Drawing.Point(12, 152);
             this.dtv_LogsApp.Name = "dtv_LogsApp";
+            this.dtv_LogsApp.ReadOnly = true;
             this.dtv_LogsApp.Size = new System.Drawing.Size(776, 286);
             this.dtv_LogsApp.TabIndex = 10;
+            // 
+            // col_Fecha
+            // 
+            this.col_Fecha.HeaderText = "Fecha y Hora";
+            this.col_Fecha.Name = "col_Fecha";
+            this.col_Fecha.ReadOnly = true;
+            // 
+            // col_Proceso
+            // 
+            this.col_Proceso.HeaderText = "Proceso";
+            this.col_Proceso.Name = "col_Proceso";
+            this.col_Proceso.ReadOnly = true;
+            // 
+            // col_Accion
+            // 
+            this.col_Accion.HeaderText = "Accion";
+            this.col_Accion.Name = "col_Accion";
+            this.col_Accion.ReadOnly = true;
+            // 
+            // col_Descripcion
+            // 
+            this.col_Descripcion.HeaderText = "Descripcion";
+            this.col_Descripcion.Name = "col_Descripcion";
+            this.col_Descripcion.ReadOnly = true;
+            // 
+            // col_Usuario
+            // 
+            this.col_Usuario.HeaderText = "Usuario";
+            this.col_Usuario.Name = "col_Usuario";
+            this.col_Usuario.ReadOnly = true;
+            // 
+            // col_Host
+            // 
+            this.col_Host.HeaderText = "Host";
+            this.col_Host.Name = "col_Host";
+            this.col_Host.ReadOnly = true;
             // 
             // check_Login
             // 
@@ -79,36 +116,6 @@
             this.check_Login.Text = "Dejar de ver Accion Login";
             this.check_Login.UseVisualStyleBackColor = true;
             this.check_Login.CheckedChanged += new System.EventHandler(this.check_Login_CheckedChanged);
-            // 
-            // col_Fecha
-            // 
-            this.col_Fecha.HeaderText = "Fecha y Hora";
-            this.col_Fecha.Name = "col_Fecha";
-            // 
-            // col_Proceso
-            // 
-            this.col_Proceso.HeaderText = "Proceso";
-            this.col_Proceso.Name = "col_Proceso";
-            // 
-            // col_Accion
-            // 
-            this.col_Accion.HeaderText = "Accion";
-            this.col_Accion.Name = "col_Accion";
-            // 
-            // col_Descripcion
-            // 
-            this.col_Descripcion.HeaderText = "Descripcion";
-            this.col_Descripcion.Name = "col_Descripcion";
-            // 
-            // col_Usuario
-            // 
-            this.col_Usuario.HeaderText = "Usuario";
-            this.col_Usuario.Name = "col_Usuario";
-            // 
-            // col_Host
-            // 
-            this.col_Host.HeaderText = "Host";
-            this.col_Host.Name = "col_Host";
             // 
             // Form_App_Logs
             // 
