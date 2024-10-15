@@ -46,7 +46,7 @@
             // btn_Volver
             // 
             this.btn_Volver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Volver.Location = new System.Drawing.Point(12, 12);
+            this.btn_Volver.Location = new System.Drawing.Point(12, 402);
             this.btn_Volver.Name = "btn_Volver";
             this.btn_Volver.Size = new System.Drawing.Size(108, 26);
             this.btn_Volver.TabIndex = 8;
@@ -69,7 +69,7 @@
             this.col_UploadFlag,
             this.col_LastActivityLog,
             this.col_LastActivityOP});
-            this.dtv_Dispositivos.Location = new System.Drawing.Point(12, 128);
+            this.dtv_Dispositivos.Location = new System.Drawing.Point(12, 69);
             this.dtv_Dispositivos.Name = "dtv_Dispositivos";
             this.dtv_Dispositivos.ReadOnly = true;
             this.dtv_Dispositivos.Size = new System.Drawing.Size(869, 310);
@@ -132,8 +132,8 @@
             // lbl_Titulo
             // 
             this.lbl_Titulo.AutoSize = true;
-            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Titulo.Location = new System.Drawing.Point(339, 67);
+            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.Location = new System.Drawing.Point(302, 9);
             this.lbl_Titulo.Name = "lbl_Titulo";
             this.lbl_Titulo.Size = new System.Drawing.Size(218, 42);
             this.lbl_Titulo.TabIndex = 10;
@@ -143,7 +143,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(893, 450);
+            this.ClientSize = new System.Drawing.Size(893, 440);
             this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.dtv_Dispositivos);
             this.Controls.Add(this.btn_Volver);

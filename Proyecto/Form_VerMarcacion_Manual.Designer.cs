@@ -42,6 +42,7 @@
             this.TSM_Registro = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM_Nuevo = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.lbl_Titulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtv_Marcaciones_Manuales)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +60,7 @@
             this.col_Hora,
             this.col_TipoMarca,
             this.col_Comentario});
-            this.dtv_Marcaciones_Manuales.Location = new System.Drawing.Point(12, 118);
+            this.dtv_Marcaciones_Manuales.Location = new System.Drawing.Point(12, 123);
             this.dtv_Marcaciones_Manuales.Name = "dtv_Marcaciones_Manuales";
             this.dtv_Marcaciones_Manuales.ReadOnly = true;
             this.dtv_Marcaciones_Manuales.Size = new System.Drawing.Size(776, 270);
@@ -110,7 +111,7 @@
             // btn_Volver
             // 
             this.btn_Volver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Volver.Location = new System.Drawing.Point(12, 410);
+            this.btn_Volver.Location = new System.Drawing.Point(12, 419);
             this.btn_Volver.Name = "btn_Volver";
             this.btn_Volver.Size = new System.Drawing.Size(80, 31);
             this.btn_Volver.TabIndex = 2;
@@ -121,7 +122,7 @@
             // txt_Buscador
             // 
             this.txt_Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Buscador.Location = new System.Drawing.Point(51, 82);
+            this.txt_Buscador.Location = new System.Drawing.Point(51, 87);
             this.txt_Buscador.Name = "txt_Buscador";
             this.txt_Buscador.Size = new System.Drawing.Size(202, 22);
             this.txt_Buscador.TabIndex = 4;
@@ -133,7 +134,7 @@
             // 
             this.lbl_Buscador.AutoSize = true;
             this.lbl_Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Buscador.Location = new System.Drawing.Point(11, 80);
+            this.lbl_Buscador.Location = new System.Drawing.Point(11, 85);
             this.lbl_Buscador.Name = "lbl_Buscador";
             this.lbl_Buscador.Size = new System.Drawing.Size(34, 25);
             this.lbl_Buscador.TabIndex = 3;
@@ -164,11 +165,22 @@
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // lbl_Titulo
+            // 
+            this.lbl_Titulo.AutoSize = true;
+            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.Location = new System.Drawing.Point(204, 35);
+            this.lbl_Titulo.Name = "lbl_Titulo";
+            this.lbl_Titulo.Size = new System.Drawing.Size(368, 33);
+            this.lbl_Titulo.TabIndex = 5;
+            this.lbl_Titulo.Text = "Ver Marcaciones Manuales";
+            // 
             // Form_VerMarcacion_Manual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 453);
+            this.ClientSize = new System.Drawing.Size(800, 467);
+            this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.txt_Buscador);
             this.Controls.Add(this.lbl_Buscador);
             this.Controls.Add(this.btn_Volver);
@@ -203,5 +215,6 @@
         private System.Windows.Forms.ToolStripMenuItem TSM_Registro;
         private System.Windows.Forms.ToolStripMenuItem TSM_Nuevo;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.Label lbl_Titulo;
     }
 }

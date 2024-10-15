@@ -61,6 +61,12 @@
     <Compile Include="Form_Agregar_Funcionario.Designer.cs">
       <DependentUpon>Form_Agregar_Funcionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Agregar_Unidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Agregar_Unidades.Designer.cs">
+      <DependentUpon>Form_Agregar_Unidades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_App_Logs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     <EmbeddedResource Include="Form_Agregar_Funcionario.resx">
       <DependentUpon>Form_Agregar_Funcionario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Agregar_Unidades.resx">
+      <DependentUpon>Form_Agregar_Unidades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_App_Logs.resx">
       <DependentUpon>Form_App_Logs.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_UPD_Contrato.resx">
       <DependentUpon>Form_UPD_Contrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_UPD_Unidad.resx">
+      <DependentUpon>Form_UPD_Unidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_VerContrato.resx">
       <DependentUpon>Form_VerContrato.cs</DependentUpon>

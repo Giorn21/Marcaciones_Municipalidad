@@ -33,15 +33,16 @@
             this.Col_IdDispositivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_IdEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Sync = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbl_Titulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtv_Disp_Funcionarios)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Volver
             // 
-            this.btn_Volver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Volver.Location = new System.Drawing.Point(12, 12);
+            this.btn_Volver.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Volver.Location = new System.Drawing.Point(12, 443);
             this.btn_Volver.Name = "btn_Volver";
-            this.btn_Volver.Size = new System.Drawing.Size(108, 26);
+            this.btn_Volver.Size = new System.Drawing.Size(115, 26);
             this.btn_Volver.TabIndex = 8;
             this.btn_Volver.Text = "Volver al menu";
             this.btn_Volver.UseVisualStyleBackColor = true;
@@ -56,7 +57,7 @@
             this.Col_IdDispositivo,
             this.col_IdEmpleado,
             this.col_Sync});
-            this.dtv_Disp_Funcionarios.Location = new System.Drawing.Point(12, 98);
+            this.dtv_Disp_Funcionarios.Location = new System.Drawing.Point(12, 87);
             this.dtv_Disp_Funcionarios.Name = "dtv_Disp_Funcionarios";
             this.dtv_Disp_Funcionarios.ReadOnly = true;
             this.dtv_Disp_Funcionarios.Size = new System.Drawing.Size(776, 340);
@@ -81,11 +82,22 @@
             this.col_Sync.Name = "col_Sync";
             this.col_Sync.ReadOnly = true;
             // 
+            // lbl_Titulo
+            // 
+            this.lbl_Titulo.AutoSize = true;
+            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.Location = new System.Drawing.Point(213, 23);
+            this.lbl_Titulo.Name = "lbl_Titulo";
+            this.lbl_Titulo.Size = new System.Drawing.Size(349, 33);
+            this.lbl_Titulo.TabIndex = 10;
+            this.lbl_Titulo.Text = "Dispositivos Funcionarios";
+            // 
             // Form_Disp_Funcionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 481);
+            this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.dtv_Disp_Funcionarios);
             this.Controls.Add(this.btn_Volver);
             this.Name = "Form_Disp_Funcionario";
@@ -94,6 +106,7 @@
             this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtv_Disp_Funcionarios)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -104,5 +117,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_IdDispositivo;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_IdEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Sync;
+        private System.Windows.Forms.Label lbl_Titulo;
     }
 }

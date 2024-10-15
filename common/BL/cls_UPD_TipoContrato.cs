@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace common.BL
+namespace common
 {
     public class cls_UPD_TipoContrato
     {

@@ -38,13 +38,14 @@
             this.col_TipoMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_Buscador = new System.Windows.Forms.TextBox();
             this.lbl_Buscador = new System.Windows.Forms.Label();
+            this.lbl_Titulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtv_Marcaciones)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Volver
             // 
-            this.btn_Volver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Volver.Location = new System.Drawing.Point(10, 359);
+            this.btn_Volver.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Volver.Location = new System.Drawing.Point(10, 415);
             this.btn_Volver.Name = "btn_Volver";
             this.btn_Volver.Size = new System.Drawing.Size(115, 30);
             this.btn_Volver.TabIndex = 8;
@@ -64,7 +65,7 @@
             this.col_fecha,
             this.col_Hora,
             this.col_TipoMarca});
-            this.dtv_Marcaciones.Location = new System.Drawing.Point(12, 64);
+            this.dtv_Marcaciones.Location = new System.Drawing.Point(12, 120);
             this.dtv_Marcaciones.Name = "dtv_Marcaciones";
             this.dtv_Marcaciones.ReadOnly = true;
             this.dtv_Marcaciones.Size = new System.Drawing.Size(776, 267);
@@ -109,7 +110,7 @@
             // txt_Buscador
             // 
             this.txt_Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Buscador.Location = new System.Drawing.Point(48, 25);
+            this.txt_Buscador.Location = new System.Drawing.Point(48, 81);
             this.txt_Buscador.Name = "txt_Buscador";
             this.txt_Buscador.Size = new System.Drawing.Size(180, 22);
             this.txt_Buscador.TabIndex = 11;
@@ -121,17 +122,28 @@
             // 
             this.lbl_Buscador.AutoSize = true;
             this.lbl_Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Buscador.Location = new System.Drawing.Point(8, 23);
+            this.lbl_Buscador.Location = new System.Drawing.Point(8, 79);
             this.lbl_Buscador.Name = "lbl_Buscador";
             this.lbl_Buscador.Size = new System.Drawing.Size(34, 25);
             this.lbl_Buscador.TabIndex = 10;
             this.lbl_Buscador.Text = "🔎";
             // 
+            // lbl_Titulo
+            // 
+            this.lbl_Titulo.AutoSize = true;
+            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.Location = new System.Drawing.Point(250, 23);
+            this.lbl_Titulo.Name = "lbl_Titulo";
+            this.lbl_Titulo.Size = new System.Drawing.Size(234, 33);
+            this.lbl_Titulo.TabIndex = 12;
+            this.lbl_Titulo.Text = "Ver Marcaciones";
+            // 
             // Form_VerMarcaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 402);
+            this.ClientSize = new System.Drawing.Size(802, 454);
+            this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.txt_Buscador);
             this.Controls.Add(this.lbl_Buscador);
             this.Controls.Add(this.dtv_Marcaciones);
@@ -158,5 +170,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Hora;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_TipoMarca;
+        private System.Windows.Forms.Label lbl_Titulo;
     }
 }

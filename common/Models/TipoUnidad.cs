@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 
 namespace common
 {
-    public class TipoUnida
+    public class TipoUnidad
     {
         public int IdDireccion { get; set; }
+        public string Direccion { get; set; }
         public int IdUnidad { get; set; }
         public string Descripcion { get; set; }
         public string Ubicacion { get; set; }
-        public int Telefono { get; set; }
+        public string Telefono { get; set; }
         public string Email { get; set; }
     }
 }

@@ -37,15 +37,16 @@
             this.col_Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Host = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.check_Login = new System.Windows.Forms.CheckBox();
+            this.lbl_Titulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtv_LogsApp)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Volver
             // 
-            this.btn_Volver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Volver.Location = new System.Drawing.Point(12, 12);
+            this.btn_Volver.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Volver.Location = new System.Drawing.Point(12, 420);
             this.btn_Volver.Name = "btn_Volver";
-            this.btn_Volver.Size = new System.Drawing.Size(108, 26);
+            this.btn_Volver.Size = new System.Drawing.Size(117, 26);
             this.btn_Volver.TabIndex = 9;
             this.btn_Volver.Text = "Volver al menu";
             this.btn_Volver.UseVisualStyleBackColor = true;
@@ -63,7 +64,7 @@
             this.col_Descripcion,
             this.col_Usuario,
             this.col_Host});
-            this.dtv_LogsApp.Location = new System.Drawing.Point(12, 152);
+            this.dtv_LogsApp.Location = new System.Drawing.Point(12, 110);
             this.dtv_LogsApp.Name = "dtv_LogsApp";
             this.dtv_LogsApp.ReadOnly = true;
             this.dtv_LogsApp.Size = new System.Drawing.Size(776, 286);
@@ -109,7 +110,7 @@
             // 
             this.check_Login.AutoSize = true;
             this.check_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.check_Login.Location = new System.Drawing.Point(580, 122);
+            this.check_Login.Location = new System.Drawing.Point(580, 80);
             this.check_Login.Name = "check_Login";
             this.check_Login.Size = new System.Drawing.Size(208, 24);
             this.check_Login.TabIndex = 12;
@@ -117,11 +118,22 @@
             this.check_Login.UseVisualStyleBackColor = true;
             this.check_Login.CheckedChanged += new System.EventHandler(this.check_Login_CheckedChanged);
             // 
+            // lbl_Titulo
+            // 
+            this.lbl_Titulo.AutoSize = true;
+            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.Location = new System.Drawing.Point(264, 18);
+            this.lbl_Titulo.Name = "lbl_Titulo";
+            this.lbl_Titulo.Size = new System.Drawing.Size(249, 33);
+            this.lbl_Titulo.TabIndex = 13;
+            this.lbl_Titulo.Text = "Bitacora Acciones";
+            // 
             // Form_App_Logs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 462);
+            this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.check_Login);
             this.Controls.Add(this.dtv_LogsApp);
             this.Controls.Add(this.btn_Volver);
@@ -146,5 +158,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Host;
+        private System.Windows.Forms.Label lbl_Titulo;
     }
 }

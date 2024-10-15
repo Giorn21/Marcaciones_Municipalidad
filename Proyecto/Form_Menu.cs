@@ -89,5 +89,12 @@ namespace Proyecto
             tipoContrato.Show();
             this.Close();
         }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            Form_VerUnidad verUnidad = new Form_VerUnidad();
+            verUnidad.Show();
+            this.Close();
+        }
     }
 }

@@ -80,6 +80,7 @@
             this.dtv_TipoUnidad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtv_TipoUnidad.Size = new System.Drawing.Size(608, 215);
             this.dtv_TipoUnidad.TabIndex = 6;
+            this.dtv_TipoUnidad.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtv_TipoUnidad_CellContentDoubleClick);
             // 
             // col_Direccion
             // 
@@ -126,6 +127,7 @@
             this.btn_Agregar.TabIndex = 9;
             this.btn_Agregar.Text = "Agregar";
             this.btn_Agregar.UseVisualStyleBackColor = true;
+            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
             // Form_VerUnidad
             // 
@@ -137,7 +139,9 @@
             this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.dtv_TipoUnidad);
             this.Name = "Form_VerUnidad";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_VerUnidad";
+            this.Load += new System.EventHandler(this.Form_VerUnidad_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtv_TipoUnidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

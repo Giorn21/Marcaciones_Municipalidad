@@ -32,3 +32,6 @@ C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_VerB
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_VerMarcas.resources
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_VerContrato.resources
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_UPD_Contrato.resources
+C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_VerUnidad.resources
+C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_Agregar_Unidades.resources
+C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_UPD_Unidad.resources

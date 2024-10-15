@@ -45,6 +45,7 @@
             this.btn_Agregar = new System.Windows.Forms.Button();
             this.btn_Volver = new System.Windows.Forms.Button();
             this.btn_desvincular = new System.Windows.Forms.Button();
+            this.lbl_Titulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtv_BaseDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -193,11 +194,22 @@
             this.btn_desvincular.UseVisualStyleBackColor = true;
             this.btn_desvincular.Click += new System.EventHandler(this.btn_desvincular_Click);
             // 
+            // lbl_Titulo
+            // 
+            this.lbl_Titulo.AutoSize = true;
+            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.Location = new System.Drawing.Point(445, 23);
+            this.lbl_Titulo.Name = "lbl_Titulo";
+            this.lbl_Titulo.Size = new System.Drawing.Size(183, 33);
+            this.lbl_Titulo.TabIndex = 9;
+            this.lbl_Titulo.Text = "Funcionarios";
+            // 
             // Form_VerFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1074, 503);
+            this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.btn_desvincular);
             this.Controls.Add(this.btn_Volver);
             this.Controls.Add(this.btn_Agregar);
@@ -233,5 +245,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_IdUnidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_IdDispositivo;
         private System.Windows.Forms.Button btn_desvincular;
+        private System.Windows.Forms.Label lbl_Titulo;
     }
 }

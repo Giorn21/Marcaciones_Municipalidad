@@ -1,4 +1,5 @@
-﻿using common.BL;
+﻿using common;
+using common.BL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace Proyecto
 {
     public partial class Form_UPD_Contrato : Form
     {
+        cls_UPD_TipoContrato actualizarContrato = new cls_UPD_TipoContrato();
         public Form_UPD_Contrato()
         {
             InitializeComponent();
@@ -36,7 +38,7 @@ namespace Proyecto
             int TipoContrato = Convert.ToInt32(txt_TipoContrato.Text);
             string nuevaDescripcion = txt_Descripcion.Text;
 
-            cls_UPD_TipoContrato actualizarContrato = new cls_UPD_TipoContrato();
+            
             bool exito = actualizarContrato.ActualizarTipoContrato(TipoContrato, nuevaDescripcion);
 
             if (exito)
