@@ -53,7 +53,7 @@
             // 
             this.lbl_TituloMenu.AutoSize = true;
             this.lbl_TituloMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TituloMenu.Location = new System.Drawing.Point(206, 12);
+            this.lbl_TituloMenu.Location = new System.Drawing.Point(235, 9);
             this.lbl_TituloMenu.Name = "lbl_TituloMenu";
             this.lbl_TituloMenu.Size = new System.Drawing.Size(111, 37);
             this.lbl_TituloMenu.TabIndex = 0;
@@ -144,7 +144,7 @@
             this.btn_Opciones.Name = "btn_Opciones";
             this.btn_Opciones.Size = new System.Drawing.Size(75, 29);
             this.btn_Opciones.TabIndex = 11;
-            this.btn_Opciones.Text = "Opciones";
+            this.btn_Opciones.Text = "MOD";
             this.btn_Opciones.UseVisualStyleBackColor = true;
             this.btn_Opciones.Click += new System.EventHandler(this.btn_Opciones_Click_1);
             // 
@@ -157,40 +157,40 @@
             this.toolStripMenuItem2,
             this.tipoBiomeToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 136);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(159, 114);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(158, 22);
             this.toolStripMenuItem3.Text = "Tipo Contraro";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(158, 22);
             this.toolStripMenuItem4.Text = "Tipo Unidad";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // tipoHorarioToolStripMenuItem
             // 
             this.tipoHorarioToolStripMenuItem.Name = "tipoHorarioToolStripMenuItem";
-            this.tipoHorarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tipoHorarioToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.tipoHorarioToolStripMenuItem.Text = "Tipo Horario";
             this.tipoHorarioToolStripMenuItem.Click += new System.EventHandler(this.tipoHorarioToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(158, 22);
             this.toolStripMenuItem2.Text = "Tipo Marca";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // tipoBiomeToolStripMenuItem
             // 
             this.tipoBiomeToolStripMenuItem.Name = "tipoBiomeToolStripMenuItem";
-            this.tipoBiomeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tipoBiomeToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.tipoBiomeToolStripMenuItem.Text = "Tipo Biometrico";
             this.tipoBiomeToolStripMenuItem.Click += new System.EventHandler(this.tipoBiomeToolStripMenuItem_Click);
             // 

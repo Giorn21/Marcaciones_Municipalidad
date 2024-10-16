@@ -56,11 +56,11 @@
             // 
             this.lbl_Titulo.AutoSize = true;
             this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Titulo.Location = new System.Drawing.Point(206, 9);
+            this.lbl_Titulo.Location = new System.Drawing.Point(159, 9);
             this.lbl_Titulo.Name = "lbl_Titulo";
-            this.lbl_Titulo.Size = new System.Drawing.Size(191, 37);
+            this.lbl_Titulo.Size = new System.Drawing.Size(296, 37);
             this.lbl_Titulo.TabIndex = 7;
-            this.lbl_Titulo.Text = "Tipo Unidad";
+            this.lbl_Titulo.Text = "Tipo Unidad (MOD)";
             // 
             // dtv_TipoUnidad
             // 

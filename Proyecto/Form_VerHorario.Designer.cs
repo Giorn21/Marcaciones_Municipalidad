@@ -40,19 +40,20 @@
             // 
             this.lbl_Titulo.AutoSize = true;
             this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Titulo.Location = new System.Drawing.Point(227, 9);
+            this.lbl_Titulo.Location = new System.Drawing.Point(213, 9);
             this.lbl_Titulo.Name = "lbl_Titulo";
-            this.lbl_Titulo.Size = new System.Drawing.Size(179, 33);
+            this.lbl_Titulo.Size = new System.Drawing.Size(222, 33);
             this.lbl_Titulo.TabIndex = 0;
-            this.lbl_Titulo.Text = "Ver Horarios";
+            this.lbl_Titulo.Text = "Horarios (MOD)";
             // 
             // dtv_Horarios
             // 
             this.dtv_Horarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtv_Horarios.Location = new System.Drawing.Point(12, 122);
             this.dtv_Horarios.Name = "dtv_Horarios";
-            this.dtv_Horarios.Size = new System.Drawing.Size(629, 218);
+            this.dtv_Horarios.Size = new System.Drawing.Size(658, 238);
             this.dtv_Horarios.TabIndex = 1;
+            this.dtv_Horarios.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtv_Horarios_RowValidated);
             // 
             // cbox_Horarios
             // 
@@ -60,8 +61,9 @@
             this.cbox_Horarios.FormattingEnabled = true;
             this.cbox_Horarios.Location = new System.Drawing.Point(12, 79);
             this.cbox_Horarios.Name = "cbox_Horarios";
-            this.cbox_Horarios.Size = new System.Drawing.Size(182, 26);
+            this.cbox_Horarios.Size = new System.Drawing.Size(285, 26);
             this.cbox_Horarios.TabIndex = 2;
+            this.cbox_Horarios.SelectedIndexChanged += new System.EventHandler(this.cbox_Horarios_SelectedIndexChanged);
             // 
             // lbl_horarios
             // 
@@ -87,7 +89,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 405);
+            this.ClientSize = new System.Drawing.Size(682, 408);
             this.Controls.Add(this.btn_Salir);
             this.Controls.Add(this.lbl_horarios);
             this.Controls.Add(this.cbox_Horarios);
@@ -96,6 +98,7 @@
             this.Name = "Form_VerHorario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_VerHorario";
+            this.Load += new System.EventHandler(this.Form_VerHorario_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dtv_Horarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -52,11 +52,11 @@
             // 
             this.lbl_Titulo.AutoSize = true;
             this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Titulo.Location = new System.Drawing.Point(62, 9);
+            this.lbl_Titulo.Location = new System.Drawing.Point(12, 9);
             this.lbl_Titulo.Name = "lbl_Titulo";
-            this.lbl_Titulo.Size = new System.Drawing.Size(213, 37);
+            this.lbl_Titulo.Size = new System.Drawing.Size(318, 37);
             this.lbl_Titulo.TabIndex = 4;
-            this.lbl_Titulo.Text = "Tipo Contrato";
+            this.lbl_Titulo.Text = "Tipo Contrato (MOD)";
             // 
             // dtv_TipoContrato
             // 
