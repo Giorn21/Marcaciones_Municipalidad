@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace common
 {
@@ -32,6 +33,8 @@ namespace common
 
         public bool ActualizarUnidad(int idUnidad, int direccion, string nombreCentro, string ubicacion, string telefono, string email)
         {
+            clsAgregar_LogsApp logs = new clsAgregar_LogsApp();
+
             bool resultado = false;
             DB.Conectar();
 
@@ -41,16 +44,18 @@ namespace common
                 DB.AsignarParametroEntero("@IdUnidad", idUnidad);
                 DB.AsignarParametroEntero("@Direccion", direccion);
                 DB.AsignarParametroCadena("@NombreCentro", nombreCentro);
-                DB.AsignarParametroCadena("@Ubicacion", ubicacion);
-                DB.AsignarParametroCadena("@Telefono", telefono);
-                DB.AsignarParametroCadena("@Email", email);
+                DB.AsignarParametroCadena("@Ubicacion", string.IsNullOrWhiteSpace(ubicacion) ? "Sin Ubicacion" : ubicacion);
+                DB.AsignarParametroCadena("@Telefono", string.IsNullOrWhiteSpace(telefono) ? "Sin Telefono" : telefono);
+                DB.AsignarParametroCadena("@Email", string.IsNullOrWhiteSpace(email) ? "Sin Email" : email);
 
                 DB.EjecutarComando();
                 resultado = true;
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al actualizar la unidad: " + ex.Message);
+                MessageBox.Show("Error al actualizar la unidad: " + ex.Message);
+                string Usuario = LoginUser.Usuario;
+                logs.InsertarLog("Unidad", "Err_Update", Usuario, ex.Message);
             }
             finally
             {

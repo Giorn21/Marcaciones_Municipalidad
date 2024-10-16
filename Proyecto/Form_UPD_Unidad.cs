@@ -36,6 +36,8 @@ namespace Proyecto
         {
             // Crear una instancia de la clase cls_UPD_Unidad
             cls_UPD_Unidad actualizarUnidad = new cls_UPD_Unidad();
+            clsAgregar_LogsApp logs = new clsAgregar_LogsApp();
+
 
             // Llamar al método para actualizar los datos
             bool exito = actualizarUnidad.ActualizarUnidad(
@@ -51,6 +53,18 @@ namespace Proyecto
             if (exito)
             {
                 MessageBox.Show("Unidad actualizada correctamente.");
+                string Usuario = LoginUser.Usuario;
+                logs.InsertarLog("Unidad", "Uni Update", Usuario, "Se a Actualizado una Unidad");
+
+                cbox_Direccion.Text = "Seleccione";
+                txt_Descripcion.Text = "";
+                cbox_Ubicacion.Text = "";
+                txt_Telefono.Text = "";
+                txt_Email.Text = "";
+
+                Form_VerUnidad verUnidad = new Form_VerUnidad();
+                verUnidad.Show();
+                this.Close();
             }
             else
             {
@@ -80,6 +94,50 @@ namespace Proyecto
             Form_VerUnidad verUnidad = new Form_VerUnidad();
             verUnidad.Show();
             this.Close();
+        }
+
+        private void txt_Telefono_TextChanged(object sender, EventArgs e)
+        {
+            txt_Telefono.TextChanged -= txt_Telefono_TextChanged;
+
+            string textoSinFormato = txt_Telefono.Text.Replace(",", "").Replace(" ", "");
+            if (textoSinFormato.Length > 3)
+            {
+                string textoFormateado = "";
+                for (int i = 0; i < textoSinFormato.Length; i++)
+                {
+                    textoFormateado += textoSinFormato[i];
+
+                    // Cada 3 dígitos, agregar una coma y un espacio
+                    if ((i + 1) % 3 == 0 && (i + 1) < textoSinFormato.Length)
+                    {
+                        textoFormateado += ", ";
+                    }
+                }
+
+                txt_Telefono.Text = textoFormateado;
+                txt_Telefono.SelectionStart = txt_Telefono.Text.Length;
+            }
+
+            // Volver a suscribir el evento
+            txt_Telefono.TextChanged += txt_Telefono_TextChanged;
+        }
+
+        private void txt_Email_Validating(object sender, CancelEventArgs e)
+        {
+            string email = txt_Email.Text.Trim();
+
+            // Si el TextBox está vacío, no realizar ninguna validación
+            if (string.IsNullOrEmpty(email))
+            {
+                return;
+            }
+            if (!email.Contains("@"))
+            {
+                MessageBox.Show("Debe ingresar un correo válido con '@'");
+                txt_Email.Clear();
+                e.Cancel = true;
+            }
         }
     }
 }

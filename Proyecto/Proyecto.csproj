@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.5.3.4\lib\net46\NLog.dll</HintPath>
@@ -55,6 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_Agregar_Contrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Agregar_Contrato.Designer.cs">
+      <DependentUpon>Form_Agregar_Contrato.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Agregar_Funcionario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +136,12 @@
     <Compile Include="Form_VerFuncionarios.Designer.cs">
       <DependentUpon>Form_VerFuncionarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_VerHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_VerHorario.Designer.cs">
+      <DependentUpon>Form_VerHorario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_VerMarcaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +180,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_Agregar_Contrato.resx">
+      <DependentUpon>Form_Agregar_Contrato.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Agregar_Funcionario.resx">
       <DependentUpon>Form_Agregar_Funcionario.cs</DependentUpon>
     </EmbeddedResource>
@@ -200,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_VerHorario.resx">
+      <DependentUpon>Form_VerHorario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_VerMarcaciones.resx">
       <DependentUpon>Form_VerMarcaciones.cs</DependentUpon>

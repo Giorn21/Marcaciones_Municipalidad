@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\clsAgregar_Contrato.cs" />
     <Compile Include="BL\clsAgregar_Funcionarios.cs" />
     <Compile Include="BL\clsAgregar_LogsApp.cs" />
     <Compile Include="BL\clsAgregar_TipoMarcasManual.cs" />

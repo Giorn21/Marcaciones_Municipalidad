@@ -22,6 +22,8 @@ namespace common
 
         public void AgregarUnidad(string Direccion, string descripcion, string ubicacion, string telefono, string email)
         {
+            clsAgregar_LogsApp logs = new clsAgregar_LogsApp();
+
             DB.Conectar();
 
             try
@@ -39,10 +41,15 @@ namespace common
                 DB.EjecutarComando();
 
                 MessageBox.Show("Unidad agregada correctamente.");
+
+                string Usuario = LoginUser.Usuario;
+                logs.InsertarLog("Unidad", "Uni Nuevo", Usuario, "Se a Agregado una nueva Unidad a la base de datos");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al agregar la unidad: " + ex.Message);
+                string Usuario = LoginUser.Usuario;
+                logs.InsertarLog("Unidad", "ErrNuevo", Usuario, ex.Message);
             }
             finally
             {

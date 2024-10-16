@@ -33,6 +33,7 @@
             this.dtv_TipoContrato = new System.Windows.Forms.DataGridView();
             this.col_TipoContrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_Agregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtv_TipoContrato)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,11 +86,23 @@
             this.col_Descripcion.Name = "col_Descripcion";
             this.col_Descripcion.ReadOnly = true;
             // 
+            // btn_Agregar
+            // 
+            this.btn_Agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Agregar.Location = new System.Drawing.Point(271, 318);
+            this.btn_Agregar.Name = "btn_Agregar";
+            this.btn_Agregar.Size = new System.Drawing.Size(75, 27);
+            this.btn_Agregar.TabIndex = 6;
+            this.btn_Agregar.Text = "Agregar";
+            this.btn_Agregar.UseVisualStyleBackColor = true;
+            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
+            // 
             // Form_VerContrato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(358, 357);
+            this.Controls.Add(this.btn_Agregar);
             this.Controls.Add(this.btn_Volver);
             this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.dtv_TipoContrato);
@@ -110,5 +123,6 @@
         private System.Windows.Forms.DataGridView dtv_TipoContrato;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_TipoContrato;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Descripcion;
+        private System.Windows.Forms.Button btn_Agregar;
     }
 }

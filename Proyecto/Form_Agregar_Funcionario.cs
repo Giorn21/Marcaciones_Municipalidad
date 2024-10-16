@@ -58,6 +58,7 @@ namespace Proyecto
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Total de horas trabajadas", DataPropertyName = "TotalHoras" });
 
             clsDatos_cboxsAgrFuncionario Datos_Contratos = new clsDatos_cboxsAgrFuncionario();
+
             Datos_Contratos.CargarTiposContratos(cbox_Tipo_Contrato);
             // Verificar que el ComboBox tenga items después de cargar los datos
             if (cbox_Tipo_Contrato.Items.Count > 0)

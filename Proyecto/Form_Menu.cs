@@ -96,5 +96,11 @@ namespace Proyecto
             verUnidad.Show();
             this.Close();
         }
+
+        private void tipoHorarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_VerHorario verHorario = new Form_VerHorario();
+            verHorario.Show();
+        }
     }
 }

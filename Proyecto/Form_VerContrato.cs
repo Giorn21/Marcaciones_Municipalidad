@@ -75,7 +75,23 @@ namespace Proyecto
                 // Pasar los datos al formulario de actualización
                 UPD_Contrato.CargarDatos(contratoId, descripcion);
 
-                UPD_Contrato.ShowDialog();
+                UPD_Contrato.Show();
+                this.Close();
+            }
+        }
+
+        private void btn_Agregar_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                    "¿Estás seguro de que deseas Agregar un nuevo contrato?",
+                    "Confirmación de Desvinculación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                Form_Agregar_Contrato AgrContrato = new Form_Agregar_Contrato();
+                AgrContrato.Show();
                 this.Close();
             }
         }

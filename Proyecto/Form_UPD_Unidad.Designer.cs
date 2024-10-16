@@ -141,6 +141,7 @@
             this.txt_Telefono.Name = "txt_Telefono";
             this.txt_Telefono.Size = new System.Drawing.Size(177, 22);
             this.txt_Telefono.TabIndex = 15;
+            this.txt_Telefono.TextChanged += new System.EventHandler(this.txt_Telefono_TextChanged);
             // 
             // txt_Email
             // 
@@ -149,6 +150,7 @@
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(177, 22);
             this.txt_Email.TabIndex = 14;
+            this.txt_Email.Validating += new System.ComponentModel.CancelEventHandler(this.txt_Email_Validating);
             // 
             // txt_Descripcion
             // 
@@ -176,6 +178,7 @@
             this.Controls.Add(this.txt_Email);
             this.Controls.Add(this.txt_Descripcion);
             this.Name = "Form_UPD_Unidad";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_UPD_Unidad";
             this.Load += new System.EventHandler(this.Form_UPD_Unidad_Load);
             this.ResumeLayout(false);

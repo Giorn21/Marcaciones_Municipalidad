@@ -42,13 +42,13 @@ namespace Proyecto
                 cbox_Ubicacion.SelectedIndex = 0;
             }
 
-            cbox_Direccion.Text = "Selecione";
+            cbox_Direccion.Text = "Seleccione";
             cbox_Ubicacion.Text = "";
         }
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-            if (cbox_Direccion.Text == "" || cbox_Direccion.Text == "Selecione" || txt_Descripcion.Text == "")
+            if (cbox_Direccion.Text == "" || cbox_Direccion.Text == "Seleccione" || txt_Descripcion.Text == "")
             {
                 MessageBox.Show("!ALERTA¡ : Rellene las casillas Direccion y Descripcion");
                 return;
@@ -78,6 +78,12 @@ namespace Proyecto
                 }
 
                 agregarUnidad.AgregarUnidad(Direccion, descripcion, ubicacion, telefono, email);
+
+                cbox_Direccion.Text = "Seleccione";
+                txt_Descripcion.Text = "";
+                cbox_Ubicacion.Text = "";
+                txt_Telefono.Text = "";
+                txt_Email.Text = "";
             }
             
         }
@@ -132,12 +138,9 @@ namespace Proyecto
             {
                 return;
             }
-            if (!email.Contains("@") ||
-                !email.EndsWith("gmail.", StringComparison.OrdinalIgnoreCase) ||
-                  email.EndsWith("hotmail.", StringComparison.OrdinalIgnoreCase) ||
-                  email.EndsWith("email.", StringComparison.OrdinalIgnoreCase))
+            if (!email.Contains("@"))
             {
-                MessageBox.Show("Debe ingresar un correo válido con '@' y los dominios permitidos ( gmail., hotmail., email. )", "Email no válido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe ingresar un correo válido con '@'");
                 txt_Email.Clear();
                 e.Cancel = true;
             }

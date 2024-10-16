@@ -35,20 +35,31 @@ namespace Proyecto
 
         private void btn_Acualizar_Click(object sender, EventArgs e)
         {
+            clsAgregar_LogsApp logs = new clsAgregar_LogsApp();
+
+            if (txt_Descripcion.Text == "") 
+            {
+                MessageBox.Show("Ingrese un Contrato para Actualizar los datos");
+                return;
+            }
             int TipoContrato = Convert.ToInt32(txt_TipoContrato.Text);
             string nuevaDescripcion = txt_Descripcion.Text;
 
-            
             bool exito = actualizarContrato.ActualizarTipoContrato(TipoContrato, nuevaDescripcion);
 
             if (exito)
             {
                 MessageBox.Show("Contrato actualizado correctamente.");
+                string Usuario = LoginUser.Usuario;
+                logs.InsertarLog("Contrato", "Con Update", Usuario, "Se a Actualizado un Contrato");
+                Form_VerContrato verContrato = new Form_VerContrato();
+                verContrato.Show();
                 this.Close(); 
             }
             else
             {
                 MessageBox.Show("Error al actualizar el contrato.");
+                return;
             }
         }
     }
