@@ -101,6 +101,7 @@ namespace Proyecto
         {
             Form_VerHorario verHorario = new Form_VerHorario();
             verHorario.Show();
+            this.Close();
         }
     }
 }

@@ -109,7 +109,6 @@ namespace DataLayer
         {
             if (this.conexion != null && !this.conexion.State.Equals(ConnectionState.Closed))
             {
-                return;
                 throw new BaseDatosException("La conexión ya se encuentra abierta.");
             }
             try
