@@ -166,7 +166,7 @@ namespace Proyecto
 
 
                 // Llamar al método que actualiza la base de datos
-                ActualizarHorario( lunesEntradaManana, lunesSalidaManana, lunesEntradaTarde, lunesSalidaTarde, lunesToleranciaEntrada,
+                ActualizarHorario(int.Parse(cbox_Horarios.SelectedValue.ToString()), lunesEntradaManana, lunesSalidaManana, lunesEntradaTarde, lunesSalidaTarde, lunesToleranciaEntrada,
                     martesEntradaManana, martesSalidaManana, martesEntradaTarde, martesSalidaTarde, martesToleranciaEntrada,
                     miercolesEntradaManana, miercolesSalidaManana, miercolesEntradaTarde, miercolesSalidaTarde, miercolesToleranciaEntrada, 
                     juevesEntradaManana, juevesSalidaManana, juevesEntradaTarde, juevesSalidaTarde, juevesToleranciaEntrada, 
@@ -179,81 +179,80 @@ namespace Proyecto
             btn_Actualizar.Enabled = false;
         }
 
-        private void ActualizarHorario(
-            TimeSpan lunesEntradaManana, TimeSpan lunesSalidaManana, TimeSpan lunesEntradaTarde, TimeSpan lunesSalidaTarde, int lunesToleranciaEntrada, 
-            TimeSpan martesEntradaManana, TimeSpan martesSalidaManana, TimeSpan martesEntradaTarde, TimeSpan martesSalidaTarde, int martesToleranciaEntrada, 
-            TimeSpan miercolesEntradaManana, TimeSpan miercolesSalidaManana, TimeSpan miercolesEntradaTarde, TimeSpan miercolesSalidaTarde, int miercolesToleranciaEntrada, 
-            TimeSpan juevesEntradaManana, TimeSpan juevesSalidaManana, TimeSpan juevesEntradaTarde, TimeSpan juevesSalidaTarde, int juevesToleranciaEntrada, 
-            TimeSpan viernesEntradaManana, TimeSpan viernesSalidaManana, TimeSpan viernesEntradaTarde, TimeSpan viernesSalidaTarde, int viernesToleranciaEntrada, 
-            TimeSpan sabadoEntradaManana, TimeSpan sabadoSalidaManana, TimeSpan sabadoEntradaTarde, TimeSpan sabadoSalidaTarde, int sabadoToleranciaEntrada, 
-            TimeSpan domingoEntradaManana, TimeSpan domingoSalidaManana, TimeSpan domingoEntradaTarde, TimeSpan domingoSalidaTarde, int domingoToleranciaEntrada)
+        private void ActualizarHorario( int horario,
+        TimeSpan lunesEntradaManana, TimeSpan lunesSalidaManana, TimeSpan lunesEntradaTarde, TimeSpan lunesSalidaTarde, int lunesToleranciaEntrada,
+        TimeSpan martesEntradaManana, TimeSpan martesSalidaManana, TimeSpan martesEntradaTarde, TimeSpan martesSalidaTarde, int martesToleranciaEntrada,
+        TimeSpan miercolesEntradaManana, TimeSpan miercolesSalidaManana, TimeSpan miercolesEntradaTarde, TimeSpan miercolesSalidaTarde, int miercolesToleranciaEntrada,
+        TimeSpan juevesEntradaManana, TimeSpan juevesSalidaManana, TimeSpan juevesEntradaTarde, TimeSpan juevesSalidaTarde, int juevesToleranciaEntrada,
+        TimeSpan viernesEntradaManana, TimeSpan viernesSalidaManana, TimeSpan viernesEntradaTarde, TimeSpan viernesSalidaTarde, int viernesToleranciaEntrada,
+        TimeSpan sabadoEntradaManana, TimeSpan sabadoSalidaManana, TimeSpan sabadoEntradaTarde, TimeSpan sabadoSalidaTarde, int sabadoToleranciaEntrada,
+        TimeSpan domingoEntradaManana, TimeSpan domingoSalidaManana, TimeSpan domingoEntradaTarde, TimeSpan domingoSalidaTarde, int domingoToleranciaEntrada)
         {
             BaseDatos DB = new BaseDatos();
             DB.Conectar();
-            SqlConnection conn = DB.Conectar();
 
-            using (SqlCommand cmd = new SqlCommand("sp_UPD_Horario"))
-            {
+            DB.CrearComando("sp_UPD_Horario @IdHorario," +
+                " @L_EntradaMañana,@L_SalidaMañana,@L_EntradaTarde,@L_SalidaTarde,@L_ToleranciaEntrada" +
+                "@M_EntradaMañana,@M_SalidaMañana,@M_EntradaTarde,@M_SalidaTarde,@L_ToleranciaEntrada" +
+                "@X_EntradaMañana,@X_SalidaMañana,@X_EntradaTarde,@X_SalidaTarde,@X_ToleranciaEntrada" +
+                "@J_EntradaMañana,@J_SalidaMañana,@J_EntradaTarde,@J_SalidaTarde,@J_ToleranciaEntrada" +
+                "@V_EntradaMañana,@V_SalidaMañana,@V_EntradaTarde,@V_SalidaTarde,@V_ToleranciaEntrada" +
+                "@S_EntradaMañana,@S_SalidaMañana,@S_EntradaTarde,@S_SalidaTarde,@S_ToleranciaEntrada" +
+                "@D_EntradaMañana,@D_SalidaMañana,@D_EntradaTarde,@D_SalidaTarde,@D_ToleranciaEntrada");
 
-                cmd.CommandType = CommandType.StoredProcedure;
+            // Parámetros para Lunes
+            DB.AsignarParametroEntero("@IdHorario", horario);
 
+            DB.AgregarParametro("@L_EntradaMañana", lunesEntradaManana);
+            DB.AgregarParametro("@L_SalidaMañana", lunesSalidaManana);
+            DB.AgregarParametro("@L_EntradaTarde", lunesEntradaTarde);
+            DB.AgregarParametro("@L_SalidaTarde", lunesSalidaTarde);
+            DB.AgregarParametro("@L_ToleranciaEntrada", lunesToleranciaEntrada);
 
-                cmd.Parameters.AddWithValue("@L_EntradaMañana", lunesEntradaManana);
-                cmd.Parameters.AddWithValue("@L_SalidaMañana", lunesSalidaManana);
-                cmd.Parameters.AddWithValue("@L_EntradaTarde", lunesEntradaTarde);
-                cmd.Parameters.AddWithValue("@L_SalidaTarde", lunesSalidaTarde);
-                cmd.Parameters.AddWithValue("@L_ToleranciaEntrada", lunesToleranciaEntrada);
+            // Parámetros para Martes
+            DB.AgregarParametro("@M_EntradaMañana", martesEntradaManana);
+            DB.AgregarParametro("@M_SalidaMañana", martesSalidaManana);
+            DB.AgregarParametro("@M_EntradaTarde", martesEntradaTarde);
+            DB.AgregarParametro("@M_SalidaTarde", martesSalidaTarde);
+            DB.AgregarParametro("@M_ToleranciaEntrada", martesToleranciaEntrada);
 
+            // Parámetros para Miércoles
+            DB.AgregarParametro("@X_EntradaMañana", miercolesEntradaManana);
+            DB.AgregarParametro("@X_SalidaMañana", miercolesSalidaManana);
+            DB.AgregarParametro("@X_EntradaTarde", miercolesEntradaTarde);
+            DB.AgregarParametro("@X_SalidaTarde", miercolesSalidaTarde);
+            DB.AgregarParametro("@X_ToleranciaEntrada", miercolesToleranciaEntrada);
 
-                // Parámetros para el Martes
-                cmd.Parameters.AddWithValue("@M_EntradaMañana", martesEntradaManana);
-                cmd.Parameters.AddWithValue("@M_SalidaMañana", martesSalidaManana);
-                cmd.Parameters.AddWithValue("@M_EntradaTarde", martesEntradaTarde);
-                cmd.Parameters.AddWithValue("@M_SalidaTarde", martesSalidaTarde);
-                cmd.Parameters.AddWithValue("@M_ToleranciaEntrada", martesToleranciaEntrada);
+            // Parámetros para Jueves
+            DB.AgregarParametro("@J_EntradaMañana", juevesEntradaManana);
+            DB.AgregarParametro("@J_SalidaMañana", juevesSalidaManana);
+            DB.AgregarParametro("@J_EntradaTarde", juevesEntradaTarde);
+            DB.AgregarParametro("@J_SalidaTarde", juevesSalidaTarde);
+            DB.AgregarParametro("@J_ToleranciaEntrada", juevesToleranciaEntrada);
 
+            // Parámetros para Viernes
+            DB.AgregarParametro("@V_EntradaMañana", viernesEntradaManana);
+            DB.AgregarParametro("@V_SalidaMañana", viernesSalidaManana);
+            DB.AgregarParametro("@V_EntradaTarde", viernesEntradaTarde);
+            DB.AgregarParametro("@V_SalidaTarde", viernesSalidaTarde);
+            DB.AgregarParametro("@V_ToleranciaEntrada", viernesToleranciaEntrada);
 
-                // Parámetros para el Miércoles
-                cmd.Parameters.AddWithValue("@X_EntradaMañana", miercolesEntradaManana);
-                cmd.Parameters.AddWithValue("@X_SalidaMañana", miercolesSalidaManana);
-                cmd.Parameters.AddWithValue("@X_EntradaTarde", miercolesEntradaTarde);
-                cmd.Parameters.AddWithValue("@X_SalidaTarde", miercolesSalidaTarde);
-                cmd.Parameters.AddWithValue("@X_ToleranciaEntrada", miercolesToleranciaEntrada);
+            // Parámetros para Sábado
+            DB.AgregarParametro("@S_EntradaMañana", sabadoEntradaManana);
+            DB.AgregarParametro("@S_SalidaMañana", sabadoSalidaManana);
+            DB.AgregarParametro("@S_EntradaTarde", sabadoEntradaTarde);
+            DB.AgregarParametro("@S_SalidaTarde", sabadoSalidaTarde);
+            DB.AgregarParametro("@S_ToleranciaEntrada", sabadoToleranciaEntrada);
 
+            // Parámetros para Domingo
+            DB.AgregarParametro("@D_EntradaMañana", domingoEntradaManana);
+            DB.AgregarParametro("@D_SalidaMañana", domingoSalidaManana);
+            DB.AgregarParametro("@D_EntradaTarde", domingoEntradaTarde);
+            DB.AgregarParametro("@D_SalidaTarde", domingoSalidaTarde);
+            DB.AgregarParametro("@D_ToleranciaEntrada", domingoToleranciaEntrada);
 
-                // Parámetros para el Jueves
-                cmd.Parameters.AddWithValue("@J_EntradaMañana", juevesEntradaManana);
-                cmd.Parameters.AddWithValue("@J_SalidaMañana", juevesSalidaManana);
-                cmd.Parameters.AddWithValue("@J_EntradaTarde", juevesEntradaTarde);
-                cmd.Parameters.AddWithValue("@J_SalidaTarde", juevesSalidaTarde);
-                cmd.Parameters.AddWithValue("@J_ToleranciaEntrada", juevesToleranciaEntrada);
-
-
-                // Parámetros para el Viernes
-                cmd.Parameters.AddWithValue("@V_EntradaMañana", viernesEntradaManana);
-                cmd.Parameters.AddWithValue("@V_SalidaMañana", viernesSalidaManana);
-                cmd.Parameters.AddWithValue("@V_EntradaTarde", viernesEntradaTarde);
-                cmd.Parameters.AddWithValue("@V_SalidaTarde", viernesSalidaTarde);
-                cmd.Parameters.AddWithValue("@V_ToleranciaEntrada", viernesToleranciaEntrada);
-
-
-                // Parámetros para el Sábado
-                cmd.Parameters.AddWithValue("@S_EntradaMañana", sabadoEntradaManana);
-                cmd.Parameters.AddWithValue("@S_SalidaMañana", sabadoSalidaManana);
-                cmd.Parameters.AddWithValue("@S_EntradaTarde", sabadoEntradaTarde);
-                cmd.Parameters.AddWithValue("@S_SalidaTarde", sabadoSalidaTarde);
-                cmd.Parameters.AddWithValue("@S_ToleranciaEntrada", sabadoToleranciaEntrada);
-
-
-                // Parámetros para el Domingo
-                cmd.Parameters.AddWithValue("@D_EntradaMañana", domingoEntradaManana);
-                cmd.Parameters.AddWithValue("@D_SalidaMañana", domingoSalidaManana);
-                cmd.Parameters.AddWithValue("@D_EntradaTarde", domingoEntradaTarde);
-                cmd.Parameters.AddWithValue("@D_SalidaTarde", domingoSalidaTarde);
-                cmd.Parameters.AddWithValue("@D_ToleranciaEntrada", domingoToleranciaEntrada);
-
-                cmd.ExecuteNonQuery(); 
-            }
+            // Ejecutar el procedimiento almacenado
+            DB.EjecutarComando();
 
             DB.Desconectar();
         }
@@ -261,6 +260,13 @@ namespace Proyecto
         private void dtv_Horarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btn_Agregar_Click(object sender, EventArgs e)
+        {
+            Form_Agregar__Horario AgrHorario = new Form_Agregar__Horario();
+            AgrHorario.Show();
+            this.Close();
         }
     }
 }

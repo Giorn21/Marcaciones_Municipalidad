@@ -32,8 +32,9 @@
             this.dtv_Horarios = new System.Windows.Forms.DataGridView();
             this.cbox_Horarios = new System.Windows.Forms.ComboBox();
             this.lbl_horarios = new System.Windows.Forms.Label();
-            this.btn_Salir = new System.Windows.Forms.Button();
+            this.btn_Volver = new System.Windows.Forms.Button();
             this.btn_Actualizar = new System.Windows.Forms.Button();
+            this.btn_Agregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtv_Horarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,35 +79,50 @@
             this.lbl_horarios.TabIndex = 3;
             this.lbl_horarios.Text = "seleccione un horario para modificar";
             // 
-            // btn_Salir
+            // btn_Volver
             // 
-            this.btn_Salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salir.Location = new System.Drawing.Point(12, 366);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(75, 27);
-            this.btn_Salir.TabIndex = 4;
-            this.btn_Salir.Text = "Salir";
-            this.btn_Salir.UseVisualStyleBackColor = true;
-            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
+            this.btn_Volver.BackColor = System.Drawing.Color.LightCoral;
+            this.btn_Volver.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Volver.Location = new System.Drawing.Point(12, 369);
+            this.btn_Volver.Name = "btn_Volver";
+            this.btn_Volver.Size = new System.Drawing.Size(75, 27);
+            this.btn_Volver.TabIndex = 4;
+            this.btn_Volver.Text = "Volver";
+            this.btn_Volver.UseVisualStyleBackColor = false;
+            this.btn_Volver.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
             // btn_Actualizar
             // 
+            this.btn_Actualizar.BackColor = System.Drawing.Color.Yellow;
             this.btn_Actualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Actualizar.Location = new System.Drawing.Point(576, 90);
+            this.btn_Actualizar.Location = new System.Drawing.Point(575, 82);
             this.btn_Actualizar.Name = "btn_Actualizar";
-            this.btn_Actualizar.Size = new System.Drawing.Size(81, 26);
+            this.btn_Actualizar.Size = new System.Drawing.Size(81, 34);
             this.btn_Actualizar.TabIndex = 5;
             this.btn_Actualizar.Text = "Actualizar";
-            this.btn_Actualizar.UseVisualStyleBackColor = true;
+            this.btn_Actualizar.UseVisualStyleBackColor = false;
             this.btn_Actualizar.Click += new System.EventHandler(this.btn_Actualizar_Click);
+            // 
+            // btn_Agregar
+            // 
+            this.btn_Agregar.BackColor = System.Drawing.Color.GreenYellow;
+            this.btn_Agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Agregar.Location = new System.Drawing.Point(333, 82);
+            this.btn_Agregar.Name = "btn_Agregar";
+            this.btn_Agregar.Size = new System.Drawing.Size(87, 34);
+            this.btn_Agregar.TabIndex = 6;
+            this.btn_Agregar.Text = "Agregar";
+            this.btn_Agregar.UseVisualStyleBackColor = false;
+            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
             // Form_VerHorario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 408);
+            this.Controls.Add(this.btn_Agregar);
             this.Controls.Add(this.btn_Actualizar);
-            this.Controls.Add(this.btn_Salir);
+            this.Controls.Add(this.btn_Volver);
             this.Controls.Add(this.lbl_horarios);
             this.Controls.Add(this.cbox_Horarios);
             this.Controls.Add(this.dtv_Horarios);
@@ -127,7 +143,8 @@
         private System.Windows.Forms.DataGridView dtv_Horarios;
         private System.Windows.Forms.ComboBox cbox_Horarios;
         private System.Windows.Forms.Label lbl_horarios;
-        private System.Windows.Forms.Button btn_Salir;
+        private System.Windows.Forms.Button btn_Volver;
         private System.Windows.Forms.Button btn_Actualizar;
+        private System.Windows.Forms.Button btn_Agregar;
     }
 }

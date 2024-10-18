@@ -58,6 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_Agregar_Horario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Agregar_Horario.Designer.cs">
+      <DependentUpon>Form_Agregar_Horario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Agregar_Contrato.cs">
       <SubType>Form</SubType>
     </Compile>
