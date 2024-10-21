@@ -50,14 +50,19 @@
             // 
             // dtv_Horarios
             // 
+            this.dtv_Horarios.AllowUserToAddRows = false;
+            this.dtv_Horarios.AllowUserToDeleteRows = false;
             this.dtv_Horarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtv_Horarios.Location = new System.Drawing.Point(12, 122);
             this.dtv_Horarios.Name = "dtv_Horarios";
             this.dtv_Horarios.Size = new System.Drawing.Size(658, 238);
             this.dtv_Horarios.TabIndex = 1;
-            this.dtv_Horarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtv_Horarios_CellDoubleClick);
+            this.dtv_Horarios.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dtv_Horarios_CellBeginEdit);
+            this.dtv_Horarios.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtv_Horarios_CellEndEdit);
             this.dtv_Horarios.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtv_Horarios_CellValueChanged);
+            this.dtv_Horarios.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dtv_Horarios_EditingControlShowing);
             this.dtv_Horarios.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtv_Horarios_RowValidated);
+            this.dtv_Horarios.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtv_Horarios_KeyPress);
             // 
             // cbox_Horarios
             // 
@@ -68,6 +73,7 @@
             this.cbox_Horarios.Size = new System.Drawing.Size(285, 26);
             this.cbox_Horarios.TabIndex = 2;
             this.cbox_Horarios.SelectedIndexChanged += new System.EventHandler(this.cbox_Horarios_SelectedIndexChanged);
+            this.cbox_Horarios.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbox_Horarios_KeyPress);
             // 
             // lbl_horarios
             // 

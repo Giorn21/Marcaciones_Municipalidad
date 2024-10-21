@@ -128,7 +128,6 @@ namespace Proyecto
             clsInsertarFuncionario nuevoUsuario = new clsInsertarFuncionario();
             clsAgregar_LogsApp logs = new clsAgregar_LogsApp();
 
-
             try
             {
 
@@ -224,6 +223,11 @@ namespace Proyecto
 
             // Asignar la tabla formateada al DataGridView
             dataGridView1.DataSource = dtFormatted;
+
+            foreach (DataGridViewColumn c in dataGridView1.Columns)
+            {
+                c.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
 
         }
 

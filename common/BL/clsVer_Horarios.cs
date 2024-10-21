@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using DataLayer;
 using System.Data.Common;
 using System.Runtime.Remoting.Messaging;
+using System.Windows.Forms;
 
 namespace common
 {
@@ -155,88 +156,88 @@ namespace common
             if (horario != null)
             {
                 dtFormatted.Rows.Add("Lunes",
-                    horario.L_EntradaMañana,
-                    horario.L_SalidaMañana,
-                    horario.L_EntradaTarde,
-                    horario.L_SalidaTarde,
-                    horario.L_ToleranciaEntrada,
-                    CalcularHorasTrabajadas(
-                        horario.L_EntradaMañana.ToString(),
-                        horario.L_SalidaMañana.ToString(),
-                        horario.L_EntradaTarde.ToString(),
-                        horario.L_SalidaTarde.ToString()));
+            horario.L_EntradaMañana != TimeSpan.Zero ? (object)horario.L_EntradaMañana : DBNull.Value,
+            horario.L_SalidaMañana != TimeSpan.Zero ? (object)horario.L_SalidaMañana : DBNull.Value,
+            horario.L_EntradaTarde != TimeSpan.Zero ? (object)horario.L_EntradaTarde : DBNull.Value,
+            horario.L_SalidaTarde != TimeSpan.Zero ? (object)horario.L_SalidaTarde : DBNull.Value,
+            horario.L_ToleranciaEntrada != 0 ? (object)horario.L_ToleranciaEntrada : 0,
+            CalcularHorasTrabajadas(
+                horario.L_EntradaMañana.ToString(),
+                horario.L_SalidaMañana.ToString(),
+                horario.L_EntradaTarde.ToString(),
+                horario.L_SalidaTarde.ToString()));
 
-                    dtFormatted.Rows.Add("Martes",
-                    horario.M_EntradaMañana,
-                    horario.M_SalidaMañana,
-                    horario.M_EntradaTarde,
-                    horario.M_SalidaTarde,
-                    horario.M_ToleranciaEntrada,
+                dtFormatted.Rows.Add("Martes",
+                    horario.M_EntradaMañana != TimeSpan.Zero ? (object)horario.M_EntradaMañana : DBNull.Value,
+                    horario.M_SalidaMañana != TimeSpan.Zero ? (object)horario.M_SalidaMañana : DBNull.Value,
+                    horario.M_EntradaTarde != TimeSpan.Zero ? (object)horario.M_EntradaTarde : DBNull.Value,
+                    horario.M_SalidaTarde != TimeSpan.Zero ? (object)horario.M_SalidaTarde : DBNull.Value,
+                    horario.M_ToleranciaEntrada != 0 ? (object)horario.M_ToleranciaEntrada : 0,
                     CalcularHorasTrabajadas(
                         horario.M_EntradaMañana.ToString(),
                         horario.M_SalidaMañana.ToString(),
                         horario.M_EntradaTarde.ToString(),
                         horario.M_SalidaTarde.ToString()));
 
-                    dtFormatted.Rows.Add("Miercoles",
-                        horario.X_EntradaMañana,
-                        horario.X_SalidaMañana,
-                        horario.X_EntradaTarde,
-                        horario.X_SalidaTarde,
-                        horario.X_ToleranciaEntrada,
-                        CalcularHorasTrabajadas(
-                            horario.X_EntradaMañana.ToString(),
-                            horario.X_SalidaMañana.ToString(),
-                            horario.X_EntradaTarde.ToString(),
-                            horario.X_SalidaTarde.ToString()));
+                dtFormatted.Rows.Add("Miercoles",
+                    horario.X_EntradaMañana != TimeSpan.Zero ? (object)horario.X_EntradaMañana : DBNull.Value,
+                    horario.X_SalidaMañana != TimeSpan.Zero ? (object)horario.X_SalidaMañana : DBNull.Value,
+                    horario.X_EntradaTarde != TimeSpan.Zero ? (object)horario.X_EntradaTarde : DBNull.Value,
+                    horario.X_SalidaTarde != TimeSpan.Zero ? (object)horario.X_SalidaTarde : DBNull.Value,
+                    horario.X_ToleranciaEntrada != 0 ? (object)horario.X_ToleranciaEntrada : 0,
+                    CalcularHorasTrabajadas(
+                        horario.X_EntradaMañana.ToString(),
+                        horario.X_SalidaMañana.ToString(),
+                        horario.X_EntradaTarde.ToString(),
+                        horario.X_SalidaTarde.ToString()));
 
-                    dtFormatted.Rows.Add("Jueves",
-                        horario.J_EntradaMañana,
-                        horario.J_SalidaMañana,
-                        horario.J_EntradaTarde,
-                        horario.J_SalidaTarde,
-                        horario.J_ToleranciaEntrada,
-                        CalcularHorasTrabajadas(
-                            horario.J_EntradaMañana.ToString(),
-                            horario.J_SalidaMañana.ToString(),
-                            horario.J_EntradaTarde.ToString(),
-                            horario.J_SalidaTarde.ToString()));
+                dtFormatted.Rows.Add("Jueves",
+                    horario.J_EntradaMañana != TimeSpan.Zero ? (object)horario.J_EntradaMañana : DBNull.Value,
+                    horario.J_SalidaMañana != TimeSpan.Zero ? (object)horario.J_SalidaMañana : DBNull.Value,
+                    horario.J_EntradaTarde != TimeSpan.Zero ? (object)horario.J_EntradaTarde : DBNull.Value,
+                    horario.J_SalidaTarde != TimeSpan.Zero ? (object)horario.J_SalidaTarde : DBNull.Value,
+                    horario.J_ToleranciaEntrada != 0 ? (object)horario.J_ToleranciaEntrada : 0,
+                    CalcularHorasTrabajadas(
+                        horario.J_EntradaMañana.ToString(),
+                        horario.J_SalidaMañana.ToString(),
+                        horario.J_EntradaTarde.ToString(),
+                        horario.J_SalidaTarde.ToString()));
 
-                    dtFormatted.Rows.Add("Viernes",
-                        horario.V_EntradaMañana,
-                        horario.V_SalidaMañana,
-                        horario.V_EntradaTarde,
-                        horario.V_SalidaTarde,
-                        horario.V_ToleranciaEntrada,
-                        CalcularHorasTrabajadas(
-                            horario.V_EntradaMañana.ToString(),
-                            horario.V_SalidaMañana.ToString(),
-                            horario.V_EntradaTarde.ToString(),
-                            horario.V_SalidaTarde.ToString()));
+                dtFormatted.Rows.Add("Viernes",
+                    horario.V_EntradaMañana != TimeSpan.Zero ? (object)horario.V_EntradaMañana : DBNull.Value,
+                    horario.V_SalidaMañana != TimeSpan.Zero ? (object)horario.V_SalidaMañana : DBNull.Value,
+                    horario.V_EntradaTarde != TimeSpan.Zero ? (object)horario.V_EntradaTarde : DBNull.Value,
+                    horario.V_SalidaTarde != TimeSpan.Zero ? (object)horario.V_SalidaTarde : DBNull.Value,
+                    horario.V_ToleranciaEntrada != 0 ? (object)horario.V_ToleranciaEntrada : 0,
+                    CalcularHorasTrabajadas(
+                        horario.V_EntradaMañana.ToString(),
+                        horario.V_SalidaMañana.ToString(),
+                        horario.V_EntradaTarde.ToString(),
+                        horario.V_SalidaTarde.ToString()));
 
-                    dtFormatted.Rows.Add("Sabado",
-                        horario.S_EntradaMañana,
-                        horario.S_SalidaMañana,
-                        horario.S_EntradaTarde,
-                        horario.S_SalidaTarde,
-                        horario.S_ToleranciaEntrada,
-                        CalcularHorasTrabajadas(
-                            horario.S_EntradaMañana.ToString(),
-                            horario.S_SalidaMañana.ToString(),
-                            horario.S_EntradaTarde.ToString(),
-                            horario.S_SalidaTarde.ToString()));
+                dtFormatted.Rows.Add("Sabado",
+                    horario.S_EntradaMañana != TimeSpan.Zero ? (object)horario.S_EntradaMañana : DBNull.Value,
+                    horario.S_SalidaMañana != TimeSpan.Zero ? (object)horario.S_SalidaMañana : DBNull.Value,
+                    horario.S_EntradaTarde != TimeSpan.Zero ? (object)horario.S_EntradaTarde : DBNull.Value,
+                    horario.S_SalidaTarde != TimeSpan.Zero ? (object)horario.S_SalidaTarde : DBNull.Value,
+                    horario.S_ToleranciaEntrada != 0 ? (object)horario.S_ToleranciaEntrada : 0,
+                    CalcularHorasTrabajadas(
+                        horario.S_EntradaMañana.ToString(),
+                        horario.S_SalidaMañana.ToString(),
+                        horario.S_EntradaTarde.ToString(),
+                        horario.S_SalidaTarde.ToString()));
 
-                    dtFormatted.Rows.Add("Domingo",
-                        horario.D_EntradaMañana,
-                        horario.D_SalidaMañana,
-                        horario.D_EntradaTarde,
-                        horario.D_SalidaTarde,
-                        horario.D_ToleranciaEntrada,
-                        CalcularHorasTrabajadas(
-                            horario.D_EntradaMañana.ToString(),
-                            horario.D_SalidaMañana.ToString(),
-                            horario.D_EntradaTarde.ToString(),
-                            horario.D_SalidaTarde.ToString()));
+                dtFormatted.Rows.Add("Domingo",
+                    horario.D_EntradaMañana != TimeSpan.Zero ? (object)horario.D_EntradaMañana : DBNull.Value,
+                    horario.D_SalidaMañana != TimeSpan.Zero ? (object)horario.D_SalidaMañana : DBNull.Value,
+                    horario.D_EntradaTarde != TimeSpan.Zero ? (object)horario.D_EntradaTarde : DBNull.Value,
+                    horario.D_SalidaTarde != TimeSpan.Zero ? (object)horario.D_SalidaTarde : DBNull.Value,
+                    horario.D_ToleranciaEntrada != 0 ? (object)horario.D_ToleranciaEntrada : 0,
+                    CalcularHorasTrabajadas(
+                        horario.D_EntradaMañana.ToString(),
+                        horario.D_SalidaMañana.ToString(),
+                        horario.D_EntradaTarde.ToString(),
+                        horario.D_SalidaTarde.ToString()));
 
                 // Mostrar el total de horas semanales
                 dtFormatted.Rows.Add("Total Horas Semanales", "--->", "--->", "--->", "--->", "--->", horario.TotalHorasSemanales);
