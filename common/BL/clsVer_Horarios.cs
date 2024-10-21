@@ -143,7 +143,7 @@ namespace common
         // Método para obtener los datos y llenar el DataTable formateado
         public DataTable ObtenerHorarioFormateado(int idHorario)
         {
-            Horario horario = ObtenerHorario(idHorario);  
+            Horario horario = ObtenerHorario(idHorario);
             DataTable dtFormatted = new DataTable();
             dtFormatted.Columns.Add("Dia");
             dtFormatted.Columns.Add("EntradaMañana");
@@ -156,16 +156,16 @@ namespace common
             if (horario != null)
             {
                 dtFormatted.Rows.Add("Lunes",
-            horario.L_EntradaMañana != TimeSpan.Zero ? (object)horario.L_EntradaMañana : DBNull.Value,
-            horario.L_SalidaMañana != TimeSpan.Zero ? (object)horario.L_SalidaMañana : DBNull.Value,
-            horario.L_EntradaTarde != TimeSpan.Zero ? (object)horario.L_EntradaTarde : DBNull.Value,
-            horario.L_SalidaTarde != TimeSpan.Zero ? (object)horario.L_SalidaTarde : DBNull.Value,
-            horario.L_ToleranciaEntrada != 0 ? (object)horario.L_ToleranciaEntrada : 0,
-            CalcularHorasTrabajadas(
-                horario.L_EntradaMañana.ToString(),
-                horario.L_SalidaMañana.ToString(),
-                horario.L_EntradaTarde.ToString(),
-                horario.L_SalidaTarde.ToString()));
+                horario.L_EntradaMañana != TimeSpan.Zero ? (object)horario.L_EntradaMañana : DBNull.Value,
+                horario.L_SalidaMañana != TimeSpan.Zero ? (object)horario.L_SalidaMañana : DBNull.Value,
+                horario.L_EntradaTarde != TimeSpan.Zero ? (object)horario.L_EntradaTarde : DBNull.Value,
+                horario.L_SalidaTarde != TimeSpan.Zero ? (object)horario.L_SalidaTarde : DBNull.Value,
+                horario.L_ToleranciaEntrada != 0 ? (object)horario.L_ToleranciaEntrada : 0,
+                CalcularHorasTrabajadas(
+                    horario.L_EntradaMañana.ToString(),
+                    horario.L_SalidaMañana.ToString(),
+                    horario.L_EntradaTarde.ToString(),
+                    horario.L_SalidaTarde.ToString()));
 
                 dtFormatted.Rows.Add("Martes",
                     horario.M_EntradaMañana != TimeSpan.Zero ? (object)horario.M_EntradaMañana : DBNull.Value,
@@ -240,11 +240,28 @@ namespace common
                         horario.D_SalidaTarde.ToString()));
 
                 // Mostrar el total de horas semanales
-                dtFormatted.Rows.Add("Total Horas Semanales", "--->", "--->", "--->", "--->", "--->", horario.TotalHorasSemanales);
+                dtFormatted.Rows.Add("Total Horas Semanales", "--->", "--->", "--->", "--->", "--->", CalcularTotalHoras(horario));
             }
 
             return dtFormatted;
-        }       
+        }
+
+        public int CalcularTotalHoras(Horario horario)
+        {
+            // Suma las horas de todos los días de la semana para obtener el total semanal.
+            double totalHoras = 0;
+
+            totalHoras += CalcularHorasTrabajadas(horario.L_EntradaMañana.ToString(), horario.L_SalidaMañana.ToString(), horario.L_EntradaTarde.ToString(), horario.L_SalidaTarde.ToString()).TotalHours;
+            totalHoras += CalcularHorasTrabajadas(horario.M_EntradaMañana.ToString(), horario.M_SalidaMañana.ToString(), horario.M_EntradaTarde.ToString(), horario.M_SalidaTarde.ToString()).TotalHours;
+            totalHoras += CalcularHorasTrabajadas(horario.X_EntradaMañana.ToString(), horario.X_SalidaMañana.ToString(), horario.X_EntradaTarde.ToString(), horario.X_SalidaTarde.ToString()).TotalHours;
+            totalHoras += CalcularHorasTrabajadas(horario.J_EntradaMañana.ToString(), horario.J_SalidaMañana.ToString(), horario.J_EntradaTarde.ToString(), horario.J_SalidaTarde.ToString()).TotalHours;
+            totalHoras += CalcularHorasTrabajadas(horario.V_EntradaMañana.ToString(), horario.V_SalidaMañana.ToString(), horario.V_EntradaTarde.ToString(), horario.V_SalidaTarde.ToString()).TotalHours;
+            totalHoras += CalcularHorasTrabajadas(horario.S_EntradaMañana.ToString(), horario.S_SalidaMañana.ToString(), horario.S_EntradaTarde.ToString(), horario.S_SalidaTarde.ToString()).TotalHours;
+            totalHoras += CalcularHorasTrabajadas(horario.D_EntradaMañana.ToString(), horario.D_SalidaMañana.ToString(), horario.D_EntradaTarde.ToString(), horario.D_SalidaTarde.ToString()).TotalHours;
+
+            // Convertir el total de horas a int redondeando
+            return (int)Math.Round(totalHoras);
+        }
 
         //calcula la horas trabajadas
         public TimeSpan CalcularHorasTrabajadas(string entradaMañana, string salidaMañana, string entradaTarde, string salidaTarde)
@@ -264,5 +281,4 @@ namespace common
             return totalHoras;
         }
     }
-
 }

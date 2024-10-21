@@ -192,6 +192,9 @@
     <EmbeddedResource Include="Form_Agregar_Funcionario.resx">
       <DependentUpon>Form_Agregar_Funcionario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Agregar_Horario.resx">
+      <DependentUpon>Form_Agregar_Horario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Agregar_Unidades.resx">
       <DependentUpon>Form_Agregar_Unidades.cs</DependentUpon>
     </EmbeddedResource>

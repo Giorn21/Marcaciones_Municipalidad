@@ -128,6 +128,7 @@ namespace Proyecto
             clsInsertarFuncionario nuevoUsuario = new clsInsertarFuncionario();
             clsAgregar_LogsApp logs = new clsAgregar_LogsApp();
 
+
             try
             {
 

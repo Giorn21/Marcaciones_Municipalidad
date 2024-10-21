@@ -11,14 +11,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static common.clsAgregar_Funcionarios;
 
 namespace Proyecto
 {
     public partial class Form_VerHorario : Form
     {
-        cls_UPD_Horarios actualizarHorario = new cls_UPD_Horarios();
         Horario horarioActual = null;
         clsVer_Horarios verHorarios = new clsVer_Horarios();
+        clsInsertarFuncionario nuevoUsuario = new clsInsertarFuncionario();
+        clsAgregar_LogsApp logs = new clsAgregar_LogsApp();
 
         public Form_VerHorario()
         {
@@ -102,88 +104,83 @@ namespace Proyecto
             this.Close();
         }
 
-        private void dtv_Horarios_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
         private void btn_Actualizar_Click(object sender, EventArgs e)
         {
-            // Lunes
-            string lunesEntradaManana = dtv_Horarios.Rows[0].Cells[1].Value.ToString();
-            string lunesSalidaManana = dtv_Horarios.Rows[0].Cells[2].Value.ToString();
-            string lunesEntradaTarde = dtv_Horarios.Rows[0].Cells[3].Value.ToString();
-            string lunesSalidaTarde = dtv_Horarios.Rows[0].Cells[4].Value.ToString();
-            int lunesToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[0].Cells[5].Value.ToString());
-
-            // Martes
-            string martesEntradaManana = dtv_Horarios.Rows[1].Cells[1].Value.ToString();
-            string martesSalidaManana = dtv_Horarios.Rows[1].Cells[2].Value.ToString();
-            string martesEntradaTarde = dtv_Horarios.Rows[1].Cells[3].Value.ToString();
-            string martesSalidaTarde = dtv_Horarios.Rows[1].Cells[4].Value.ToString();
-            int martesToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[1].Cells[5].Value.ToString());
-
-            // Miércoles
-            string miercolesEntradaManana = dtv_Horarios.Rows[2].Cells[1].Value.ToString();
-            string miercolesSalidaManana = dtv_Horarios.Rows[2].Cells[2].Value.ToString();
-            string miercolesEntradaTarde = dtv_Horarios.Rows[2].Cells[3].Value.ToString();
-            string miercolesSalidaTarde = dtv_Horarios.Rows[2].Cells[4].Value.ToString();
-            int miercolesToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[2].Cells[5].Value.ToString());
-
-            // Jueves
-            string juevesEntradaManana = dtv_Horarios.Rows[3].Cells[1].Value.ToString();
-            string juevesSalidaManana = dtv_Horarios.Rows[3].Cells[2].Value.ToString();
-            string juevesEntradaTarde = dtv_Horarios.Rows[3].Cells[3].Value.ToString();
-            string juevesSalidaTarde = dtv_Horarios.Rows[3].Cells[4].Value.ToString();
-            int juevesToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[3].Cells[5].Value.ToString());
-
-            // Viernes
-            string viernesEntradaManana = dtv_Horarios.Rows[4].Cells[1].Value.ToString();
-            string viernesSalidaManana = dtv_Horarios.Rows[4].Cells[2].Value.ToString();
-            string viernesEntradaTarde = dtv_Horarios.Rows[4].Cells[3].Value.ToString();
-            string viernesSalidaTarde = dtv_Horarios.Rows[4].Cells[4].Value.ToString();
-            int viernesToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[4].Cells[5].Value.ToString());
-
-            // Sábado
-            string sabadoEntradaManana = dtv_Horarios.Rows[5].Cells[1].Value.ToString();
-            string sabadoSalidaManana = dtv_Horarios.Rows[5].Cells[2].Value.ToString();
-            string sabadoEntradaTarde = dtv_Horarios.Rows[5].Cells[3].Value.ToString();
-            string sabadoSalidaTarde = dtv_Horarios.Rows[5].Cells[4].Value.ToString();
-            int sabadoToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[5].Cells[5].Value.ToString());
-
-            // Domingo
-            string domingoEntradaManana = dtv_Horarios.Rows[6].Cells[1].Value.ToString();
-            string domingoSalidaManana = dtv_Horarios.Rows[6].Cells[2].Value.ToString();
-            string domingoEntradaTarde = dtv_Horarios.Rows[6].Cells[3].Value.ToString();
-            string domingoSalidaTarde = dtv_Horarios.Rows[6].Cells[4].Value.ToString();
-            int domingoToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[6].Cells[5].Value.ToString());
-
-            // Llamar al método que actualiza la base de datos
-            ActualizarHorario(int.Parse(cbox_Horarios.SelectedValue.ToString()), lunesEntradaManana, lunesSalidaManana, lunesEntradaTarde, lunesSalidaTarde, lunesToleranciaEntrada,
-                martesEntradaManana, martesSalidaManana, martesEntradaTarde, martesSalidaTarde, martesToleranciaEntrada,
-                miercolesEntradaManana, miercolesSalidaManana, miercolesEntradaTarde, miercolesSalidaTarde, miercolesToleranciaEntrada, 
-                juevesEntradaManana, juevesSalidaManana, juevesEntradaTarde, juevesSalidaTarde, juevesToleranciaEntrada, 
-                viernesEntradaManana, viernesSalidaManana, viernesEntradaTarde, viernesSalidaTarde, viernesToleranciaEntrada, 
-                sabadoEntradaManana, sabadoSalidaManana, sabadoEntradaTarde, sabadoSalidaTarde, sabadoToleranciaEntrada, 
-                domingoEntradaManana, domingoSalidaManana, domingoEntradaTarde, domingoSalidaTarde, domingoToleranciaEntrada);
-
-
-            // Deshabilitar el botón después de actualizar
-            btn_Actualizar.Enabled = false;
-
-        }
-
-        private DateTime? formatoFecha(int fila, int col)
-        {
-            if (string.IsNullOrEmpty(dtv_Horarios.Rows[fila].Cells[col].Value.ToString()))
+            try
             {
-                return null;
-            }
-            else
-            {
-                return DateTime.Parse(dtv_Horarios.Rows[fila].Cells[col].Value.ToString());
+                // Lunes
+                string lunesEntradaManana = dtv_Horarios.Rows[0].Cells[1].Value.ToString();
+                string lunesSalidaManana = dtv_Horarios.Rows[0].Cells[2].Value.ToString();
+                string lunesEntradaTarde = dtv_Horarios.Rows[0].Cells[3].Value.ToString();
+                string lunesSalidaTarde = dtv_Horarios.Rows[0].Cells[4].Value.ToString();
+                int lunesToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[0].Cells[5].Value.ToString());
+
+                // Martes
+                string martesEntradaManana = dtv_Horarios.Rows[1].Cells[1].Value.ToString();
+                string martesSalidaManana = dtv_Horarios.Rows[1].Cells[2].Value.ToString();
+                string martesEntradaTarde = dtv_Horarios.Rows[1].Cells[3].Value.ToString();
+                string martesSalidaTarde = dtv_Horarios.Rows[1].Cells[4].Value.ToString();
+                int martesToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[1].Cells[5].Value.ToString());
+
+                // Miércoles
+                string miercolesEntradaManana = dtv_Horarios.Rows[2].Cells[1].Value.ToString();
+                string miercolesSalidaManana = dtv_Horarios.Rows[2].Cells[2].Value.ToString();
+                string miercolesEntradaTarde = dtv_Horarios.Rows[2].Cells[3].Value.ToString();
+                string miercolesSalidaTarde = dtv_Horarios.Rows[2].Cells[4].Value.ToString();
+                int miercolesToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[2].Cells[5].Value.ToString());
+
+                // Jueves
+                string juevesEntradaManana = dtv_Horarios.Rows[3].Cells[1].Value.ToString();
+                string juevesSalidaManana = dtv_Horarios.Rows[3].Cells[2].Value.ToString();
+                string juevesEntradaTarde = dtv_Horarios.Rows[3].Cells[3].Value.ToString();
+                string juevesSalidaTarde = dtv_Horarios.Rows[3].Cells[4].Value.ToString();
+                int juevesToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[3].Cells[5].Value.ToString());
+
+                // Viernes
+                string viernesEntradaManana = dtv_Horarios.Rows[4].Cells[1].Value.ToString();
+                string viernesSalidaManana = dtv_Horarios.Rows[4].Cells[2].Value.ToString();
+                string viernesEntradaTarde = dtv_Horarios.Rows[4].Cells[3].Value.ToString();
+                string viernesSalidaTarde = dtv_Horarios.Rows[4].Cells[4].Value.ToString();
+                int viernesToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[4].Cells[5].Value.ToString());
+
+                // Sábado
+                string sabadoEntradaManana = dtv_Horarios.Rows[5].Cells[1].Value.ToString();
+                string sabadoSalidaManana = dtv_Horarios.Rows[5].Cells[2].Value.ToString();
+                string sabadoEntradaTarde = dtv_Horarios.Rows[5].Cells[3].Value.ToString();
+                string sabadoSalidaTarde = dtv_Horarios.Rows[5].Cells[4].Value.ToString();
+                int sabadoToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[5].Cells[5].Value.ToString());
+
+                // Domingo
+                string domingoEntradaManana = dtv_Horarios.Rows[6].Cells[1].Value.ToString();
+                string domingoSalidaManana = dtv_Horarios.Rows[6].Cells[2].Value.ToString();
+                string domingoEntradaTarde = dtv_Horarios.Rows[6].Cells[3].Value.ToString();
+                string domingoSalidaTarde = dtv_Horarios.Rows[6].Cells[4].Value.ToString();
+                int domingoToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[6].Cells[5].Value.ToString());
+
+                // Llamar al método que actualiza la base de datos
+                ActualizarHorario(int.Parse(cbox_Horarios.SelectedValue.ToString()), lunesEntradaManana, lunesSalidaManana, lunesEntradaTarde, lunesSalidaTarde, lunesToleranciaEntrada,
+                    martesEntradaManana, martesSalidaManana, martesEntradaTarde, martesSalidaTarde, martesToleranciaEntrada,
+                    miercolesEntradaManana, miercolesSalidaManana, miercolesEntradaTarde, miercolesSalidaTarde, miercolesToleranciaEntrada,
+                    juevesEntradaManana, juevesSalidaManana, juevesEntradaTarde, juevesSalidaTarde, juevesToleranciaEntrada,
+                    viernesEntradaManana, viernesSalidaManana, viernesEntradaTarde, viernesSalidaTarde, viernesToleranciaEntrada,
+                    sabadoEntradaManana, sabadoSalidaManana, sabadoEntradaTarde, sabadoSalidaTarde, sabadoToleranciaEntrada,
+                    domingoEntradaManana, domingoSalidaManana, domingoEntradaTarde, domingoSalidaTarde, domingoToleranciaEntrada);
+
+                string Usuario = LoginUser.Usuario;
+                logs.InsertarLog("Horarios MOD", "Horario Update", Usuario, "Se a actualizado un Horario");
+
+                MessageBox.Show("Horario Actualizado correctamente");
+                // Deshabilitar el botón después de actualizar
+                btn_Actualizar.Enabled = false;
+                ActualizarDataGridView(int.Parse(cbox_Horarios.SelectedValue.ToString()));
 
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar el Horario: " + ex.Message);
+                string Usuario = LoginUser.Usuario;
+                logs.InsertarLog("Horario MOD", "Err_Update", Usuario, ex.Message);
+            }  
         }
 
         private void ActualizarHorario( int horario,
@@ -198,75 +195,78 @@ namespace Proyecto
             BaseDatos DB = new BaseDatos();
             DB.Conectar();
 
-            DB.CrearComando("sp_UPD_Horario @IdHorario," +
-            " @L_EntradaMañana, @L_SalidaMañana, @L_EntradaTarde, @L_SalidaTarde, @L_ToleranciaEntrada," +
-            " @M_EntradaMañana, @M_SalidaMañana, @M_EntradaTarde, @M_SalidaTarde, @M_ToleranciaEntrada," +
-            " @X_EntradaMañana, @X_SalidaMañana, @X_EntradaTarde, @X_SalidaTarde, @X_ToleranciaEntrada," +
-            " @J_EntradaMañana, @J_SalidaMañana, @J_EntradaTarde, @J_SalidaTarde, @J_ToleranciaEntrada," +
-            " @V_EntradaMañana, @V_SalidaMañana, @V_EntradaTarde, @V_SalidaTarde, @V_ToleranciaEntrada," +
-            " @S_EntradaMañana, @S_SalidaMañana, @S_EntradaTarde, @S_SalidaTarde, @S_ToleranciaEntrada," +
-            " @D_EntradaMañana, @D_SalidaMañana, @D_EntradaTarde, @D_SalidaTarde, @D_ToleranciaEntrada");
+            try
+            {
+                DB.CrearComando("sp_UPD_Horario @IdHorario," +
+                " @L_EntradaMañana, @L_SalidaMañana, @L_EntradaTarde, @L_SalidaTarde, @L_ToleranciaEntrada," +
+                " @M_EntradaMañana, @M_SalidaMañana, @M_EntradaTarde, @M_SalidaTarde, @M_ToleranciaEntrada," +
+                " @X_EntradaMañana, @X_SalidaMañana, @X_EntradaTarde, @X_SalidaTarde, @X_ToleranciaEntrada," +
+                " @J_EntradaMañana, @J_SalidaMañana, @J_EntradaTarde, @J_SalidaTarde, @J_ToleranciaEntrada," +
+                " @V_EntradaMañana, @V_SalidaMañana, @V_EntradaTarde, @V_SalidaTarde, @V_ToleranciaEntrada," +
+                " @S_EntradaMañana, @S_SalidaMañana, @S_EntradaTarde, @S_SalidaTarde, @S_ToleranciaEntrada," +
+                " @D_EntradaMañana, @D_SalidaMañana, @D_EntradaTarde, @D_SalidaTarde, @D_ToleranciaEntrada");
 
-            // Parámetros para Lunes
-            DB.AsignarParametroEntero("@IdHorario", horario);
+                // Parámetros para Lunes
+                DB.AsignarParametroEntero("@IdHorario", horario);
 
-            DB.AsignarParametroCadena("@L_EntradaMañana", lunesEntradaManana);
-            DB.AsignarParametroCadena("@L_SalidaMañana", lunesSalidaManana);
-            DB.AsignarParametroCadena("@L_EntradaTarde", lunesEntradaTarde);
-            DB.AsignarParametroCadena("@L_SalidaTarde", lunesSalidaTarde);
-            DB.AgregarParametro("@L_ToleranciaEntrada", lunesToleranciaEntrada);
+                DB.AsignarParametroCadena("@L_EntradaMañana", lunesEntradaManana);
+                DB.AsignarParametroCadena("@L_SalidaMañana", lunesSalidaManana);
+                DB.AsignarParametroCadena("@L_EntradaTarde", lunesEntradaTarde);
+                DB.AsignarParametroCadena("@L_SalidaTarde", lunesSalidaTarde);
+                DB.AgregarParametro("@L_ToleranciaEntrada", lunesToleranciaEntrada);
 
-            // Parámetros para Martes
-            DB.AsignarParametroCadena("@M_EntradaMañana", martesEntradaManana);
-            DB.AsignarParametroCadena("@M_SalidaMañana", martesSalidaManana);
-            DB.AsignarParametroCadena("@M_EntradaTarde", martesEntradaTarde);
-            DB.AsignarParametroCadena("@M_SalidaTarde", martesSalidaTarde);
-            DB.AgregarParametro("@M_ToleranciaEntrada", martesToleranciaEntrada);
+                // Parámetros para Martes
+                DB.AsignarParametroCadena("@M_EntradaMañana", martesEntradaManana);
+                DB.AsignarParametroCadena("@M_SalidaMañana", martesSalidaManana);
+                DB.AsignarParametroCadena("@M_EntradaTarde", martesEntradaTarde);
+                DB.AsignarParametroCadena("@M_SalidaTarde", martesSalidaTarde);
+                DB.AgregarParametro("@M_ToleranciaEntrada", martesToleranciaEntrada);
 
-            // Parámetros para Miércoles
-            DB.AsignarParametroCadena("@X_EntradaMañana", miercolesEntradaManana);
-            DB.AsignarParametroCadena("@X_SalidaMañana", miercolesSalidaManana);
-            DB.AsignarParametroCadena("@X_EntradaTarde", miercolesEntradaTarde);
-            DB.AsignarParametroCadena("@X_SalidaTarde", miercolesSalidaTarde);
-            DB.AgregarParametro("@X_ToleranciaEntrada", miercolesToleranciaEntrada);
+                // Parámetros para Miércoles
+                DB.AsignarParametroCadena("@X_EntradaMañana", miercolesEntradaManana);
+                DB.AsignarParametroCadena("@X_SalidaMañana", miercolesSalidaManana);
+                DB.AsignarParametroCadena("@X_EntradaTarde", miercolesEntradaTarde);
+                DB.AsignarParametroCadena("@X_SalidaTarde", miercolesSalidaTarde);
+                DB.AgregarParametro("@X_ToleranciaEntrada", miercolesToleranciaEntrada);
 
-            // Parámetros para Jueves
-            DB.AsignarParametroCadena("@J_EntradaMañana", juevesEntradaManana);
-            DB.AsignarParametroCadena("@J_SalidaMañana", juevesSalidaManana);
-            DB.AsignarParametroCadena("@J_EntradaTarde", juevesEntradaTarde);
-            DB.AsignarParametroCadena("@J_SalidaTarde", juevesSalidaTarde);
-            DB.AgregarParametro("@J_ToleranciaEntrada", juevesToleranciaEntrada);
+                // Parámetros para Jueves
+                DB.AsignarParametroCadena("@J_EntradaMañana", juevesEntradaManana);
+                DB.AsignarParametroCadena("@J_SalidaMañana", juevesSalidaManana);
+                DB.AsignarParametroCadena("@J_EntradaTarde", juevesEntradaTarde);
+                DB.AsignarParametroCadena("@J_SalidaTarde", juevesSalidaTarde);
+                DB.AgregarParametro("@J_ToleranciaEntrada", juevesToleranciaEntrada);
 
-            // Parámetros para Viernes
-            DB.AsignarParametroCadena("@V_EntradaMañana", viernesEntradaManana);
-            DB.AsignarParametroCadena("@V_SalidaMañana", viernesSalidaManana);
-            DB.AsignarParametroCadena("@V_EntradaTarde", viernesEntradaTarde);
-            DB.AsignarParametroCadena("@V_SalidaTarde", viernesSalidaTarde);
-            DB.AgregarParametro("@V_ToleranciaEntrada", viernesToleranciaEntrada);
+                // Parámetros para Viernes
+                DB.AsignarParametroCadena("@V_EntradaMañana", viernesEntradaManana);
+                DB.AsignarParametroCadena("@V_SalidaMañana", viernesSalidaManana);
+                DB.AsignarParametroCadena("@V_EntradaTarde", viernesEntradaTarde);
+                DB.AsignarParametroCadena("@V_SalidaTarde", viernesSalidaTarde);
+                DB.AgregarParametro("@V_ToleranciaEntrada", viernesToleranciaEntrada);
 
-            // Parámetros para Sábado
-            DB.AsignarParametroCadena("@S_EntradaMañana", sabadoEntradaManana);
-            DB.AsignarParametroCadena("@S_SalidaMañana", sabadoSalidaManana);
-            DB.AsignarParametroCadena("@S_EntradaTarde", sabadoEntradaTarde);
-            DB.AsignarParametroCadena("@S_SalidaTarde", sabadoSalidaTarde);
-            DB.AgregarParametro("@S_ToleranciaEntrada", sabadoToleranciaEntrada);
+                // Parámetros para Sábado
+                DB.AsignarParametroCadena("@S_EntradaMañana", sabadoEntradaManana);
+                DB.AsignarParametroCadena("@S_SalidaMañana", sabadoSalidaManana);
+                DB.AsignarParametroCadena("@S_EntradaTarde", sabadoEntradaTarde);
+                DB.AsignarParametroCadena("@S_SalidaTarde", sabadoSalidaTarde);
+                DB.AgregarParametro("@S_ToleranciaEntrada", sabadoToleranciaEntrada);
 
-            // Parámetros para Domingo
-            DB.AsignarParametroCadena("@D_EntradaMañana", domingoEntradaManana);
-            DB.AsignarParametroCadena("@D_SalidaMañana", domingoSalidaManana);
-            DB.AsignarParametroCadena("@D_EntradaTarde", domingoEntradaTarde);
-            DB.AsignarParametroCadena("@D_SalidaTarde", domingoSalidaTarde);
-            DB.AgregarParametro("@D_ToleranciaEntrada", domingoToleranciaEntrada);
+                // Parámetros para Domingo
+                DB.AsignarParametroCadena("@D_EntradaMañana", domingoEntradaManana);
+                DB.AsignarParametroCadena("@D_SalidaMañana", domingoSalidaManana);
+                DB.AsignarParametroCadena("@D_EntradaTarde", domingoEntradaTarde);
+                DB.AsignarParametroCadena("@D_SalidaTarde", domingoSalidaTarde);
+                DB.AgregarParametro("@D_ToleranciaEntrada", domingoToleranciaEntrada);
 
-            // Ejecutar el procedimiento almacenado
-            DB.EjecutarComando();
+                DB.EjecutarComando();
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show("Error al actualizar el Horario: " + ex.Message);
+                string Usuario = LoginUser.Usuario;
+                logs.InsertarLog("Horario MOD", "Err_Update", Usuario, ex.Message);
+            }
 
             DB.Desconectar();
-        }
-
-        private void dtv_Horarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void btn_Agregar_Click(object sender, EventArgs e)
@@ -291,15 +291,12 @@ namespace Proyecto
                 }
 
                 // Solo se permite ingresar números y los dos puntos (:)
-                if (!System.Text.RegularExpressions.Regex.IsMatch(cellValue, @"^[0-9: ]+$"))
+                if (!System.Text.RegularExpressions.Regex.IsMatch(cellValue, @"^[0-9]+$"))  
                 {
-                    MessageBox.Show("Solo se permiten números y el símbolo ':'", "Entrada no válida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Solo se permiten números y espacios", "Entrada no válida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     dtv_Horarios.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = DBNull.Value;
                     return;
                 }
-
-                // Quitamos los espacios en caso de que haya algún espacio innecesario
-                cellValue = cellValue.Replace(" ", "");
 
                 // Tratamos las entradas según el formato
                 string formattedTime = "";
@@ -319,7 +316,7 @@ namespace Proyecto
                     }
                     else
                     {
-                        formattedTime = cellValue; // Si ya tiene el formato completo, lo dejamos tal cual
+                        formattedTime = cellValue;
                     }
                 }
 
@@ -332,6 +329,7 @@ namespace Proyecto
                 {
                     MessageBox.Show("La hora ingresada no es válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     dtv_Horarios.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = DBNull.Value;
+
                 }
             }
         }

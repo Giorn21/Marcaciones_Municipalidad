@@ -59,7 +59,6 @@
             this.dtv_Horarios.TabIndex = 1;
             this.dtv_Horarios.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dtv_Horarios_CellBeginEdit);
             this.dtv_Horarios.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtv_Horarios_CellEndEdit);
-            this.dtv_Horarios.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtv_Horarios_CellValueChanged);
             this.dtv_Horarios.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dtv_Horarios_EditingControlShowing);
             this.dtv_Horarios.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtv_Horarios_RowValidated);
             this.dtv_Horarios.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtv_Horarios_KeyPress);
