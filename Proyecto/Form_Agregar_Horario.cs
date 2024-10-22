@@ -15,6 +15,21 @@ namespace Proyecto
         public Form_Agregar__Horario()
         {
             InitializeComponent();
+
+            foreach(Control c in this.Controls)
+            {
+                if (c is DateTimePicker)
+                {
+                    ((DateTimePicker)c).ShowUpDown = true;
+                }
+            }
+        }
+
+        private void btn_Salir_Click(object sender, EventArgs e)
+        {
+            Form_VerHorario verHorario = new Form_VerHorario();
+            verHorario.Show();
+            this.Close();
         }
     }
 }

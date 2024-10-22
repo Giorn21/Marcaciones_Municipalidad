@@ -75,60 +75,60 @@ namespace common
                             Descripcion = reader["Descripcion"].ToString(),
 
                             // Lunes
-                            L_EntradaMañana = reader["L_EntradaMañana"] != DBNull.Value ? (TimeSpan)reader["L_EntradaMañana"] : TimeSpan.Zero,
-                            L_SalidaMañana = reader["L_SalidaMañana"] != DBNull.Value ? (TimeSpan)reader["L_SalidaMañana"] : TimeSpan.Zero,
-                            L_EntradaTarde = reader["L_EntradaTarde"] != DBNull.Value ? (TimeSpan)reader["L_EntradaTarde"] : TimeSpan.Zero,
-                            L_SalidaTarde = reader["L_SalidaTarde"] != DBNull.Value ? (TimeSpan)reader["L_SalidaTarde"] : TimeSpan.Zero,
-                            L_ToleranciaEntrada = reader["L_ToleranciaEntrada"] != DBNull.Value ? Convert.ToInt32(reader["L_ToleranciaEntrada"]) : 0,
-                            L_ToleranciaSalida = reader["L_ToleranciaSalida"] != DBNull.Value ? Convert.ToInt32(reader["L_ToleranciaSalida"]) : 0,
+                            L_EntradaMañana = !string.IsNullOrEmpty(reader["L_EntradaMañana"].ToString()) ? (TimeSpan)reader["L_EntradaMañana"] : TimeSpan.MinValue,
+                            L_SalidaMañana = !string.IsNullOrEmpty(reader["L_SalidaMañana"].ToString()) ? (TimeSpan)reader["L_SalidaMañana"] : TimeSpan.MinValue,
+                            L_EntradaTarde = !string.IsNullOrEmpty(reader["L_EntradaTarde"].ToString()) ? (TimeSpan)reader["L_EntradaTarde"] : TimeSpan.MinValue,
+                            L_SalidaTarde = !string.IsNullOrEmpty(reader["L_SalidaTarde"].ToString()) ? (TimeSpan)reader["L_SalidaTarde"] : TimeSpan.MinValue,
+                            L_ToleranciaEntrada = !string.IsNullOrEmpty(reader["L_ToleranciaEntrada"].ToString()) ? Convert.ToInt32(reader["L_ToleranciaEntrada"]) : 0,
+                            L_ToleranciaSalida = !string.IsNullOrEmpty(reader["L_ToleranciaSalida"].ToString()) ? Convert.ToInt32(reader["L_ToleranciaSalida"]) : 0,
 
                             // Martes
-                            M_EntradaMañana = reader["M_EntradaMañana"] != DBNull.Value ? (TimeSpan)reader["M_EntradaMañana"] : TimeSpan.Zero,
-                            M_SalidaMañana = reader["M_SalidaMañana"] != DBNull.Value ? (TimeSpan)reader["M_SalidaMañana"] : TimeSpan.Zero,
-                            M_EntradaTarde = reader["M_EntradaTarde"] != DBNull.Value ? (TimeSpan)reader["M_EntradaTarde"] : TimeSpan.Zero,
-                            M_SalidaTarde = reader["M_SalidaTarde"] != DBNull.Value ? (TimeSpan)reader["M_SalidaTarde"] : TimeSpan.Zero,
-                            M_ToleranciaEntrada = reader["M_ToleranciaEntrada"] != DBNull.Value ? Convert.ToInt32(reader["M_ToleranciaEntrada"]) : 0,
-                            M_ToleranciaSalida = reader["M_ToleranciaSalida"] != DBNull.Value ? Convert.ToInt32(reader["M_ToleranciaSalida"]) : 0,
+                            M_EntradaMañana = !string.IsNullOrEmpty(reader["M_EntradaMañana"].ToString()) ? (TimeSpan)reader["M_EntradaMañana"] : TimeSpan.MinValue,
+                            M_SalidaMañana = !string.IsNullOrEmpty(reader["M_SalidaMañana"].ToString()) ? (TimeSpan)reader["M_SalidaMañana"] : TimeSpan.MinValue,
+                            M_EntradaTarde = !string.IsNullOrEmpty(reader["M_EntradaTarde"].ToString()) ? (TimeSpan)reader["M_EntradaTarde"] : TimeSpan.MinValue,
+                            M_SalidaTarde = !string.IsNullOrEmpty(reader["M_SalidaTarde"].ToString()) ? (TimeSpan)reader["M_SalidaTarde"] : TimeSpan.MinValue,
+                            M_ToleranciaEntrada = !string.IsNullOrEmpty(reader["M_ToleranciaEntrada"].ToString()) ? Convert.ToInt32(reader["M_ToleranciaEntrada"]) : 0,
+                            M_ToleranciaSalida = !string.IsNullOrEmpty(reader["M_ToleranciaSalida"].ToString()) ? Convert.ToInt32(reader["M_ToleranciaSalida"]) : 0,
 
                             // Miércoles
-                            X_EntradaMañana = reader["X_EntradaMañana"] != DBNull.Value ? (TimeSpan)reader["X_EntradaMañana"] : TimeSpan.Zero,
-                            X_SalidaMañana = reader["X_SalidaMañana"] != DBNull.Value ? (TimeSpan)reader["X_SalidaMañana"] : TimeSpan.Zero,
-                            X_EntradaTarde = reader["X_EntradaTarde"] != DBNull.Value ? (TimeSpan)reader["X_EntradaTarde"] : TimeSpan.Zero,
-                            X_SalidaTarde = reader["X_SalidaTarde"] != DBNull.Value ? (TimeSpan)reader["X_SalidaTarde"] : TimeSpan.Zero,
-                            X_ToleranciaEntrada = reader["X_ToleranciaEntrada"] != DBNull.Value ? Convert.ToInt32(reader["X_ToleranciaEntrada"]) : 0,
-                            X_ToleranciaSalida = reader["X_ToleranciaSalida"] != DBNull.Value ? Convert.ToInt32(reader["X_ToleranciaSalida"]) : 0,
+                            X_EntradaMañana = !string.IsNullOrEmpty(reader["X_EntradaMañana"].ToString()) ? (TimeSpan)reader["X_EntradaMañana"] : TimeSpan.MinValue,
+                            X_SalidaMañana = !string.IsNullOrEmpty(reader["X_SalidaMañana"].ToString()) ? (TimeSpan)reader["X_SalidaMañana"] : TimeSpan.MinValue,
+                            X_EntradaTarde = !string.IsNullOrEmpty(reader["X_EntradaTarde"].ToString()) ? (TimeSpan)reader["X_EntradaTarde"] : TimeSpan.MinValue,
+                            X_SalidaTarde = !string.IsNullOrEmpty(reader["X_SalidaTarde"].ToString()) ? (TimeSpan)reader["X_SalidaTarde"] : TimeSpan.MinValue,
+                            X_ToleranciaEntrada = !string.IsNullOrEmpty(reader["X_ToleranciaEntrada"].ToString()) ? Convert.ToInt32(reader["X_ToleranciaEntrada"]) : 0,
+                            X_ToleranciaSalida = !string.IsNullOrEmpty(reader["X_ToleranciaSalida"].ToString()) ? Convert.ToInt32(reader["X_ToleranciaSalida"]) : 0,
 
                             // Jueves
-                            J_EntradaMañana = reader["J_EntradaMañana"] != DBNull.Value ? (TimeSpan)reader["J_EntradaMañana"] : TimeSpan.Zero,
-                            J_SalidaMañana = reader["J_SalidaMañana"] != DBNull.Value ? (TimeSpan)reader["J_SalidaMañana"] : TimeSpan.Zero,
-                            J_EntradaTarde = reader["J_EntradaTarde"] != DBNull.Value ? (TimeSpan)reader["J_EntradaTarde"] : TimeSpan.Zero,
-                            J_SalidaTarde = reader["J_SalidaTarde"] != DBNull.Value ? (TimeSpan)reader["J_SalidaTarde"] : TimeSpan.Zero,
-                            J_ToleranciaEntrada = reader["J_ToleranciaEntrada"] != DBNull.Value ? Convert.ToInt32(reader["J_ToleranciaEntrada"]) : 0,
-                            J_ToleranciaSalida = reader["J_ToleranciaSalida"] != DBNull.Value ? Convert.ToInt32(reader["J_ToleranciaSalida"]) : 0,
+                            J_EntradaMañana = !string.IsNullOrEmpty(reader["J_EntradaMañana"].ToString()) ? (TimeSpan)reader["J_EntradaMañana"] : TimeSpan.MinValue,
+                            J_SalidaMañana = !string.IsNullOrEmpty(reader["J_SalidaMañana"].ToString()) ? (TimeSpan)reader["J_SalidaMañana"] : TimeSpan.MinValue,
+                            J_EntradaTarde = !string.IsNullOrEmpty(reader["J_EntradaTarde"].ToString()) ? (TimeSpan)reader["J_EntradaTarde"] : TimeSpan.MinValue,
+                            J_SalidaTarde = !string.IsNullOrEmpty(reader["J_SalidaTarde"].ToString()) ? (TimeSpan)reader["J_SalidaTarde"] : TimeSpan.MinValue,
+                            J_ToleranciaEntrada = !string.IsNullOrEmpty(reader["J_ToleranciaEntrada"].ToString()) ? Convert.ToInt32(reader["J_ToleranciaEntrada"]) : 0,
+                            J_ToleranciaSalida = !string.IsNullOrEmpty(reader["J_ToleranciaSalida"].ToString()) ? Convert.ToInt32(reader["J_ToleranciaSalida"]) : 0,
 
                             // Viernes
-                            V_EntradaMañana = reader["V_EntradaMañana"] != DBNull.Value ? (TimeSpan)reader["V_EntradaMañana"] : TimeSpan.Zero,
-                            V_SalidaMañana = reader["V_SalidaMañana"] != DBNull.Value ? (TimeSpan)reader["V_SalidaMañana"] : TimeSpan.Zero,
-                            V_EntradaTarde = reader["V_EntradaTarde"] != DBNull.Value ? (TimeSpan)reader["V_EntradaTarde"] : TimeSpan.Zero,
-                            V_SalidaTarde = reader["V_SalidaTarde"] != DBNull.Value ? (TimeSpan)reader["V_SalidaTarde"] : TimeSpan.Zero,
-                            V_ToleranciaEntrada = reader["V_ToleranciaEntrada"] != DBNull.Value ? Convert.ToInt32(reader["V_ToleranciaEntrada"]) : 0,
-                            V_ToleranciaSalida = reader["V_ToleranciaSalida"] != DBNull.Value ? Convert.ToInt32(reader["V_ToleranciaSalida"]) : 0,
+                            V_EntradaMañana = !string.IsNullOrEmpty(reader["V_EntradaMañana"].ToString()) ? (TimeSpan)reader["V_EntradaMañana"] : TimeSpan.MinValue,
+                            V_SalidaMañana = !string.IsNullOrEmpty(reader["V_SalidaMañana"].ToString()) ? (TimeSpan)reader["V_SalidaMañana"] : TimeSpan.MinValue,
+                            V_EntradaTarde = !string.IsNullOrEmpty(reader["V_EntradaTarde"].ToString()) ? (TimeSpan)reader["V_EntradaTarde"] : TimeSpan.MinValue,
+                            V_SalidaTarde = !string.IsNullOrEmpty(reader["V_SalidaTarde"].ToString()) ? (TimeSpan)reader["V_SalidaTarde"] : TimeSpan.MinValue,
+                            V_ToleranciaEntrada = !string.IsNullOrEmpty(reader["V_ToleranciaEntrada"].ToString()) ? Convert.ToInt32(reader["V_ToleranciaEntrada"]) : 0,
+                            V_ToleranciaSalida = !string.IsNullOrEmpty(reader["V_ToleranciaSalida"].ToString()) ? Convert.ToInt32(reader["V_ToleranciaSalida"]) : 0,
 
                             // Sábado
-                            S_EntradaMañana = reader["S_EntradaMañana"] != DBNull.Value ? (TimeSpan)reader["S_EntradaMañana"] : TimeSpan.Zero,
-                            S_SalidaMañana = reader["S_SalidaMañana"] != DBNull.Value ? (TimeSpan)reader["S_SalidaMañana"] : TimeSpan.Zero,
-                            S_EntradaTarde = reader["S_EntradaTarde"] != DBNull.Value ? (TimeSpan)reader["S_EntradaTarde"] : TimeSpan.Zero,
-                            S_SalidaTarde = reader["S_SalidaTarde"] != DBNull.Value ? (TimeSpan)reader["S_SalidaTarde"] : TimeSpan.Zero,
-                            S_ToleranciaEntrada = reader["S_ToleranciaEntrada"] != DBNull.Value ? Convert.ToInt32(reader["S_ToleranciaEntrada"]) : 0,
-                            S_ToleranciaSalida = reader["S_ToleranciaSalida"] != DBNull.Value ? Convert.ToInt32(reader["S_ToleranciaSalida"]) : 0,
+                            S_EntradaMañana = !string.IsNullOrEmpty(reader["S_EntradaMañana"].ToString()) ? (TimeSpan)reader["S_EntradaMañana"] : TimeSpan.MinValue,
+                            S_SalidaMañana = !string.IsNullOrEmpty(reader["S_SalidaMañana"].ToString()) ? (TimeSpan)reader["S_SalidaMañana"] : TimeSpan.MinValue,
+                            S_EntradaTarde = !string.IsNullOrEmpty(reader["S_EntradaTarde"].ToString()) ? (TimeSpan)reader["S_EntradaTarde"] : TimeSpan.MinValue,
+                            S_SalidaTarde = !string.IsNullOrEmpty(reader["S_SalidaTarde"].ToString()) ? (TimeSpan)reader["S_SalidaTarde"] : TimeSpan.MinValue,
+                            S_ToleranciaEntrada = !string.IsNullOrEmpty(reader["S_ToleranciaEntrada"].ToString()) ? Convert.ToInt32(reader["S_ToleranciaEntrada"]) : 0,
+                            S_ToleranciaSalida = !string.IsNullOrEmpty(reader["S_ToleranciaSalida"].ToString()) ? Convert.ToInt32(reader["S_ToleranciaSalida"]) : 0,
 
                             // Domingo
-                            D_EntradaMañana = reader["D_EntradaMañana"] != DBNull.Value ? (TimeSpan)reader["D_EntradaMañana"] : TimeSpan.Zero,
-                            D_SalidaMañana = reader["D_SalidaMañana"] != DBNull.Value ? (TimeSpan)reader["D_SalidaMañana"] : TimeSpan.Zero,
-                            D_EntradaTarde = reader["D_EntradaTarde"] != DBNull.Value ? (TimeSpan)reader["D_EntradaTarde"] : TimeSpan.Zero,
-                            D_SalidaTarde = reader["D_SalidaTarde"] != DBNull.Value ? (TimeSpan)reader["D_SalidaTarde"] : TimeSpan.Zero,
-                            D_ToleranciaEntrada = reader["D_ToleranciaEntrada"] != DBNull.Value ? Convert.ToInt32(reader["D_ToleranciaEntrada"]) : 0,
-                            D_ToleranciaSalida = reader["D_ToleranciaSalida"] != DBNull.Value ? Convert.ToInt32(reader["D_ToleranciaSalida"]) : 0,
+                            D_EntradaMañana = !string.IsNullOrEmpty(reader["D_EntradaMañana"].ToString()) ? (TimeSpan)reader["D_EntradaMañana"] : TimeSpan.MinValue,
+                            D_SalidaMañana = !string.IsNullOrEmpty(reader["D_SalidaMañana"].ToString()) ? (TimeSpan)reader["D_SalidaMañana"] : TimeSpan.MinValue,
+                            D_EntradaTarde = !string.IsNullOrEmpty(reader["D_EntradaTarde"].ToString()) ? (TimeSpan)reader["D_EntradaTarde"] : TimeSpan.MinValue,
+                            D_SalidaTarde = !string.IsNullOrEmpty(reader["D_SalidaTarde"].ToString()) ? (TimeSpan)reader["D_SalidaTarde"] : TimeSpan.MinValue,
+                            D_ToleranciaEntrada = !string.IsNullOrEmpty(reader["D_ToleranciaEntrada"].ToString()) ? Convert.ToInt32(reader["D_ToleranciaEntrada"]) : 0,
+                            D_ToleranciaSalida = !string.IsNullOrEmpty(reader["D_ToleranciaSalida"].ToString()) ? Convert.ToInt32(reader["D_ToleranciaSalida"]) : 0,
 
                             // Total de Horas semanales
                             TotalHorasSemanales = reader["TotalHorasSemanales"] != DBNull.Value ? Convert.ToInt32(reader["TotalHorasSemanales"]) : 0
@@ -156,10 +156,10 @@ namespace common
             if (horario != null)
             {
                 dtFormatted.Rows.Add("Lunes",
-                horario.L_EntradaMañana != TimeSpan.Zero ? (object)horario.L_EntradaMañana : DBNull.Value,
-                horario.L_SalidaMañana != TimeSpan.Zero ? (object)horario.L_SalidaMañana : DBNull.Value,
-                horario.L_EntradaTarde != TimeSpan.Zero ? (object)horario.L_EntradaTarde : DBNull.Value,
-                horario.L_SalidaTarde != TimeSpan.Zero ? (object)horario.L_SalidaTarde : DBNull.Value,
+                horario.L_EntradaMañana == TimeSpan.MinValue ? null : (object)horario.L_EntradaMañana,
+                horario.L_SalidaMañana == TimeSpan.MinValue ? null : (object)horario.L_SalidaMañana,
+                horario.L_EntradaTarde == TimeSpan.MinValue ? null : (object)horario.L_EntradaTarde,
+                horario.L_SalidaTarde == TimeSpan.MinValue ? null : (object)horario.L_SalidaTarde,
                 horario.L_ToleranciaEntrada != 0 ? (object)horario.L_ToleranciaEntrada : 0,
                 CalcularHorasTrabajadas(
                     horario.L_EntradaMañana.ToString(),
@@ -168,10 +168,10 @@ namespace common
                     horario.L_SalidaTarde.ToString()));
 
                 dtFormatted.Rows.Add("Martes",
-                    horario.M_EntradaMañana != TimeSpan.Zero ? (object)horario.M_EntradaMañana : DBNull.Value,
-                    horario.M_SalidaMañana != TimeSpan.Zero ? (object)horario.M_SalidaMañana : DBNull.Value,
-                    horario.M_EntradaTarde != TimeSpan.Zero ? (object)horario.M_EntradaTarde : DBNull.Value,
-                    horario.M_SalidaTarde != TimeSpan.Zero ? (object)horario.M_SalidaTarde : DBNull.Value,
+                    horario.M_EntradaMañana == TimeSpan.MinValue ? null : (object)horario.M_EntradaMañana ,
+                    horario.M_SalidaMañana == TimeSpan.MinValue ? null : (object)horario.M_SalidaMañana ,
+                    horario.M_EntradaTarde == TimeSpan.MinValue ? null : (object)horario.M_EntradaTarde ,
+                    horario.M_SalidaTarde == TimeSpan.MinValue ? null : (object)horario.M_SalidaTarde ,
                     horario.M_ToleranciaEntrada != 0 ? (object)horario.M_ToleranciaEntrada : 0,
                     CalcularHorasTrabajadas(
                         horario.M_EntradaMañana.ToString(),
@@ -180,10 +180,10 @@ namespace common
                         horario.M_SalidaTarde.ToString()));
 
                 dtFormatted.Rows.Add("Miercoles",
-                    horario.X_EntradaMañana != TimeSpan.Zero ? (object)horario.X_EntradaMañana : DBNull.Value,
-                    horario.X_SalidaMañana != TimeSpan.Zero ? (object)horario.X_SalidaMañana : DBNull.Value,
-                    horario.X_EntradaTarde != TimeSpan.Zero ? (object)horario.X_EntradaTarde : DBNull.Value,
-                    horario.X_SalidaTarde != TimeSpan.Zero ? (object)horario.X_SalidaTarde : DBNull.Value,
+                    horario.X_EntradaMañana == TimeSpan.MinValue ? null : (object)horario.X_EntradaMañana ,
+                    horario.X_SalidaMañana == TimeSpan.MinValue ? null : (object)horario.X_SalidaMañana ,
+                    horario.X_EntradaTarde == TimeSpan.MinValue ? null : (object)horario.X_EntradaTarde ,
+                    horario.X_SalidaTarde == TimeSpan.MinValue ? null : (object)horario.X_SalidaTarde ,
                     horario.X_ToleranciaEntrada != 0 ? (object)horario.X_ToleranciaEntrada : 0,
                     CalcularHorasTrabajadas(
                         horario.X_EntradaMañana.ToString(),
@@ -192,10 +192,10 @@ namespace common
                         horario.X_SalidaTarde.ToString()));
 
                 dtFormatted.Rows.Add("Jueves",
-                    horario.J_EntradaMañana != TimeSpan.Zero ? (object)horario.J_EntradaMañana : DBNull.Value,
-                    horario.J_SalidaMañana != TimeSpan.Zero ? (object)horario.J_SalidaMañana : DBNull.Value,
-                    horario.J_EntradaTarde != TimeSpan.Zero ? (object)horario.J_EntradaTarde : DBNull.Value,
-                    horario.J_SalidaTarde != TimeSpan.Zero ? (object)horario.J_SalidaTarde : DBNull.Value,
+                    horario.J_EntradaMañana == TimeSpan.MinValue ? null : (object)horario.J_EntradaMañana ,
+                    horario.J_SalidaMañana == TimeSpan.MinValue ? null : (object)horario.J_SalidaMañana ,
+                    horario.J_EntradaTarde == TimeSpan.MinValue ? null : (object)horario.J_EntradaTarde ,
+                    horario.J_SalidaTarde == TimeSpan.MinValue ? null : (object)horario.J_SalidaTarde ,
                     horario.J_ToleranciaEntrada != 0 ? (object)horario.J_ToleranciaEntrada : 0,
                     CalcularHorasTrabajadas(
                         horario.J_EntradaMañana.ToString(),
@@ -204,10 +204,10 @@ namespace common
                         horario.J_SalidaTarde.ToString()));
 
                 dtFormatted.Rows.Add("Viernes",
-                    horario.V_EntradaMañana != TimeSpan.Zero ? (object)horario.V_EntradaMañana : DBNull.Value,
-                    horario.V_SalidaMañana != TimeSpan.Zero ? (object)horario.V_SalidaMañana : DBNull.Value,
-                    horario.V_EntradaTarde != TimeSpan.Zero ? (object)horario.V_EntradaTarde : DBNull.Value,
-                    horario.V_SalidaTarde != TimeSpan.Zero ? (object)horario.V_SalidaTarde : DBNull.Value,
+                    horario.V_EntradaMañana == TimeSpan.MinValue ? null : (object)horario.V_EntradaMañana ,
+                    horario.V_SalidaMañana == TimeSpan.MinValue ? null : (object)horario.V_SalidaMañana ,
+                    horario.V_EntradaTarde == TimeSpan.MinValue ? null : (object)horario.V_EntradaTarde ,
+                    horario.V_SalidaTarde == TimeSpan.MinValue ? null : (object)horario.V_SalidaTarde ,
                     horario.V_ToleranciaEntrada != 0 ? (object)horario.V_ToleranciaEntrada : 0,
                     CalcularHorasTrabajadas(
                         horario.V_EntradaMañana.ToString(),
@@ -216,10 +216,10 @@ namespace common
                         horario.V_SalidaTarde.ToString()));
 
                 dtFormatted.Rows.Add("Sabado",
-                    horario.S_EntradaMañana != TimeSpan.Zero ? (object)horario.S_EntradaMañana : DBNull.Value,
-                    horario.S_SalidaMañana != TimeSpan.Zero ? (object)horario.S_SalidaMañana : DBNull.Value,
-                    horario.S_EntradaTarde != TimeSpan.Zero ? (object)horario.S_EntradaTarde : DBNull.Value,
-                    horario.S_SalidaTarde != TimeSpan.Zero ? (object)horario.S_SalidaTarde : DBNull.Value,
+                    horario.S_EntradaMañana == TimeSpan.MinValue ? null : (object)horario.S_EntradaMañana,
+                    horario.S_SalidaMañana == TimeSpan.MinValue ? null : (object)horario.S_SalidaMañana ,
+                    horario.S_EntradaTarde == TimeSpan.MinValue ? null : (object)horario.S_EntradaTarde ,
+                    horario.S_SalidaTarde == TimeSpan.MinValue ? null : (object)horario.S_SalidaTarde ,
                     horario.S_ToleranciaEntrada != 0 ? (object)horario.S_ToleranciaEntrada : 0,
                     CalcularHorasTrabajadas(
                         horario.S_EntradaMañana.ToString(),
@@ -228,10 +228,10 @@ namespace common
                         horario.S_SalidaTarde.ToString()));
 
                 dtFormatted.Rows.Add("Domingo",
-                    horario.D_EntradaMañana != TimeSpan.Zero ? (object)horario.D_EntradaMañana : DBNull.Value,
-                    horario.D_SalidaMañana != TimeSpan.Zero ? (object)horario.D_SalidaMañana : DBNull.Value,
-                    horario.D_EntradaTarde != TimeSpan.Zero ? (object)horario.D_EntradaTarde : DBNull.Value,
-                    horario.D_SalidaTarde != TimeSpan.Zero ? (object)horario.D_SalidaTarde : DBNull.Value,
+                    horario.D_EntradaMañana == TimeSpan.MinValue ? null : (object)horario.D_EntradaMañana ,
+                    horario.D_SalidaMañana == TimeSpan.MinValue ? null : (object)horario.D_SalidaMañana ,
+                    horario.D_EntradaTarde == TimeSpan.MinValue ? null : (object)horario.D_EntradaTarde ,
+                    horario.D_SalidaTarde == TimeSpan.MinValue ? null : (object)horario.D_SalidaTarde ,
                     horario.D_ToleranciaEntrada != 0 ? (object)horario.D_ToleranciaEntrada : 0,
                     CalcularHorasTrabajadas(
                         horario.D_EntradaMañana.ToString(),
@@ -268,17 +268,32 @@ namespace common
         {
             TimeSpan totalHoras = TimeSpan.Zero;
 
-            if (TimeSpan.TryParse(entradaMañana, out TimeSpan entradaMananaTime) && TimeSpan.TryParse(salidaMañana, out TimeSpan salidaMananaTime))
+            // Verificación para entrada y salida de la mañana
+            if (!string.IsNullOrEmpty(entradaMañana) && !string.IsNullOrEmpty(salidaMañana))
             {
-                totalHoras += salidaMananaTime - entradaMananaTime;
+                if (TimeSpan.TryParse(entradaMañana, out TimeSpan entradaMananaTime) && TimeSpan.TryParse(salidaMañana, out TimeSpan salidaMananaTime))
+                {
+                    if (salidaMananaTime > entradaMananaTime) // Verificación de que la salida sea posterior a la entrada
+                    {
+                        totalHoras += salidaMananaTime - entradaMananaTime;
+                    }
+                }
             }
 
-            if (TimeSpan.TryParse(entradaTarde, out TimeSpan entradaTardeTime) && TimeSpan.TryParse(salidaTarde, out TimeSpan salidaTardeTime))
+            // Verificación para entrada y salida de la tarde
+            if (!string.IsNullOrEmpty(entradaTarde) && !string.IsNullOrEmpty(salidaTarde))
             {
-                totalHoras += salidaTardeTime - entradaTardeTime;
+                if (TimeSpan.TryParse(entradaTarde, out TimeSpan entradaTardeTime) && TimeSpan.TryParse(salidaTarde, out TimeSpan salidaTardeTime))
+                {
+                    if (salidaTardeTime > entradaTardeTime) // Verificación de que la salida sea posterior a la entrada
+                    {
+                        totalHoras += salidaTardeTime - entradaTardeTime;
+                    }
+                }
             }
-
+            
             return totalHoras;
+
         }
     }
 }

@@ -167,7 +167,7 @@ namespace Proyecto
                     domingoEntradaManana, domingoSalidaManana, domingoEntradaTarde, domingoSalidaTarde, domingoToleranciaEntrada);
 
                 string Usuario = LoginUser.Usuario;
-                logs.InsertarLog("Horarios MOD", "Horario Update", Usuario, "Se a actualizado un Horario");
+                logs.InsertarLog("Horarios MOD", "Horario Update", Usuario, "Se a actualizado el Horario " + int.Parse(cbox_Horarios.SelectedValue.ToString()));
 
                 MessageBox.Show("Horario Actualizado correctamente");
                 // Deshabilitar el botón después de actualizar
@@ -278,7 +278,6 @@ namespace Proyecto
 
         private void dtv_Horarios_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            // Verificamos que las columnas editables son las columnas [1] a [4]
             if (e.ColumnIndex >= 1 && e.ColumnIndex <= 4)
             {
                 var cellValue = dtv_Horarios.Rows[e.RowIndex].Cells[e.ColumnIndex].Value?.ToString().Trim();
@@ -286,50 +285,82 @@ namespace Proyecto
                 // Si la celda está vacía o es nula, almacenamos como null
                 if (string.IsNullOrEmpty(cellValue))
                 {
-                    dtv_Horarios.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = DBNull.Value;
-                    return; // Salimos del método
-                }
+                    dtv_Horarios.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = null;
 
-                // Solo se permite ingresar números y los dos puntos (:)
-                if (!System.Text.RegularExpressions.Regex.IsMatch(cellValue, @"^[0-9]+$"))  
-                {
-                    MessageBox.Show("Solo se permiten números y espacios", "Entrada no válida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    dtv_Horarios.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = DBNull.Value;
-                    return;
-                }
-
-                // Tratamos las entradas según el formato
-                string formattedTime = "";
-                if (cellValue.Length == 2) // Entrada con solo hora (ej: "12")
-                {
-                    formattedTime = cellValue + ":00:00"; // Asumimos minutos y segundos como 00
-                }
-                else if (cellValue.Length == 4 && !cellValue.Contains(":")) // Entrada tipo "1230"
-                {
-                    formattedTime = cellValue.Insert(2, ":") + ":00"; // Convertimos "1230" en "12:30:00"
-                }
-                else if (cellValue.Contains(":")) // Entrada que ya contiene un separador (ej: "12:30")
-                {
-                    if (cellValue.Count(c => c == ':') == 1) // Solo tiene una separación
+                    // Si la columna es EntradaMañana (por ejemplo, columna 1), borrar SalidaMañana (columna 2)
+                    if (e.ColumnIndex == 1) // EntradaMañana
                     {
-                        formattedTime = cellValue + ":00"; // Si es "12:30", convertimos en "12:30:00"
+                        dtv_Horarios.Rows[e.RowIndex].Cells[2].Value = null; // Borrar SalidaMañana
                     }
-                    else
-                    {
-                        formattedTime = cellValue;
-                    }
-                }
 
-                // Intentamos parsear a DateTime para asegurarnos que es válido
-                if (DateTime.TryParse(formattedTime, out DateTime parsedTime))
-                {
-                    dtv_Horarios.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = parsedTime.ToString("HH:mm:ss");
+                    // Si la columna es EntradaTarde (por ejemplo, columna 3), borrar SalidaTarde (columna 4)
+                    if (e.ColumnIndex == 3) // EntradaTarde
+                    {
+                        dtv_Horarios.Rows[e.RowIndex].Cells[4].Value = null; // Borrar SalidaTarde
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("La hora ingresada no es válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    dtv_Horarios.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = DBNull.Value;
+                    // Solo se permite ingresar números y los dos puntos (:)
+                    if (!System.Text.RegularExpressions.Regex.IsMatch(cellValue, @"^[0-9:]+$"))
+                    {
+                        MessageBox.Show("Solo se permiten números y el carácter ':'", "Entrada no válida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        dtv_Horarios.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = DBNull.Value;
+                        return;
+                    }
 
+                    // Tratamos las entradas según el formato
+                    string formattedTime = "";
+                    if (cellValue.Length == 2) // Entrada con solo hora (ej: "12")
+                    {
+                        formattedTime = cellValue + ":00:00"; // Asumimos minutos y segundos como 00
+                    }
+                    else if (cellValue.Length == 4 && !cellValue.Contains(":")) // Entrada tipo "1230"
+                    {
+                        formattedTime = cellValue.Insert(2, ":") + ":00"; // Convertimos "1230" en "12:30:00"
+                    }
+                    else if (cellValue.Contains(":")) // Entrada que ya contiene un separador (ej: "12:30")
+                    {
+                        if (cellValue.Count(c => c == ':') == 1) // Solo tiene una separación
+                        {
+                            formattedTime = cellValue + ":00"; // Si es "12:30", convertimos en "12:30:00"
+                        }
+                        else
+                        {
+                            formattedTime = cellValue;
+                        }
+                    }
+
+                    // Intentamos parsear a DateTime para asegurarnos que es válido
+                    if (DateTime.TryParse(formattedTime, out DateTime parsedTime))
+                    {
+                        dtv_Horarios.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = parsedTime.ToString("HH:mm:ss");
+                    }
+                    else
+                    {
+                        MessageBox.Show("La hora ingresada no es válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        dtv_Horarios.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = DBNull.Value;
+                    }
+                }
+
+                // Verificación adicional para EntradaMañana y SalidaMañana
+                if (e.ColumnIndex == 2) // SalidaMañana (columna 2)
+                {
+                    var entradaMañana = dtv_Horarios.Rows[e.RowIndex].Cells[1].Value?.ToString().Trim(); // EntradaMañana
+                    if (string.IsNullOrEmpty(entradaMañana)) // Si EntradaMañana está vacía
+                    {
+                        dtv_Horarios.Rows[e.RowIndex].Cells[1].Value = "00:00:00"; // Asignar 00:00:00 a EntradaMañana
+                    }
+                }
+
+                // Verificación adicional para EntradaTarde y SalidaTarde
+                if (e.ColumnIndex == 4) // SalidaTarde (columna 4)
+                {
+                    var entradaTarde = dtv_Horarios.Rows[e.RowIndex].Cells[3].Value?.ToString().Trim(); // EntradaTarde
+                    if (string.IsNullOrEmpty(entradaTarde)) // Si EntradaTarde está vacía
+                    {
+                        dtv_Horarios.Rows[e.RowIndex].Cells[3].Value = "00:00:00"; // Asignar 00:00:00 a EntradaTarde
+                    }
                 }
             }
         }

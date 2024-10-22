@@ -151,6 +151,7 @@
             // 
             // DTP_Fecha
             // 
+            this.DTP_Fecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DTP_Fecha.Location = new System.Drawing.Point(271, 57);
             this.DTP_Fecha.Name = "DTP_Fecha";
             this.DTP_Fecha.Size = new System.Drawing.Size(200, 20);
