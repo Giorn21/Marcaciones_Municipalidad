@@ -69,6 +69,7 @@
     <Compile Include="BL\clsVer_TipoContrato.cs" />
     <Compile Include="BL\clsVer_TipoMarca.cs" />
     <Compile Include="BL\clsVer_TipoUnidad.cs" />
+    <Compile Include="BL\clsAgregar_Horario.cs" />
     <Compile Include="BL\cls_UPD_TipoContrato.cs" />
     <Compile Include="BL\cls_UPD_Unidad.cs" />
     <Compile Include="Models\AgregarDatos.cs" />

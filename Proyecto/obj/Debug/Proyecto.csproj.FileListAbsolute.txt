@@ -37,4 +37,4 @@ C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.Up
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.exe
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_VerHorario.resources
-C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_Agregar__Horario.resources
+C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_Agregar_Horario.resources

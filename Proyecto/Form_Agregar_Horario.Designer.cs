@@ -1,6 +1,6 @@
 ﻿namespace Proyecto
 {
-    partial class Form_Agregar__Horario
+    partial class Form_Agregar_Horario
     {
         /// <summary>
         /// Required designer variable.
@@ -73,15 +73,13 @@
             this.dtp_D_EnMañana = new System.Windows.Forms.DateTimePicker();
             this.btn_Salir = new System.Windows.Forms.Button();
             this.btn_Agregar = new System.Windows.Forms.Button();
-            this.txt_Descripcion = new System.Windows.Forms.TextBox();
-            this.lbl_Descripcion = new System.Windows.Forms.Label();
             this.numUP_D_ToleSa = new System.Windows.Forms.NumericUpDown();
             this.numUP_S_ToleSa = new System.Windows.Forms.NumericUpDown();
             this.numUP_V_ToleSa = new System.Windows.Forms.NumericUpDown();
             this.numUP_J_ToleSa = new System.Windows.Forms.NumericUpDown();
             this.numUP_X_ToleSa = new System.Windows.Forms.NumericUpDown();
             this.numUP_M_ToleSa = new System.Windows.Forms.NumericUpDown();
-            this.numUP_L_ToleSA = new System.Windows.Forms.NumericUpDown();
+            this.numUP_L_ToleSa = new System.Windows.Forms.NumericUpDown();
             this.check_L_Asis = new System.Windows.Forms.CheckBox();
             this.check_M_Asis = new System.Windows.Forms.CheckBox();
             this.check_X_Asis = new System.Windows.Forms.CheckBox();
@@ -96,6 +94,10 @@
             this.lbl_SalidaTarde = new System.Windows.Forms.Label();
             this.lbl_ToleEntrada = new System.Windows.Forms.Label();
             this.lbl_ToleSalida = new System.Windows.Forms.Label();
+            this.lbl_Nombre = new System.Windows.Forms.Label();
+            this.lbl_Descripcion = new System.Windows.Forms.Label();
+            this.lbl_TotalHoras = new System.Windows.Forms.Label();
+            this.lbl_Horas = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numUP_L_ToleEn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUP_M_ToleEn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUP_X_ToleEn)).BeginInit();
@@ -109,14 +111,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.numUP_J_ToleSa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUP_X_ToleSa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUP_M_ToleSa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numUP_L_ToleSA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUP_L_ToleSa)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Titulo
             // 
             this.lbl_Titulo.AutoSize = true;
             this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Titulo.Location = new System.Drawing.Point(258, 9);
+            this.lbl_Titulo.Location = new System.Drawing.Point(267, 9);
             this.lbl_Titulo.Name = "lbl_Titulo";
             this.lbl_Titulo.Size = new System.Drawing.Size(309, 33);
             this.lbl_Titulo.TabIndex = 0;
@@ -235,7 +237,7 @@
             // numUP_L_ToleEn
             // 
             this.numUP_L_ToleEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numUP_L_ToleEn.Location = new System.Drawing.Point(683, 161);
+            this.numUP_L_ToleEn.Location = new System.Drawing.Point(668, 161);
             this.numUP_L_ToleEn.Name = "numUP_L_ToleEn";
             this.numUP_L_ToleEn.Size = new System.Drawing.Size(44, 24);
             this.numUP_L_ToleEn.TabIndex = 12;
@@ -243,7 +245,7 @@
             // numUP_M_ToleEn
             // 
             this.numUP_M_ToleEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numUP_M_ToleEn.Location = new System.Drawing.Point(683, 205);
+            this.numUP_M_ToleEn.Location = new System.Drawing.Point(668, 205);
             this.numUP_M_ToleEn.Name = "numUP_M_ToleEn";
             this.numUP_M_ToleEn.Size = new System.Drawing.Size(44, 24);
             this.numUP_M_ToleEn.TabIndex = 17;
@@ -291,7 +293,7 @@
             // numUP_X_ToleEn
             // 
             this.numUP_X_ToleEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numUP_X_ToleEn.Location = new System.Drawing.Point(683, 249);
+            this.numUP_X_ToleEn.Location = new System.Drawing.Point(668, 249);
             this.numUP_X_ToleEn.Name = "numUP_X_ToleEn";
             this.numUP_X_ToleEn.Size = new System.Drawing.Size(44, 24);
             this.numUP_X_ToleEn.TabIndex = 22;
@@ -339,7 +341,7 @@
             // numUP_J_ToleEn
             // 
             this.numUP_J_ToleEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numUP_J_ToleEn.Location = new System.Drawing.Point(683, 293);
+            this.numUP_J_ToleEn.Location = new System.Drawing.Point(668, 293);
             this.numUP_J_ToleEn.Name = "numUP_J_ToleEn";
             this.numUP_J_ToleEn.Size = new System.Drawing.Size(44, 24);
             this.numUP_J_ToleEn.TabIndex = 27;
@@ -387,7 +389,7 @@
             // numUP_V_ToleEn
             // 
             this.numUP_V_ToleEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numUP_V_ToleEn.Location = new System.Drawing.Point(683, 337);
+            this.numUP_V_ToleEn.Location = new System.Drawing.Point(668, 337);
             this.numUP_V_ToleEn.Name = "numUP_V_ToleEn";
             this.numUP_V_ToleEn.Size = new System.Drawing.Size(44, 24);
             this.numUP_V_ToleEn.TabIndex = 32;
@@ -435,7 +437,7 @@
             // numUP_S_ToleEn
             // 
             this.numUP_S_ToleEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numUP_S_ToleEn.Location = new System.Drawing.Point(683, 381);
+            this.numUP_S_ToleEn.Location = new System.Drawing.Point(668, 381);
             this.numUP_S_ToleEn.Name = "numUP_S_ToleEn";
             this.numUP_S_ToleEn.Size = new System.Drawing.Size(44, 24);
             this.numUP_S_ToleEn.TabIndex = 37;
@@ -483,7 +485,7 @@
             // numUP_D_ToleEn
             // 
             this.numUP_D_ToleEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numUP_D_ToleEn.Location = new System.Drawing.Point(683, 425);
+            this.numUP_D_ToleEn.Location = new System.Drawing.Point(668, 425);
             this.numUP_D_ToleEn.Name = "numUP_D_ToleEn";
             this.numUP_D_ToleEn.Size = new System.Drawing.Size(44, 24);
             this.numUP_D_ToleEn.TabIndex = 42;
@@ -544,35 +546,18 @@
             // 
             this.btn_Agregar.BackColor = System.Drawing.Color.GreenYellow;
             this.btn_Agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Agregar.Location = new System.Drawing.Point(741, 480);
+            this.btn_Agregar.Location = new System.Drawing.Point(762, 486);
             this.btn_Agregar.Name = "btn_Agregar";
             this.btn_Agregar.Size = new System.Drawing.Size(96, 39);
             this.btn_Agregar.TabIndex = 44;
             this.btn_Agregar.Text = "Agregar";
             this.btn_Agregar.UseVisualStyleBackColor = false;
-            // 
-            // txt_Descripcion
-            // 
-            this.txt_Descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Descripcion.Location = new System.Drawing.Point(11, 83);
-            this.txt_Descripcion.Name = "txt_Descripcion";
-            this.txt_Descripcion.Size = new System.Drawing.Size(226, 24);
-            this.txt_Descripcion.TabIndex = 45;
-            // 
-            // lbl_Descripcion
-            // 
-            this.lbl_Descripcion.AutoSize = true;
-            this.lbl_Descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Descripcion.Location = new System.Drawing.Point(12, 60);
-            this.lbl_Descripcion.Name = "lbl_Descripcion";
-            this.lbl_Descripcion.Size = new System.Drawing.Size(140, 20);
-            this.lbl_Descripcion.TabIndex = 46;
-            this.lbl_Descripcion.Text = "Nombre de horario";
+            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
             // numUP_D_ToleSa
             // 
             this.numUP_D_ToleSa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numUP_D_ToleSa.Location = new System.Drawing.Point(775, 426);
+            this.numUP_D_ToleSa.Location = new System.Drawing.Point(741, 426);
             this.numUP_D_ToleSa.Name = "numUP_D_ToleSa";
             this.numUP_D_ToleSa.Size = new System.Drawing.Size(44, 24);
             this.numUP_D_ToleSa.TabIndex = 53;
@@ -580,7 +565,7 @@
             // numUP_S_ToleSa
             // 
             this.numUP_S_ToleSa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numUP_S_ToleSa.Location = new System.Drawing.Point(775, 382);
+            this.numUP_S_ToleSa.Location = new System.Drawing.Point(741, 382);
             this.numUP_S_ToleSa.Name = "numUP_S_ToleSa";
             this.numUP_S_ToleSa.Size = new System.Drawing.Size(44, 24);
             this.numUP_S_ToleSa.TabIndex = 52;
@@ -588,7 +573,7 @@
             // numUP_V_ToleSa
             // 
             this.numUP_V_ToleSa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numUP_V_ToleSa.Location = new System.Drawing.Point(775, 338);
+            this.numUP_V_ToleSa.Location = new System.Drawing.Point(741, 338);
             this.numUP_V_ToleSa.Name = "numUP_V_ToleSa";
             this.numUP_V_ToleSa.Size = new System.Drawing.Size(44, 24);
             this.numUP_V_ToleSa.TabIndex = 51;
@@ -596,7 +581,7 @@
             // numUP_J_ToleSa
             // 
             this.numUP_J_ToleSa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numUP_J_ToleSa.Location = new System.Drawing.Point(775, 294);
+            this.numUP_J_ToleSa.Location = new System.Drawing.Point(741, 294);
             this.numUP_J_ToleSa.Name = "numUP_J_ToleSa";
             this.numUP_J_ToleSa.Size = new System.Drawing.Size(44, 24);
             this.numUP_J_ToleSa.TabIndex = 50;
@@ -604,7 +589,7 @@
             // numUP_X_ToleSa
             // 
             this.numUP_X_ToleSa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numUP_X_ToleSa.Location = new System.Drawing.Point(775, 250);
+            this.numUP_X_ToleSa.Location = new System.Drawing.Point(741, 250);
             this.numUP_X_ToleSa.Name = "numUP_X_ToleSa";
             this.numUP_X_ToleSa.Size = new System.Drawing.Size(44, 24);
             this.numUP_X_ToleSa.TabIndex = 49;
@@ -612,82 +597,103 @@
             // numUP_M_ToleSa
             // 
             this.numUP_M_ToleSa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numUP_M_ToleSa.Location = new System.Drawing.Point(775, 206);
+            this.numUP_M_ToleSa.Location = new System.Drawing.Point(741, 206);
             this.numUP_M_ToleSa.Name = "numUP_M_ToleSa";
             this.numUP_M_ToleSa.Size = new System.Drawing.Size(44, 24);
             this.numUP_M_ToleSa.TabIndex = 48;
             // 
-            // numUP_L_ToleSA
+            // numUP_L_ToleSa
             // 
-            this.numUP_L_ToleSA.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numUP_L_ToleSA.Location = new System.Drawing.Point(775, 162);
-            this.numUP_L_ToleSA.Name = "numUP_L_ToleSA";
-            this.numUP_L_ToleSA.Size = new System.Drawing.Size(44, 24);
-            this.numUP_L_ToleSA.TabIndex = 47;
+            this.numUP_L_ToleSa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numUP_L_ToleSa.Location = new System.Drawing.Point(741, 162);
+            this.numUP_L_ToleSa.Name = "numUP_L_ToleSa";
+            this.numUP_L_ToleSa.Size = new System.Drawing.Size(44, 24);
+            this.numUP_L_ToleSa.TabIndex = 47;
             // 
             // check_L_Asis
             // 
             this.check_L_Asis.AutoSize = true;
+            this.check_L_Asis.Checked = true;
+            this.check_L_Asis.CheckState = System.Windows.Forms.CheckState.Checked;
             this.check_L_Asis.Location = new System.Drawing.Point(117, 168);
             this.check_L_Asis.Margin = new System.Windows.Forms.Padding(5);
             this.check_L_Asis.Name = "check_L_Asis";
             this.check_L_Asis.Size = new System.Drawing.Size(15, 14);
             this.check_L_Asis.TabIndex = 54;
             this.check_L_Asis.UseVisualStyleBackColor = true;
+            this.check_L_Asis.CheckedChanged += new System.EventHandler(this.check_L_Asis_CheckedChanged);
             // 
             // check_M_Asis
             // 
             this.check_M_Asis.AutoSize = true;
+            this.check_M_Asis.Checked = true;
+            this.check_M_Asis.CheckState = System.Windows.Forms.CheckState.Checked;
             this.check_M_Asis.Location = new System.Drawing.Point(117, 211);
             this.check_M_Asis.Name = "check_M_Asis";
             this.check_M_Asis.Size = new System.Drawing.Size(15, 14);
             this.check_M_Asis.TabIndex = 55;
             this.check_M_Asis.UseVisualStyleBackColor = true;
+            this.check_M_Asis.CheckedChanged += new System.EventHandler(this.check_M_Asis_CheckedChanged);
             // 
             // check_X_Asis
             // 
             this.check_X_Asis.AutoSize = true;
+            this.check_X_Asis.Checked = true;
+            this.check_X_Asis.CheckState = System.Windows.Forms.CheckState.Checked;
             this.check_X_Asis.Location = new System.Drawing.Point(117, 256);
             this.check_X_Asis.Name = "check_X_Asis";
             this.check_X_Asis.Size = new System.Drawing.Size(15, 14);
             this.check_X_Asis.TabIndex = 56;
             this.check_X_Asis.UseVisualStyleBackColor = true;
+            this.check_X_Asis.CheckedChanged += new System.EventHandler(this.check_X_Asis_CheckedChanged);
             // 
             // check_S_Asis
             // 
             this.check_S_Asis.AutoSize = true;
+            this.check_S_Asis.Checked = true;
+            this.check_S_Asis.CheckState = System.Windows.Forms.CheckState.Checked;
             this.check_S_Asis.Location = new System.Drawing.Point(117, 387);
             this.check_S_Asis.Name = "check_S_Asis";
             this.check_S_Asis.Size = new System.Drawing.Size(15, 14);
             this.check_S_Asis.TabIndex = 59;
             this.check_S_Asis.UseVisualStyleBackColor = true;
+            this.check_S_Asis.CheckedChanged += new System.EventHandler(this.check_S_Asis_CheckedChanged);
             // 
             // check_V_Asis
             // 
             this.check_V_Asis.AutoSize = true;
+            this.check_V_Asis.Checked = true;
+            this.check_V_Asis.CheckState = System.Windows.Forms.CheckState.Checked;
             this.check_V_Asis.Location = new System.Drawing.Point(117, 344);
             this.check_V_Asis.Name = "check_V_Asis";
             this.check_V_Asis.Size = new System.Drawing.Size(15, 14);
             this.check_V_Asis.TabIndex = 58;
             this.check_V_Asis.UseVisualStyleBackColor = true;
+            this.check_V_Asis.CheckedChanged += new System.EventHandler(this.check_V_Asis_CheckedChanged);
             // 
             // check_J_Asis
             // 
             this.check_J_Asis.AutoSize = true;
+            this.check_J_Asis.Checked = true;
+            this.check_J_Asis.CheckState = System.Windows.Forms.CheckState.Checked;
             this.check_J_Asis.Location = new System.Drawing.Point(117, 302);
             this.check_J_Asis.Name = "check_J_Asis";
             this.check_J_Asis.Size = new System.Drawing.Size(15, 14);
             this.check_J_Asis.TabIndex = 57;
             this.check_J_Asis.UseVisualStyleBackColor = true;
+            this.check_J_Asis.CheckedChanged += new System.EventHandler(this.check_J_Asis_CheckedChanged);
             // 
             // check_D_Asis
             // 
             this.check_D_Asis.AutoSize = true;
+            this.check_D_Asis.Checked = true;
+            this.check_D_Asis.CheckState = System.Windows.Forms.CheckState.Checked;
             this.check_D_Asis.Location = new System.Drawing.Point(117, 432);
             this.check_D_Asis.Name = "check_D_Asis";
             this.check_D_Asis.Size = new System.Drawing.Size(15, 14);
             this.check_D_Asis.TabIndex = 60;
             this.check_D_Asis.UseVisualStyleBackColor = true;
+            this.check_D_Asis.CheckedChanged += new System.EventHandler(this.check_D_Asis_CheckedChanged);
             // 
             // lbl_Asistencia
             // 
@@ -743,7 +749,7 @@
             // 
             this.lbl_ToleEntrada.AutoSize = true;
             this.lbl_ToleEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ToleEntrada.Location = new System.Drawing.Point(680, 126);
+            this.lbl_ToleEntrada.Location = new System.Drawing.Point(665, 126);
             this.lbl_ToleEntrada.Name = "lbl_ToleEntrada";
             this.lbl_ToleEntrada.Size = new System.Drawing.Size(65, 30);
             this.lbl_ToleEntrada.TabIndex = 64;
@@ -753,17 +759,61 @@
             // 
             this.lbl_ToleSalida.AutoSize = true;
             this.lbl_ToleSalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ToleSalida.Location = new System.Drawing.Point(772, 126);
+            this.lbl_ToleSalida.Location = new System.Drawing.Point(738, 126);
             this.lbl_ToleSalida.Name = "lbl_ToleSalida";
             this.lbl_ToleSalida.Size = new System.Drawing.Size(65, 30);
             this.lbl_ToleSalida.TabIndex = 67;
             this.lbl_ToleSalida.Text = "Tolerancia\r\nSalida\r\n";
             // 
-            // Form_Agregar__Horario
+            // lbl_Nombre
+            // 
+            this.lbl_Nombre.AutoSize = true;
+            this.lbl_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Nombre.Location = new System.Drawing.Point(9, 75);
+            this.lbl_Nombre.Name = "lbl_Nombre";
+            this.lbl_Nombre.Size = new System.Drawing.Size(70, 18);
+            this.lbl_Nombre.TabIndex = 68;
+            this.lbl_Nombre.Text = "Nombre :";
+            // 
+            // lbl_Descripcion
+            // 
+            this.lbl_Descripcion.AutoSize = true;
+            this.lbl_Descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Descripcion.Location = new System.Drawing.Point(85, 75);
+            this.lbl_Descripcion.Name = "lbl_Descripcion";
+            this.lbl_Descripcion.Size = new System.Drawing.Size(87, 18);
+            this.lbl_Descripcion.TabIndex = 69;
+            this.lbl_Descripcion.Text = "Descripcion";
+            // 
+            // lbl_TotalHoras
+            // 
+            this.lbl_TotalHoras.AutoSize = true;
+            this.lbl_TotalHoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TotalHoras.Location = new System.Drawing.Point(630, 498);
+            this.lbl_TotalHoras.Name = "lbl_TotalHoras";
+            this.lbl_TotalHoras.Size = new System.Drawing.Size(78, 16);
+            this.lbl_TotalHoras.TabIndex = 70;
+            this.lbl_TotalHoras.Text = "Total Horas";
+            // 
+            // lbl_Horas
+            // 
+            this.lbl_Horas.AutoSize = true;
+            this.lbl_Horas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Horas.Location = new System.Drawing.Point(531, 497);
+            this.lbl_Horas.Name = "lbl_Horas";
+            this.lbl_Horas.Size = new System.Drawing.Size(93, 16);
+            this.lbl_Horas.TabIndex = 71;
+            this.lbl_Horas.Text = "HorasTotales:";
+            // 
+            // Form_Agregar_Horario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 531);
+            this.ClientSize = new System.Drawing.Size(864, 531);
+            this.Controls.Add(this.lbl_Horas);
+            this.Controls.Add(this.lbl_TotalHoras);
+            this.Controls.Add(this.lbl_Descripcion);
+            this.Controls.Add(this.lbl_Nombre);
             this.Controls.Add(this.lbl_ToleSalida);
             this.Controls.Add(this.lbl_EntradaTarde);
             this.Controls.Add(this.lbl_SalidaTarde);
@@ -784,9 +834,7 @@
             this.Controls.Add(this.numUP_J_ToleSa);
             this.Controls.Add(this.numUP_X_ToleSa);
             this.Controls.Add(this.numUP_M_ToleSa);
-            this.Controls.Add(this.numUP_L_ToleSA);
-            this.Controls.Add(this.lbl_Descripcion);
-            this.Controls.Add(this.txt_Descripcion);
+            this.Controls.Add(this.numUP_L_ToleSa);
             this.Controls.Add(this.btn_Agregar);
             this.Controls.Add(this.btn_Salir);
             this.Controls.Add(this.numUP_D_ToleEn);
@@ -832,7 +880,7 @@
             this.Controls.Add(this.lbl_Lunes);
             this.Controls.Add(this.dtp_L_EnMañana);
             this.Controls.Add(this.lbl_Titulo);
-            this.Name = "Form_Agregar__Horario";
+            this.Name = "Form_Agregar_Horario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Agregar__Horario";
             ((System.ComponentModel.ISupportInitialize)(this.numUP_L_ToleEn)).EndInit();
@@ -848,7 +896,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numUP_J_ToleSa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUP_X_ToleSa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUP_M_ToleSa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numUP_L_ToleSA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUP_L_ToleSa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -901,15 +949,13 @@
         private System.Windows.Forms.DateTimePicker dtp_D_EnMañana;
         private System.Windows.Forms.Button btn_Salir;
         private System.Windows.Forms.Button btn_Agregar;
-        private System.Windows.Forms.TextBox txt_Descripcion;
-        private System.Windows.Forms.Label lbl_Descripcion;
         private System.Windows.Forms.NumericUpDown numUP_D_ToleSa;
         private System.Windows.Forms.NumericUpDown numUP_S_ToleSa;
         private System.Windows.Forms.NumericUpDown numUP_V_ToleSa;
         private System.Windows.Forms.NumericUpDown numUP_J_ToleSa;
         private System.Windows.Forms.NumericUpDown numUP_X_ToleSa;
         private System.Windows.Forms.NumericUpDown numUP_M_ToleSa;
-        private System.Windows.Forms.NumericUpDown numUP_L_ToleSA;
+        private System.Windows.Forms.NumericUpDown numUP_L_ToleSa;
         private System.Windows.Forms.CheckBox check_L_Asis;
         private System.Windows.Forms.CheckBox check_M_Asis;
         private System.Windows.Forms.CheckBox check_X_Asis;
@@ -924,5 +970,9 @@
         private System.Windows.Forms.Label lbl_SalidaTarde;
         private System.Windows.Forms.Label lbl_ToleEntrada;
         private System.Windows.Forms.Label lbl_ToleSalida;
+        private System.Windows.Forms.Label lbl_Nombre;
+        private System.Windows.Forms.Label lbl_Descripcion;
+        private System.Windows.Forms.Label lbl_TotalHoras;
+        private System.Windows.Forms.Label lbl_Horas;
     }
 }

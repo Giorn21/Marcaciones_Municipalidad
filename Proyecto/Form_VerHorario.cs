@@ -271,7 +271,7 @@ namespace Proyecto
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-            Form_Agregar__Horario AgrHorario = new Form_Agregar__Horario();
+            Form_Agregar_Horario AgrHorario = new Form_Agregar_Horario();
             AgrHorario.Show();
             this.Close();
         }
