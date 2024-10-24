@@ -94,8 +94,6 @@
             this.lbl_SalidaTarde = new System.Windows.Forms.Label();
             this.lbl_ToleEntrada = new System.Windows.Forms.Label();
             this.lbl_ToleSalida = new System.Windows.Forms.Label();
-            this.lbl_Nombre = new System.Windows.Forms.Label();
-            this.lbl_Descripcion = new System.Windows.Forms.Label();
             this.lbl_TotalHoras = new System.Windows.Forms.Label();
             this.lbl_Horas = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numUP_L_ToleEn)).BeginInit();
@@ -765,26 +763,6 @@
             this.lbl_ToleSalida.TabIndex = 67;
             this.lbl_ToleSalida.Text = "Tolerancia\r\nSalida\r\n";
             // 
-            // lbl_Nombre
-            // 
-            this.lbl_Nombre.AutoSize = true;
-            this.lbl_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Nombre.Location = new System.Drawing.Point(9, 75);
-            this.lbl_Nombre.Name = "lbl_Nombre";
-            this.lbl_Nombre.Size = new System.Drawing.Size(70, 18);
-            this.lbl_Nombre.TabIndex = 68;
-            this.lbl_Nombre.Text = "Nombre :";
-            // 
-            // lbl_Descripcion
-            // 
-            this.lbl_Descripcion.AutoSize = true;
-            this.lbl_Descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Descripcion.Location = new System.Drawing.Point(85, 75);
-            this.lbl_Descripcion.Name = "lbl_Descripcion";
-            this.lbl_Descripcion.Size = new System.Drawing.Size(87, 18);
-            this.lbl_Descripcion.TabIndex = 69;
-            this.lbl_Descripcion.Text = "Descripcion";
-            // 
             // lbl_TotalHoras
             // 
             this.lbl_TotalHoras.AutoSize = true;
@@ -809,11 +787,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 531);
+            this.ClientSize = new System.Drawing.Size(888, 531);
             this.Controls.Add(this.lbl_Horas);
             this.Controls.Add(this.lbl_TotalHoras);
-            this.Controls.Add(this.lbl_Descripcion);
-            this.Controls.Add(this.lbl_Nombre);
             this.Controls.Add(this.lbl_ToleSalida);
             this.Controls.Add(this.lbl_EntradaTarde);
             this.Controls.Add(this.lbl_SalidaTarde);
@@ -970,8 +946,6 @@
         private System.Windows.Forms.Label lbl_SalidaTarde;
         private System.Windows.Forms.Label lbl_ToleEntrada;
         private System.Windows.Forms.Label lbl_ToleSalida;
-        private System.Windows.Forms.Label lbl_Nombre;
-        private System.Windows.Forms.Label lbl_Descripcion;
         private System.Windows.Forms.Label lbl_TotalHoras;
         private System.Windows.Forms.Label lbl_Horas;
     }

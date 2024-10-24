@@ -14,146 +14,260 @@ namespace common
     {
         private BaseDatos DB = new BaseDatos();
 
-        public void InsertarHorario(string descripcion,
-            string lunes, string l_EntradaMañana, string l_SalidaMañana, string l_EntradaTarde, string l_SalidaTarde, int l_ToleranciaEntrada, int l_ToleranciaSalida,
-            string Martes, string M_EntradaMañana, string M_SalidaMañana, string M_EntradaTarde, string M_SalidaTarde, int M_ToleranciaEntrada, int M_ToleranciaSalida,
-            string Miercoles, string X_EntradaMañana, string X_SalidaMañana, string X_EntradaTarde, string X_SalidaTarde, int X_ToleranciaEntrada, int X_ToleranciaSalida,
-            string Jueves, string J_EntradaMañana, string J_SalidaMañana, string J_EntradaTarde, string J_SalidaTarde, int J_ToleranciaEntrada, int J_ToleranciaSalida,
-            string Viernes, string V_EntradaMañana, string V_SalidaMañana, string V_EntradaTarde, string V_SalidaTarde, int V_ToleranciaEntrada, int V_ToleranciaSalida,
-            string Sabado, string S_EntradaMañana, string S_SalidaMañana, string S_EntradaTarde, string S_SalidaTarde, int S_ToleranciaEntrada, int S_ToleranciaSalida,
-            string Domingo, string D_EntradaMañana, string D_SalidaMañana, string D_EntradaTarde, string D_SalidaTarde, int D_ToleranciaEntrada, int D_ToleranciaSalida,
-            int totalHorasSemanales)
+        public void InsertarHorario(Horario horario, int totalHorasSemanales)
         {
             DB.Conectar();
 
             try
             {
+                DB.ComenzarTransaccion();
+
                 DB.CrearComando("HorarioInsProc @Descripcion, " +
-                    "@Lunes, @L_EntradaMañana, @L_SalidaMañana, @L_EntradaTarde, @L_SalidaTarde, @L_ToletanciaEntrada, @L_ToleranciaSalida, " +
-                    "@Martes, @M_EntradaMañana, @M_SalidaMañana, @M_EntradaTarde, @M_SalidaTarde, @M_ToletanciaEntrada, @M_ToleranciaSalida, " +
-                    "@Miercoles, @X_EntradaMañana, @X_SalidaMañana, @X_EntradaTarde, @X_SalidaTarde, @X_ToletanciaEntrada, @X_ToleranciaSalida, " +
-                    "@Jueves, @J_EntradaMañana, @J_SalidaMañana, @J_EntradaTarde, @J_SalidaTarde, @J_ToletanciaEntrada, @J_ToleranciaSalida, " +
-                    "@Viernes, @V_EntradaMañana, @V_SalidaMañana, @V_EntradaTarde, @V_SalidaTarde, @V_ToletanciaEntrada, @V_ToleranciaSalida, " +
-                    "@Sabado, @S_EntradaMañana, @S_SalidaMañana, @S_EntradaTarde, @S_SalidaTarde, @S_ToletanciaEntrada, @S_ToleranciaSalida, " +
-                    "@Domingo, @D_EntradaMañana, @D_SalidaMañana, @D_EntradaTarde, @D_SalidaTarde, @D_ToletanciaEntrada, @D_ToleranciaSalida, ");
+                    "@Lunes, @L_EntradaMañana, @L_SalidaMañana, @L_EntradaTarde, @L_SalidaTarde, @L_ToleranciaEntrada, @L_ToleranciaSalida, " +
+                    "@Martes, @M_EntradaMañana, @M_SalidaMañana, @M_EntradaTarde, @M_SalidaTarde, @M_ToleranciaEntrada, @M_ToleranciaSalida, " +
+                    "@Miercoles, @X_EntradaMañana, @X_SalidaMañana, @X_EntradaTarde, @X_SalidaTarde, @X_ToleranciaEntrada, @X_ToleranciaSalida, " +
+                    "@Jueves, @J_EntradaMañana, @J_SalidaMañana, @J_EntradaTarde, @J_SalidaTarde, @J_ToleranciaEntrada, @J_ToleranciaSalida, " +
+                    "@Viernes, @V_EntradaMañana, @V_SalidaMañana, @V_EntradaTarde, @V_SalidaTarde, @V_ToleranciaEntrada, @V_ToleranciaSalida, " +
+                    "@Sabado, @S_EntradaMañana, @S_SalidaMañana, @S_EntradaTarde, @S_SalidaTarde, @S_ToleranciaEntrada, @S_ToleranciaSalida, " +
+                    "@Domingo, @D_EntradaMañana, @D_SalidaMañana, @D_EntradaTarde, @D_SalidaTarde, @D_ToleranciaEntrada, @D_ToleranciaSalida, " +
+                    "@TotalHorasSemanales");
 
-                DB.AgregarParametro("@Descripcion", descripcion);
+                DB.AsignarParametroCadena("@Descripcion", "");
 
-                DB.AgregarParametro("@Lunes", lunes);
-                DB.AgregarParametro("@L_EntradaMañana", l_EntradaMañana);
-                DB.AgregarParametro("@L_SalidaMañana", l_SalidaMañana);
-                DB.AgregarParametro("@L_EntradaTarde", l_EntradaTarde);
-                DB.AgregarParametro("@L_SalidaTarde", l_SalidaTarde);
-                DB.AgregarParametro("@L_ToleranciaEntrada", l_ToleranciaEntrada);
-                DB.AgregarParametro("@L_ToleranciaSalida", l_ToleranciaSalida);
+                DB.AsignarParametroBoolean("@Lunes", horario.Lunes);
+                DB.AsignarParametroCadena("@L_EntradaMañana", horario.L_EntradaMañana == TimeSpan.MinValue ? null : horario.L_EntradaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@L_SalidaMañana", horario.L_SalidaMañana == TimeSpan.MinValue ? null : horario.L_SalidaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@L_EntradaTarde", horario.L_EntradaTarde == TimeSpan.MinValue ? null : horario.L_EntradaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@L_SalidaTarde", horario.L_SalidaTarde == TimeSpan.MinValue ? null : horario.L_SalidaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroEntero("@L_ToleranciaEntrada", horario.L_ToleranciaEntrada);
+                DB.AsignarParametroEntero("@L_ToleranciaSalida", horario.L_ToleranciaSalida);
                 
 
-                DB.AgregarParametro("@Martes", Martes);
-                DB.AgregarParametro("@M_EntradaMañana", M_EntradaMañana);
-                DB.AgregarParametro("@M_SalidaMañana", M_SalidaMañana);
-                DB.AgregarParametro("@M_EntradaTarde", M_EntradaTarde);
-                DB.AgregarParametro("@M_SalidaTarde", M_SalidaTarde);
-                DB.AsignarParametroEntero("@M_ToleranciaEntrada", M_ToleranciaEntrada);
-                DB.AsignarParametroEntero("@M_ToleranciaSalida", M_ToleranciaSalida);
+                DB.AsignarParametroBoolean("@Martes", horario.Martes);
+                DB.AsignarParametroCadena("@M_EntradaMañana", horario.M_EntradaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@M_SalidaMañana", horario.M_SalidaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@M_EntradaTarde", horario.M_EntradaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@M_SalidaTarde", horario.M_SalidaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroEntero("@M_ToleranciaEntrada", horario.M_ToleranciaEntrada);
+                DB.AsignarParametroEntero("@M_ToleranciaSalida", horario.M_ToleranciaSalida);
 
-                DB.AgregarParametro("@Miercoles", Miercoles);
-                DB.AgregarParametro("@X_EntradaMañana", X_EntradaMañana);
-                DB.AgregarParametro("@X_SalidaMañana", X_SalidaMañana);
-                DB.AgregarParametro("@X_EntradaTarde", X_EntradaTarde);
-                DB.AgregarParametro("@X_SalidaTarde", X_SalidaTarde);
-                DB.AsignarParametroEntero("@X_ToleranciaEntrada", X_ToleranciaEntrada);
-                DB.AsignarParametroEntero("@X_ToleranciaSalida", X_ToleranciaSalida);
+                DB.AsignarParametroBoolean("@Miercoles", horario.Miercoles);
+                DB.AsignarParametroCadena("@X_EntradaMañana", horario.X_EntradaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@X_SalidaMañana", horario.X_SalidaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@X_EntradaTarde", horario.X_EntradaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@X_SalidaTarde", horario.X_SalidaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroEntero("@X_ToleranciaEntrada", horario.X_ToleranciaEntrada);
+                DB.AsignarParametroEntero("@X_ToleranciaSalida", horario.X_ToleranciaSalida);
 
-                DB.AgregarParametro("@Jueves", Jueves);
-                DB.AgregarParametro("@J_EntradaMañana", J_EntradaMañana);
-                DB.AgregarParametro("@J_SalidaMañana", J_SalidaMañana);
-                DB.AgregarParametro("@J_EntradaTarde", J_EntradaTarde);
-                DB.AgregarParametro("@J_SalidaTarde", J_SalidaTarde);
-                DB.AsignarParametroEntero("@J_ToleranciaEntrada", J_ToleranciaEntrada);
-                DB.AsignarParametroEntero("@J_ToleranciaSalida", J_ToleranciaSalida);
+                DB.AsignarParametroBoolean("@Jueves", horario.Jueves);
+                DB.AsignarParametroCadena("@J_EntradaMañana", horario.J_EntradaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@J_SalidaMañana", horario.J_SalidaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@J_EntradaTarde", horario.J_EntradaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@J_SalidaTarde", horario.J_SalidaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroEntero("@J_ToleranciaEntrada", horario.J_ToleranciaEntrada);
+                DB.AsignarParametroEntero("@J_ToleranciaSalida", horario.J_ToleranciaSalida);
 
-                DB.AgregarParametro("@Viernes", Viernes);
-                DB.AgregarParametro("@V_EntradaMañana", V_EntradaMañana);
-                DB.AgregarParametro("@V_SalidaMañana", V_SalidaMañana);
-                DB.AgregarParametro("@V_EntradaTarde", V_EntradaTarde);
-                DB.AgregarParametro("@V_SalidaTarde", V_SalidaTarde);
-                DB.AsignarParametroEntero("@V_ToleranciaEntrada", V_ToleranciaEntrada);
-                DB.AsignarParametroEntero("@V_ToleranciaSalida", V_ToleranciaSalida);
+                DB.AsignarParametroBoolean("@Viernes", horario.Viernes);
+                DB.AsignarParametroCadena("@V_EntradaMañana", horario.V_EntradaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@V_SalidaMañana", horario.V_SalidaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@V_EntradaTarde", horario.V_EntradaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@V_SalidaTarde", horario.V_SalidaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroEntero("@V_ToleranciaEntrada", horario.V_ToleranciaEntrada);
+                DB.AsignarParametroEntero("@V_ToleranciaSalida", horario.V_ToleranciaSalida);
 
-                DB.AgregarParametro("@Sabado", Sabado);
-                DB.AgregarParametro("@S_EntradaMañana", S_EntradaMañana);
-                DB.AgregarParametro("@S_SalidaMañana", S_SalidaMañana);
-                DB.AgregarParametro("@S_EntradaTarde", S_EntradaTarde);
-                DB.AgregarParametro("@S_SalidaTarde", S_SalidaTarde);
-                DB.AsignarParametroEntero("@S_ToleranciaEntrada", S_ToleranciaEntrada);
-                DB.AsignarParametroEntero("@S_ToleranciaSalida", S_ToleranciaSalida);
+                DB.AsignarParametroBoolean("@Sabado", horario.Sabado);
+                DB.AsignarParametroCadena("@S_EntradaMañana", horario.S_EntradaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@S_SalidaMañana", horario.S_SalidaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@S_EntradaTarde", horario.S_EntradaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@S_SalidaTarde", horario.S_SalidaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroEntero("@S_ToleranciaEntrada", horario.S_ToleranciaEntrada);
+                DB.AsignarParametroEntero("@S_ToleranciaSalida", horario.S_ToleranciaSalida);
 
-                DB.AgregarParametro("@Domingo", Domingo);
-                DB.AgregarParametro("@D_EntradaMañana", D_EntradaMañana);
-                DB.AgregarParametro("@D_SalidaMañana", D_SalidaMañana);
-                DB.AgregarParametro("@D_EntradaTarde", D_EntradaTarde);
-                DB.AgregarParametro("@D_SalidaTarde", D_SalidaTarde);
-                DB.AsignarParametroEntero("@D_ToleranciaEntrada", D_ToleranciaEntrada);
-                DB.AsignarParametroEntero("@D_ToleranciaSalida", D_ToleranciaSalida);
+                DB.AsignarParametroBoolean("@Domingo", horario.Domingo);
+                DB.AsignarParametroCadena("@D_EntradaMañana", horario.D_EntradaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@D_SalidaMañana", horario.D_SalidaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@D_EntradaTarde", horario.D_EntradaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@D_SalidaTarde", horario.D_SalidaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroEntero("@D_ToleranciaEntrada", horario.D_ToleranciaEntrada);
+                DB.AsignarParametroEntero("@D_ToleranciaSalida", horario.D_ToleranciaSalida);
 
-                DB.AgregarParametro("@TotalHorasSemanales", totalHorasSemanales);
+                DB.AsignarParametroEntero("@TotalHorasSemanales", totalHorasSemanales);
 
                 // Ejecutar el procedimiento almacenado
                 DB.EjecutarComando();
+
+                DB.ConfirmarTransaccion();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error cls : " + ex.Message);
+                DB.CancelarTransaccion();
             }
             DB.Desconectar();
         }
 
-        public string GenerarNombreHorario(int idHorario, int totalHoras)
+        public string GenerarNombreHorario(int idHorario, int totalHoras, string Dias)
         {
             // Generar un nombre único para el horario basado en el ID y las horas totales
-            return $"Horario_{idHorario}_Horas{totalHoras}";
+            return $"HORARIO{idHorario} - {totalHoras}HRS {Dias}";
         }
 
-        public int CalcularTotalHoras(
-        string l_EntradaMañana, string l_SalidaMañana, string l_EntradaTarde, string l_SalidaTarde,
-        string m_EntradaMañana, string m_SalidaMañana, string m_EntradaTarde, string m_SalidaTarde,
-        string x_EntradaMañana, string x_SalidaMañana, string x_EntradaTarde, string x_SalidaTarde,
-        string j_EntradaMañana, string j_SalidaMañana, string j_EntradaTarde, string j_SalidaTarde,
-        string v_EntradaMañana, string v_SalidaMañana, string v_EntradaTarde, string v_SalidaTarde,
-        string s_EntradaMañana, string s_SalidaMañana, string s_EntradaTarde, string s_SalidaTarde,
-        string d_EntradaMañana, string d_SalidaMañana, string d_EntradaTarde, string d_SalidaTarde)
+        public int ObtenerProximoIdHorario()
+        {
+            DB.Conectar();
+            DB.CrearComando("SELECT ISNULL(MAX(IdHorario), 0) + 1 FROM Horario");
+            int proximoId = (int)DB.EjecutarEscalar(); // EjecutarEscalar retorna el valor en la consulta.
+            DB.Desconectar();
+            return proximoId;
+        }
+
+        public int CalcularTotalHoras(Horario horario)
         {
             // Calcular las horas para cada día que tiene asistencia
             int totalHoras = 0;
 
+            // Función para calcular horas de un turno
+            int CalcularHoras(TimeSpan entrada, TimeSpan salida)
+            {
+                // Calcular la diferencia en horas
+                return (int)(salida - entrada).TotalHours;
+            }
+
+            
             // Lunes
-            totalHoras += (int)(l_SalidaMañana - l_EntradaMañana).TotalHours;
-            totalHoras += (int)(l_SalidaTarde - l_EntradaTarde).TotalHours;
+            totalHoras += CalcularHoras(horario.L_EntradaMañana, horario.L_SalidaMañana);
+            totalHoras += CalcularHoras(horario.L_EntradaTarde, horario.L_SalidaTarde);
 
             // Martes
-            totalHoras += (int)(m_SalidaMañana - m_EntradaMañana).TotalHours;
-            totalHoras += (int)(m_SalidaTarde - m_EntradaTarde).TotalHours;
+            totalHoras += CalcularHoras(horario.M_EntradaMañana, horario.M_SalidaMañana);
+            totalHoras += CalcularHoras(horario.M_EntradaTarde, horario.M_SalidaTarde);
 
             // Miércoles
-            totalHoras += (int)(x_SalidaMañana - x_EntradaMañana).TotalHours;
-            totalHoras += (int)(x_SalidaTarde - x_EntradaTarde).TotalHours;
+            totalHoras += CalcularHoras(horario.X_EntradaMañana, horario.X_SalidaMañana);
+            totalHoras += CalcularHoras(horario.X_EntradaTarde, horario.X_SalidaTarde);
 
             // Jueves
-            totalHoras += (int)(j_SalidaMañana - j_EntradaMañana).TotalHours;
-            totalHoras += (int)(j_SalidaTarde - j_EntradaTarde).TotalHours;
+            totalHoras += CalcularHoras(horario.J_EntradaMañana, horario.J_SalidaMañana);
+            totalHoras += CalcularHoras(horario.J_EntradaTarde, horario.J_SalidaTarde);
 
             // Viernes
-            totalHoras += (int)(v_SalidaMañana - v_EntradaMañana).TotalHours;
-            totalHoras += (int)(v_SalidaTarde - v_EntradaTarde).TotalHours;
+            totalHoras += CalcularHoras(horario.V_EntradaMañana, horario.V_SalidaMañana);
+            totalHoras += CalcularHoras(horario.V_EntradaTarde, horario.V_SalidaTarde);
 
             // Sábado
-            totalHoras += (int)(s_SalidaMañana - s_EntradaMañana).TotalHours;
-            totalHoras += (int)(s_SalidaTarde - s_EntradaTarde).TotalHours;
+            totalHoras += CalcularHoras(horario.S_EntradaMañana, horario.S_SalidaMañana);
+            totalHoras += CalcularHoras(horario.S_EntradaTarde, horario.S_SalidaTarde);
 
-            totalHoras += (int)(d_SalidaMañana - d_EntradaMañana).TotalHours;
-            totalHoras += (int)(d_SalidaTarde - d_EntradaTarde).TotalHours;
+            // Domingo
+            totalHoras += CalcularHoras(horario.D_EntradaMañana, horario.D_SalidaMañana);
+            totalHoras += CalcularHoras(horario.D_EntradaTarde, horario.D_SalidaTarde);
 
             return totalHoras;
         }
+
+        public string MostrarDias(Horario horario) 
+        {
+            StringBuilder dias = new StringBuilder();
+
+            // Función auxiliar para formatear la hora
+            string FormatearHora(TimeSpan hora)
+            {
+                return hora.ToString(@"hh\:mm");
+            }
+
+            // Lunes
+            if (horario.Lunes)
+            {
+                if (horario.L_SalidaMañana > horario.L_SalidaTarde)
+                {
+                    dias.Append($"L-{FormatearHora(horario.L_EntradaMañana)}_{FormatearHora(horario.L_SalidaMañana)} ");
+                }
+                else if (horario.L_SalidaMañana < horario.L_SalidaTarde) 
+                {
+                    dias.Append($"L-{FormatearHora(horario.L_EntradaMañana)}_{FormatearHora(horario.L_SalidaTarde)} ");
+                }
+            }
+            // Martes
+            if (horario.Martes)
+            {
+                if (horario.M_SalidaMañana > horario.M_SalidaTarde)
+                {
+                    dias.Append($"M-{FormatearHora(horario.M_EntradaMañana)}_{FormatearHora(horario.M_SalidaMañana)} ");
+                }
+                else if (horario.M_SalidaMañana < horario.M_SalidaTarde)
+                {
+                    dias.Append($"M-{FormatearHora(horario.M_EntradaMañana)}_{FormatearHora(horario.M_SalidaTarde)} ");
+                }
+            }
+
+            // Miércoles
+            if (horario.Miercoles)
+            {
+                if (horario.X_SalidaMañana > horario.X_SalidaTarde)
+                {
+                    dias.Append($"X-{FormatearHora(horario.X_EntradaMañana)}_{FormatearHora(horario.X_SalidaMañana)} ");
+                }
+                else if (horario.X_SalidaMañana < horario.X_SalidaTarde)
+                {
+                    dias.Append($"X-{FormatearHora(horario.X_EntradaMañana)}_{FormatearHora(horario.X_SalidaTarde)} ");
+                }
+            }
+
+            // Jueves
+            if (horario.Jueves)
+            {
+                if (horario.J_SalidaMañana > horario.J_SalidaTarde)
+                {
+                    dias.Append($"J-{FormatearHora(horario.J_EntradaMañana)}_{FormatearHora(horario.J_SalidaMañana)} ");
+                }
+                else if (horario.J_SalidaMañana < horario.J_SalidaTarde)
+                {
+                    dias.Append($"J-{FormatearHora(horario.J_EntradaMañana)}_{FormatearHora(horario.J_SalidaTarde)} ");
+                }
+            }
+
+            // Viernes
+            if (horario.Viernes)
+            {
+                if (horario.V_SalidaMañana > horario.V_SalidaTarde)
+                {
+                    dias.Append($"V-{FormatearHora(horario.V_EntradaMañana)}_{FormatearHora(horario.V_SalidaMañana)} ");
+                }
+                else if (horario.V_SalidaMañana < horario.V_SalidaTarde)
+                {
+                    dias.Append($"V-{FormatearHora(horario.L_EntradaMañana)}_{FormatearHora(horario.V_SalidaTarde)} ");
+                }
+            }
+
+            // Sábado
+            if (horario.Sabado)
+            {
+                if (horario.S_SalidaMañana > horario.S_SalidaTarde)
+                {
+                    dias.Append($"S-{FormatearHora(horario.S_EntradaMañana)}_{FormatearHora(horario.S_SalidaMañana)} ");
+                }
+                else if (horario.S_SalidaMañana < horario.S_SalidaTarde)
+                {
+                    dias.Append($"S-{FormatearHora(horario.S_EntradaMañana)}_{FormatearHora(horario.S_SalidaTarde)} ");
+                }
+            }
+
+            // Domingo
+            if (horario.Domingo)
+            {
+                if (horario.D_SalidaMañana > horario.D_SalidaTarde)
+                {
+                    dias.Append($"D-{FormatearHora(horario.D_EntradaMañana)}_{FormatearHora(horario.D_SalidaMañana)} ");
+                }
+                else if (horario.D_SalidaMañana < horario.D_SalidaTarde)
+                {
+                    dias.Append($"D-{FormatearHora(horario.D_EntradaMañana)}_{FormatearHora(horario.D_SalidaTarde)} ");
+                }
+            }
+
+            // Devolver el string completo sin espacios sobrantes
+            return dias.ToString().Trim();
+        }
+
     }
 }

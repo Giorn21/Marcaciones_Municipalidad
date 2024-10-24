@@ -17,6 +17,7 @@ namespace Proyecto
     {
         BaseDatos DB = new BaseDatos();
         clsAgregar_Horario horario = new clsAgregar_Horario();
+        
         public Form_Agregar_Horario()
         {
             InitializeComponent();
@@ -30,6 +31,19 @@ namespace Proyecto
                     ((DateTimePicker)c).CustomFormat = "HH:mm";
                 }
             }
+
+            limpiarform();
+        }
+
+        private void limpiarform()
+        {
+            check_L_Asis.Checked = false;
+            check_M_Asis.Checked = false;
+            check_X_Asis.Checked = false;
+            check_J_Asis.Checked = false;
+            check_V_Asis.Checked = false;
+            check_S_Asis.Checked = false;
+            check_D_Asis.Checked = false;
         }
 
         private void btn_Salir_Click(object sender, EventArgs e)
@@ -71,20 +85,7 @@ namespace Proyecto
 
         private void check_D_Asis_CheckedChanged(object sender, EventArgs e)
         {
-            if (check_D_Asis.Checked == false)
-            {
-                ActivarControlesDia(check_D_Asis.Checked, dtp_D_EnMañana, dtp_D_SaMañana, dtp_D_EnTarde, dtp_D_SaTarde, numUP_D_ToleEn, numUP_D_ToleSa);
-
-            }
-            else 
-            {
-                dtp_D_EnMañana = null;
-                dtp_D_SaMañana = null;
-                dtp_D_EnTarde = null;
-                dtp_D_SaTarde = null;
-                numUP_D_ToleEn = null;
-                numUP_D_ToleSa = null;
-            }
+            ActivarControlesDia(check_D_Asis.Checked, dtp_D_EnMañana, dtp_D_SaMañana, dtp_D_EnTarde, dtp_D_SaTarde, numUP_D_ToleEn, numUP_D_ToleSa);
         }
 
         private void ActivarControlesDia(bool habilitar, params Control[] controles)
@@ -100,109 +101,90 @@ namespace Proyecto
 
             try
             {
-                // Variables para el horario
-                string descripcion = lbl_Descripcion.Text;
+                Horario hor = new Horario()
+                {
+                    // Lunes
+                    Lunes = check_L_Asis.Checked,
+                    L_EntradaMañana = !check_L_Asis.Checked ? TimeSpan.MinValue : dtp_L_EnMañana.Value.TimeOfDay,
+                    L_SalidaMañana = !check_L_Asis.Checked ? TimeSpan.MinValue : dtp_L_SaMañana.Value.TimeOfDay,
+                    L_EntradaTarde = !check_L_Asis.Checked ? TimeSpan.MinValue : dtp_L_EnTarde.Value.TimeOfDay,
+                    L_SalidaTarde = !check_L_Asis.Checked ? TimeSpan.MinValue : dtp_L_SaTarde.Value.TimeOfDay,
+                    L_ToleranciaEntrada = (int)numUP_L_ToleEn.Value,
+                    L_ToleranciaSalida = (int)numUP_L_ToleSa.Value,
 
-                // Lunes
-                string lunes = check_L_Asis.Checked ? "S" : "N";
-                string l_EntradaMañana = dtp_L_EnMañana.Value.ToString();
-                string l_SalidaMañana = dtp_L_SaMañana.Value.ToString();
-                string l_EntradaTarde = dtp_L_EnTarde.Value.ToString();
-                string l_SalidaTarde = dtp_L_SaTarde.Value.ToString();
-                int l_ToleranciaEntrada = int.Parse(numUP_L_ToleEn.Text);
-                int l_ToleranciaSalida = int.Parse(numUP_L_ToleSa.Text);
+                    // Martes
+                    Martes = check_M_Asis.Checked,
+                    M_EntradaMañana = dtp_M_EnMañana.Value.TimeOfDay,
+                    M_SalidaMañana = dtp_M_SaMañana.Value.TimeOfDay,
+                    M_EntradaTarde = dtp_M_EnTarde.Value.TimeOfDay,
+                    M_SalidaTarde = dtp_M_SaTarde.Value.TimeOfDay,
+                    M_ToleranciaEntrada = (int)numUP_M_ToleEn.Value,
+                    M_ToleranciaSalida = (int)numUP_M_ToleSa.Value,
 
-                // Martes
-                string martes = check_M_Asis.Checked ? "S" : "N";
-                string m_EntradaMañana = dtp_M_EnMañana.Value.ToString();
-                string m_SalidaMañana = dtp_M_SaMañana.Value.ToString();
-                string m_EntradaTarde = dtp_M_EnTarde.Value.ToString();
-                string m_SalidaTarde = dtp_M_SaTarde.Value.ToString();
-                int m_ToleranciaEntrada = int.Parse(numUP_M_ToleEn.Text);
-                int m_ToleranciaSalida = int.Parse(numUP_M_ToleSa.Text);
+                    // Miércoles
+                    Miercoles = check_X_Asis.Checked,
+                    X_EntradaMañana = dtp_X_EnMañana.Value.TimeOfDay,
+                    X_SalidaMañana = dtp_X_SaMañana.Value.TimeOfDay,
+                    X_EntradaTarde = dtp_X_EnTarde.Value.TimeOfDay,
+                    X_SalidaTarde = dtp_X_SaTarde.Value.TimeOfDay,
+                    X_ToleranciaEntrada = (int)numUP_X_ToleEn.Value,
+                    X_ToleranciaSalida = (int)numUP_X_ToleSa.Value,
 
-                // Miércoles
-                string miercoles = check_X_Asis.Checked ? "S" : "N";
-                string x_EntradaMañana = dtp_X_EnMañana.Value.ToString();
-                string x_SalidaMañana = dtp_X_SaMañana.Value.ToString();
-                string x_EntradaTarde = dtp_X_EnTarde.Value.ToString();
-                string x_SalidaTarde = dtp_X_SaTarde.Value.ToString();
-                int x_ToleranciaEntrada = int.Parse(numUP_X_ToleEn.Text);
-                int x_ToleranciaSalida = int.Parse(numUP_X_ToleSa.Text);
+                    // Jueves
+                    Jueves = check_J_Asis.Checked,
+                    J_EntradaMañana = dtp_J_EnMañana.Value.TimeOfDay,
+                    J_SalidaMañana = dtp_J_SaMañana.Value.TimeOfDay,
+                    J_EntradaTarde = dtp_J_EnTarde.Value.TimeOfDay,
+                    J_SalidaTarde = dtp_J_SaTarde.Value.TimeOfDay,
+                    J_ToleranciaEntrada = (int)numUP_J_ToleEn.Value,
+                    J_ToleranciaSalida = (int)numUP_J_ToleSa.Value,
 
-                // Jueves
-                string jueves = check_J_Asis.Checked ? "S" : "N";
-                string j_EntradaMañana = dtp_J_EnMañana.Value.ToString();
-                string j_SalidaMañana = dtp_J_SaMañana.Value.ToString();
-                string j_EntradaTarde = dtp_J_EnTarde.Value.ToString();
-                string j_SalidaTarde = dtp_J_SaTarde.Value.ToString();
-                int j_ToleranciaEntrada = int.Parse(numUP_J_ToleEn.Text);
-                int j_ToleranciaSalida = int.Parse(numUP_J_ToleSa.Text);
+                    // Viernes
+                    Viernes = check_V_Asis.Checked,
+                    V_EntradaMañana = dtp_V_EnMañana.Value.TimeOfDay,
+                    V_SalidaMañana = dtp_V_SaMañana.Value.TimeOfDay,
+                    V_EntradaTarde = dtp_V_EnTarde.Value.TimeOfDay,
+                    V_SalidaTarde = dtp_V_SaTarde.Value.TimeOfDay,
+                    V_ToleranciaEntrada = (int)numUP_V_ToleEn.Value,
+                    V_ToleranciaSalida = (int)numUP_V_ToleSa.Value,
 
-                // Viernes
-                string viernes = check_V_Asis.Checked ? "S" : "N";
-                string v_EntradaMañana = dtp_V_EnMañana.Value.ToString();
-                string v_SalidaMañana = dtp_V_SaMañana.Value.ToString();
-                string v_EntradaTarde = dtp_V_EnTarde.Value.ToString();
-                string v_SalidaTarde = dtp_V_SaTarde.Value.ToString();
-                int v_ToleranciaEntrada = int.Parse(numUP_V_ToleEn.Text);
-                int v_ToleranciaSalida = int.Parse(numUP_V_ToleSa.Text);
+                    // Sábado
+                    Sabado = check_S_Asis.Checked,
+                    S_EntradaMañana = dtp_S_EnMañana.Value.TimeOfDay,
+                    S_SalidaMañana = dtp_S_SaMañana.Value.TimeOfDay,
+                    S_EntradaTarde = dtp_S_EnTarde.Value.TimeOfDay,
+                    S_SalidaTarde = dtp_S_SaTarde.Value.TimeOfDay,
+                    S_ToleranciaEntrada = (int)numUP_S_ToleEn.Value,
+                    S_ToleranciaSalida = (int)numUP_S_ToleSa.Value,
 
-                // Sábado
-                string sabado = check_S_Asis.Checked ? "S" : "N";
-                string s_EntradaMañana = dtp_S_EnMañana.Value.ToString();
-                string s_SalidaMañana = dtp_S_SaMañana.Value.ToString();
-                string s_EntradaTarde = dtp_S_EnTarde.Value.ToString();
-                string s_SalidaTarde = dtp_S_SaTarde.Value.ToString();
-                int s_ToleranciaEntrada = int.Parse(numUP_S_ToleEn.Text);
-                int s_ToleranciaSalida = int.Parse(numUP_S_ToleSa.Text);
-
-                // Domingo
-                string domingo = check_D_Asis.Checked ? "S" : "N";
-                string d_EntradaMañana = dtp_D_EnMañana.Value.ToString();
-                string d_SalidaMañana = dtp_D_SaMañana.Value.ToString();
-                string d_EntradaTarde = dtp_D_EnTarde.Value.ToString();
-                string d_SalidaTarde = dtp_D_SaTarde.Value.ToString();
-                int d_ToleranciaEntrada = int.Parse(numUP_D_ToleEn.Text);
-                int d_ToleranciaSalida = int.Parse(numUP_D_ToleSa.Text);
+                    // Domingo
+                    Domingo = check_D_Asis.Checked,
+                    D_EntradaMañana = dtp_D_EnMañana.Value.TimeOfDay,
+                    D_SalidaMañana = dtp_D_SaMañana.Value.TimeOfDay,
+                    D_EntradaTarde = dtp_D_EnTarde.Value.TimeOfDay,
+                    D_SalidaTarde = dtp_D_SaTarde.Value.TimeOfDay,
+                    D_ToleranciaEntrada = (int)numUP_D_ToleEn.Value,
+                    D_ToleranciaSalida = (int)numUP_D_ToleSa.Value
+                };
 
                 // Calcular las horas totales
-                int totalHorasSemanales = horario.CalcularTotalHoras(
-                    l_EntradaMañana, l_SalidaMañana, l_EntradaTarde, l_SalidaTarde,
-                    m_EntradaMañana, m_SalidaMañana, m_EntradaTarde, m_SalidaTarde,
-                    x_EntradaMañana, x_SalidaMañana, x_EntradaTarde, x_SalidaTarde,
-                    j_EntradaMañana, j_SalidaMañana, j_EntradaTarde, j_SalidaTarde,
-                    v_EntradaMañana, v_SalidaMañana, v_EntradaTarde, v_SalidaTarde,
-                    s_EntradaMañana, s_SalidaMañana, s_EntradaTarde, s_SalidaTarde,
-                    d_EntradaMañana, d_SalidaMañana, d_EntradaTarde, d_SalidaTarde);
+                int totalHorasSemanales = horario.CalcularTotalHoras(hor);
+
+                int NextID = horario.ObtenerProximoIdHorario();
+
+                string Dias = horario.MostrarDias(hor);
+
+                string NombreHorario = horario.GenerarNombreHorario(NextID, totalHorasSemanales, Dias);
 
                 // Insertar el horario en la base de datos
-                horario.InsertarHorario(
-                    descripcion,
-                    lunes, l_EntradaMañana, l_SalidaMañana, l_EntradaTarde, l_SalidaTarde, l_ToleranciaEntrada, l_ToleranciaSalida,
-                    martes, m_EntradaMañana, m_SalidaMañana, m_EntradaTarde, m_SalidaTarde, m_ToleranciaEntrada, m_ToleranciaSalida,
-                    miercoles, x_EntradaMañana, x_SalidaMañana, x_EntradaTarde, x_SalidaTarde, x_ToleranciaEntrada, x_ToleranciaSalida,
-                    jueves, j_EntradaMañana, j_SalidaMañana, j_EntradaTarde, j_SalidaTarde, j_ToleranciaEntrada, j_ToleranciaSalida,
-                    viernes, v_EntradaMañana, v_SalidaMañana, v_EntradaTarde, v_SalidaTarde, v_ToleranciaEntrada, v_ToleranciaSalida,
-                    sabado, s_EntradaMañana, s_SalidaMañana, s_EntradaTarde, s_SalidaTarde, s_ToleranciaEntrada, s_ToleranciaSalida,
-                    domingo, d_EntradaMañana, d_SalidaMañana, d_EntradaTarde, d_SalidaTarde, d_ToleranciaEntrada, d_ToleranciaSalida,
-                    totalHorasSemanales);
+                horario.InsertarHorario(hor, totalHorasSemanales);
 
-                MessageBox.Show("Horario guardado con éxito.");
+                MessageBox.Show("Se a agregado un nuevo Horario llamado: " + NombreHorario);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error Form: " + ex.Message);
             }
-        }
-
-        private int ObtenerProximoIdHorario()
-        {
-            DB.Conectar();
-            DB.CrearComando("SELECT ISNULL(MAX(IdHorario), 0) + 1 FROM Horario");
-            int proximoId = (int)DB.EjecutarEscalar(); // EjecutarEscalar retorna el valor en la consulta.
-            DB.Desconectar();
-            return proximoId;
         }
     }
 }

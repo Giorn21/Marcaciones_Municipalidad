@@ -284,6 +284,18 @@ namespace DataLayer
             comando.Parameters.Add(param);
         }
 
+
+        public void AsignarParametroTimeSpan(string nombre, TimeSpan valor)
+        {
+            DbParameter param = comando.CreateParameter(); ;
+            param.DbType = System.Data.DbType.Time;
+            param.Direction = ParameterDirection.Input;
+            param.ParameterName = nombre;
+            param.Value = valor;
+
+            comando.Parameters.Add(param);
+        }
+
         /// <summary>
         /// Asigna un parámetro de tipo double al comando creado.
         /// </summary>
@@ -527,6 +539,7 @@ namespace DataLayer
         {
             return new SqlDataAdapter((SqlCommand)cmd);
         }
+
         #endregion
 
     }
