@@ -69,7 +69,7 @@
             this.cbox_Horarios.FormattingEnabled = true;
             this.cbox_Horarios.Location = new System.Drawing.Point(12, 90);
             this.cbox_Horarios.Name = "cbox_Horarios";
-            this.cbox_Horarios.Size = new System.Drawing.Size(285, 26);
+            this.cbox_Horarios.Size = new System.Drawing.Size(521, 26);
             this.cbox_Horarios.TabIndex = 2;
             this.cbox_Horarios.SelectedIndexChanged += new System.EventHandler(this.cbox_Horarios_SelectedIndexChanged);
             this.cbox_Horarios.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbox_Horarios_KeyPress);
@@ -112,11 +112,11 @@
             // 
             this.btn_Agregar.BackColor = System.Drawing.Color.GreenYellow;
             this.btn_Agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Agregar.Location = new System.Drawing.Point(333, 82);
+            this.btn_Agregar.Location = new System.Drawing.Point(522, 369);
             this.btn_Agregar.Name = "btn_Agregar";
-            this.btn_Agregar.Size = new System.Drawing.Size(87, 34);
+            this.btn_Agregar.Size = new System.Drawing.Size(134, 34);
             this.btn_Agregar.TabIndex = 6;
-            this.btn_Agregar.Text = "Agregar";
+            this.btn_Agregar.Text = "Agregar Nuevo +";
             this.btn_Agregar.UseVisualStyleBackColor = false;
             this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 

@@ -35,6 +35,7 @@ namespace common
         {
             clsAgregar_LogsApp logs = new clsAgregar_LogsApp();
 
+
             bool resultado = false;
             DB.Conectar();
 

@@ -150,7 +150,6 @@ namespace common
                     DB.Desconectar();
                 }
             }
-
         }
     }
 }

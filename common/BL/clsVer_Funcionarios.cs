@@ -91,7 +91,6 @@ namespace common
             {
                 DB.Desconectar();  // Cierra la conexión
             }
-
         }
     }
 }

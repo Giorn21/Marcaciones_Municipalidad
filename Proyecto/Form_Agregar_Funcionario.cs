@@ -96,20 +96,7 @@ namespace Proyecto
                 cbox_Horarios.SelectedIndex = 0; 
             }
 
-
-            //Limpia las Combobox al inicar el formulario
-            cbox_Tipo_Contrato.SelectedIndex = -1;
-            cbox_Tipo_Cargo.SelectedIndex = -1;
-            cbox_IdUnidad.SelectedIndex = -1;
-            cbox_IdDispositivo.SelectedIndex = -1;
-            cbox_Horarios.SelectedIndex = -1;
-
-            if (cbox_Horarios.SelectedIndex == -1)
-            {
-                dataGridView1.DataSource = null; 
-                dataGridView1.Rows.Clear();       
-            }
-
+            Limpiar();
         }
 
         private void btn_Registro_Click(object sender, EventArgs e)
@@ -127,7 +114,6 @@ namespace Proyecto
 
             clsInsertarFuncionario nuevoUsuario = new clsInsertarFuncionario();
             clsAgregar_LogsApp logs = new clsAgregar_LogsApp();
-
 
             try
             {
@@ -160,46 +146,12 @@ namespace Proyecto
                 return; 
             }
 
-            // Limpia las casillas cuando se logra registrar un usuario
-            txt_Rut.Clear();
-            txt_Nombre.Clear();
-            txt_Apellido_Paterno.Clear();
-            txt_Apellido_Materno.Clear();
-            txt_Email.Clear();
-            cbox_Tipo_Contrato.SelectedIndex = -1;
-            cbox_Tipo_Cargo.SelectedIndex = -1;
-            cbox_IdUnidad.SelectedIndex = -1;
-            cbox_IdDispositivo.SelectedIndex = -1;
-            cbox_Horarios.SelectedIndex = -1;
-
-            if (cbox_Horarios.SelectedIndex == -1)
-            {
-                // Limpia el DataGridView
-                dataGridView1.DataSource = null; 
-                dataGridView1.Rows.Clear();       
-            }
+            Limpiar();
         }
 
         private void btn_Limpiar_Click(object sender, EventArgs e)
         {
-            txt_Rut.Clear();
-            txt_Nombre.Clear();
-            txt_Apellido_Paterno.Clear();
-            txt_Apellido_Materno.Clear();
-            txt_Email.Clear();
-            cbox_Tipo_Contrato.SelectedIndex = -1;
-            cbox_Tipo_Cargo.SelectedIndex = -1;
-            cbox_IdUnidad.SelectedIndex = -1;
-            cbox_IdDispositivo.SelectedIndex = -1;
-            cbox_Horarios.SelectedIndex = -1;
-
-            if (cbox_Horarios.SelectedIndex == -1)
-            {
-                // Limpia el DataGridView
-                dataGridView1.DataSource = null; 
-                dataGridView1.Rows.Clear();       
-            }
-
+            Limpiar();
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
@@ -242,6 +194,27 @@ namespace Proyecto
             if (e.KeyChar == '-' && txt_Rut.Text.Contains("-"))
             {
                 e.Handled = true; 
+            }
+        }
+
+        private void Limpiar()
+        {
+            txt_Rut.Clear();
+            txt_Nombre.Clear();
+            txt_Apellido_Paterno.Clear();
+            txt_Apellido_Materno.Clear();
+            txt_Email.Clear();
+            cbox_Tipo_Contrato.SelectedIndex = -1;
+            cbox_Tipo_Cargo.SelectedIndex = -1;
+            cbox_IdUnidad.SelectedIndex = -1;
+            cbox_IdDispositivo.SelectedIndex = -1;
+            cbox_Horarios.SelectedIndex = -1;
+
+            if (cbox_Horarios.SelectedIndex == -1)
+            {
+                // Limpia el DataGridView
+                dataGridView1.DataSource = null;
+                dataGridView1.Rows.Clear();
             }
         }
     }

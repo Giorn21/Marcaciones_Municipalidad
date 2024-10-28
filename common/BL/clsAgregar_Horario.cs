@@ -14,12 +14,12 @@ namespace common
     {
         private BaseDatos DB = new BaseDatos();
 
-        public void InsertarHorario(Horario horario, int totalHorasSemanales)
+        public void InsertarHorario(Horario horario, int totalHorasSemanales, string NombreHorario)
         {
             DB.Conectar();
 
-            try
-            {
+            try { 
+
                 DB.ComenzarTransaccion();
 
                 DB.CrearComando("HorarioInsProc @Descripcion, " +
@@ -32,7 +32,7 @@ namespace common
                     "@Domingo, @D_EntradaMañana, @D_SalidaMañana, @D_EntradaTarde, @D_SalidaTarde, @D_ToleranciaEntrada, @D_ToleranciaSalida, " +
                     "@TotalHorasSemanales");
 
-                DB.AsignarParametroCadena("@Descripcion", "");
+                DB.AsignarParametroCadena("@Descripcion", NombreHorario);
 
                 DB.AsignarParametroBoolean("@Lunes", horario.Lunes);
                 DB.AsignarParametroCadena("@L_EntradaMañana", horario.L_EntradaMañana == TimeSpan.MinValue ? null : horario.L_EntradaMañana.ToString(@"hh\:mm\:ss"));
@@ -44,50 +44,50 @@ namespace common
                 
 
                 DB.AsignarParametroBoolean("@Martes", horario.Martes);
-                DB.AsignarParametroCadena("@M_EntradaMañana", horario.M_EntradaMañana.ToString(@"hh\:mm\:ss"));
-                DB.AsignarParametroCadena("@M_SalidaMañana", horario.M_SalidaMañana.ToString(@"hh\:mm\:ss"));
-                DB.AsignarParametroCadena("@M_EntradaTarde", horario.M_EntradaTarde.ToString(@"hh\:mm\:ss"));
-                DB.AsignarParametroCadena("@M_SalidaTarde", horario.M_SalidaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@M_EntradaMañana", horario.M_EntradaMañana == TimeSpan.MinValue ? null : horario.M_EntradaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@M_SalidaMañana", horario.M_SalidaMañana == TimeSpan.MinValue ? null : horario.M_SalidaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@M_EntradaTarde", horario.M_EntradaTarde == TimeSpan.MinValue ? null : horario.M_EntradaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@M_SalidaTarde", horario.M_SalidaTarde == TimeSpan.MinValue ? null : horario.M_SalidaTarde.ToString(@"hh\:mm\:ss"));
                 DB.AsignarParametroEntero("@M_ToleranciaEntrada", horario.M_ToleranciaEntrada);
                 DB.AsignarParametroEntero("@M_ToleranciaSalida", horario.M_ToleranciaSalida);
 
                 DB.AsignarParametroBoolean("@Miercoles", horario.Miercoles);
-                DB.AsignarParametroCadena("@X_EntradaMañana", horario.X_EntradaMañana.ToString(@"hh\:mm\:ss"));
-                DB.AsignarParametroCadena("@X_SalidaMañana", horario.X_SalidaMañana.ToString(@"hh\:mm\:ss"));
-                DB.AsignarParametroCadena("@X_EntradaTarde", horario.X_EntradaTarde.ToString(@"hh\:mm\:ss"));
-                DB.AsignarParametroCadena("@X_SalidaTarde", horario.X_SalidaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@X_EntradaMañana", horario.X_EntradaMañana == TimeSpan.MinValue ? null : horario.X_EntradaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@X_SalidaMañana", horario.X_SalidaMañana == TimeSpan.MinValue ? null : horario.X_SalidaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@X_EntradaTarde", horario.X_EntradaTarde == TimeSpan.MinValue ? null : horario.X_EntradaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@X_SalidaTarde", horario.X_SalidaTarde == TimeSpan.MinValue ? null : horario.X_SalidaTarde.ToString(@"hh\:mm\:ss"));
                 DB.AsignarParametroEntero("@X_ToleranciaEntrada", horario.X_ToleranciaEntrada);
                 DB.AsignarParametroEntero("@X_ToleranciaSalida", horario.X_ToleranciaSalida);
 
                 DB.AsignarParametroBoolean("@Jueves", horario.Jueves);
-                DB.AsignarParametroCadena("@J_EntradaMañana", horario.J_EntradaMañana.ToString(@"hh\:mm\:ss"));
-                DB.AsignarParametroCadena("@J_SalidaMañana", horario.J_SalidaMañana.ToString(@"hh\:mm\:ss"));
-                DB.AsignarParametroCadena("@J_EntradaTarde", horario.J_EntradaTarde.ToString(@"hh\:mm\:ss"));
-                DB.AsignarParametroCadena("@J_SalidaTarde", horario.J_SalidaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@J_EntradaMañana", horario.J_EntradaMañana == TimeSpan.MinValue ? null : horario.J_EntradaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@J_SalidaMañana", horario.J_SalidaMañana == TimeSpan.MinValue ? null : horario.J_SalidaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@J_EntradaTarde", horario.J_EntradaTarde == TimeSpan.MinValue ? null : horario.J_EntradaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@J_SalidaTarde", horario.J_SalidaTarde == TimeSpan.MinValue ? null : horario.J_SalidaTarde.ToString(@"hh\:mm\:ss"));
                 DB.AsignarParametroEntero("@J_ToleranciaEntrada", horario.J_ToleranciaEntrada);
                 DB.AsignarParametroEntero("@J_ToleranciaSalida", horario.J_ToleranciaSalida);
 
                 DB.AsignarParametroBoolean("@Viernes", horario.Viernes);
-                DB.AsignarParametroCadena("@V_EntradaMañana", horario.V_EntradaMañana.ToString(@"hh\:mm\:ss"));
-                DB.AsignarParametroCadena("@V_SalidaMañana", horario.V_SalidaMañana.ToString(@"hh\:mm\:ss"));
-                DB.AsignarParametroCadena("@V_EntradaTarde", horario.V_EntradaTarde.ToString(@"hh\:mm\:ss"));
-                DB.AsignarParametroCadena("@V_SalidaTarde", horario.V_SalidaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@V_EntradaMañana", horario.V_EntradaMañana == TimeSpan.MinValue ? null : horario.V_EntradaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@V_SalidaMañana", horario.V_SalidaMañana == TimeSpan.MinValue ? null : horario.V_SalidaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@V_EntradaTarde", horario.V_EntradaTarde == TimeSpan.MinValue ? null : horario.V_EntradaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@V_SalidaTarde", horario.V_SalidaTarde == TimeSpan.MinValue ? null : horario.V_SalidaTarde.ToString(@"hh\:mm\:ss"));
                 DB.AsignarParametroEntero("@V_ToleranciaEntrada", horario.V_ToleranciaEntrada);
                 DB.AsignarParametroEntero("@V_ToleranciaSalida", horario.V_ToleranciaSalida);
 
                 DB.AsignarParametroBoolean("@Sabado", horario.Sabado);
-                DB.AsignarParametroCadena("@S_EntradaMañana", horario.S_EntradaMañana.ToString(@"hh\:mm\:ss"));
-                DB.AsignarParametroCadena("@S_SalidaMañana", horario.S_SalidaMañana.ToString(@"hh\:mm\:ss"));
-                DB.AsignarParametroCadena("@S_EntradaTarde", horario.S_EntradaTarde.ToString(@"hh\:mm\:ss"));
-                DB.AsignarParametroCadena("@S_SalidaTarde", horario.S_SalidaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@S_EntradaMañana", horario.S_EntradaMañana == TimeSpan.MinValue ? null : horario.S_EntradaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@S_SalidaMañana", horario.S_SalidaMañana == TimeSpan.MinValue ? null : horario.S_SalidaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@S_EntradaTarde", horario.S_EntradaTarde == TimeSpan.MinValue ? null : horario.S_EntradaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@S_SalidaTarde", horario.S_SalidaTarde == TimeSpan.MinValue ? null : horario.S_SalidaTarde.ToString(@"hh\:mm\:ss"));
                 DB.AsignarParametroEntero("@S_ToleranciaEntrada", horario.S_ToleranciaEntrada);
                 DB.AsignarParametroEntero("@S_ToleranciaSalida", horario.S_ToleranciaSalida);
 
                 DB.AsignarParametroBoolean("@Domingo", horario.Domingo);
-                DB.AsignarParametroCadena("@D_EntradaMañana", horario.D_EntradaMañana.ToString(@"hh\:mm\:ss"));
-                DB.AsignarParametroCadena("@D_SalidaMañana", horario.D_SalidaMañana.ToString(@"hh\:mm\:ss"));
-                DB.AsignarParametroCadena("@D_EntradaTarde", horario.D_EntradaTarde.ToString(@"hh\:mm\:ss"));
-                DB.AsignarParametroCadena("@D_SalidaTarde", horario.D_SalidaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@D_EntradaMañana", horario.D_EntradaMañana == TimeSpan.MinValue ? null : horario.D_EntradaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@D_SalidaMañana", horario.D_SalidaMañana == TimeSpan.MinValue ? null : horario.D_SalidaMañana.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@D_EntradaTarde", horario.D_EntradaTarde == TimeSpan.MinValue ? null : horario.D_EntradaTarde.ToString(@"hh\:mm\:ss"));
+                DB.AsignarParametroCadena("@D_SalidaTarde", horario.D_SalidaTarde == TimeSpan.MinValue ? null : horario.D_SalidaTarde.ToString(@"hh\:mm\:ss"));
                 DB.AsignarParametroEntero("@D_ToleranciaEntrada", horario.D_ToleranciaEntrada);
                 DB.AsignarParametroEntero("@D_ToleranciaSalida", horario.D_ToleranciaSalida);
 
@@ -100,8 +100,11 @@ namespace common
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error cls : " + ex.Message);
+                MessageBox.Show("Error : " + ex.Message);
                 DB.CancelarTransaccion();
+                clsAgregar_LogsApp logs = new clsAgregar_LogsApp();
+                string Usuario = LoginUser.Usuario;
+                logs.InsertarLog("Horario MOD", "Err_Agr", Usuario, ex.Message);
             }
             DB.Desconectar();
         }

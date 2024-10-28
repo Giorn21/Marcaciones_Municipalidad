@@ -73,7 +73,7 @@ namespace Proyecto
 
         private void Home_Load(object sender, EventArgs e)
         {
-            txt_Buscador.Text = placeholderText;
+            txt_Buscador.Text = textoinvisible;
             txt_Buscador.ForeColor = Color.Gray;
 
             CargarDatos();
@@ -87,12 +87,12 @@ namespace Proyecto
         }
 
         //texto con Informacion 
-        private string placeholderText = "Buscar por RUT o Nombre";
+        private string textoinvisible = "Buscar por RUT o Nombre";
 
         private void txt_Buscador_TextChanged(object sender, EventArgs e)
         {
 
-            if (txt_Buscador.Text == placeholderText)
+            if (txt_Buscador.Text == textoinvisible)
             {
                 return;
             }
@@ -109,7 +109,7 @@ namespace Proyecto
 
         private void txt_Buscador_Enter(object sender, EventArgs e)
         {
-            if (txt_Buscador.Text == placeholderText) 
+            if (txt_Buscador.Text == textoinvisible) 
             { 
                 txt_Buscador.Text = "";
                 txt_Buscador.ForeColor = Color.Black;
@@ -120,7 +120,7 @@ namespace Proyecto
         {
             if (string.IsNullOrWhiteSpace(txt_Buscador.Text)) 
             { 
-                txt_Buscador.Text = placeholderText;
+                txt_Buscador.Text = textoinvisible;
                 txt_Buscador.ForeColor= Color.Gray;
             }
         }
@@ -169,6 +169,7 @@ namespace Proyecto
                         MessageBox.Show("Error: " + ex.Message);
                         string Usuario = LoginUser.Usuario;
                         logs.InsertarLog("Funcionarios", "ErrDesv", Usuario, ex.Message);
+                        txt_Buscador.Clear();
                     }
                 }
                 else
