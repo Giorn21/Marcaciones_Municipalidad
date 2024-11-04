@@ -94,8 +94,6 @@
             this.lbl_SalidaTarde = new System.Windows.Forms.Label();
             this.lbl_ToleEntrada = new System.Windows.Forms.Label();
             this.lbl_ToleSalida = new System.Windows.Forms.Label();
-            this.lbl_TotalHoras = new System.Windows.Forms.Label();
-            this.lbl_Horas = new System.Windows.Forms.Label();
             this.btn_Limpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numUP_L_ToleEn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUP_M_ToleEn)).BeginInit();
@@ -764,26 +762,6 @@
             this.lbl_ToleSalida.TabIndex = 67;
             this.lbl_ToleSalida.Text = "Tolerancia\r\nSalida\r\n";
             // 
-            // lbl_TotalHoras
-            // 
-            this.lbl_TotalHoras.AutoSize = true;
-            this.lbl_TotalHoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TotalHoras.Location = new System.Drawing.Point(563, 442);
-            this.lbl_TotalHoras.Name = "lbl_TotalHoras";
-            this.lbl_TotalHoras.Size = new System.Drawing.Size(78, 16);
-            this.lbl_TotalHoras.TabIndex = 70;
-            this.lbl_TotalHoras.Text = "Total Horas";
-            // 
-            // lbl_Horas
-            // 
-            this.lbl_Horas.AutoSize = true;
-            this.lbl_Horas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Horas.Location = new System.Drawing.Point(464, 441);
-            this.lbl_Horas.Name = "lbl_Horas";
-            this.lbl_Horas.Size = new System.Drawing.Size(93, 16);
-            this.lbl_Horas.TabIndex = 71;
-            this.lbl_Horas.Text = "HorasTotales:";
-            // 
             // btn_Limpiar
             // 
             this.btn_Limpiar.BackColor = System.Drawing.Color.Yellow;
@@ -802,8 +780,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(867, 502);
             this.Controls.Add(this.btn_Limpiar);
-            this.Controls.Add(this.lbl_Horas);
-            this.Controls.Add(this.lbl_TotalHoras);
             this.Controls.Add(this.lbl_ToleSalida);
             this.Controls.Add(this.lbl_EntradaTarde);
             this.Controls.Add(this.lbl_SalidaTarde);
@@ -961,8 +937,6 @@
         private System.Windows.Forms.Label lbl_SalidaTarde;
         private System.Windows.Forms.Label lbl_ToleEntrada;
         private System.Windows.Forms.Label lbl_ToleSalida;
-        private System.Windows.Forms.Label lbl_TotalHoras;
-        private System.Windows.Forms.Label lbl_Horas;
         private System.Windows.Forms.Button btn_Limpiar;
     }
 }

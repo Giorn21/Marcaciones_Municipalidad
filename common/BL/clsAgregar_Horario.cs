@@ -168,6 +168,8 @@ namespace common
             return totalHoras;
         }
 
+
+
         public string MostrarDias(Horario horario) 
         {
             StringBuilder dias = new StringBuilder();

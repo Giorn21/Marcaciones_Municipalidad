@@ -193,13 +193,23 @@ namespace Proyecto
 
                 string NombreHorario = horario.GenerarNombreHorario(NextID, totalHorasSemanales, Dias);
 
-                horario.InsertarHorario(hor, totalHorasSemanales, NombreHorario);
+                DialogResult result = MessageBox.Show(
+                    "Quiere agregar el Horario: " + NombreHorario, "Desea Ingresar un Nuevo Horario?",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    limpiarform();
 
-                limpiarform();
+                    horario.InsertarHorario(hor, totalHorasSemanales, NombreHorario);
+                    string Usuario = LoginUser.Usuario;
+                    logs.InsertarLog("Horario MOD", "Agr Nuevo", Usuario, "Se agrego un nuevo Horario a la Base De Datos");
+                }
+                else
+                {
+                    MessageBox.Show("Se a cancelado el Ingreso de un Nuevo Horario");
+                }
 
-                MessageBox.Show("Se a agregado un nuevo Horario llamado: " + NombreHorario);
-                string Usuario = LoginUser.Usuario;
-                logs.InsertarLog("Horario MOD", "Agr Nuevo", Usuario, "Se agrego un nuevo Horario a la Base De Datos");
             }
             catch (Exception ex)
             {
@@ -208,6 +218,7 @@ namespace Proyecto
                 logs.InsertarLog("Horario MOD", "Err_Agr", Usuario, ex.Message);
             }
         }
+        
 
         private void btn_Limpiar_Click(object sender, EventArgs e)
         {
