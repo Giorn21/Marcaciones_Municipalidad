@@ -35,13 +35,6 @@ namespace Proyecto
 
         }
 
-        private void btn_Volver_Click(object sender, EventArgs e)
-        {
-            Form_VerFuncionarios funcionarios = new Form_VerFuncionarios();
-            funcionarios.Show();
-            this.Close();
-        }
-
         private void Form_Agregar_Funcionario_Load(object sender, EventArgs e)
         {
             lbl_FechaTiempoReal.Text = DateTime.Now.ToString("dd/MM/yyyy");
@@ -96,61 +89,6 @@ namespace Proyecto
                 cbox_Horarios.SelectedIndex = 0; 
             }
 
-            Limpiar();
-        }
-
-        private void btn_Registro_Click(object sender, EventArgs e)
-        {
-            if (txt_Rut.Text == "" || txt_Nombre.Text == "" || txt_Apellido_Paterno.Text == "" || txt_Apellido_Materno.Text == "" || txt_Email.Text == "" || cbox_Tipo_Contrato.Text == "" || cbox_Tipo_Cargo.Text == "" || cbox_IdUnidad.Text == "" || cbox_IdDispositivo.Text == "")
-            {
-                MessageBox.Show("!ALERTA¡ : Rellene todas las casillas");
-
-                return;
-            } else if (cbox_Horarios.Text == "") 
-            {
-                MessageBox.Show("!ALERTA¡ : Elija una Horario para el Funcionario");
-                return;
-            }
-
-            clsInsertarFuncionario nuevoUsuario = new clsInsertarFuncionario();
-            clsAgregar_LogsApp logs = new clsAgregar_LogsApp();
-
-            try
-            {
-
-                nuevoUsuario.ProcesarRut(txt_Rut.Text);
-                nuevoUsuario.ValidarCorreo(txt_Email.Text);
-                nuevoUsuario.DatosFuncionario.Nombre = txt_Nombre.Text;
-                nuevoUsuario.DatosFuncionario.ApellidoPaterno = txt_Apellido_Paterno.Text;
-                nuevoUsuario.DatosFuncionario.ApellidoMaterno = txt_Apellido_Materno.Text;
-                nuevoUsuario.SeleccionarTipoContrato((int)cbox_Tipo_Contrato.SelectedValue);
-                nuevoUsuario.SeleccionarTipoCargo((int)cbox_Tipo_Cargo.SelectedValue);
-                nuevoUsuario.SeleccionarUnidad((int)cbox_IdUnidad.SelectedValue);
-                nuevoUsuario.SeleccionarDispositivo((int)cbox_IdDispositivo.SelectedValue);
-                nuevoUsuario.SeleccionarHorario((int)cbox_Horarios.SelectedValue);
-                nuevoUsuario.DatosFuncionario.Fecha = DateTime.Now;
-
-                if (nuevoUsuario.RegistrarUsuario())
-                {
-                    MessageBox.Show("Usuario registrado exitosamente.");
-                    string Usuario = LoginUser.Usuario;
-                    logs.InsertarLog("funcionarios", "Agr Nuevo", Usuario, "Se a agregado un nuevo funcionario a la base de datos.");
-                }
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-                string Usuario = LoginUser.Usuario;
-                logs.InsertarLog("funcionarios", "Err Agr", Usuario, ex.Message);
-                return; 
-            }
-
-            Limpiar();
-        }
-
-        private void btn_Limpiar_Click(object sender, EventArgs e)
-        {
             Limpiar();
         }
 
@@ -217,7 +155,69 @@ namespace Proyecto
                 dataGridView1.Rows.Clear();
             }
         }
-    }
-    
+
+        private void diseñoButton1_Click(object sender, EventArgs e)
+        {
+            Form_VerFuncionarios funcionarios = new Form_VerFuncionarios();
+            funcionarios.Show();
+            this.Close();
+        }
+
+        private void diseñoButton2_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void diseñoIconButton1_Click(object sender, EventArgs e)
+        {
+            if (txt_Rut.Text == "" || txt_Nombre.Text == "" || txt_Apellido_Paterno.Text == "" || txt_Apellido_Materno.Text == "" || txt_Email.Text == "" || cbox_Tipo_Contrato.Text == "" || cbox_Tipo_Cargo.Text == "" || cbox_IdUnidad.Text == "" || cbox_IdDispositivo.Text == "")
+            {
+                MessageBox.Show("!ALERTA¡ : Rellene todas las casillas");
+
+                return;
+            }
+            else if (cbox_Horarios.Text == "")
+            {
+                MessageBox.Show("!ALERTA¡ : Elija una Horario para el Funcionario");
+                return;
+            }
+
+            clsInsertarFuncionario nuevoUsuario = new clsInsertarFuncionario();
+            clsAgregar_LogsApp logs = new clsAgregar_LogsApp();
+
+            try
+            {
+
+                nuevoUsuario.ProcesarRut(txt_Rut.Text);
+                nuevoUsuario.ValidarCorreo(txt_Email.Text);
+                nuevoUsuario.DatosFuncionario.Nombre = txt_Nombre.Text;
+                nuevoUsuario.DatosFuncionario.ApellidoPaterno = txt_Apellido_Paterno.Text;
+                nuevoUsuario.DatosFuncionario.ApellidoMaterno = txt_Apellido_Materno.Text;
+                nuevoUsuario.SeleccionarTipoContrato((int)cbox_Tipo_Contrato.SelectedValue);
+                nuevoUsuario.SeleccionarTipoCargo((int)cbox_Tipo_Cargo.SelectedValue);
+                nuevoUsuario.SeleccionarUnidad((int)cbox_IdUnidad.SelectedValue);
+                nuevoUsuario.SeleccionarDispositivo((int)cbox_IdDispositivo.SelectedValue);
+                nuevoUsuario.SeleccionarHorario((int)cbox_Horarios.SelectedValue);
+                nuevoUsuario.DatosFuncionario.Fecha = DateTime.Now;
+
+                if (nuevoUsuario.RegistrarUsuario())
+                {
+                    MessageBox.Show("Usuario registrado exitosamente.");
+                    string Usuario = LoginUser.Usuario;
+                    logs.InsertarLog("funcionarios", "Agr Nuevo", Usuario, "Se a agregado un nuevo funcionario a la base de datos.");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                string Usuario = LoginUser.Usuario;
+                logs.InsertarLog("funcionarios", "Err Agr", Usuario, ex.Message);
+                return;
+            }
+
+            Limpiar();
+        }
+    }  
 }
 

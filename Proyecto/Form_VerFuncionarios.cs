@@ -79,7 +79,7 @@ namespace Proyecto
             CargarDatos();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void diseñoIconButton1_Click(object sender, EventArgs e)
         {
             Form_Agregar_Funcionario agregar_Funcionario = new Form_Agregar_Funcionario();
             agregar_Funcionario.Show();
@@ -125,17 +125,16 @@ namespace Proyecto
             }
         }
 
-        private void btn_Salir_Click(object sender, EventArgs e)
+        private int IdEmpleado;
+
+        private void diseñoButton1_Click(object sender, EventArgs e)
         {
             Form_Menu menu = new Form_Menu();
             menu.Show();
             this.Close();
         }
 
-
-        private int IdEmpleado;
-
-        private void btn_desvincular_Click(object sender, EventArgs e)
+        private void diseñoIconButton2_Click(object sender, EventArgs e)
         {
             clsAgregar_LogsApp logs = new clsAgregar_LogsApp();
 

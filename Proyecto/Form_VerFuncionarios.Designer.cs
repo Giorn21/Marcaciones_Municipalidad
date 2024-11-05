@@ -40,19 +40,21 @@
             this.col_IdCargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_IdUnidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_IdDispositivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lbl_Buscador = new System.Windows.Forms.Label();
             this.txt_Buscador = new System.Windows.Forms.TextBox();
-            this.btn_Agregar = new System.Windows.Forms.Button();
-            this.btn_Volver = new System.Windows.Forms.Button();
-            this.btn_desvincular = new System.Windows.Forms.Button();
             this.lbl_Titulo = new System.Windows.Forms.Label();
+            this.diseñoIconButton1 = new Proyecto.Resources.DiseñoIconButton();
+            this.diseñoIconButton2 = new Proyecto.Resources.DiseñoIconButton();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.diseñoButton1 = new Proyecto.Resources.DiseñoButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtv_BaseDatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dtv_BaseDatos
             // 
             this.dtv_BaseDatos.AllowUserToAddRows = false;
             this.dtv_BaseDatos.AllowUserToDeleteRows = false;
+            this.dtv_BaseDatos.BackgroundColor = System.Drawing.Color.CornflowerBlue;
             this.dtv_BaseDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtv_BaseDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Col_Id,
@@ -66,6 +68,7 @@
             this.col_IdCargo,
             this.col_IdUnidad,
             this.col_IdDispositivo});
+            this.dtv_BaseDatos.GridColor = System.Drawing.Color.Black;
             this.dtv_BaseDatos.Location = new System.Drawing.Point(12, 135);
             this.dtv_BaseDatos.Name = "dtv_BaseDatos";
             this.dtv_BaseDatos.ReadOnly = true;
@@ -141,86 +144,140 @@
             this.col_IdDispositivo.Name = "col_IdDispositivo";
             this.col_IdDispositivo.ReadOnly = true;
             // 
-            // lbl_Buscador
-            // 
-            this.lbl_Buscador.AutoSize = true;
-            this.lbl_Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Buscador.Location = new System.Drawing.Point(14, 95);
-            this.lbl_Buscador.Name = "lbl_Buscador";
-            this.lbl_Buscador.Size = new System.Drawing.Size(34, 25);
-            this.lbl_Buscador.TabIndex = 1;
-            this.lbl_Buscador.Text = "🔎";
-            // 
             // txt_Buscador
             // 
-            this.txt_Buscador.Location = new System.Drawing.Point(54, 97);
+            this.txt_Buscador.Location = new System.Drawing.Point(56, 95);
             this.txt_Buscador.Name = "txt_Buscador";
-            this.txt_Buscador.Size = new System.Drawing.Size(172, 20);
+            this.txt_Buscador.Size = new System.Drawing.Size(198, 20);
             this.txt_Buscador.TabIndex = 2;
             this.txt_Buscador.TextChanged += new System.EventHandler(this.txt_Buscador_TextChanged);
             this.txt_Buscador.Enter += new System.EventHandler(this.txt_Buscador_Enter);
             this.txt_Buscador.Leave += new System.EventHandler(this.txt_Buscador_Leave);
             // 
-            // btn_Agregar
-            // 
-            this.btn_Agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Agregar.Location = new System.Drawing.Point(257, 90);
-            this.btn_Agregar.Name = "btn_Agregar";
-            this.btn_Agregar.Size = new System.Drawing.Size(98, 32);
-            this.btn_Agregar.TabIndex = 5;
-            this.btn_Agregar.Text = "Agregar";
-            this.btn_Agregar.UseVisualStyleBackColor = true;
-            this.btn_Agregar.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btn_Volver
-            // 
-            this.btn_Volver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Volver.Location = new System.Drawing.Point(12, 12);
-            this.btn_Volver.Name = "btn_Volver";
-            this.btn_Volver.Size = new System.Drawing.Size(108, 26);
-            this.btn_Volver.TabIndex = 7;
-            this.btn_Volver.Text = "Volver al menu";
-            this.btn_Volver.UseVisualStyleBackColor = true;
-            this.btn_Volver.Click += new System.EventHandler(this.btn_Salir_Click);
-            // 
-            // btn_desvincular
-            // 
-            this.btn_desvincular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_desvincular.Location = new System.Drawing.Point(936, 92);
-            this.btn_desvincular.Name = "btn_desvincular";
-            this.btn_desvincular.Size = new System.Drawing.Size(106, 32);
-            this.btn_desvincular.TabIndex = 8;
-            this.btn_desvincular.Text = "Desvincular ";
-            this.btn_desvincular.UseVisualStyleBackColor = true;
-            this.btn_desvincular.Click += new System.EventHandler(this.btn_desvincular_Click);
-            // 
             // lbl_Titulo
             // 
-            this.lbl_Titulo.AutoSize = true;
-            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Titulo.Location = new System.Drawing.Point(445, 23);
+            this.lbl_Titulo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.ForeColor = System.Drawing.SystemColors.Window;
+            this.lbl_Titulo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_Titulo.Location = new System.Drawing.Point(559, 9);
             this.lbl_Titulo.Name = "lbl_Titulo";
-            this.lbl_Titulo.Size = new System.Drawing.Size(183, 33);
+            this.lbl_Titulo.Size = new System.Drawing.Size(503, 116);
             this.lbl_Titulo.TabIndex = 9;
-            this.lbl_Titulo.Text = "Funcionarios";
+            this.lbl_Titulo.Text = "Lista De Funcionarios";
+            this.lbl_Titulo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // diseñoIconButton1
+            // 
+            this.diseñoIconButton1.BackColor = System.Drawing.Color.OliveDrab;
+            this.diseñoIconButton1.BackgroundColor = System.Drawing.Color.OliveDrab;
+            this.diseñoIconButton1.BorderColor = System.Drawing.Color.Green;
+            this.diseñoIconButton1.BorderRadius = 20;
+            this.diseñoIconButton1.BorderSize = 2;
+            this.diseñoIconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.diseñoIconButton1.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.diseñoIconButton1.FlatAppearance.BorderSize = 3;
+            this.diseñoIconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.diseñoIconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.diseñoIconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diseñoIconButton1.ForeColor = System.Drawing.Color.White;
+            this.diseñoIconButton1.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.diseñoIconButton1.IconColor = System.Drawing.SystemColors.Window;
+            this.diseñoIconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.diseñoIconButton1.IconSize = 35;
+            this.diseñoIconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.diseñoIconButton1.Location = new System.Drawing.Point(274, 84);
+            this.diseñoIconButton1.Name = "diseñoIconButton1";
+            this.diseñoIconButton1.Size = new System.Drawing.Size(125, 41);
+            this.diseñoIconButton1.TabIndex = 10;
+            this.diseñoIconButton1.Text = "Agregar Funcionario";
+            this.diseñoIconButton1.TextColor = System.Drawing.Color.White;
+            this.diseñoIconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.diseñoIconButton1.UseVisualStyleBackColor = false;
+            this.diseñoIconButton1.Click += new System.EventHandler(this.diseñoIconButton1_Click);
+            // 
+            // diseñoIconButton2
+            // 
+            this.diseñoIconButton2.BackColor = System.Drawing.Color.IndianRed;
+            this.diseñoIconButton2.BackgroundColor = System.Drawing.Color.IndianRed;
+            this.diseñoIconButton2.BorderColor = System.Drawing.Color.Red;
+            this.diseñoIconButton2.BorderRadius = 20;
+            this.diseñoIconButton2.BorderSize = 2;
+            this.diseñoIconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.diseñoIconButton2.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.diseñoIconButton2.FlatAppearance.BorderSize = 2;
+            this.diseñoIconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.diseñoIconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diseñoIconButton2.ForeColor = System.Drawing.Color.White;
+            this.diseñoIconButton2.IconChar = FontAwesome.Sharp.IconChar.UserSlash;
+            this.diseñoIconButton2.IconColor = System.Drawing.SystemColors.Window;
+            this.diseñoIconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.diseñoIconButton2.IconSize = 35;
+            this.diseñoIconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.diseñoIconButton2.Location = new System.Drawing.Point(428, 84);
+            this.diseñoIconButton2.Name = "diseñoIconButton2";
+            this.diseñoIconButton2.Size = new System.Drawing.Size(125, 41);
+            this.diseñoIconButton2.TabIndex = 10;
+            this.diseñoIconButton2.Text = "Desvincular Usuario";
+            this.diseñoIconButton2.TextColor = System.Drawing.Color.White;
+            this.diseñoIconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.diseñoIconButton2.UseVisualStyleBackColor = false;
+            this.diseñoIconButton2.Click += new System.EventHandler(this.diseñoIconButton2_Click);
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.Window;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 38;
+            this.iconPictureBox1.Location = new System.Drawing.Point(12, 88);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(38, 41);
+            this.iconPictureBox1.TabIndex = 12;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // diseñoButton1
+            // 
+            this.diseñoButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.diseñoButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.diseñoButton1.BorderColor = System.Drawing.Color.Gray;
+            this.diseñoButton1.BorderRadius = 40;
+            this.diseñoButton1.BorderSize = 0;
+            this.diseñoButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.diseñoButton1.FlatAppearance.BorderSize = 0;
+            this.diseñoButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.diseñoButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diseñoButton1.ForeColor = System.Drawing.Color.White;
+            this.diseñoButton1.Location = new System.Drawing.Point(12, 9);
+            this.diseñoButton1.Name = "diseñoButton1";
+            this.diseñoButton1.Size = new System.Drawing.Size(114, 39);
+            this.diseñoButton1.TabIndex = 13;
+            this.diseñoButton1.Text = "Volver al MENÚ";
+            this.diseñoButton1.TextColor = System.Drawing.Color.White;
+            this.diseñoButton1.UseVisualStyleBackColor = true;
+            this.diseñoButton1.Click += new System.EventHandler(this.diseñoButton1_Click);
             // 
             // Form_VerFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
             this.ClientSize = new System.Drawing.Size(1074, 503);
+            this.Controls.Add(this.diseñoButton1);
+            this.Controls.Add(this.iconPictureBox1);
+            this.Controls.Add(this.diseñoIconButton2);
+            this.Controls.Add(this.diseñoIconButton1);
             this.Controls.Add(this.lbl_Titulo);
-            this.Controls.Add(this.btn_desvincular);
-            this.Controls.Add(this.btn_Volver);
-            this.Controls.Add(this.btn_Agregar);
             this.Controls.Add(this.txt_Buscador);
-            this.Controls.Add(this.lbl_Buscador);
             this.Controls.Add(this.dtv_BaseDatos);
             this.Name = "Form_VerFuncionarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Funcionarios";
             this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtv_BaseDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,10 +286,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dtv_BaseDatos;
-        private System.Windows.Forms.Label lbl_Buscador;
         private System.Windows.Forms.TextBox txt_Buscador;
-        private System.Windows.Forms.Button btn_Agregar;
-        private System.Windows.Forms.Button btn_Volver;
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_Rut;
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_Nombre;
@@ -244,7 +298,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_IdCargo;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_IdUnidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_IdDispositivo;
-        private System.Windows.Forms.Button btn_desvincular;
         private System.Windows.Forms.Label lbl_Titulo;
+        private Resources.DiseñoIconButton diseñoIconButton1;
+        private Resources.DiseñoIconButton diseñoIconButton2;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private Resources.DiseñoButton diseñoButton1;
     }
 }

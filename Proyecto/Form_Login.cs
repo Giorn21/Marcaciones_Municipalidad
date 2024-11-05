@@ -24,9 +24,8 @@ namespace Proyecto
             txt_Contrasena.Text = "admin000";
         }
 
-        private void btn_login_Click(object sender, EventArgs e)
+        private void diseñoIconButton1_Click(object sender, EventArgs e)
         {
-
             clsLoginUser login = new clsLoginUser();
 
             //verifico que los campos no estén vacíos
@@ -42,7 +41,7 @@ namespace Proyecto
 
             if (login.Get(user, contrasena).Count == 1)
             {
-                
+
                 //logs.InsertarLog("ControlAcceso", "Login", user, "El usuario se ha conectado correctamente.");
 
                 this.Hide();
@@ -54,12 +53,6 @@ namespace Proyecto
                 logs.InsertarLog("ControlAcceso", "ErrLog", user, "Credencial invalida. Pass Usada: " + contrasena);
                 MessageBox.Show("Usuario o contraseña incorrectos.");
             }
-
-        }
-
-        private void btn_Cerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

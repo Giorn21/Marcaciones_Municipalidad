@@ -59,15 +59,5 @@ namespace Proyecto.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap logo_la_granja_buena_vida {
-            get {
-                object obj = ResourceManager.GetObject("logo-la-granja-buena-vida", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }
