@@ -28,7 +28,7 @@ namespace Proyecto
 
         private void btn_Volver_Click_1(object sender, EventArgs e)
         {
-            Form_Menu menu = new Form_Menu();
+            Form_Menú menu = new Form_Menú();
             menu.Show();
             this.Close();
         }

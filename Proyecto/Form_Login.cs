@@ -45,7 +45,7 @@ namespace Proyecto
                 //logs.InsertarLog("ControlAcceso", "Login", user, "El usuario se ha conectado correctamente.");
 
                 this.Hide();
-                Form_Menu Menu = new Form_Menu();
+                Form_Menú Menu = new Form_Menú();
                 Menu.Show(); ;
             }
             else

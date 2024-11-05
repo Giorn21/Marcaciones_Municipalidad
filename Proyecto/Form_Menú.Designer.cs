@@ -1,6 +1,6 @@
 ﻿namespace Proyecto
 {
-    partial class Form_Menu
+    partial class Form_Menú
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Menu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Menú));
             this.lbl_TituloMenu = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.biometriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();

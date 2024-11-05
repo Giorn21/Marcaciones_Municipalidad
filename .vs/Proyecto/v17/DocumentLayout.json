@@ -27,7 +27,7 @@
       "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|c:\\users\\informatica\\source\\repos\\proyecto\\proyecto\\form_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -39,7 +39,7 @@
       "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_vermarcas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|C:\\Users\\informatica\\source\\repos\\Proyecto\\proyecto\\form_menu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|c:\\users\\informatica\\source\\repos\\proyecto\\proyecto\\form_menu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8C475F49-1B3D-418A-88E2-DD75B4098589}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\form_menu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -415,8 +415,8 @@
               "Title": "Form_VerFuncionarios.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerFuncionarios.cs",
               "RelativeDocumentMoniker": "Proyecto\\Form_VerFuncionarios.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerFuncionarios.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "Proyecto\\Form_VerFuncionarios.cs [Dise\u00F1o]*",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerFuncionarios.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto\\Form_VerFuncionarios.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-05T20:10:05.704Z",
               "EditorCaption": " [Dise\u00F1o]"
@@ -439,8 +439,8 @@
               "Title": "Form_VerFuncionarios.cs",
               "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerFuncionarios.cs",
               "RelativeDocumentMoniker": "Proyecto\\Form_VerFuncionarios.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerFuncionarios.cs*",
-              "RelativeToolTip": "Proyecto\\Form_VerFuncionarios.cs*",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerFuncionarios.cs",
+              "RelativeToolTip": "Proyecto\\Form_VerFuncionarios.cs",
               "ViewState": "AgIAAHMAAAAAAAAAAAAqwIYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-01T19:59:36.455Z",
@@ -1331,8 +1331,8 @@
               "Title": "Form_VerFuncionarios.Designer.cs",
               "DocumentMoniker": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerFuncionarios.Designer.cs",
               "RelativeDocumentMoniker": "Proyecto\\Form_VerFuncionarios.Designer.cs",
-              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerFuncionarios.Designer.cs*",
-              "RelativeToolTip": "Proyecto\\Form_VerFuncionarios.Designer.cs*",
+              "ToolTip": "C:\\Users\\informatica\\source\\repos\\Proyecto\\Proyecto\\Form_VerFuncionarios.Designer.cs",
+              "RelativeToolTip": "Proyecto\\Form_VerFuncionarios.Designer.cs",
               "ViewState": "AgIAAMEAAAAAAAAAAIAwwNoAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T19:52:43.049Z",
