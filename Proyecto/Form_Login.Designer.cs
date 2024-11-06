@@ -69,7 +69,7 @@
             this.txt_Usuario.Location = new System.Drawing.Point(12, 115);
             this.txt_Usuario.Name = "txt_Usuario";
             this.txt_Usuario.Size = new System.Drawing.Size(226, 20);
-            this.txt_Usuario.TabIndex = 3;
+            this.txt_Usuario.TabIndex = 0;
             // 
             // txt_Contrasena
             // 
@@ -78,7 +78,7 @@
             this.txt_Contrasena.Name = "txt_Contrasena";
             this.txt_Contrasena.PasswordChar = '*';
             this.txt_Contrasena.Size = new System.Drawing.Size(226, 20);
-            this.txt_Contrasena.TabIndex = 4;
+            this.txt_Contrasena.TabIndex = 1;
             // 
             // iconPictureBox1
             // 
@@ -150,7 +150,7 @@
             this.diseñoIconButton1.Location = new System.Drawing.Point(68, 243);
             this.diseñoIconButton1.Name = "diseñoIconButton1";
             this.diseñoIconButton1.Size = new System.Drawing.Size(129, 43);
-            this.diseñoIconButton1.TabIndex = 8;
+            this.diseñoIconButton1.TabIndex = 2;
             this.diseñoIconButton1.Text = "Iniciar Sesion";
             this.diseñoIconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.diseñoIconButton1.TextColor = System.Drawing.SystemColors.Window;

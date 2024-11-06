@@ -60,7 +60,7 @@
             this.txt_Descripcion.Location = new System.Drawing.Point(51, 230);
             this.txt_Descripcion.Name = "txt_Descripcion";
             this.txt_Descripcion.Size = new System.Drawing.Size(200, 20);
-            this.txt_Descripcion.TabIndex = 1;
+            this.txt_Descripcion.TabIndex = 3;
             // 
             // cbox_Proceso
             // 
@@ -76,7 +76,7 @@
             this.cbox_Usuario.Location = new System.Drawing.Point(51, 285);
             this.cbox_Usuario.Name = "cbox_Usuario";
             this.cbox_Usuario.Size = new System.Drawing.Size(200, 21);
-            this.cbox_Usuario.TabIndex = 3;
+            this.cbox_Usuario.TabIndex = 4;
             // 
             // DTP_Hasta
             // 
@@ -84,7 +84,7 @@
             this.DTP_Hasta.Location = new System.Drawing.Point(51, 123);
             this.DTP_Hasta.Name = "DTP_Hasta";
             this.DTP_Hasta.Size = new System.Drawing.Size(200, 20);
-            this.DTP_Hasta.TabIndex = 21;
+            this.DTP_Hasta.TabIndex = 1;
             // 
             // lbl_Desde
             // 
@@ -147,7 +147,7 @@
             this.DTP_Desde.Location = new System.Drawing.Point(51, 75);
             this.DTP_Desde.Name = "DTP_Desde";
             this.DTP_Desde.Size = new System.Drawing.Size(200, 20);
-            this.DTP_Desde.TabIndex = 17;
+            this.DTP_Desde.TabIndex = 0;
             // 
             // diseñoButton1
             // 
@@ -163,7 +163,7 @@
             this.diseñoButton1.Location = new System.Drawing.Point(97, 336);
             this.diseñoButton1.Name = "diseñoButton1";
             this.diseñoButton1.Size = new System.Drawing.Size(101, 40);
-            this.diseñoButton1.TabIndex = 27;
+            this.diseñoButton1.TabIndex = 5;
             this.diseñoButton1.Text = "Iniciar Busqueda";
             this.diseñoButton1.TextColor = System.Drawing.Color.White;
             this.diseñoButton1.UseVisualStyleBackColor = true;
@@ -183,7 +183,7 @@
             this.diseñoButton2.Location = new System.Drawing.Point(12, 406);
             this.diseñoButton2.Name = "diseñoButton2";
             this.diseñoButton2.Size = new System.Drawing.Size(101, 40);
-            this.diseñoButton2.TabIndex = 28;
+            this.diseñoButton2.TabIndex = 7;
             this.diseñoButton2.Text = "Cancelar y Volver";
             this.diseñoButton2.TextColor = System.Drawing.Color.White;
             this.diseñoButton2.UseVisualStyleBackColor = true;
@@ -203,7 +203,7 @@
             this.diseñoButton3.Location = new System.Drawing.Point(192, 406);
             this.diseñoButton3.Name = "diseñoButton3";
             this.diseñoButton3.Size = new System.Drawing.Size(116, 40);
-            this.diseñoButton3.TabIndex = 29;
+            this.diseñoButton3.TabIndex = 6;
             this.diseñoButton3.Text = "Ver todos los Datos";
             this.diseñoButton3.TextColor = System.Drawing.Color.White;
             this.diseñoButton3.UseVisualStyleBackColor = true;

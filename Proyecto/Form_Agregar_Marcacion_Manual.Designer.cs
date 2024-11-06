@@ -77,7 +77,7 @@
             this.txt_Hora.Location = new System.Drawing.Point(27, 89);
             this.txt_Hora.Name = "txt_Hora";
             this.txt_Hora.Size = new System.Drawing.Size(157, 20);
-            this.txt_Hora.TabIndex = 9;
+            this.txt_Hora.TabIndex = 3;
             this.txt_Hora.TextChanged += new System.EventHandler(this.txt_Hora_TextChanged);
             this.txt_Hora.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Hora_KeyPress);
             this.txt_Hora.Leave += new System.EventHandler(this.txt_Hora_Leave);
@@ -109,7 +109,7 @@
             this.rtxt_Comentario.Location = new System.Drawing.Point(28, 143);
             this.rtxt_Comentario.Name = "rtxt_Comentario";
             this.rtxt_Comentario.Size = new System.Drawing.Size(376, 125);
-            this.rtxt_Comentario.TabIndex = 11;
+            this.rtxt_Comentario.TabIndex = 6;
             this.rtxt_Comentario.Text = "";
             // 
             // rbtn_Salida
@@ -120,7 +120,7 @@
             this.rbtn_Salida.Location = new System.Drawing.Point(333, 89);
             this.rbtn_Salida.Name = "rbtn_Salida";
             this.rbtn_Salida.Size = new System.Drawing.Size(71, 24);
-            this.rbtn_Salida.TabIndex = 12;
+            this.rbtn_Salida.TabIndex = 5;
             this.rbtn_Salida.TabStop = true;
             this.rbtn_Salida.Text = "Salida";
             this.rbtn_Salida.UseVisualStyleBackColor = true;
@@ -133,7 +133,7 @@
             this.rbtn_Entrada.Location = new System.Drawing.Point(221, 89);
             this.rbtn_Entrada.Name = "rbtn_Entrada";
             this.rbtn_Entrada.Size = new System.Drawing.Size(84, 24);
-            this.rbtn_Entrada.TabIndex = 13;
+            this.rbtn_Entrada.TabIndex = 4;
             this.rbtn_Entrada.TabStop = true;
             this.rbtn_Entrada.Text = "Entrada";
             this.rbtn_Entrada.UseVisualStyleBackColor = true;
@@ -144,7 +144,7 @@
             this.DTP_Fecha.Location = new System.Drawing.Point(221, 40);
             this.DTP_Fecha.Name = "DTP_Fecha";
             this.DTP_Fecha.Size = new System.Drawing.Size(183, 20);
-            this.DTP_Fecha.TabIndex = 16;
+            this.DTP_Fecha.TabIndex = 2;
             // 
             // diseñoButton1
             // 
@@ -161,7 +161,7 @@
             this.diseñoButton1.Location = new System.Drawing.Point(12, 304);
             this.diseñoButton1.Name = "diseñoButton1";
             this.diseñoButton1.Size = new System.Drawing.Size(114, 39);
-            this.diseñoButton1.TabIndex = 18;
+            this.diseñoButton1.TabIndex = 8;
             this.diseñoButton1.Text = "Volver al MENÚ";
             this.diseñoButton1.TextColor = System.Drawing.Color.White;
             this.diseñoButton1.UseVisualStyleBackColor = false;
@@ -188,7 +188,7 @@
             this.diseñoIconButton1.Location = new System.Drawing.Point(288, 295);
             this.diseñoIconButton1.Name = "diseñoIconButton1";
             this.diseñoIconButton1.Size = new System.Drawing.Size(116, 48);
-            this.diseñoIconButton1.TabIndex = 17;
+            this.diseñoIconButton1.TabIndex = 7;
             this.diseñoIconButton1.Text = "Ingresar Marcacion";
             this.diseñoIconButton1.TextColor = System.Drawing.Color.White;
             this.diseñoIconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

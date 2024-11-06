@@ -216,7 +216,7 @@
             this.dtp_L_SaMañana.Location = new System.Drawing.Point(309, 121);
             this.dtp_L_SaMañana.Name = "dtp_L_SaMañana";
             this.dtp_L_SaMañana.Size = new System.Drawing.Size(92, 24);
-            this.dtp_L_SaMañana.TabIndex = 9;
+            this.dtp_L_SaMañana.TabIndex = 2;
             this.dtp_L_SaMañana.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // dtp_L_EnTarde
@@ -226,7 +226,7 @@
             this.dtp_L_EnTarde.Location = new System.Drawing.Point(432, 121);
             this.dtp_L_EnTarde.Name = "dtp_L_EnTarde";
             this.dtp_L_EnTarde.Size = new System.Drawing.Size(92, 24);
-            this.dtp_L_EnTarde.TabIndex = 10;
+            this.dtp_L_EnTarde.TabIndex = 3;
             this.dtp_L_EnTarde.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // dtp_L_SaTarde
@@ -236,7 +236,7 @@
             this.dtp_L_SaTarde.Location = new System.Drawing.Point(555, 121);
             this.dtp_L_SaTarde.Name = "dtp_L_SaTarde";
             this.dtp_L_SaTarde.Size = new System.Drawing.Size(92, 24);
-            this.dtp_L_SaTarde.TabIndex = 11;
+            this.dtp_L_SaTarde.TabIndex = 4;
             this.dtp_L_SaTarde.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // numUP_L_ToleEn
@@ -245,7 +245,7 @@
             this.numUP_L_ToleEn.Location = new System.Drawing.Point(672, 120);
             this.numUP_L_ToleEn.Name = "numUP_L_ToleEn";
             this.numUP_L_ToleEn.Size = new System.Drawing.Size(44, 24);
-            this.numUP_L_ToleEn.TabIndex = 12;
+            this.numUP_L_ToleEn.TabIndex = 5;
             // 
             // numUP_M_ToleEn
             // 
@@ -253,7 +253,7 @@
             this.numUP_M_ToleEn.Location = new System.Drawing.Point(672, 164);
             this.numUP_M_ToleEn.Name = "numUP_M_ToleEn";
             this.numUP_M_ToleEn.Size = new System.Drawing.Size(44, 24);
-            this.numUP_M_ToleEn.TabIndex = 17;
+            this.numUP_M_ToleEn.TabIndex = 12;
             // 
             // dtp_M_SaTarde
             // 
@@ -262,7 +262,7 @@
             this.dtp_M_SaTarde.Location = new System.Drawing.Point(555, 165);
             this.dtp_M_SaTarde.Name = "dtp_M_SaTarde";
             this.dtp_M_SaTarde.Size = new System.Drawing.Size(92, 24);
-            this.dtp_M_SaTarde.TabIndex = 16;
+            this.dtp_M_SaTarde.TabIndex = 11;
             this.dtp_M_SaTarde.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // dtp_M_EnTarde
@@ -272,7 +272,7 @@
             this.dtp_M_EnTarde.Location = new System.Drawing.Point(432, 165);
             this.dtp_M_EnTarde.Name = "dtp_M_EnTarde";
             this.dtp_M_EnTarde.Size = new System.Drawing.Size(92, 24);
-            this.dtp_M_EnTarde.TabIndex = 15;
+            this.dtp_M_EnTarde.TabIndex = 10;
             this.dtp_M_EnTarde.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // dtp_M_SaMañana
@@ -282,7 +282,7 @@
             this.dtp_M_SaMañana.Location = new System.Drawing.Point(309, 165);
             this.dtp_M_SaMañana.Name = "dtp_M_SaMañana";
             this.dtp_M_SaMañana.Size = new System.Drawing.Size(92, 24);
-            this.dtp_M_SaMañana.TabIndex = 14;
+            this.dtp_M_SaMañana.TabIndex = 9;
             this.dtp_M_SaMañana.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // dtp_M_EnMañana
@@ -292,7 +292,7 @@
             this.dtp_M_EnMañana.Location = new System.Drawing.Point(186, 165);
             this.dtp_M_EnMañana.Name = "dtp_M_EnMañana";
             this.dtp_M_EnMañana.Size = new System.Drawing.Size(92, 24);
-            this.dtp_M_EnMañana.TabIndex = 13;
+            this.dtp_M_EnMañana.TabIndex = 8;
             this.dtp_M_EnMañana.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // numUP_X_ToleEn
@@ -301,7 +301,7 @@
             this.numUP_X_ToleEn.Location = new System.Drawing.Point(672, 208);
             this.numUP_X_ToleEn.Name = "numUP_X_ToleEn";
             this.numUP_X_ToleEn.Size = new System.Drawing.Size(44, 24);
-            this.numUP_X_ToleEn.TabIndex = 22;
+            this.numUP_X_ToleEn.TabIndex = 21;
             // 
             // dtp_X_SaTarde
             // 
@@ -310,7 +310,7 @@
             this.dtp_X_SaTarde.Location = new System.Drawing.Point(555, 209);
             this.dtp_X_SaTarde.Name = "dtp_X_SaTarde";
             this.dtp_X_SaTarde.Size = new System.Drawing.Size(92, 24);
-            this.dtp_X_SaTarde.TabIndex = 21;
+            this.dtp_X_SaTarde.TabIndex = 20;
             this.dtp_X_SaTarde.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // dtp_X_EnTarde
@@ -320,7 +320,7 @@
             this.dtp_X_EnTarde.Location = new System.Drawing.Point(432, 209);
             this.dtp_X_EnTarde.Name = "dtp_X_EnTarde";
             this.dtp_X_EnTarde.Size = new System.Drawing.Size(92, 24);
-            this.dtp_X_EnTarde.TabIndex = 20;
+            this.dtp_X_EnTarde.TabIndex = 18;
             this.dtp_X_EnTarde.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // dtp_X_SaMañana
@@ -330,7 +330,7 @@
             this.dtp_X_SaMañana.Location = new System.Drawing.Point(309, 209);
             this.dtp_X_SaMañana.Name = "dtp_X_SaMañana";
             this.dtp_X_SaMañana.Size = new System.Drawing.Size(92, 24);
-            this.dtp_X_SaMañana.TabIndex = 19;
+            this.dtp_X_SaMañana.TabIndex = 17;
             this.dtp_X_SaMañana.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // dtp_X_EnMañana
@@ -340,7 +340,7 @@
             this.dtp_X_EnMañana.Location = new System.Drawing.Point(186, 209);
             this.dtp_X_EnMañana.Name = "dtp_X_EnMañana";
             this.dtp_X_EnMañana.Size = new System.Drawing.Size(92, 24);
-            this.dtp_X_EnMañana.TabIndex = 18;
+            this.dtp_X_EnMañana.TabIndex = 16;
             this.dtp_X_EnMañana.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // numUP_J_ToleEn
@@ -349,7 +349,7 @@
             this.numUP_J_ToleEn.Location = new System.Drawing.Point(672, 252);
             this.numUP_J_ToleEn.Name = "numUP_J_ToleEn";
             this.numUP_J_ToleEn.Size = new System.Drawing.Size(44, 24);
-            this.numUP_J_ToleEn.TabIndex = 27;
+            this.numUP_J_ToleEn.TabIndex = 28;
             // 
             // dtp_J_SaTarde
             // 
@@ -358,7 +358,7 @@
             this.dtp_J_SaTarde.Location = new System.Drawing.Point(555, 253);
             this.dtp_J_SaTarde.Name = "dtp_J_SaTarde";
             this.dtp_J_SaTarde.Size = new System.Drawing.Size(92, 24);
-            this.dtp_J_SaTarde.TabIndex = 26;
+            this.dtp_J_SaTarde.TabIndex = 27;
             this.dtp_J_SaTarde.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // dtp_J_EnTarde
@@ -368,7 +368,7 @@
             this.dtp_J_EnTarde.Location = new System.Drawing.Point(432, 253);
             this.dtp_J_EnTarde.Name = "dtp_J_EnTarde";
             this.dtp_J_EnTarde.Size = new System.Drawing.Size(92, 24);
-            this.dtp_J_EnTarde.TabIndex = 25;
+            this.dtp_J_EnTarde.TabIndex = 26;
             this.dtp_J_EnTarde.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // dtp_J_SaMañana
@@ -378,7 +378,7 @@
             this.dtp_J_SaMañana.Location = new System.Drawing.Point(309, 253);
             this.dtp_J_SaMañana.Name = "dtp_J_SaMañana";
             this.dtp_J_SaMañana.Size = new System.Drawing.Size(92, 24);
-            this.dtp_J_SaMañana.TabIndex = 24;
+            this.dtp_J_SaMañana.TabIndex = 25;
             this.dtp_J_SaMañana.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // dtp_J_EnMañana
@@ -388,7 +388,7 @@
             this.dtp_J_EnMañana.Location = new System.Drawing.Point(186, 253);
             this.dtp_J_EnMañana.Name = "dtp_J_EnMañana";
             this.dtp_J_EnMañana.Size = new System.Drawing.Size(92, 24);
-            this.dtp_J_EnMañana.TabIndex = 23;
+            this.dtp_J_EnMañana.TabIndex = 24;
             this.dtp_J_EnMañana.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // numUP_V_ToleEn
@@ -397,7 +397,7 @@
             this.numUP_V_ToleEn.Location = new System.Drawing.Point(672, 296);
             this.numUP_V_ToleEn.Name = "numUP_V_ToleEn";
             this.numUP_V_ToleEn.Size = new System.Drawing.Size(44, 24);
-            this.numUP_V_ToleEn.TabIndex = 32;
+            this.numUP_V_ToleEn.TabIndex = 35;
             // 
             // dtp_V_SaTarde
             // 
@@ -406,7 +406,7 @@
             this.dtp_V_SaTarde.Location = new System.Drawing.Point(555, 297);
             this.dtp_V_SaTarde.Name = "dtp_V_SaTarde";
             this.dtp_V_SaTarde.Size = new System.Drawing.Size(92, 24);
-            this.dtp_V_SaTarde.TabIndex = 31;
+            this.dtp_V_SaTarde.TabIndex = 34;
             this.dtp_V_SaTarde.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // dtp_V_EnTarde
@@ -416,7 +416,7 @@
             this.dtp_V_EnTarde.Location = new System.Drawing.Point(432, 297);
             this.dtp_V_EnTarde.Name = "dtp_V_EnTarde";
             this.dtp_V_EnTarde.Size = new System.Drawing.Size(92, 24);
-            this.dtp_V_EnTarde.TabIndex = 30;
+            this.dtp_V_EnTarde.TabIndex = 33;
             this.dtp_V_EnTarde.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // dtp_V_SaMañana
@@ -426,7 +426,7 @@
             this.dtp_V_SaMañana.Location = new System.Drawing.Point(309, 297);
             this.dtp_V_SaMañana.Name = "dtp_V_SaMañana";
             this.dtp_V_SaMañana.Size = new System.Drawing.Size(92, 24);
-            this.dtp_V_SaMañana.TabIndex = 29;
+            this.dtp_V_SaMañana.TabIndex = 32;
             this.dtp_V_SaMañana.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // dtp_V_EnMañana
@@ -436,7 +436,7 @@
             this.dtp_V_EnMañana.Location = new System.Drawing.Point(186, 297);
             this.dtp_V_EnMañana.Name = "dtp_V_EnMañana";
             this.dtp_V_EnMañana.Size = new System.Drawing.Size(92, 24);
-            this.dtp_V_EnMañana.TabIndex = 28;
+            this.dtp_V_EnMañana.TabIndex = 31;
             this.dtp_V_EnMañana.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // numUP_S_ToleEn
@@ -445,7 +445,7 @@
             this.numUP_S_ToleEn.Location = new System.Drawing.Point(672, 340);
             this.numUP_S_ToleEn.Name = "numUP_S_ToleEn";
             this.numUP_S_ToleEn.Size = new System.Drawing.Size(44, 24);
-            this.numUP_S_ToleEn.TabIndex = 37;
+            this.numUP_S_ToleEn.TabIndex = 42;
             // 
             // dtp_S_SaTarde
             // 
@@ -454,7 +454,7 @@
             this.dtp_S_SaTarde.Location = new System.Drawing.Point(555, 341);
             this.dtp_S_SaTarde.Name = "dtp_S_SaTarde";
             this.dtp_S_SaTarde.Size = new System.Drawing.Size(92, 24);
-            this.dtp_S_SaTarde.TabIndex = 36;
+            this.dtp_S_SaTarde.TabIndex = 41;
             this.dtp_S_SaTarde.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // dtp_S_EnTarde
@@ -464,7 +464,7 @@
             this.dtp_S_EnTarde.Location = new System.Drawing.Point(432, 341);
             this.dtp_S_EnTarde.Name = "dtp_S_EnTarde";
             this.dtp_S_EnTarde.Size = new System.Drawing.Size(92, 24);
-            this.dtp_S_EnTarde.TabIndex = 35;
+            this.dtp_S_EnTarde.TabIndex = 40;
             this.dtp_S_EnTarde.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // dtp_S_SaMañana
@@ -474,7 +474,7 @@
             this.dtp_S_SaMañana.Location = new System.Drawing.Point(309, 341);
             this.dtp_S_SaMañana.Name = "dtp_S_SaMañana";
             this.dtp_S_SaMañana.Size = new System.Drawing.Size(92, 24);
-            this.dtp_S_SaMañana.TabIndex = 34;
+            this.dtp_S_SaMañana.TabIndex = 39;
             this.dtp_S_SaMañana.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // dtp_S_EnMañana
@@ -484,7 +484,7 @@
             this.dtp_S_EnMañana.Location = new System.Drawing.Point(186, 341);
             this.dtp_S_EnMañana.Name = "dtp_S_EnMañana";
             this.dtp_S_EnMañana.Size = new System.Drawing.Size(92, 24);
-            this.dtp_S_EnMañana.TabIndex = 33;
+            this.dtp_S_EnMañana.TabIndex = 38;
             this.dtp_S_EnMañana.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // numUP_D_ToleEn
@@ -493,7 +493,7 @@
             this.numUP_D_ToleEn.Location = new System.Drawing.Point(672, 384);
             this.numUP_D_ToleEn.Name = "numUP_D_ToleEn";
             this.numUP_D_ToleEn.Size = new System.Drawing.Size(44, 24);
-            this.numUP_D_ToleEn.TabIndex = 42;
+            this.numUP_D_ToleEn.TabIndex = 49;
             // 
             // dtp_D_SaTarde
             // 
@@ -502,7 +502,7 @@
             this.dtp_D_SaTarde.Location = new System.Drawing.Point(555, 385);
             this.dtp_D_SaTarde.Name = "dtp_D_SaTarde";
             this.dtp_D_SaTarde.Size = new System.Drawing.Size(92, 24);
-            this.dtp_D_SaTarde.TabIndex = 41;
+            this.dtp_D_SaTarde.TabIndex = 48;
             this.dtp_D_SaTarde.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // dtp_D_EnTarde
@@ -512,7 +512,7 @@
             this.dtp_D_EnTarde.Location = new System.Drawing.Point(432, 385);
             this.dtp_D_EnTarde.Name = "dtp_D_EnTarde";
             this.dtp_D_EnTarde.Size = new System.Drawing.Size(92, 24);
-            this.dtp_D_EnTarde.TabIndex = 40;
+            this.dtp_D_EnTarde.TabIndex = 47;
             this.dtp_D_EnTarde.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // dtp_D_SaMañana
@@ -522,7 +522,7 @@
             this.dtp_D_SaMañana.Location = new System.Drawing.Point(309, 385);
             this.dtp_D_SaMañana.Name = "dtp_D_SaMañana";
             this.dtp_D_SaMañana.Size = new System.Drawing.Size(92, 24);
-            this.dtp_D_SaMañana.TabIndex = 39;
+            this.dtp_D_SaMañana.TabIndex = 46;
             this.dtp_D_SaMañana.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // dtp_D_EnMañana
@@ -532,7 +532,7 @@
             this.dtp_D_EnMañana.Location = new System.Drawing.Point(186, 385);
             this.dtp_D_EnMañana.Name = "dtp_D_EnMañana";
             this.dtp_D_EnMañana.Size = new System.Drawing.Size(92, 24);
-            this.dtp_D_EnMañana.TabIndex = 38;
+            this.dtp_D_EnMañana.TabIndex = 45;
             this.dtp_D_EnMañana.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
             // numUP_D_ToleSa
@@ -541,7 +541,7 @@
             this.numUP_D_ToleSa.Location = new System.Drawing.Point(745, 385);
             this.numUP_D_ToleSa.Name = "numUP_D_ToleSa";
             this.numUP_D_ToleSa.Size = new System.Drawing.Size(44, 24);
-            this.numUP_D_ToleSa.TabIndex = 53;
+            this.numUP_D_ToleSa.TabIndex = 50;
             // 
             // numUP_S_ToleSa
             // 
@@ -549,7 +549,7 @@
             this.numUP_S_ToleSa.Location = new System.Drawing.Point(745, 341);
             this.numUP_S_ToleSa.Name = "numUP_S_ToleSa";
             this.numUP_S_ToleSa.Size = new System.Drawing.Size(44, 24);
-            this.numUP_S_ToleSa.TabIndex = 52;
+            this.numUP_S_ToleSa.TabIndex = 43;
             // 
             // numUP_V_ToleSa
             // 
@@ -557,7 +557,7 @@
             this.numUP_V_ToleSa.Location = new System.Drawing.Point(745, 297);
             this.numUP_V_ToleSa.Name = "numUP_V_ToleSa";
             this.numUP_V_ToleSa.Size = new System.Drawing.Size(44, 24);
-            this.numUP_V_ToleSa.TabIndex = 51;
+            this.numUP_V_ToleSa.TabIndex = 36;
             // 
             // numUP_J_ToleSa
             // 
@@ -565,7 +565,7 @@
             this.numUP_J_ToleSa.Location = new System.Drawing.Point(745, 253);
             this.numUP_J_ToleSa.Name = "numUP_J_ToleSa";
             this.numUP_J_ToleSa.Size = new System.Drawing.Size(44, 24);
-            this.numUP_J_ToleSa.TabIndex = 50;
+            this.numUP_J_ToleSa.TabIndex = 29;
             // 
             // numUP_X_ToleSa
             // 
@@ -573,7 +573,7 @@
             this.numUP_X_ToleSa.Location = new System.Drawing.Point(745, 209);
             this.numUP_X_ToleSa.Name = "numUP_X_ToleSa";
             this.numUP_X_ToleSa.Size = new System.Drawing.Size(44, 24);
-            this.numUP_X_ToleSa.TabIndex = 49;
+            this.numUP_X_ToleSa.TabIndex = 22;
             // 
             // numUP_M_ToleSa
             // 
@@ -581,7 +581,7 @@
             this.numUP_M_ToleSa.Location = new System.Drawing.Point(745, 165);
             this.numUP_M_ToleSa.Name = "numUP_M_ToleSa";
             this.numUP_M_ToleSa.Size = new System.Drawing.Size(44, 24);
-            this.numUP_M_ToleSa.TabIndex = 48;
+            this.numUP_M_ToleSa.TabIndex = 14;
             // 
             // numUP_L_ToleSa
             // 
@@ -589,7 +589,7 @@
             this.numUP_L_ToleSa.Location = new System.Drawing.Point(745, 121);
             this.numUP_L_ToleSa.Name = "numUP_L_ToleSa";
             this.numUP_L_ToleSa.Size = new System.Drawing.Size(44, 24);
-            this.numUP_L_ToleSa.TabIndex = 47;
+            this.numUP_L_ToleSa.TabIndex = 6;
             // 
             // check_L_Asis
             // 
@@ -601,7 +601,7 @@
             this.check_L_Asis.Margin = new System.Windows.Forms.Padding(5);
             this.check_L_Asis.Name = "check_L_Asis";
             this.check_L_Asis.Size = new System.Drawing.Size(15, 14);
-            this.check_L_Asis.TabIndex = 54;
+            this.check_L_Asis.TabIndex = 0;
             this.check_L_Asis.UseVisualStyleBackColor = true;
             this.check_L_Asis.CheckedChanged += new System.EventHandler(this.check_L_Asis_CheckedChanged);
             // 
@@ -614,7 +614,7 @@
             this.check_M_Asis.Location = new System.Drawing.Point(121, 170);
             this.check_M_Asis.Name = "check_M_Asis";
             this.check_M_Asis.Size = new System.Drawing.Size(15, 14);
-            this.check_M_Asis.TabIndex = 55;
+            this.check_M_Asis.TabIndex = 7;
             this.check_M_Asis.UseVisualStyleBackColor = true;
             this.check_M_Asis.CheckedChanged += new System.EventHandler(this.check_M_Asis_CheckedChanged);
             // 
@@ -627,7 +627,7 @@
             this.check_X_Asis.Location = new System.Drawing.Point(121, 215);
             this.check_X_Asis.Name = "check_X_Asis";
             this.check_X_Asis.Size = new System.Drawing.Size(15, 14);
-            this.check_X_Asis.TabIndex = 56;
+            this.check_X_Asis.TabIndex = 15;
             this.check_X_Asis.UseVisualStyleBackColor = true;
             this.check_X_Asis.CheckedChanged += new System.EventHandler(this.check_X_Asis_CheckedChanged);
             // 
@@ -640,7 +640,7 @@
             this.check_S_Asis.Location = new System.Drawing.Point(121, 346);
             this.check_S_Asis.Name = "check_S_Asis";
             this.check_S_Asis.Size = new System.Drawing.Size(15, 14);
-            this.check_S_Asis.TabIndex = 59;
+            this.check_S_Asis.TabIndex = 37;
             this.check_S_Asis.UseVisualStyleBackColor = true;
             this.check_S_Asis.CheckedChanged += new System.EventHandler(this.check_S_Asis_CheckedChanged);
             // 
@@ -653,7 +653,7 @@
             this.check_V_Asis.Location = new System.Drawing.Point(121, 303);
             this.check_V_Asis.Name = "check_V_Asis";
             this.check_V_Asis.Size = new System.Drawing.Size(15, 14);
-            this.check_V_Asis.TabIndex = 58;
+            this.check_V_Asis.TabIndex = 30;
             this.check_V_Asis.UseVisualStyleBackColor = true;
             this.check_V_Asis.CheckedChanged += new System.EventHandler(this.check_V_Asis_CheckedChanged);
             // 
@@ -666,7 +666,7 @@
             this.check_J_Asis.Location = new System.Drawing.Point(121, 261);
             this.check_J_Asis.Name = "check_J_Asis";
             this.check_J_Asis.Size = new System.Drawing.Size(15, 14);
-            this.check_J_Asis.TabIndex = 57;
+            this.check_J_Asis.TabIndex = 23;
             this.check_J_Asis.UseVisualStyleBackColor = true;
             this.check_J_Asis.CheckedChanged += new System.EventHandler(this.check_J_Asis_CheckedChanged);
             // 
@@ -679,7 +679,7 @@
             this.check_D_Asis.Location = new System.Drawing.Point(121, 391);
             this.check_D_Asis.Name = "check_D_Asis";
             this.check_D_Asis.Size = new System.Drawing.Size(15, 14);
-            this.check_D_Asis.TabIndex = 60;
+            this.check_D_Asis.TabIndex = 44;
             this.check_D_Asis.UseVisualStyleBackColor = true;
             this.check_D_Asis.CheckedChanged += new System.EventHandler(this.check_D_Asis_CheckedChanged);
             // 
@@ -781,7 +781,7 @@
             this.diseñoIconButton1.Location = new System.Drawing.Point(673, 442);
             this.diseñoIconButton1.Name = "diseñoIconButton1";
             this.diseñoIconButton1.Size = new System.Drawing.Size(116, 48);
-            this.diseñoIconButton1.TabIndex = 73;
+            this.diseñoIconButton1.TabIndex = 51;
             this.diseñoIconButton1.Text = "Ingresar Horario";
             this.diseñoIconButton1.TextColor = System.Drawing.Color.White;
             this.diseñoIconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -802,7 +802,7 @@
             this.diseñoButton2.Location = new System.Drawing.Point(186, 462);
             this.diseñoButton2.Name = "diseñoButton2";
             this.diseñoButton2.Size = new System.Drawing.Size(92, 28);
-            this.diseñoButton2.TabIndex = 74;
+            this.diseñoButton2.TabIndex = 52;
             this.diseñoButton2.Text = "Limpiar";
             this.diseñoButton2.TextColor = System.Drawing.Color.White;
             this.diseñoButton2.UseVisualStyleBackColor = false;
@@ -823,7 +823,7 @@
             this.diseñoButton1.Location = new System.Drawing.Point(13, 450);
             this.diseñoButton1.Name = "diseñoButton1";
             this.diseñoButton1.Size = new System.Drawing.Size(85, 40);
-            this.diseñoButton1.TabIndex = 75;
+            this.diseñoButton1.TabIndex = 53;
             this.diseñoButton1.Text = "Volver ";
             this.diseñoButton1.TextColor = System.Drawing.Color.White;
             this.diseñoButton1.UseVisualStyleBackColor = true;

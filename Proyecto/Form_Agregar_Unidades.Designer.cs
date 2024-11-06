@@ -49,7 +49,7 @@
             this.txt_Descripcion.Location = new System.Drawing.Point(51, 128);
             this.txt_Descripcion.Name = "txt_Descripcion";
             this.txt_Descripcion.Size = new System.Drawing.Size(177, 22);
-            this.txt_Descripcion.TabIndex = 0;
+            this.txt_Descripcion.TabIndex = 2;
             // 
             // txt_Email
             // 
@@ -57,7 +57,7 @@
             this.txt_Email.Location = new System.Drawing.Point(51, 290);
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(177, 22);
-            this.txt_Email.TabIndex = 2;
+            this.txt_Email.TabIndex = 5;
             this.txt_Email.Validating += new System.ComponentModel.CancelEventHandler(this.txt_Email_Validating);
             // 
             // txt_Telefono
@@ -66,7 +66,7 @@
             this.txt_Telefono.Location = new System.Drawing.Point(51, 236);
             this.txt_Telefono.Name = "txt_Telefono";
             this.txt_Telefono.Size = new System.Drawing.Size(177, 22);
-            this.txt_Telefono.TabIndex = 3;
+            this.txt_Telefono.TabIndex = 4;
             this.txt_Telefono.TextChanged += new System.EventHandler(this.txt_Telefono_TextChanged);
             this.txt_Telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Telefono_KeyPress);
             // 
@@ -77,7 +77,7 @@
             this.cbox_Direccion.Location = new System.Drawing.Point(51, 73);
             this.cbox_Direccion.Name = "cbox_Direccion";
             this.cbox_Direccion.Size = new System.Drawing.Size(177, 24);
-            this.cbox_Direccion.TabIndex = 4;
+            this.cbox_Direccion.TabIndex = 1;
             this.cbox_Direccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbox_Direccion_KeyPress);
             // 
             // lbl_Direccion
@@ -142,7 +142,7 @@
             this.cbox_Ubicacion.Location = new System.Drawing.Point(51, 182);
             this.cbox_Ubicacion.Name = "cbox_Ubicacion";
             this.cbox_Ubicacion.Size = new System.Drawing.Size(177, 24);
-            this.cbox_Ubicacion.TabIndex = 10;
+            this.cbox_Ubicacion.TabIndex = 3;
             // 
             // label1
             // 
@@ -169,7 +169,7 @@
             this.diseñoButton2.Location = new System.Drawing.Point(12, 349);
             this.diseñoButton2.Name = "diseñoButton2";
             this.diseñoButton2.Size = new System.Drawing.Size(80, 37);
-            this.diseñoButton2.TabIndex = 29;
+            this.diseñoButton2.TabIndex = 7;
             this.diseñoButton2.Text = "Volver";
             this.diseñoButton2.TextColor = System.Drawing.Color.White;
             this.diseñoButton2.UseVisualStyleBackColor = true;
@@ -193,10 +193,10 @@
             this.diseñoIconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.diseñoIconButton1.IconSize = 25;
             this.diseñoIconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.diseñoIconButton1.Location = new System.Drawing.Point(161, 348);
+            this.diseñoIconButton1.Location = new System.Drawing.Point(175, 349);
             this.diseñoIconButton1.Name = "diseñoIconButton1";
-            this.diseñoIconButton1.Size = new System.Drawing.Size(124, 38);
-            this.diseñoIconButton1.TabIndex = 30;
+            this.diseñoIconButton1.Size = new System.Drawing.Size(100, 37);
+            this.diseñoIconButton1.TabIndex = 6;
             this.diseñoIconButton1.Text = "Agregar";
             this.diseñoIconButton1.TextColor = System.Drawing.Color.White;
             this.diseñoIconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

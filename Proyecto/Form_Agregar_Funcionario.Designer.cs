@@ -117,7 +117,7 @@
             this.cbox_IdUnidad.Location = new System.Drawing.Point(552, 149);
             this.cbox_IdUnidad.Name = "cbox_IdUnidad";
             this.cbox_IdUnidad.Size = new System.Drawing.Size(176, 24);
-            this.cbox_IdUnidad.TabIndex = 23;
+            this.cbox_IdUnidad.TabIndex = 8;
             // 
             // cbox_IdDispositivo
             // 
@@ -129,7 +129,7 @@
             this.cbox_IdDispositivo.Location = new System.Drawing.Point(552, 254);
             this.cbox_IdDispositivo.Name = "cbox_IdDispositivo";
             this.cbox_IdDispositivo.Size = new System.Drawing.Size(176, 24);
-            this.cbox_IdDispositivo.TabIndex = 22;
+            this.cbox_IdDispositivo.TabIndex = 9;
             // 
             // cbox_Tipo_Cargo
             // 
@@ -141,7 +141,7 @@
             this.cbox_Tipo_Cargo.Location = new System.Drawing.Point(552, 50);
             this.cbox_Tipo_Cargo.Name = "cbox_Tipo_Cargo";
             this.cbox_Tipo_Cargo.Size = new System.Drawing.Size(176, 24);
-            this.cbox_Tipo_Cargo.TabIndex = 21;
+            this.cbox_Tipo_Cargo.TabIndex = 7;
             // 
             // cbox_Tipo_Contrato
             // 
@@ -153,7 +153,7 @@
             this.cbox_Tipo_Contrato.Location = new System.Drawing.Point(298, 254);
             this.cbox_Tipo_Contrato.Name = "cbox_Tipo_Contrato";
             this.cbox_Tipo_Contrato.Size = new System.Drawing.Size(176, 24);
-            this.cbox_Tipo_Contrato.TabIndex = 20;
+            this.cbox_Tipo_Contrato.TabIndex = 6;
             // 
             // lbl_Id_Dispositivo
             // 
@@ -204,7 +204,7 @@
             this.txt_Email.Location = new System.Drawing.Point(298, 149);
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(176, 22);
-            this.txt_Email.TabIndex = 11;
+            this.txt_Email.TabIndex = 5;
             // 
             // lbl_Email
             // 
@@ -222,7 +222,7 @@
             this.txt_Apellido_Materno.Location = new System.Drawing.Point(294, 52);
             this.txt_Apellido_Materno.Name = "txt_Apellido_Materno";
             this.txt_Apellido_Materno.Size = new System.Drawing.Size(176, 22);
-            this.txt_Apellido_Materno.TabIndex = 7;
+            this.txt_Apellido_Materno.TabIndex = 4;
             // 
             // lbl_Apellido_Materno
             // 
@@ -240,7 +240,7 @@
             this.txt_Apellido_Paterno.Location = new System.Drawing.Point(28, 254);
             this.txt_Apellido_Paterno.Name = "txt_Apellido_Paterno";
             this.txt_Apellido_Paterno.Size = new System.Drawing.Size(176, 22);
-            this.txt_Apellido_Paterno.TabIndex = 5;
+            this.txt_Apellido_Paterno.TabIndex = 3;
             // 
             // lbl_Apellido_Paterno
             // 
@@ -258,7 +258,7 @@
             this.txt_Nombre.Location = new System.Drawing.Point(28, 149);
             this.txt_Nombre.Name = "txt_Nombre";
             this.txt_Nombre.Size = new System.Drawing.Size(176, 22);
-            this.txt_Nombre.TabIndex = 3;
+            this.txt_Nombre.TabIndex = 2;
             // 
             // lbl_Nombre
             // 
@@ -335,7 +335,7 @@
             this.cbox_Horarios.Location = new System.Drawing.Point(6, 45);
             this.cbox_Horarios.Name = "cbox_Horarios";
             this.cbox_Horarios.Size = new System.Drawing.Size(287, 24);
-            this.cbox_Horarios.TabIndex = 3;
+            this.cbox_Horarios.TabIndex = 10;
             this.cbox_Horarios.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // lbl_Asignar_Horario
@@ -397,7 +397,7 @@
             this.diseñoButton1.Location = new System.Drawing.Point(12, 457);
             this.diseñoButton1.Name = "diseñoButton1";
             this.diseñoButton1.Size = new System.Drawing.Size(85, 40);
-            this.diseñoButton1.TabIndex = 14;
+            this.diseñoButton1.TabIndex = 11;
             this.diseñoButton1.Text = "Volver ";
             this.diseñoButton1.TextColor = System.Drawing.Color.White;
             this.diseñoButton1.UseVisualStyleBackColor = true;
@@ -417,7 +417,7 @@
             this.diseñoButton2.Location = new System.Drawing.Point(533, 469);
             this.diseñoButton2.Name = "diseñoButton2";
             this.diseñoButton2.Size = new System.Drawing.Size(76, 28);
-            this.diseñoButton2.TabIndex = 15;
+            this.diseñoButton2.TabIndex = 12;
             this.diseñoButton2.Text = "Limpiar";
             this.diseñoButton2.TextColor = System.Drawing.Color.White;
             this.diseñoButton2.UseVisualStyleBackColor = false;
@@ -444,7 +444,7 @@
             this.diseñoIconButton1.Location = new System.Drawing.Point(630, 452);
             this.diseñoIconButton1.Name = "diseñoIconButton1";
             this.diseñoIconButton1.Size = new System.Drawing.Size(150, 48);
-            this.diseñoIconButton1.TabIndex = 16;
+            this.diseñoIconButton1.TabIndex = 13;
             this.diseñoIconButton1.Text = "Registrar Usuario";
             this.diseñoIconButton1.TextColor = System.Drawing.Color.White;
             this.diseñoIconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

@@ -65,6 +65,7 @@
             this.dtv_Dispositivos.ReadOnly = true;
             this.dtv_Dispositivos.Size = new System.Drawing.Size(869, 310);
             this.dtv_Dispositivos.TabIndex = 9;
+            this.dtv_Dispositivos.TabStop = false;
             // 
             // col_IdDispositivo
             // 
@@ -146,7 +147,7 @@
             this.diseñoButton1.Location = new System.Drawing.Point(12, 12);
             this.diseñoButton1.Name = "diseñoButton1";
             this.diseñoButton1.Size = new System.Drawing.Size(114, 39);
-            this.diseñoButton1.TabIndex = 15;
+            this.diseñoButton1.TabIndex = 0;
             this.diseñoButton1.Text = "Volver al MENÚ";
             this.diseñoButton1.TextColor = System.Drawing.Color.White;
             this.diseñoButton1.UseVisualStyleBackColor = true;

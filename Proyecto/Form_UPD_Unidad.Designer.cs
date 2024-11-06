@@ -50,7 +50,7 @@
             this.cbox_Ubicacion.Location = new System.Drawing.Point(23, 192);
             this.cbox_Ubicacion.Name = "cbox_Ubicacion";
             this.cbox_Ubicacion.Size = new System.Drawing.Size(214, 24);
-            this.cbox_Ubicacion.TabIndex = 22;
+            this.cbox_Ubicacion.TabIndex = 2;
             // 
             // lbl_Email
             // 
@@ -114,7 +114,7 @@
             this.cbox_Direccion.Location = new System.Drawing.Point(23, 97);
             this.cbox_Direccion.Name = "cbox_Direccion";
             this.cbox_Direccion.Size = new System.Drawing.Size(214, 24);
-            this.cbox_Direccion.TabIndex = 16;
+            this.cbox_Direccion.TabIndex = 0;
             // 
             // txt_Telefono
             // 
@@ -122,7 +122,7 @@
             this.txt_Telefono.Location = new System.Drawing.Point(23, 244);
             this.txt_Telefono.Name = "txt_Telefono";
             this.txt_Telefono.Size = new System.Drawing.Size(214, 22);
-            this.txt_Telefono.TabIndex = 15;
+            this.txt_Telefono.TabIndex = 3;
             this.txt_Telefono.TextChanged += new System.EventHandler(this.txt_Telefono_TextChanged);
             // 
             // txt_Email
@@ -131,7 +131,7 @@
             this.txt_Email.Location = new System.Drawing.Point(23, 297);
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(214, 22);
-            this.txt_Email.TabIndex = 14;
+            this.txt_Email.TabIndex = 4;
             this.txt_Email.Validating += new System.ComponentModel.CancelEventHandler(this.txt_Email_Validating);
             // 
             // txt_Descripcion
@@ -140,7 +140,7 @@
             this.txt_Descripcion.Location = new System.Drawing.Point(23, 149);
             this.txt_Descripcion.Name = "txt_Descripcion";
             this.txt_Descripcion.Size = new System.Drawing.Size(214, 22);
-            this.txt_Descripcion.TabIndex = 13;
+            this.txt_Descripcion.TabIndex = 1;
             // 
             // diseñoIconButton1
             // 
@@ -163,7 +163,7 @@
             this.diseñoIconButton1.Location = new System.Drawing.Point(133, 351);
             this.diseñoIconButton1.Name = "diseñoIconButton1";
             this.diseñoIconButton1.Size = new System.Drawing.Size(104, 44);
-            this.diseñoIconButton1.TabIndex = 25;
+            this.diseñoIconButton1.TabIndex = 5;
             this.diseñoIconButton1.Text = "Actualizar";
             this.diseñoIconButton1.TextColor = System.Drawing.Color.White;
             this.diseñoIconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -182,10 +182,10 @@
             this.diseñoButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.diseñoButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.diseñoButton1.ForeColor = System.Drawing.Color.White;
-            this.diseñoButton1.Location = new System.Drawing.Point(12, 356);
+            this.diseñoButton1.Location = new System.Drawing.Point(13, 356);
             this.diseñoButton1.Name = "diseñoButton1";
             this.diseñoButton1.Size = new System.Drawing.Size(75, 39);
-            this.diseñoButton1.TabIndex = 26;
+            this.diseñoButton1.TabIndex = 6;
             this.diseñoButton1.Text = "Volver\r\n";
             this.diseñoButton1.TextColor = System.Drawing.Color.White;
             this.diseñoButton1.UseVisualStyleBackColor = false;

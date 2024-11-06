@@ -73,7 +73,7 @@
             this.cbox_Horarios.Location = new System.Drawing.Point(12, 90);
             this.cbox_Horarios.Name = "cbox_Horarios";
             this.cbox_Horarios.Size = new System.Drawing.Size(485, 26);
-            this.cbox_Horarios.TabIndex = 2;
+            this.cbox_Horarios.TabIndex = 0;
             this.cbox_Horarios.SelectedIndexChanged += new System.EventHandler(this.cbox_Horarios_SelectedIndexChanged);
             this.cbox_Horarios.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbox_Horarios_KeyPress);
             // 
@@ -109,7 +109,7 @@
             this.diseñoIconButton1.Location = new System.Drawing.Point(569, 69);
             this.diseñoIconButton1.Name = "diseñoIconButton1";
             this.diseñoIconButton1.Size = new System.Drawing.Size(101, 44);
-            this.diseñoIconButton1.TabIndex = 19;
+            this.diseñoIconButton1.TabIndex = 2;
             this.diseñoIconButton1.Text = "Actualizar";
             this.diseñoIconButton1.TextColor = System.Drawing.Color.White;
             this.diseñoIconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -131,7 +131,7 @@
             this.diseñoButton1.Location = new System.Drawing.Point(12, 365);
             this.diseñoButton1.Name = "diseñoButton1";
             this.diseñoButton1.Size = new System.Drawing.Size(114, 39);
-            this.diseñoButton1.TabIndex = 20;
+            this.diseñoButton1.TabIndex = 4;
             this.diseñoButton1.Text = "Volver al MENÚ";
             this.diseñoButton1.TextColor = System.Drawing.Color.White;
             this.diseñoButton1.UseVisualStyleBackColor = false;
@@ -158,7 +158,7 @@
             this.diseñoIconButton2.Location = new System.Drawing.Point(516, 363);
             this.diseñoIconButton2.Name = "diseñoIconButton2";
             this.diseñoIconButton2.Size = new System.Drawing.Size(154, 44);
-            this.diseñoIconButton2.TabIndex = 21;
+            this.diseñoIconButton2.TabIndex = 3;
             this.diseñoIconButton2.Text = "Nuevo Horario";
             this.diseñoIconButton2.TextColor = System.Drawing.Color.White;
             this.diseñoIconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

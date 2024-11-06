@@ -68,6 +68,7 @@
             this.dtv_Marcaciones_Manuales.ReadOnly = true;
             this.dtv_Marcaciones_Manuales.Size = new System.Drawing.Size(776, 273);
             this.dtv_Marcaciones_Manuales.TabIndex = 0;
+            this.dtv_Marcaciones_Manuales.TabStop = false;
             // 
             // col_ID
             // 
@@ -117,7 +118,7 @@
             this.txt_Buscador.Location = new System.Drawing.Point(51, 86);
             this.txt_Buscador.Name = "txt_Buscador";
             this.txt_Buscador.Size = new System.Drawing.Size(183, 22);
-            this.txt_Buscador.TabIndex = 4;
+            this.txt_Buscador.TabIndex = 0;
             this.txt_Buscador.TextChanged += new System.EventHandler(this.txt_Buscador_TextChanged);
             this.txt_Buscador.Enter += new System.EventHandler(this.txt_Buscador_Enter);
             this.txt_Buscador.Leave += new System.EventHandler(this.txt_Buscador_Leave);
@@ -137,7 +138,7 @@
             // 
             this.TSM_Nuevo.BackColor = System.Drawing.SystemColors.Control;
             this.TSM_Nuevo.Name = "TSM_Nuevo";
-            this.TSM_Nuevo.Size = new System.Drawing.Size(180, 22);
+            this.TSM_Nuevo.Size = new System.Drawing.Size(180, 26);
             this.TSM_Nuevo.Text = "NUEVO +";
             this.TSM_Nuevo.Click += new System.EventHandler(this.TSM_Nuevo_Click);
             // 
@@ -192,7 +193,7 @@
             this.diseñoButton1.Location = new System.Drawing.Point(254, 69);
             this.diseñoButton1.Name = "diseñoButton1";
             this.diseñoButton1.Size = new System.Drawing.Size(114, 39);
-            this.diseñoButton1.TabIndex = 14;
+            this.diseñoButton1.TabIndex = 1;
             this.diseñoButton1.Text = "Volver al MENÚ";
             this.diseñoButton1.TextColor = System.Drawing.Color.White;
             this.diseñoButton1.UseVisualStyleBackColor = true;

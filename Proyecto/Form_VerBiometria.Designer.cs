@@ -50,7 +50,8 @@
             this.dtv_Biometria.Name = "dtv_Biometria";
             this.dtv_Biometria.ReadOnly = true;
             this.dtv_Biometria.Size = new System.Drawing.Size(330, 215);
-            this.dtv_Biometria.TabIndex = 0;
+            this.dtv_Biometria.TabIndex = 10;
+            this.dtv_Biometria.TabStop = false;
             // 
             // col_TipoBiometria
             // 
@@ -90,7 +91,7 @@
             this.diseñoButton1.Location = new System.Drawing.Point(12, 306);
             this.diseñoButton1.Name = "diseñoButton1";
             this.diseñoButton1.Size = new System.Drawing.Size(114, 39);
-            this.diseñoButton1.TabIndex = 16;
+            this.diseñoButton1.TabIndex = 1;
             this.diseñoButton1.Text = "Volver al MENÚ";
             this.diseñoButton1.TextColor = System.Drawing.Color.White;
             this.diseñoButton1.UseVisualStyleBackColor = true;

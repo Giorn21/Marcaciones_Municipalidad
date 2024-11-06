@@ -54,7 +54,7 @@
             this.txt_TipoContrato.Location = new System.Drawing.Point(38, 103);
             this.txt_TipoContrato.Name = "txt_TipoContrato";
             this.txt_TipoContrato.Size = new System.Drawing.Size(167, 24);
-            this.txt_TipoContrato.TabIndex = 3;
+            this.txt_TipoContrato.TabIndex = 0;
             this.txt_TipoContrato.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_TipoContrato_KeyPress);
             // 
             // txt_Descripcion
@@ -63,7 +63,7 @@
             this.txt_Descripcion.Location = new System.Drawing.Point(38, 167);
             this.txt_Descripcion.Name = "txt_Descripcion";
             this.txt_Descripcion.Size = new System.Drawing.Size(167, 24);
-            this.txt_Descripcion.TabIndex = 4;
+            this.txt_Descripcion.TabIndex = 1;
             // 
             // lbl_IDContrato
             // 
@@ -108,7 +108,7 @@
             this.diseñoIconButton1.Location = new System.Drawing.Point(48, 220);
             this.diseñoIconButton1.Name = "diseñoIconButton1";
             this.diseñoIconButton1.Size = new System.Drawing.Size(141, 41);
-            this.diseñoIconButton1.TabIndex = 21;
+            this.diseñoIconButton1.TabIndex = 2;
             this.diseñoIconButton1.Text = "Confirmar Nuevo Contrato\r\n";
             this.diseñoIconButton1.TextColor = System.Drawing.Color.White;
             this.diseñoIconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -129,7 +129,7 @@
             this.diseñoButton2.Location = new System.Drawing.Point(3, 283);
             this.diseñoButton2.Name = "diseñoButton2";
             this.diseñoButton2.Size = new System.Drawing.Size(101, 40);
-            this.diseñoButton2.TabIndex = 29;
+            this.diseñoButton2.TabIndex = 3;
             this.diseñoButton2.Text = "Cancelar y Volver";
             this.diseñoButton2.TextColor = System.Drawing.Color.White;
             this.diseñoButton2.UseVisualStyleBackColor = true;

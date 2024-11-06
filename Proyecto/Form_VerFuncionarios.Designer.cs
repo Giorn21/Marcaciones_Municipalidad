@@ -74,7 +74,8 @@
             this.dtv_BaseDatos.ReadOnly = true;
             this.dtv_BaseDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtv_BaseDatos.Size = new System.Drawing.Size(1050, 356);
-            this.dtv_BaseDatos.TabIndex = 0;
+            this.dtv_BaseDatos.TabIndex = 5;
+            this.dtv_BaseDatos.TabStop = false;
             this.dtv_BaseDatos.AlternatingRowsDefaultCellStyleChanged += new System.EventHandler(this.txt_Buscador_TextChanged);
             this.dtv_BaseDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtv_BaseDatos_CellContentClick);
             // 
@@ -149,7 +150,7 @@
             this.txt_Buscador.Location = new System.Drawing.Point(56, 95);
             this.txt_Buscador.Name = "txt_Buscador";
             this.txt_Buscador.Size = new System.Drawing.Size(198, 20);
-            this.txt_Buscador.TabIndex = 2;
+            this.txt_Buscador.TabIndex = 0;
             this.txt_Buscador.TextChanged += new System.EventHandler(this.txt_Buscador_TextChanged);
             this.txt_Buscador.Enter += new System.EventHandler(this.txt_Buscador_Enter);
             this.txt_Buscador.Leave += new System.EventHandler(this.txt_Buscador_Leave);
@@ -189,7 +190,7 @@
             this.diseñoIconButton1.Location = new System.Drawing.Point(274, 84);
             this.diseñoIconButton1.Name = "diseñoIconButton1";
             this.diseñoIconButton1.Size = new System.Drawing.Size(125, 41);
-            this.diseñoIconButton1.TabIndex = 10;
+            this.diseñoIconButton1.TabIndex = 1;
             this.diseñoIconButton1.Text = "Agregar Funcionario";
             this.diseñoIconButton1.TextColor = System.Drawing.Color.White;
             this.diseñoIconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -217,7 +218,7 @@
             this.diseñoIconButton2.Location = new System.Drawing.Point(428, 84);
             this.diseñoIconButton2.Name = "diseñoIconButton2";
             this.diseñoIconButton2.Size = new System.Drawing.Size(125, 41);
-            this.diseñoIconButton2.TabIndex = 10;
+            this.diseñoIconButton2.TabIndex = 2;
             this.diseñoIconButton2.Text = "Desvincular Usuario";
             this.diseñoIconButton2.TextColor = System.Drawing.Color.White;
             this.diseñoIconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -253,7 +254,7 @@
             this.diseñoButton1.Location = new System.Drawing.Point(12, 9);
             this.diseñoButton1.Name = "diseñoButton1";
             this.diseñoButton1.Size = new System.Drawing.Size(114, 39);
-            this.diseñoButton1.TabIndex = 13;
+            this.diseñoButton1.TabIndex = 3;
             this.diseñoButton1.Text = "Volver al MENÚ";
             this.diseñoButton1.TextColor = System.Drawing.Color.White;
             this.diseñoButton1.UseVisualStyleBackColor = true;

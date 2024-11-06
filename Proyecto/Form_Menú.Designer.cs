@@ -137,7 +137,7 @@
             this.diseñoIconButton8.Location = new System.Drawing.Point(417, 337);
             this.diseñoIconButton8.Name = "diseñoIconButton8";
             this.diseñoIconButton8.Size = new System.Drawing.Size(91, 40);
-            this.diseñoIconButton8.TabIndex = 21;
+            this.diseñoIconButton8.TabIndex = 7;
             this.diseñoIconButton8.Text = "Volver al Login";
             this.diseñoIconButton8.TextColor = System.Drawing.Color.White;
             this.diseñoIconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -164,7 +164,7 @@
             this.diseñoIconButton7.Location = new System.Drawing.Point(417, 10);
             this.diseñoIconButton7.Name = "diseñoIconButton7";
             this.diseñoIconButton7.Size = new System.Drawing.Size(91, 36);
-            this.diseñoIconButton7.TabIndex = 19;
+            this.diseñoIconButton7.TabIndex = 6;
             this.diseñoIconButton7.Text = "MOD";
             this.diseñoIconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.diseñoIconButton7.TextColor = System.Drawing.Color.White;
@@ -192,7 +192,7 @@
             this.diseñoIconButton6.Location = new System.Drawing.Point(16, 315);
             this.diseñoIconButton6.Name = "diseñoIconButton6";
             this.diseñoIconButton6.Size = new System.Drawing.Size(128, 40);
-            this.diseñoIconButton6.TabIndex = 17;
+            this.diseñoIconButton6.TabIndex = 5;
             this.diseñoIconButton6.Text = "App Logs";
             this.diseñoIconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.diseñoIconButton6.TextColor = System.Drawing.Color.White;
@@ -220,7 +220,7 @@
             this.diseñoIconButton5.Location = new System.Drawing.Point(14, 262);
             this.diseñoIconButton5.Name = "diseñoIconButton5";
             this.diseñoIconButton5.Size = new System.Drawing.Size(130, 40);
-            this.diseñoIconButton5.TabIndex = 16;
+            this.diseñoIconButton5.TabIndex = 4;
             this.diseñoIconButton5.Text = "Ver Marcaciones";
             this.diseñoIconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.diseñoIconButton5.TextColor = System.Drawing.Color.White;
@@ -248,7 +248,7 @@
             this.diseñoIconButton4.Location = new System.Drawing.Point(14, 207);
             this.diseñoIconButton4.Name = "diseñoIconButton4";
             this.diseñoIconButton4.Size = new System.Drawing.Size(130, 40);
-            this.diseñoIconButton4.TabIndex = 15;
+            this.diseñoIconButton4.TabIndex = 3;
             this.diseñoIconButton4.Text = "Ver Dispositivos";
             this.diseñoIconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.diseñoIconButton4.TextColor = System.Drawing.Color.White;
@@ -276,7 +276,7 @@
             this.diseñoIconButton3.Location = new System.Drawing.Point(14, 147);
             this.diseñoIconButton3.Name = "diseñoIconButton3";
             this.diseñoIconButton3.Size = new System.Drawing.Size(130, 50);
-            this.diseñoIconButton3.TabIndex = 14;
+            this.diseñoIconButton3.TabIndex = 2;
             this.diseñoIconButton3.Text = "Marcaciones Manuales";
             this.diseñoIconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.diseñoIconButton3.TextColor = System.Drawing.Color.White;
@@ -304,7 +304,7 @@
             this.diseñoIconButton2.Location = new System.Drawing.Point(14, 80);
             this.diseñoIconButton2.Name = "diseñoIconButton2";
             this.diseñoIconButton2.Size = new System.Drawing.Size(130, 56);
-            this.diseñoIconButton2.TabIndex = 13;
+            this.diseñoIconButton2.TabIndex = 1;
             this.diseñoIconButton2.Text = "Funcionarios con Dispositivo\r\n";
             this.diseñoIconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.diseñoIconButton2.TextColor = System.Drawing.Color.White;
@@ -332,7 +332,7 @@
             this.diseñoIconButton1.Location = new System.Drawing.Point(15, 33);
             this.diseñoIconButton1.Name = "diseñoIconButton1";
             this.diseñoIconButton1.Size = new System.Drawing.Size(129, 40);
-            this.diseñoIconButton1.TabIndex = 12;
+            this.diseñoIconButton1.TabIndex = 0;
             this.diseñoIconButton1.Text = "Funcionarios";
             this.diseñoIconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.diseñoIconButton1.TextColor = System.Drawing.Color.White;

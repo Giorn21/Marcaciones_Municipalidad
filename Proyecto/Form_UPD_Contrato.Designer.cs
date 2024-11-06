@@ -55,7 +55,7 @@
             this.txt_TipoContrato.Name = "txt_TipoContrato";
             this.txt_TipoContrato.ReadOnly = true;
             this.txt_TipoContrato.Size = new System.Drawing.Size(160, 22);
-            this.txt_TipoContrato.TabIndex = 3;
+            this.txt_TipoContrato.TabIndex = 0;
             // 
             // txt_Descripcion
             // 
@@ -63,7 +63,7 @@
             this.txt_Descripcion.Location = new System.Drawing.Point(65, 167);
             this.txt_Descripcion.Name = "txt_Descripcion";
             this.txt_Descripcion.Size = new System.Drawing.Size(160, 22);
-            this.txt_Descripcion.TabIndex = 4;
+            this.txt_Descripcion.TabIndex = 1;
             // 
             // lbl_IdTipoContrato
             // 
@@ -102,7 +102,7 @@
             this.diseñoButton1.Location = new System.Drawing.Point(12, 236);
             this.diseñoButton1.Name = "diseñoButton1";
             this.diseñoButton1.Size = new System.Drawing.Size(75, 39);
-            this.diseñoButton1.TabIndex = 15;
+            this.diseñoButton1.TabIndex = 4;
             this.diseñoButton1.Text = "Volver\r\n";
             this.diseñoButton1.TextColor = System.Drawing.Color.White;
             this.diseñoButton1.UseVisualStyleBackColor = false;
@@ -129,7 +129,7 @@
             this.diseñoIconButton1.Location = new System.Drawing.Point(167, 231);
             this.diseñoIconButton1.Name = "diseñoIconButton1";
             this.diseñoIconButton1.Size = new System.Drawing.Size(104, 44);
-            this.diseñoIconButton1.TabIndex = 18;
+            this.diseñoIconButton1.TabIndex = 2;
             this.diseñoIconButton1.Text = "Actualizar";
             this.diseñoIconButton1.TextColor = System.Drawing.Color.White;
             this.diseñoIconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
