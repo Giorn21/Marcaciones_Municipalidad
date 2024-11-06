@@ -99,9 +99,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(50, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 33);
+            this.label1.Size = new System.Drawing.Size(169, 33);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Inserta Usuario";
+            this.label1.Text = "LOGIN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // iconPictureBox3
@@ -111,7 +111,7 @@
             this.iconPictureBox3.IconColor = System.Drawing.Color.White;
             this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox3.IconSize = 23;
-            this.iconPictureBox3.Location = new System.Drawing.Point(120, 157);
+            this.iconPictureBox3.Location = new System.Drawing.Point(120, 154);
             this.iconPictureBox3.Name = "iconPictureBox3";
             this.iconPictureBox3.Size = new System.Drawing.Size(23, 24);
             this.iconPictureBox3.TabIndex = 10;
@@ -147,7 +147,7 @@
             this.diseñoIconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.diseñoIconButton1.IconSize = 32;
             this.diseñoIconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.diseñoIconButton1.Location = new System.Drawing.Point(68, 232);
+            this.diseñoIconButton1.Location = new System.Drawing.Point(68, 243);
             this.diseñoIconButton1.Name = "diseñoIconButton1";
             this.diseñoIconButton1.Size = new System.Drawing.Size(129, 43);
             this.diseñoIconButton1.TabIndex = 8;

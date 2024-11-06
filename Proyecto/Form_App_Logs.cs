@@ -50,12 +50,6 @@ namespace Proyecto
                 dtv_LogsApp.Rows.Add(row);
             }
         }
-        private void btn_Volver_Click(object sender, EventArgs e)
-        {
-            Form_buscador_Logs buscador_Logs = new Form_buscador_Logs();
-            buscador_Logs.Show();
-            this.Close();
-        }
 
         private void check_Login_CheckedChanged(object sender, EventArgs e)
         {
@@ -88,6 +82,13 @@ namespace Proyecto
                     fila.Visible = true;
                 }
             }
+        }
+
+        private void diseñoButton1_Click(object sender, EventArgs e)
+        {
+            Form_buscador_Logs buscador_Logs = new Form_buscador_Logs();
+            buscador_Logs.Show();
+            this.Close();
         }
     }
 }

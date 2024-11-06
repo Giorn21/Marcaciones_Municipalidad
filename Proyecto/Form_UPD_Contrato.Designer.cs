@@ -28,48 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Salir = new System.Windows.Forms.Button();
-            this.btn_Acualizar = new System.Windows.Forms.Button();
             this.lbl_Titulo = new System.Windows.Forms.Label();
             this.txt_TipoContrato = new System.Windows.Forms.TextBox();
             this.txt_Descripcion = new System.Windows.Forms.TextBox();
             this.lbl_IdTipoContrato = new System.Windows.Forms.Label();
             this.lbl_Descripcion = new System.Windows.Forms.Label();
+            this.diseñoButton1 = new Proyecto.Resources.DiseñoButton();
+            this.diseñoIconButton1 = new Proyecto.Resources.DiseñoIconButton();
             this.SuspendLayout();
-            // 
-            // btn_Salir
-            // 
-            this.btn_Salir.BackColor = System.Drawing.Color.LightCoral;
-            this.btn_Salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salir.Location = new System.Drawing.Point(196, 236);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(75, 31);
-            this.btn_Salir.TabIndex = 0;
-            this.btn_Salir.Text = "Salir";
-            this.btn_Salir.UseVisualStyleBackColor = false;
-            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
-            // 
-            // btn_Acualizar
-            // 
-            this.btn_Acualizar.BackColor = System.Drawing.Color.Yellow;
-            this.btn_Acualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Acualizar.Location = new System.Drawing.Point(27, 236);
-            this.btn_Acualizar.Name = "btn_Acualizar";
-            this.btn_Acualizar.Size = new System.Drawing.Size(75, 31);
-            this.btn_Acualizar.TabIndex = 1;
-            this.btn_Acualizar.Text = "Actualizar";
-            this.btn_Acualizar.UseVisualStyleBackColor = false;
-            this.btn_Acualizar.Click += new System.EventHandler(this.btn_Acualizar_Click);
             // 
             // lbl_Titulo
             // 
             this.lbl_Titulo.AutoSize = true;
             this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.ForeColor = System.Drawing.Color.White;
             this.lbl_Titulo.Location = new System.Drawing.Point(22, 9);
             this.lbl_Titulo.Name = "lbl_Titulo";
             this.lbl_Titulo.Size = new System.Drawing.Size(249, 25);
             this.lbl_Titulo.TabIndex = 2;
-            this.lbl_Titulo.Text = "Edicion de Tipo Contrato";
+            this.lbl_Titulo.Text = "Edición de Tipo Contrato";
             // 
             // txt_TipoContrato
             // 
@@ -92,6 +69,7 @@
             // 
             this.lbl_IdTipoContrato.AutoSize = true;
             this.lbl_IdTipoContrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_IdTipoContrato.ForeColor = System.Drawing.Color.White;
             this.lbl_IdTipoContrato.Location = new System.Drawing.Point(62, 70);
             this.lbl_IdTipoContrato.Name = "lbl_IdTipoContrato";
             this.lbl_IdTipoContrato.Size = new System.Drawing.Size(73, 16);
@@ -102,24 +80,75 @@
             // 
             this.lbl_Descripcion.AutoSize = true;
             this.lbl_Descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Descripcion.ForeColor = System.Drawing.Color.White;
             this.lbl_Descripcion.Location = new System.Drawing.Point(62, 148);
             this.lbl_Descripcion.Name = "lbl_Descripcion";
             this.lbl_Descripcion.Size = new System.Drawing.Size(88, 16);
             this.lbl_Descripcion.TabIndex = 6;
             this.lbl_Descripcion.Text = "Tipo Contrato";
             // 
+            // diseñoButton1
+            // 
+            this.diseñoButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.diseñoButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.diseñoButton1.BorderColor = System.Drawing.Color.Red;
+            this.diseñoButton1.BorderRadius = 40;
+            this.diseñoButton1.BorderSize = 0;
+            this.diseñoButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.diseñoButton1.FlatAppearance.BorderSize = 0;
+            this.diseñoButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.diseñoButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diseñoButton1.ForeColor = System.Drawing.Color.White;
+            this.diseñoButton1.Location = new System.Drawing.Point(12, 236);
+            this.diseñoButton1.Name = "diseñoButton1";
+            this.diseñoButton1.Size = new System.Drawing.Size(75, 39);
+            this.diseñoButton1.TabIndex = 15;
+            this.diseñoButton1.Text = "Volver\r\n";
+            this.diseñoButton1.TextColor = System.Drawing.Color.White;
+            this.diseñoButton1.UseVisualStyleBackColor = false;
+            this.diseñoButton1.Click += new System.EventHandler(this.diseñoButton1_Click);
+            // 
+            // diseñoIconButton1
+            // 
+            this.diseñoIconButton1.BackColor = System.Drawing.Color.Olive;
+            this.diseñoIconButton1.BackgroundColor = System.Drawing.Color.Olive;
+            this.diseñoIconButton1.BorderColor = System.Drawing.Color.Yellow;
+            this.diseñoIconButton1.BorderRadius = 45;
+            this.diseñoIconButton1.BorderSize = 3;
+            this.diseñoIconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.diseñoIconButton1.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.diseñoIconButton1.FlatAppearance.BorderSize = 3;
+            this.diseñoIconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.diseñoIconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diseñoIconButton1.ForeColor = System.Drawing.Color.White;
+            this.diseñoIconButton1.IconChar = FontAwesome.Sharp.IconChar.Redo;
+            this.diseñoIconButton1.IconColor = System.Drawing.Color.White;
+            this.diseñoIconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.diseñoIconButton1.IconSize = 20;
+            this.diseñoIconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.diseñoIconButton1.Location = new System.Drawing.Point(167, 231);
+            this.diseñoIconButton1.Name = "diseñoIconButton1";
+            this.diseñoIconButton1.Size = new System.Drawing.Size(104, 44);
+            this.diseñoIconButton1.TabIndex = 18;
+            this.diseñoIconButton1.Text = "Actualizar";
+            this.diseñoIconButton1.TextColor = System.Drawing.Color.White;
+            this.diseñoIconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.diseñoIconButton1.UseVisualStyleBackColor = false;
+            this.diseñoIconButton1.Click += new System.EventHandler(this.diseñoIconButton1_Click);
+            // 
             // Form_UPD_Contrato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
             this.ClientSize = new System.Drawing.Size(298, 287);
+            this.Controls.Add(this.diseñoIconButton1);
+            this.Controls.Add(this.diseñoButton1);
             this.Controls.Add(this.lbl_Descripcion);
             this.Controls.Add(this.lbl_IdTipoContrato);
             this.Controls.Add(this.txt_Descripcion);
             this.Controls.Add(this.txt_TipoContrato);
             this.Controls.Add(this.lbl_Titulo);
-            this.Controls.Add(this.btn_Acualizar);
-            this.Controls.Add(this.btn_Salir);
             this.Name = "Form_UPD_Contrato";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_UPD_Contrato";
@@ -129,13 +158,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_Salir;
-        private System.Windows.Forms.Button btn_Acualizar;
         private System.Windows.Forms.Label lbl_Titulo;
         private System.Windows.Forms.TextBox txt_TipoContrato;
         private System.Windows.Forms.TextBox txt_Descripcion;
         private System.Windows.Forms.Label lbl_IdTipoContrato;
         private System.Windows.Forms.Label lbl_Descripcion;
+        private Resources.DiseñoButton diseñoButton1;
+        private Resources.DiseñoIconButton diseñoIconButton1;
     }
 }

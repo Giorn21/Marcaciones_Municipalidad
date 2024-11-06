@@ -38,14 +38,15 @@
             this.lbl_Telefono = new System.Windows.Forms.Label();
             this.lbl_Email = new System.Windows.Forms.Label();
             this.cbox_Ubicacion = new System.Windows.Forms.ComboBox();
-            this.btn_Agregar = new System.Windows.Forms.Button();
-            this.btn_salir = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.diseñoButton2 = new Proyecto.Resources.DiseñoButton();
+            this.diseñoIconButton1 = new Proyecto.Resources.DiseñoIconButton();
             this.SuspendLayout();
             // 
             // txt_Descripcion
             // 
             this.txt_Descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Descripcion.Location = new System.Drawing.Point(50, 125);
+            this.txt_Descripcion.Location = new System.Drawing.Point(51, 128);
             this.txt_Descripcion.Name = "txt_Descripcion";
             this.txt_Descripcion.Size = new System.Drawing.Size(177, 22);
             this.txt_Descripcion.TabIndex = 0;
@@ -53,7 +54,7 @@
             // txt_Email
             // 
             this.txt_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Email.Location = new System.Drawing.Point(50, 287);
+            this.txt_Email.Location = new System.Drawing.Point(51, 290);
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(177, 22);
             this.txt_Email.TabIndex = 2;
@@ -62,7 +63,7 @@
             // txt_Telefono
             // 
             this.txt_Telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Telefono.Location = new System.Drawing.Point(50, 233);
+            this.txt_Telefono.Location = new System.Drawing.Point(51, 236);
             this.txt_Telefono.Name = "txt_Telefono";
             this.txt_Telefono.Size = new System.Drawing.Size(177, 22);
             this.txt_Telefono.TabIndex = 3;
@@ -73,7 +74,7 @@
             // 
             this.cbox_Direccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbox_Direccion.FormattingEnabled = true;
-            this.cbox_Direccion.Location = new System.Drawing.Point(50, 70);
+            this.cbox_Direccion.Location = new System.Drawing.Point(51, 73);
             this.cbox_Direccion.Name = "cbox_Direccion";
             this.cbox_Direccion.Size = new System.Drawing.Size(177, 24);
             this.cbox_Direccion.TabIndex = 4;
@@ -82,50 +83,55 @@
             // lbl_Direccion
             // 
             this.lbl_Direccion.AutoSize = true;
-            this.lbl_Direccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Direccion.Location = new System.Drawing.Point(47, 54);
+            this.lbl_Direccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Direccion.ForeColor = System.Drawing.Color.White;
+            this.lbl_Direccion.Location = new System.Drawing.Point(51, 52);
             this.lbl_Direccion.Name = "lbl_Direccion";
-            this.lbl_Direccion.Size = new System.Drawing.Size(64, 16);
+            this.lbl_Direccion.Size = new System.Drawing.Size(71, 18);
             this.lbl_Direccion.TabIndex = 5;
             this.lbl_Direccion.Text = "Direccion";
             // 
             // lbl_Descripcion
             // 
             this.lbl_Descripcion.AutoSize = true;
-            this.lbl_Descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Descripcion.Location = new System.Drawing.Point(47, 109);
+            this.lbl_Descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Descripcion.ForeColor = System.Drawing.Color.White;
+            this.lbl_Descripcion.Location = new System.Drawing.Point(48, 107);
             this.lbl_Descripcion.Name = "lbl_Descripcion";
-            this.lbl_Descripcion.Size = new System.Drawing.Size(117, 16);
+            this.lbl_Descripcion.Size = new System.Drawing.Size(131, 18);
             this.lbl_Descripcion.TabIndex = 6;
             this.lbl_Descripcion.Text = "Nombre de Centro";
             // 
             // lbl_Ubicacion
             // 
             this.lbl_Ubicacion.AutoSize = true;
-            this.lbl_Ubicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Ubicacion.Location = new System.Drawing.Point(47, 163);
+            this.lbl_Ubicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Ubicacion.ForeColor = System.Drawing.Color.White;
+            this.lbl_Ubicacion.Location = new System.Drawing.Point(48, 161);
             this.lbl_Ubicacion.Name = "lbl_Ubicacion";
-            this.lbl_Ubicacion.Size = new System.Drawing.Size(68, 16);
+            this.lbl_Ubicacion.Size = new System.Drawing.Size(74, 18);
             this.lbl_Ubicacion.TabIndex = 7;
             this.lbl_Ubicacion.Text = "Ubicacion";
             // 
             // lbl_Telefono
             // 
             this.lbl_Telefono.AutoSize = true;
-            this.lbl_Telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Telefono.Location = new System.Drawing.Point(47, 217);
+            this.lbl_Telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Telefono.ForeColor = System.Drawing.Color.White;
+            this.lbl_Telefono.Location = new System.Drawing.Point(48, 215);
             this.lbl_Telefono.Name = "lbl_Telefono";
-            this.lbl_Telefono.Size = new System.Drawing.Size(61, 16);
+            this.lbl_Telefono.Size = new System.Drawing.Size(66, 18);
             this.lbl_Telefono.TabIndex = 8;
             this.lbl_Telefono.Text = "Telefono";
             // 
             // lbl_Email
             // 
             this.lbl_Email.AutoSize = true;
-            this.lbl_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Email.Location = new System.Drawing.Point(47, 271);
+            this.lbl_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Email.ForeColor = System.Drawing.Color.White;
+            this.lbl_Email.Location = new System.Drawing.Point(48, 269);
             this.lbl_Email.Name = "lbl_Email";
-            this.lbl_Email.Size = new System.Drawing.Size(41, 16);
+            this.lbl_Email.Size = new System.Drawing.Size(45, 18);
             this.lbl_Email.TabIndex = 9;
             this.lbl_Email.Text = "Email";
             // 
@@ -133,42 +139,79 @@
             // 
             this.cbox_Ubicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbox_Ubicacion.FormattingEnabled = true;
-            this.cbox_Ubicacion.Location = new System.Drawing.Point(50, 179);
+            this.cbox_Ubicacion.Location = new System.Drawing.Point(51, 182);
             this.cbox_Ubicacion.Name = "cbox_Ubicacion";
             this.cbox_Ubicacion.Size = new System.Drawing.Size(177, 24);
             this.cbox_Ubicacion.TabIndex = 10;
             // 
-            // btn_Agregar
+            // label1
             // 
-            this.btn_Agregar.BackColor = System.Drawing.Color.GreenYellow;
-            this.btn_Agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Agregar.Location = new System.Drawing.Point(95, 330);
-            this.btn_Agregar.Name = "btn_Agregar";
-            this.btn_Agregar.Size = new System.Drawing.Size(75, 26);
-            this.btn_Agregar.TabIndex = 11;
-            this.btn_Agregar.Text = "Agregar";
-            this.btn_Agregar.UseVisualStyleBackColor = false;
-            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(35, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(203, 31);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "Agregar Unidad";
             // 
-            // btn_salir
+            // diseñoButton2
             // 
-            this.btn_salir.BackColor = System.Drawing.Color.LightCoral;
-            this.btn_salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_salir.Location = new System.Drawing.Point(3, 408);
-            this.btn_salir.Name = "btn_salir";
-            this.btn_salir.Size = new System.Drawing.Size(75, 26);
-            this.btn_salir.TabIndex = 12;
-            this.btn_salir.Text = "Salir";
-            this.btn_salir.UseVisualStyleBackColor = false;
-            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
+            this.diseñoButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.diseñoButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.diseñoButton2.BorderColor = System.Drawing.Color.Red;
+            this.diseñoButton2.BorderRadius = 40;
+            this.diseñoButton2.BorderSize = 0;
+            this.diseñoButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.diseñoButton2.FlatAppearance.BorderSize = 0;
+            this.diseñoButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.diseñoButton2.ForeColor = System.Drawing.Color.White;
+            this.diseñoButton2.Location = new System.Drawing.Point(12, 349);
+            this.diseñoButton2.Name = "diseñoButton2";
+            this.diseñoButton2.Size = new System.Drawing.Size(80, 37);
+            this.diseñoButton2.TabIndex = 29;
+            this.diseñoButton2.Text = "Volver";
+            this.diseñoButton2.TextColor = System.Drawing.Color.White;
+            this.diseñoButton2.UseVisualStyleBackColor = true;
+            this.diseñoButton2.Click += new System.EventHandler(this.diseñoButton2_Click);
+            // 
+            // diseñoIconButton1
+            // 
+            this.diseñoIconButton1.BackColor = System.Drawing.Color.OliveDrab;
+            this.diseñoIconButton1.BackgroundColor = System.Drawing.Color.OliveDrab;
+            this.diseñoIconButton1.BorderColor = System.Drawing.Color.Green;
+            this.diseñoIconButton1.BorderRadius = 25;
+            this.diseñoIconButton1.BorderSize = 3;
+            this.diseñoIconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.diseñoIconButton1.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.diseñoIconButton1.FlatAppearance.BorderSize = 3;
+            this.diseñoIconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.diseñoIconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diseñoIconButton1.ForeColor = System.Drawing.Color.White;
+            this.diseñoIconButton1.IconChar = FontAwesome.Sharp.IconChar.BuildingCircleCheck;
+            this.diseñoIconButton1.IconColor = System.Drawing.Color.White;
+            this.diseñoIconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.diseñoIconButton1.IconSize = 25;
+            this.diseñoIconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.diseñoIconButton1.Location = new System.Drawing.Point(161, 348);
+            this.diseñoIconButton1.Name = "diseñoIconButton1";
+            this.diseñoIconButton1.Size = new System.Drawing.Size(124, 38);
+            this.diseñoIconButton1.TabIndex = 30;
+            this.diseñoIconButton1.Text = "Agregar";
+            this.diseñoIconButton1.TextColor = System.Drawing.Color.White;
+            this.diseñoIconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.diseñoIconButton1.UseVisualStyleBackColor = false;
+            this.diseñoIconButton1.Click += new System.EventHandler(this.diseñoIconButton1_Click);
             // 
             // Form_Agregar_Unidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(297, 437);
-            this.Controls.Add(this.btn_salir);
-            this.Controls.Add(this.btn_Agregar);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.ClientSize = new System.Drawing.Size(297, 407);
+            this.Controls.Add(this.diseñoIconButton1);
+            this.Controls.Add(this.diseñoButton2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cbox_Ubicacion);
             this.Controls.Add(this.lbl_Email);
             this.Controls.Add(this.lbl_Telefono);
@@ -200,7 +243,8 @@
         private System.Windows.Forms.Label lbl_Telefono;
         private System.Windows.Forms.Label lbl_Email;
         private System.Windows.Forms.ComboBox cbox_Ubicacion;
-        private System.Windows.Forms.Button btn_Agregar;
-        private System.Windows.Forms.Button btn_salir;
+        private System.Windows.Forms.Label label1;
+        private Resources.DiseñoButton diseñoButton2;
+        private Resources.DiseñoIconButton diseñoIconButton1;
     }
 }

@@ -36,21 +36,23 @@
             this.col_Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_TipoMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Comentario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_Volver = new System.Windows.Forms.Button();
             this.txt_Buscador = new System.Windows.Forms.TextBox();
-            this.lbl_Buscador = new System.Windows.Forms.Label();
             this.TSM_Registro = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM_Nuevo = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.lbl_Titulo = new System.Windows.Forms.Label();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.diseñoButton1 = new Proyecto.Resources.DiseñoButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtv_Marcaciones_Manuales)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dtv_Marcaciones_Manuales
             // 
             this.dtv_Marcaciones_Manuales.AllowUserToAddRows = false;
             this.dtv_Marcaciones_Manuales.AllowUserToDeleteRows = false;
+            this.dtv_Marcaciones_Manuales.BackgroundColor = System.Drawing.Color.CornflowerBlue;
             this.dtv_Marcaciones_Manuales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtv_Marcaciones_Manuales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_ID,
@@ -60,10 +62,11 @@
             this.col_Hora,
             this.col_TipoMarca,
             this.col_Comentario});
-            this.dtv_Marcaciones_Manuales.Location = new System.Drawing.Point(12, 123);
+            this.dtv_Marcaciones_Manuales.GridColor = System.Drawing.Color.Black;
+            this.dtv_Marcaciones_Manuales.Location = new System.Drawing.Point(12, 122);
             this.dtv_Marcaciones_Manuales.Name = "dtv_Marcaciones_Manuales";
             this.dtv_Marcaciones_Manuales.ReadOnly = true;
-            this.dtv_Marcaciones_Manuales.Size = new System.Drawing.Size(776, 270);
+            this.dtv_Marcaciones_Manuales.Size = new System.Drawing.Size(776, 273);
             this.dtv_Marcaciones_Manuales.TabIndex = 0;
             // 
             // col_ID
@@ -108,82 +111,103 @@
             this.col_Comentario.Name = "col_Comentario";
             this.col_Comentario.ReadOnly = true;
             // 
-            // btn_Volver
-            // 
-            this.btn_Volver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Volver.Location = new System.Drawing.Point(12, 419);
-            this.btn_Volver.Name = "btn_Volver";
-            this.btn_Volver.Size = new System.Drawing.Size(80, 31);
-            this.btn_Volver.TabIndex = 2;
-            this.btn_Volver.Text = "Volver";
-            this.btn_Volver.UseVisualStyleBackColor = true;
-            this.btn_Volver.Click += new System.EventHandler(this.btn_Volver_Click);
-            // 
             // txt_Buscador
             // 
             this.txt_Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Buscador.Location = new System.Drawing.Point(51, 87);
+            this.txt_Buscador.Location = new System.Drawing.Point(51, 86);
             this.txt_Buscador.Name = "txt_Buscador";
-            this.txt_Buscador.Size = new System.Drawing.Size(202, 22);
+            this.txt_Buscador.Size = new System.Drawing.Size(183, 22);
             this.txt_Buscador.TabIndex = 4;
             this.txt_Buscador.TextChanged += new System.EventHandler(this.txt_Buscador_TextChanged);
             this.txt_Buscador.Enter += new System.EventHandler(this.txt_Buscador_Enter);
             this.txt_Buscador.Leave += new System.EventHandler(this.txt_Buscador_Leave);
             // 
-            // lbl_Buscador
-            // 
-            this.lbl_Buscador.AutoSize = true;
-            this.lbl_Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Buscador.Location = new System.Drawing.Point(11, 85);
-            this.lbl_Buscador.Name = "lbl_Buscador";
-            this.lbl_Buscador.Size = new System.Drawing.Size(34, 25);
-            this.lbl_Buscador.TabIndex = 3;
-            this.lbl_Buscador.Text = "🔎";
-            // 
             // TSM_Registro
             // 
             this.TSM_Registro.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TSM_Nuevo});
+            this.TSM_Registro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TSM_Registro.ForeColor = System.Drawing.Color.Lime;
+            this.TSM_Registro.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.TSM_Registro.Name = "TSM_Registro";
-            this.TSM_Registro.Size = new System.Drawing.Size(59, 20);
-            this.TSM_Registro.Text = "registro";
+            this.TSM_Registro.Size = new System.Drawing.Size(94, 25);
+            this.TSM_Registro.Text = "REGISTRO";
             // 
             // TSM_Nuevo
             // 
+            this.TSM_Nuevo.BackColor = System.Drawing.SystemColors.Control;
             this.TSM_Nuevo.Name = "TSM_Nuevo";
-            this.TSM_Nuevo.Size = new System.Drawing.Size(124, 22);
+            this.TSM_Nuevo.Size = new System.Drawing.Size(180, 22);
             this.TSM_Nuevo.Text = "NUEVO +";
             this.TSM_Nuevo.Click += new System.EventHandler(this.TSM_Nuevo_Click);
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TSM_Registro});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 29);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // lbl_Titulo
             // 
-            this.lbl_Titulo.AutoSize = true;
-            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Titulo.Location = new System.Drawing.Point(204, 35);
+            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.ForeColor = System.Drawing.Color.White;
+            this.lbl_Titulo.Location = new System.Drawing.Point(374, 12);
             this.lbl_Titulo.Name = "lbl_Titulo";
-            this.lbl_Titulo.Size = new System.Drawing.Size(368, 33);
+            this.lbl_Titulo.Size = new System.Drawing.Size(414, 104);
             this.lbl_Titulo.TabIndex = 5;
-            this.lbl_Titulo.Text = "Ver Marcaciones Manuales";
+            this.lbl_Titulo.Text = "Ingreso de Marcaciones Manuales";
+            this.lbl_Titulo.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.Window;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 38;
+            this.iconPictureBox1.Location = new System.Drawing.Point(7, 75);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(38, 41);
+            this.iconPictureBox1.TabIndex = 13;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // diseñoButton1
+            // 
+            this.diseñoButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.diseñoButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.diseñoButton1.BorderColor = System.Drawing.Color.Gray;
+            this.diseñoButton1.BorderRadius = 40;
+            this.diseñoButton1.BorderSize = 0;
+            this.diseñoButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.diseñoButton1.FlatAppearance.BorderSize = 0;
+            this.diseñoButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.diseñoButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diseñoButton1.ForeColor = System.Drawing.Color.White;
+            this.diseñoButton1.Location = new System.Drawing.Point(254, 69);
+            this.diseñoButton1.Name = "diseñoButton1";
+            this.diseñoButton1.Size = new System.Drawing.Size(114, 39);
+            this.diseñoButton1.TabIndex = 14;
+            this.diseñoButton1.Text = "Volver al MENÚ";
+            this.diseñoButton1.TextColor = System.Drawing.Color.White;
+            this.diseñoButton1.UseVisualStyleBackColor = true;
+            this.diseñoButton1.Click += new System.EventHandler(this.diseñoButton1_Click);
             // 
             // Form_VerMarcacion_Manual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 467);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.ClientSize = new System.Drawing.Size(800, 407);
+            this.Controls.Add(this.diseñoButton1);
+            this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.txt_Buscador);
-            this.Controls.Add(this.lbl_Buscador);
-            this.Controls.Add(this.btn_Volver);
             this.Controls.Add(this.dtv_Marcaciones_Manuales);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -194,6 +218,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtv_Marcaciones_Manuales)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,9 +227,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dtv_Marcaciones_Manuales;
-        private System.Windows.Forms.Button btn_Volver;
         private System.Windows.Forms.TextBox txt_Buscador;
-        private System.Windows.Forms.Label lbl_Buscador;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Apellido;
@@ -216,5 +239,7 @@
         private System.Windows.Forms.ToolStripMenuItem TSM_Nuevo;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Label lbl_Titulo;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private Resources.DiseñoButton diseñoButton1;
     }
 }

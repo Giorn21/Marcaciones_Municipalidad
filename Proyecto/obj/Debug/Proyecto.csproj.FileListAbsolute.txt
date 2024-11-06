@@ -31,7 +31,6 @@ C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_Logi
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_VerHorario.resources
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_VerMarcaciones.resources
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_Agregar_Marcacion_Manual.resources
-C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_Menu.resources
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_VerMarcacion_Manual.resources
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_VerMarcas.resources
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_VerUnidad.resources
@@ -62,3 +61,4 @@ C:\Users\informatica\source\repos\Proyecto\Proyecto\bin\Debug\CrystalDecisions.R
 C:\Users\informatica\source\repos\Proyecto\Proyecto\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 C:\Users\informatica\source\repos\Proyecto\Proyecto\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\informatica\source\repos\Proyecto\Proyecto\bin\Debug\stdole.dll
+C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_Menú.resources

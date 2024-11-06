@@ -69,6 +69,7 @@
             // 
             this.tbc_Agregar_Funcionario.Controls.Add(this.tabP_Datos_Personales);
             this.tbc_Agregar_Funcionario.Controls.Add(this.tabP_Horarios);
+            this.tbc_Agregar_Funcionario.Cursor = System.Windows.Forms.Cursors.Default;
             this.tbc_Agregar_Funcionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbc_Agregar_Funcionario.Location = new System.Drawing.Point(12, 68);
             this.tbc_Agregar_Funcionario.Name = "tbc_Agregar_Funcionario";
@@ -321,6 +322,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.CornflowerBlue;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.Color.Black;
             this.dataGridView1.Location = new System.Drawing.Point(9, 89);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -405,14 +407,14 @@
             // 
             this.diseñoButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
             this.diseñoButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
-            this.diseñoButton2.BorderColor = System.Drawing.Color.Yellow;
+            this.diseñoButton2.BorderColor = System.Drawing.Color.Gold;
             this.diseñoButton2.BorderRadius = 25;
             this.diseñoButton2.BorderSize = 1;
             this.diseñoButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.diseñoButton2.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
             this.diseñoButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.diseñoButton2.ForeColor = System.Drawing.Color.White;
-            this.diseñoButton2.Location = new System.Drawing.Point(519, 472);
+            this.diseñoButton2.Location = new System.Drawing.Point(533, 469);
             this.diseñoButton2.Name = "diseñoButton2";
             this.diseñoButton2.Size = new System.Drawing.Size(76, 28);
             this.diseñoButton2.TabIndex = 15;
@@ -428,6 +430,7 @@
             this.diseñoIconButton1.BorderColor = System.Drawing.Color.Green;
             this.diseñoIconButton1.BorderRadius = 25;
             this.diseñoIconButton1.BorderSize = 3;
+            this.diseñoIconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.diseñoIconButton1.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.diseñoIconButton1.FlatAppearance.BorderSize = 3;
             this.diseñoIconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -461,6 +464,7 @@
             this.Controls.Add(this.lbl_FechaTiempoReal);
             this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.tbc_Agregar_Funcionario);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Name = "Form_Agregar_Funcionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

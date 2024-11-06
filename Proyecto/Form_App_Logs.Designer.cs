@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Volver = new System.Windows.Forms.Button();
             this.dtv_LogsApp = new System.Windows.Forms.DataGridView();
             this.col_Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Proceso = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,24 +37,15 @@
             this.col_Host = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.check_Login = new System.Windows.Forms.CheckBox();
             this.lbl_Titulo = new System.Windows.Forms.Label();
+            this.diseñoButton1 = new Proyecto.Resources.DiseñoButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtv_LogsApp)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_Volver
-            // 
-            this.btn_Volver.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Volver.Location = new System.Drawing.Point(12, 420);
-            this.btn_Volver.Name = "btn_Volver";
-            this.btn_Volver.Size = new System.Drawing.Size(117, 26);
-            this.btn_Volver.TabIndex = 9;
-            this.btn_Volver.Text = "Volver al menu";
-            this.btn_Volver.UseVisualStyleBackColor = true;
-            this.btn_Volver.Click += new System.EventHandler(this.btn_Volver_Click);
             // 
             // dtv_LogsApp
             // 
             this.dtv_LogsApp.AllowUserToAddRows = false;
             this.dtv_LogsApp.AllowUserToDeleteRows = false;
+            this.dtv_LogsApp.BackgroundColor = System.Drawing.Color.CornflowerBlue;
             this.dtv_LogsApp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtv_LogsApp.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_Fecha,
@@ -64,6 +54,7 @@
             this.col_Descripcion,
             this.col_Usuario,
             this.col_Host});
+            this.dtv_LogsApp.GridColor = System.Drawing.Color.Black;
             this.dtv_LogsApp.Location = new System.Drawing.Point(12, 110);
             this.dtv_LogsApp.Name = "dtv_LogsApp";
             this.dtv_LogsApp.ReadOnly = true;
@@ -109,8 +100,10 @@
             // check_Login
             // 
             this.check_Login.AutoSize = true;
+            this.check_Login.Cursor = System.Windows.Forms.Cursors.Hand;
             this.check_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.check_Login.Location = new System.Drawing.Point(580, 80);
+            this.check_Login.ForeColor = System.Drawing.Color.White;
+            this.check_Login.Location = new System.Drawing.Point(12, 80);
             this.check_Login.Name = "check_Login";
             this.check_Login.Size = new System.Drawing.Size(208, 24);
             this.check_Login.TabIndex = 12;
@@ -120,23 +113,45 @@
             // 
             // lbl_Titulo
             // 
-            this.lbl_Titulo.AutoSize = true;
-            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Titulo.Location = new System.Drawing.Point(264, 18);
+            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.ForeColor = System.Drawing.Color.White;
+            this.lbl_Titulo.Location = new System.Drawing.Point(411, 12);
             this.lbl_Titulo.Name = "lbl_Titulo";
-            this.lbl_Titulo.Size = new System.Drawing.Size(249, 33);
+            this.lbl_Titulo.Size = new System.Drawing.Size(377, 89);
             this.lbl_Titulo.TabIndex = 13;
-            this.lbl_Titulo.Text = "Bitacora Acciones";
+            this.lbl_Titulo.Text = "Bitácora de Acciones realizadas ";
+            // 
+            // diseñoButton1
+            // 
+            this.diseñoButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.diseñoButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.diseñoButton1.BorderColor = System.Drawing.Color.Gray;
+            this.diseñoButton1.BorderRadius = 40;
+            this.diseñoButton1.BorderSize = 0;
+            this.diseñoButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.diseñoButton1.FlatAppearance.BorderSize = 0;
+            this.diseñoButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.diseñoButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diseñoButton1.ForeColor = System.Drawing.Color.White;
+            this.diseñoButton1.Location = new System.Drawing.Point(12, 12);
+            this.diseñoButton1.Name = "diseñoButton1";
+            this.diseñoButton1.Size = new System.Drawing.Size(114, 39);
+            this.diseñoButton1.TabIndex = 19;
+            this.diseñoButton1.Text = "Volver al MENÚ";
+            this.diseñoButton1.TextColor = System.Drawing.Color.White;
+            this.diseñoButton1.UseVisualStyleBackColor = false;
+            this.diseñoButton1.Click += new System.EventHandler(this.diseñoButton1_Click);
             // 
             // Form_App_Logs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 462);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.ClientSize = new System.Drawing.Size(800, 408);
+            this.Controls.Add(this.diseñoButton1);
             this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.check_Login);
             this.Controls.Add(this.dtv_LogsApp);
-            this.Controls.Add(this.btn_Volver);
             this.Name = "Form_App_Logs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "App_Logs";
@@ -148,8 +163,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_Volver;
         private System.Windows.Forms.DataGridView dtv_LogsApp;
         private System.Windows.Forms.CheckBox check_Login;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Fecha;
@@ -159,5 +172,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Host;
         private System.Windows.Forms.Label lbl_Titulo;
+        private Resources.DiseñoButton diseñoButton1;
     }
 }

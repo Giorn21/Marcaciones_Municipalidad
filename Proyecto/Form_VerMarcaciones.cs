@@ -53,13 +53,6 @@ namespace Proyecto
             }
         }
 
-        private void btn_Volver_Click(object sender, EventArgs e)
-        {
-            Form_Menú menu = new Form_Menú();
-            menu.Show();
-            this.Close();
-        }
-
         private string placeholderText = "Buscar por RUT o Nombre";
 
         private void txt_Buscador_TextChanged(object sender, EventArgs e)
@@ -134,6 +127,13 @@ namespace Proyecto
 
                 dtv_Marcaciones.Rows.Add(row);
             }
+        }
+
+        private void diseñoButton1_Click(object sender, EventArgs e)
+        {
+            Form_Menú menu = new Form_Menú();
+            menu.Show();
+            this.Close();
         }
     }
 }

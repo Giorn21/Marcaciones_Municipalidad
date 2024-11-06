@@ -160,9 +160,9 @@
             this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Titulo.ForeColor = System.Drawing.SystemColors.Window;
             this.lbl_Titulo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbl_Titulo.Location = new System.Drawing.Point(559, 9);
+            this.lbl_Titulo.Location = new System.Drawing.Point(570, 9);
             this.lbl_Titulo.Name = "lbl_Titulo";
-            this.lbl_Titulo.Size = new System.Drawing.Size(503, 116);
+            this.lbl_Titulo.Size = new System.Drawing.Size(492, 116);
             this.lbl_Titulo.TabIndex = 9;
             this.lbl_Titulo.Text = "Lista De Funcionarios";
             this.lbl_Titulo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

@@ -32,46 +32,6 @@ namespace Proyecto
             this.IdUnidad = IdUnidad;
         }
 
-        private void btn_Actualizar_Click(object sender, EventArgs e)
-        {
-            // Crear una instancia de la clase cls_UPD_Unidad
-            cls_UPD_Unidad actualizarUnidad = new cls_UPD_Unidad();
-            clsAgregar_LogsApp logs = new clsAgregar_LogsApp();
-
-
-            // Llamar al método para actualizar los datos
-            bool exito = actualizarUnidad.ActualizarUnidad(
-                this.IdUnidad, // El ID de la unidad
-                int.Parse(cbox_Direccion.SelectedValue.ToString()), // Dirección desde ComboBox
-                txt_Descripcion.Text, // Descripción
-                cbox_Ubicacion.SelectedValue.ToString(), // Ubicación desde ComboBox
-                txt_Telefono.Text, // Teléfono
-                txt_Email.Text // Email
-            );
-
-            // Verificar si la actualización fue exitosa
-            if (exito)
-            {
-                MessageBox.Show("Unidad actualizada correctamente.");
-                string Usuario = LoginUser.Usuario;
-                logs.InsertarLog("Unidad", "Uni Update", Usuario, "Se a Actualizado una Unidad");
-
-                cbox_Direccion.Text = "Seleccione";
-                txt_Descripcion.Text = "";
-                cbox_Ubicacion.Text = "";
-                txt_Telefono.Text = "";
-                txt_Email.Text = "";
-
-                Form_VerUnidad verUnidad = new Form_VerUnidad();
-                verUnidad.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Error al actualizar la unidad.");
-            }
-        }
-
         private void Form_UPD_Unidad_Load(object sender, EventArgs e)
         {
             clsDatos_cboxAgrUnidad Datos_Direccion = new clsDatos_cboxAgrUnidad();
@@ -87,13 +47,6 @@ namespace Proyecto
             {
                 cbox_Ubicacion.SelectedIndex = 0;
             }
-        }
-
-        private void btn_salir_Click(object sender, EventArgs e)
-        {
-            Form_VerUnidad verUnidad = new Form_VerUnidad();
-            verUnidad.Show();
-            this.Close();
         }
 
         private void txt_Telefono_TextChanged(object sender, EventArgs e)
@@ -138,6 +91,53 @@ namespace Proyecto
                 txt_Email.Clear();
                 e.Cancel = true;
             }
+        }
+
+        private void diseñoIconButton1_Click(object sender, EventArgs e)
+        {
+            // Crear una instancia de la clase cls_UPD_Unidad
+            cls_UPD_Unidad actualizarUnidad = new cls_UPD_Unidad();
+            clsAgregar_LogsApp logs = new clsAgregar_LogsApp();
+
+
+            // Llamar al método para actualizar los datos
+            bool exito = actualizarUnidad.ActualizarUnidad(
+                this.IdUnidad, // El ID de la unidad
+                int.Parse(cbox_Direccion.SelectedValue.ToString()), // Dirección desde ComboBox
+                txt_Descripcion.Text, // Descripción
+                cbox_Ubicacion.SelectedValue.ToString(), // Ubicación desde ComboBox
+                txt_Telefono.Text, // Teléfono
+                txt_Email.Text // Email
+            );
+
+            // Verificar si la actualización fue exitosa
+            if (exito)
+            {
+                MessageBox.Show("Unidad actualizada correctamente.");
+                string Usuario = LoginUser.Usuario;
+                logs.InsertarLog("Unidad", "Uni Update", Usuario, "Se a Actualizado una Unidad");
+
+                cbox_Direccion.Text = "Seleccione";
+                txt_Descripcion.Text = "";
+                cbox_Ubicacion.Text = "";
+                txt_Telefono.Text = "";
+                txt_Email.Text = "";
+
+                Form_VerUnidad verUnidad = new Form_VerUnidad();
+                verUnidad.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Error al actualizar la unidad.");
+            }
+        }
+
+        private void diseñoButton1_Click(object sender, EventArgs e)
+        {
+            Form_VerUnidad verUnidad = new Form_VerUnidad();
+            verUnidad.Show();
+            this.Close();
         }
     }
 }

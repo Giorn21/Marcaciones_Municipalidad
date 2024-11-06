@@ -26,13 +26,6 @@ namespace Proyecto
             CargarDatos();
         }
 
-        private void btn_Volver_Click_1(object sender, EventArgs e)
-        {
-            Form_Menú menu = new Form_Menú();
-            menu.Show();
-            this.Close();
-        }
-
         private void CargarDatos()
         {
             dtv_TipoMarcas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -61,6 +54,13 @@ namespace Proyecto
             {
                 MessageBox.Show("Error al cargar los datos: " + ex.Message);
             }
+        }
+
+        private void diseñoButton1_Click(object sender, EventArgs e)
+        {
+            Form_Menú menu = new Form_Menú();
+            menu.Show();
+            this.Close();
         }
     }
 }

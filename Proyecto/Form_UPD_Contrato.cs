@@ -26,18 +26,18 @@ namespace Proyecto
             txt_Descripcion.Text = descripcion;
         }
 
-        private void btn_Salir_Click(object sender, EventArgs e)
+        private void diseñoButton1_Click(object sender, EventArgs e)
         {
             Form_VerContrato contrato = new Form_VerContrato();
             contrato.Show();
             this.Close();
         }
 
-        private void btn_Acualizar_Click(object sender, EventArgs e)
+        private void diseñoIconButton1_Click(object sender, EventArgs e)
         {
             clsAgregar_LogsApp logs = new clsAgregar_LogsApp();
 
-            if (txt_Descripcion.Text == "") 
+            if (txt_Descripcion.Text == "")
             {
                 MessageBox.Show("Ingrese un Contrato para Actualizar los datos");
                 return;
@@ -54,7 +54,7 @@ namespace Proyecto
                 logs.InsertarLog("Contrato", "Con Update", Usuario, "Se a Actualizado un Contrato");
                 Form_VerContrato verContrato = new Form_VerContrato();
                 verContrato.Show();
-                this.Close(); 
+                this.Close();
             }
             else
             {

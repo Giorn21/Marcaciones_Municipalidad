@@ -63,13 +63,6 @@ namespace Proyecto
             }
         }
 
-        private void btn_Salir_Click(object sender, EventArgs e)
-        {
-            Form_VerHorario verHorario = new Form_VerHorario();
-            verHorario.Show();
-            this.Close();
-        }
-
         private void check_L_Asis_CheckedChanged(object sender, EventArgs e)
         {
             ActivarControlesDia(check_L_Asis.Checked, dtp_L_EnMañana, dtp_L_SaMañana, dtp_L_EnTarde, dtp_L_SaTarde, numUP_L_ToleEn, numUP_L_ToleSa);
@@ -113,7 +106,7 @@ namespace Proyecto
             }
         }
 
-        private void btn_Agregar_Click(object sender, EventArgs e)
+        private void diseñoIconButton1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -126,7 +119,7 @@ namespace Proyecto
                     L_SalidaMañana = !check_L_Asis.Checked ? TimeSpan.MinValue : dtp_L_SaMañana.Value.TimeOfDay,
                     L_EntradaTarde = !check_L_Asis.Checked ? TimeSpan.MinValue : dtp_L_EnTarde.Value.TimeOfDay,
                     L_SalidaTarde = !check_L_Asis.Checked ? TimeSpan.MinValue : dtp_L_SaTarde.Value.TimeOfDay,
-                    L_ToleranciaEntrada = !check_L_Asis.Checked ? 0 :  (int)numUP_L_ToleEn.Value,
+                    L_ToleranciaEntrada = !check_L_Asis.Checked ? 0 : (int)numUP_L_ToleEn.Value,
                     L_ToleranciaSalida = !check_L_Asis.Checked ? 0 : (int)numUP_L_ToleSa.Value,
 
                     // Martes
@@ -154,7 +147,7 @@ namespace Proyecto
                     J_EntradaTarde = !check_J_Asis.Checked ? TimeSpan.MinValue : dtp_J_EnTarde.Value.TimeOfDay,
                     J_SalidaTarde = !check_J_Asis.Checked ? TimeSpan.MinValue : dtp_J_SaTarde.Value.TimeOfDay,
                     J_ToleranciaEntrada = !check_J_Asis.Checked ? 0 : (int)numUP_J_ToleEn.Value,
-                    J_ToleranciaSalida = !check_J_Asis.Checked ?0 : (int)numUP_J_ToleSa.Value,
+                    J_ToleranciaSalida = !check_J_Asis.Checked ? 0 : (int)numUP_J_ToleSa.Value,
 
                     // Viernes
                     Viernes = check_V_Asis.Checked,
@@ -218,11 +211,17 @@ namespace Proyecto
                 logs.InsertarLog("Horario MOD", "Err_Agr", Usuario, ex.Message);
             }
         }
-        
 
-        private void btn_Limpiar_Click(object sender, EventArgs e)
+        private void diseñoButton2_Click(object sender, EventArgs e)
         {
             limpiarform();
+        }
+
+        private void diseñoButton1_Click(object sender, EventArgs e)
+        {
+            Form_VerHorario verHorario = new Form_VerHorario();
+            verHorario.Show();
+            this.Close();
         }
     }
 }

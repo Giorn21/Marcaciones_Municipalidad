@@ -79,13 +79,6 @@ namespace Proyecto
             CargarDatosMarcacionesManuales();
         }
 
-        private void btn_Volver_Click(object sender, EventArgs e)
-        {
-            Form_Menú menu = new Form_Menú();
-            menu.Show();
-            this.Close();
-        }
-
         private void txt_Buscador_Enter(object sender, EventArgs e)
         {
             if (txt_Buscador.Text == placeholderText)
@@ -121,6 +114,13 @@ namespace Proyecto
             {
                 CargarDatosMarcacionesManuales(); 
             }
+        }
+
+        private void diseñoButton1_Click(object sender, EventArgs e)
+        {
+            Form_Menú menu = new Form_Menú();
+            menu.Show();
+            this.Close();
         }
     }
 }

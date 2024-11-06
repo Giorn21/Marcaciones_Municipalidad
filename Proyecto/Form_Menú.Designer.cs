@@ -64,6 +64,7 @@
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.biometriaToolStripMenuItem,
             this.marcasToolStripMenuItem,
@@ -111,9 +112,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(164, 65);
+            this.pictureBox1.Location = new System.Drawing.Point(160, 66);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 250);
+            this.pictureBox1.Size = new System.Drawing.Size(265, 250);
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
@@ -339,7 +340,7 @@
             this.diseñoIconButton1.UseVisualStyleBackColor = true;
             this.diseñoIconButton1.Click += new System.EventHandler(this.diseñoIconButton1_Click);
             // 
-            // Form_Menu
+            // Form_Menú
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -355,7 +356,7 @@
             this.Controls.Add(this.diseñoIconButton2);
             this.Controls.Add(this.diseñoIconButton1);
             this.Controls.Add(this.lbl_TituloMenu);
-            this.Name = "Form_Menu";
+            this.Name = "Form_Menú";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.contextMenuStrip1.ResumeLayout(false);

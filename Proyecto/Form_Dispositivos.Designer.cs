@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Volver = new System.Windows.Forms.Button();
             this.dtv_Dispositivos = new System.Windows.Forms.DataGridView();
             this.col_IdDispositivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,24 +39,15 @@
             this.col_LastActivityLog = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_LastActivityOP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbl_Titulo = new System.Windows.Forms.Label();
+            this.diseñoButton1 = new Proyecto.Resources.DiseñoButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtv_Dispositivos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_Volver
-            // 
-            this.btn_Volver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Volver.Location = new System.Drawing.Point(12, 402);
-            this.btn_Volver.Name = "btn_Volver";
-            this.btn_Volver.Size = new System.Drawing.Size(108, 26);
-            this.btn_Volver.TabIndex = 8;
-            this.btn_Volver.Text = "Volver al menu";
-            this.btn_Volver.UseVisualStyleBackColor = true;
-            this.btn_Volver.Click += new System.EventHandler(this.btn_Volver_Click);
             // 
             // dtv_Dispositivos
             // 
             this.dtv_Dispositivos.AllowUserToAddRows = false;
             this.dtv_Dispositivos.AllowUserToDeleteRows = false;
+            this.dtv_Dispositivos.BackgroundColor = System.Drawing.Color.CornflowerBlue;
             this.dtv_Dispositivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtv_Dispositivos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_IdDispositivo,
@@ -69,6 +59,7 @@
             this.col_UploadFlag,
             this.col_LastActivityLog,
             this.col_LastActivityOP});
+            this.dtv_Dispositivos.GridColor = System.Drawing.Color.Black;
             this.dtv_Dispositivos.Location = new System.Drawing.Point(12, 69);
             this.dtv_Dispositivos.Name = "dtv_Dispositivos";
             this.dtv_Dispositivos.ReadOnly = true;
@@ -133,20 +124,43 @@
             // 
             this.lbl_Titulo.AutoSize = true;
             this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Titulo.Location = new System.Drawing.Point(302, 9);
+            this.lbl_Titulo.ForeColor = System.Drawing.Color.White;
+            this.lbl_Titulo.Location = new System.Drawing.Point(492, 9);
             this.lbl_Titulo.Name = "lbl_Titulo";
-            this.lbl_Titulo.Size = new System.Drawing.Size(218, 42);
+            this.lbl_Titulo.Size = new System.Drawing.Size(357, 42);
             this.lbl_Titulo.TabIndex = 10;
-            this.lbl_Titulo.Text = "Dispositivos";
+            this.lbl_Titulo.Text = "Ver Los Dispositivos";
+            // 
+            // diseñoButton1
+            // 
+            this.diseñoButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.diseñoButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.diseñoButton1.BorderColor = System.Drawing.Color.Gray;
+            this.diseñoButton1.BorderRadius = 40;
+            this.diseñoButton1.BorderSize = 0;
+            this.diseñoButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.diseñoButton1.FlatAppearance.BorderSize = 0;
+            this.diseñoButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.diseñoButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diseñoButton1.ForeColor = System.Drawing.Color.White;
+            this.diseñoButton1.Location = new System.Drawing.Point(12, 12);
+            this.diseñoButton1.Name = "diseñoButton1";
+            this.diseñoButton1.Size = new System.Drawing.Size(114, 39);
+            this.diseñoButton1.TabIndex = 15;
+            this.diseñoButton1.Text = "Volver al MENÚ";
+            this.diseñoButton1.TextColor = System.Drawing.Color.White;
+            this.diseñoButton1.UseVisualStyleBackColor = true;
+            this.diseñoButton1.Click += new System.EventHandler(this.diseñoButton1_Click);
             // 
             // Form_Dispositivos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(893, 440);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.ClientSize = new System.Drawing.Size(893, 392);
+            this.Controls.Add(this.diseñoButton1);
             this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.dtv_Dispositivos);
-            this.Controls.Add(this.btn_Volver);
             this.Name = "Form_Dispositivos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dispositivos";
@@ -158,8 +172,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_Volver;
         private System.Windows.Forms.DataGridView dtv_Dispositivos;
         private System.Windows.Forms.Label lbl_Titulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_IdDispositivo;
@@ -171,5 +183,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_UploadFlag;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_LastActivityLog;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_LastActivityOP;
+        private Resources.DiseñoButton diseñoButton1;
     }
 }

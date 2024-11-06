@@ -19,13 +19,6 @@ namespace Proyecto
             InitializeComponent();
         }
 
-        private void btn_salir_Click(object sender, EventArgs e)
-        {
-            Form_VerUnidad verUnidad = new Form_VerUnidad();
-            verUnidad.Show();
-            this.Close();
-        }
-
         private void Form_Agregar_Unidades_Load(object sender, EventArgs e)
         {
             clsDatos_cboxAgrUnidad Datos_Direccion = new clsDatos_cboxAgrUnidad();
@@ -44,48 +37,6 @@ namespace Proyecto
 
             cbox_Direccion.Text = "Seleccione";
             cbox_Ubicacion.Text = "";
-        }
-
-        private void btn_Agregar_Click(object sender, EventArgs e)
-        {
-            if (cbox_Direccion.Text == "" || cbox_Direccion.Text == "Seleccione" || txt_Descripcion.Text == "")
-            {
-                MessageBox.Show("!ALERTA¡ : Rellene las casillas Direccion y Descripcion");
-                return;
-            }
-            else 
-            {
-                clsAgregar_Unidad agregarUnidad = new clsAgregar_Unidad();
-
-                string Direccion = cbox_Direccion.SelectedValue.ToString();
-                string descripcion = txt_Descripcion.Text;
-                string ubicacion = cbox_Ubicacion.Text;
-                if (cbox_Ubicacion.Text == "")
-                {
-                    ubicacion = null;
-                }
-
-                string telefono = txt_Telefono.Text;
-                if (txt_Telefono.Text == "")
-                {
-                    telefono = null;
-                }
-
-                string email = txt_Email.Text;
-                if (txt_Email.Text=="") 
-                {
-                    email = null;
-                }
-
-                agregarUnidad.AgregarUnidad(Direccion, descripcion, ubicacion, telefono, email);
-
-                cbox_Direccion.Text = "Seleccione";
-                txt_Descripcion.Text = "";
-                cbox_Ubicacion.Text = "";
-                txt_Telefono.Text = "";
-                txt_Email.Text = "";
-            }
-            
         }
 
         private void cbox_Direccion_KeyPress(object sender, KeyPressEventArgs e)
@@ -143,6 +94,54 @@ namespace Proyecto
                 MessageBox.Show("Debe ingresar un correo válido con '@'");
                 txt_Email.Clear();
                 e.Cancel = true;
+            }
+        }
+
+        private void diseñoButton2_Click(object sender, EventArgs e)
+        {
+            Form_VerUnidad verUnidad = new Form_VerUnidad();
+            verUnidad.Show();
+            this.Close();
+        }
+
+        private void diseñoIconButton1_Click(object sender, EventArgs e)
+        {
+            if (cbox_Direccion.Text == "" || cbox_Direccion.Text == "Seleccione" || txt_Descripcion.Text == "")
+            {
+                MessageBox.Show("!ALERTA¡ : Rellene las casillas Direccion y Descripcion");
+                return;
+            }
+            else
+            {
+                clsAgregar_Unidad agregarUnidad = new clsAgregar_Unidad();
+
+                string Direccion = cbox_Direccion.SelectedValue.ToString();
+                string descripcion = txt_Descripcion.Text;
+                string ubicacion = cbox_Ubicacion.Text;
+                if (cbox_Ubicacion.Text == "")
+                {
+                    ubicacion = null;
+                }
+
+                string telefono = txt_Telefono.Text;
+                if (txt_Telefono.Text == "")
+                {
+                    telefono = null;
+                }
+
+                string email = txt_Email.Text;
+                if (txt_Email.Text == "")
+                {
+                    email = null;
+                }
+
+                agregarUnidad.AgregarUnidad(Direccion, descripcion, ubicacion, telefono, email);
+
+                cbox_Direccion.Text = "Seleccione";
+                txt_Descripcion.Text = "";
+                cbox_Ubicacion.Text = "";
+                txt_Telefono.Text = "";
+                txt_Email.Text = "";
             }
         }
     }

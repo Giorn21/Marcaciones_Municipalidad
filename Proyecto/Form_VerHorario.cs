@@ -29,7 +29,7 @@ namespace Proyecto
 
         private void Form_VerHorario_Load_1(object sender, EventArgs e)
         {
-            btn_Actualizar.Enabled = false;
+            diseñoIconButton1.Enabled = false;
 
             // Se configura el evento RowValidated del DataGridView
             dtv_Horarios.RowValidated += new DataGridViewCellEventHandler(dtv_Horarios_RowValidated);
@@ -93,94 +93,8 @@ namespace Proyecto
 
         private void dtv_Horarios_RowValidated(object sender, DataGridViewCellEventArgs e)
         {
-            
-            btn_Actualizar.Enabled = true;
-        }
 
-        private void btn_Salir_Click(object sender, EventArgs e)
-        {
-            Form_Menú menu = new Form_Menú();
-            menu.Show();
-            this.Close();
-        }
-
-        private void btn_Actualizar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                // Lunes
-                string lunesEntradaManana = dtv_Horarios.Rows[0].Cells[1].Value.ToString();
-                string lunesSalidaManana = dtv_Horarios.Rows[0].Cells[2].Value.ToString();
-                string lunesEntradaTarde = dtv_Horarios.Rows[0].Cells[3].Value.ToString();
-                string lunesSalidaTarde = dtv_Horarios.Rows[0].Cells[4].Value.ToString();
-                int lunesToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[0].Cells[5].Value.ToString());
-
-                // Martes
-                string martesEntradaManana = dtv_Horarios.Rows[1].Cells[1].Value.ToString();
-                string martesSalidaManana = dtv_Horarios.Rows[1].Cells[2].Value.ToString();
-                string martesEntradaTarde = dtv_Horarios.Rows[1].Cells[3].Value.ToString();
-                string martesSalidaTarde = dtv_Horarios.Rows[1].Cells[4].Value.ToString();
-                int martesToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[1].Cells[5].Value.ToString());
-
-                // Miércoles
-                string miercolesEntradaManana = dtv_Horarios.Rows[2].Cells[1].Value.ToString();
-                string miercolesSalidaManana = dtv_Horarios.Rows[2].Cells[2].Value.ToString();
-                string miercolesEntradaTarde = dtv_Horarios.Rows[2].Cells[3].Value.ToString();
-                string miercolesSalidaTarde = dtv_Horarios.Rows[2].Cells[4].Value.ToString();
-                int miercolesToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[2].Cells[5].Value.ToString());
-
-                // Jueves
-                string juevesEntradaManana = dtv_Horarios.Rows[3].Cells[1].Value.ToString();
-                string juevesSalidaManana = dtv_Horarios.Rows[3].Cells[2].Value.ToString();
-                string juevesEntradaTarde = dtv_Horarios.Rows[3].Cells[3].Value.ToString();
-                string juevesSalidaTarde = dtv_Horarios.Rows[3].Cells[4].Value.ToString();
-                int juevesToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[3].Cells[5].Value.ToString());
-
-                // Viernes
-                string viernesEntradaManana = dtv_Horarios.Rows[4].Cells[1].Value.ToString();
-                string viernesSalidaManana = dtv_Horarios.Rows[4].Cells[2].Value.ToString();
-                string viernesEntradaTarde = dtv_Horarios.Rows[4].Cells[3].Value.ToString();
-                string viernesSalidaTarde = dtv_Horarios.Rows[4].Cells[4].Value.ToString();
-                int viernesToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[4].Cells[5].Value.ToString());
-
-                // Sábado
-                string sabadoEntradaManana = dtv_Horarios.Rows[5].Cells[1].Value.ToString();
-                string sabadoSalidaManana = dtv_Horarios.Rows[5].Cells[2].Value.ToString();
-                string sabadoEntradaTarde = dtv_Horarios.Rows[5].Cells[3].Value.ToString();
-                string sabadoSalidaTarde = dtv_Horarios.Rows[5].Cells[4].Value.ToString();
-                int sabadoToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[5].Cells[5].Value.ToString());
-
-                // Domingo
-                string domingoEntradaManana = dtv_Horarios.Rows[6].Cells[1].Value.ToString();
-                string domingoSalidaManana = dtv_Horarios.Rows[6].Cells[2].Value.ToString();
-                string domingoEntradaTarde = dtv_Horarios.Rows[6].Cells[3].Value.ToString();
-                string domingoSalidaTarde = dtv_Horarios.Rows[6].Cells[4].Value.ToString();
-                int domingoToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[6].Cells[5].Value.ToString());
-
-                // Llamar al método que actualiza la base de datos
-                ActualizarHorario(int.Parse(cbox_Horarios.SelectedValue.ToString()), lunesEntradaManana, lunesSalidaManana, lunesEntradaTarde, lunesSalidaTarde, lunesToleranciaEntrada,
-                    martesEntradaManana, martesSalidaManana, martesEntradaTarde, martesSalidaTarde, martesToleranciaEntrada,
-                    miercolesEntradaManana, miercolesSalidaManana, miercolesEntradaTarde, miercolesSalidaTarde, miercolesToleranciaEntrada,
-                    juevesEntradaManana, juevesSalidaManana, juevesEntradaTarde, juevesSalidaTarde, juevesToleranciaEntrada,
-                    viernesEntradaManana, viernesSalidaManana, viernesEntradaTarde, viernesSalidaTarde, viernesToleranciaEntrada,
-                    sabadoEntradaManana, sabadoSalidaManana, sabadoEntradaTarde, sabadoSalidaTarde, sabadoToleranciaEntrada,
-                    domingoEntradaManana, domingoSalidaManana, domingoEntradaTarde, domingoSalidaTarde, domingoToleranciaEntrada);
-
-                string Usuario = LoginUser.Usuario;
-                logs.InsertarLog("Horarios MOD", "Horario Update", Usuario, "Se a actualizado el Horario " + int.Parse(cbox_Horarios.SelectedValue.ToString()));
-
-                MessageBox.Show("Horario Actualizado correctamente");
-                // Deshabilitar el botón después de actualizar
-                btn_Actualizar.Enabled = false;
-                ActualizarDataGridView(int.Parse(cbox_Horarios.SelectedValue.ToString()));
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al actualizar el Horario: " + ex.Message);
-                string Usuario = LoginUser.Usuario;
-                logs.InsertarLog("Horario MOD", "Err_Update", Usuario, ex.Message);
-            }  
+            diseñoIconButton1.Enabled = true;
         }
 
         private void ActualizarHorario( int horario,
@@ -271,9 +185,7 @@ namespace Proyecto
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-            Form_Agregar_Horario AgrHorario = new Form_Agregar_Horario();
-            AgrHorario.Show();
-            this.Close();
+            
         }
 
         private void dtv_Horarios_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -407,6 +319,99 @@ namespace Proyecto
                     txt.KeyPress += dtv_Horarios_KeyPress;
                 }
             }
+        }
+
+        private void diseñoIconButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Lunes
+                string lunesEntradaManana = dtv_Horarios.Rows[0].Cells[1].Value.ToString();
+                string lunesSalidaManana = dtv_Horarios.Rows[0].Cells[2].Value.ToString();
+                string lunesEntradaTarde = dtv_Horarios.Rows[0].Cells[3].Value.ToString();
+                string lunesSalidaTarde = dtv_Horarios.Rows[0].Cells[4].Value.ToString();
+                int lunesToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[0].Cells[5].Value.ToString());
+
+                // Martes
+                string martesEntradaManana = dtv_Horarios.Rows[1].Cells[1].Value.ToString();
+                string martesSalidaManana = dtv_Horarios.Rows[1].Cells[2].Value.ToString();
+                string martesEntradaTarde = dtv_Horarios.Rows[1].Cells[3].Value.ToString();
+                string martesSalidaTarde = dtv_Horarios.Rows[1].Cells[4].Value.ToString();
+                int martesToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[1].Cells[5].Value.ToString());
+
+                // Miércoles
+                string miercolesEntradaManana = dtv_Horarios.Rows[2].Cells[1].Value.ToString();
+                string miercolesSalidaManana = dtv_Horarios.Rows[2].Cells[2].Value.ToString();
+                string miercolesEntradaTarde = dtv_Horarios.Rows[2].Cells[3].Value.ToString();
+                string miercolesSalidaTarde = dtv_Horarios.Rows[2].Cells[4].Value.ToString();
+                int miercolesToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[2].Cells[5].Value.ToString());
+
+                // Jueves
+                string juevesEntradaManana = dtv_Horarios.Rows[3].Cells[1].Value.ToString();
+                string juevesSalidaManana = dtv_Horarios.Rows[3].Cells[2].Value.ToString();
+                string juevesEntradaTarde = dtv_Horarios.Rows[3].Cells[3].Value.ToString();
+                string juevesSalidaTarde = dtv_Horarios.Rows[3].Cells[4].Value.ToString();
+                int juevesToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[3].Cells[5].Value.ToString());
+
+                // Viernes
+                string viernesEntradaManana = dtv_Horarios.Rows[4].Cells[1].Value.ToString();
+                string viernesSalidaManana = dtv_Horarios.Rows[4].Cells[2].Value.ToString();
+                string viernesEntradaTarde = dtv_Horarios.Rows[4].Cells[3].Value.ToString();
+                string viernesSalidaTarde = dtv_Horarios.Rows[4].Cells[4].Value.ToString();
+                int viernesToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[4].Cells[5].Value.ToString());
+
+                // Sábado
+                string sabadoEntradaManana = dtv_Horarios.Rows[5].Cells[1].Value.ToString();
+                string sabadoSalidaManana = dtv_Horarios.Rows[5].Cells[2].Value.ToString();
+                string sabadoEntradaTarde = dtv_Horarios.Rows[5].Cells[3].Value.ToString();
+                string sabadoSalidaTarde = dtv_Horarios.Rows[5].Cells[4].Value.ToString();
+                int sabadoToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[5].Cells[5].Value.ToString());
+
+                // Domingo
+                string domingoEntradaManana = dtv_Horarios.Rows[6].Cells[1].Value.ToString();
+                string domingoSalidaManana = dtv_Horarios.Rows[6].Cells[2].Value.ToString();
+                string domingoEntradaTarde = dtv_Horarios.Rows[6].Cells[3].Value.ToString();
+                string domingoSalidaTarde = dtv_Horarios.Rows[6].Cells[4].Value.ToString();
+                int domingoToleranciaEntrada = Convert.ToInt32(dtv_Horarios.Rows[6].Cells[5].Value.ToString());
+
+                // Llamar al método que actualiza la base de datos
+                ActualizarHorario(int.Parse(cbox_Horarios.SelectedValue.ToString()), lunesEntradaManana, lunesSalidaManana, lunesEntradaTarde, lunesSalidaTarde, lunesToleranciaEntrada,
+                    martesEntradaManana, martesSalidaManana, martesEntradaTarde, martesSalidaTarde, martesToleranciaEntrada,
+                    miercolesEntradaManana, miercolesSalidaManana, miercolesEntradaTarde, miercolesSalidaTarde, miercolesToleranciaEntrada,
+                    juevesEntradaManana, juevesSalidaManana, juevesEntradaTarde, juevesSalidaTarde, juevesToleranciaEntrada,
+                    viernesEntradaManana, viernesSalidaManana, viernesEntradaTarde, viernesSalidaTarde, viernesToleranciaEntrada,
+                    sabadoEntradaManana, sabadoSalidaManana, sabadoEntradaTarde, sabadoSalidaTarde, sabadoToleranciaEntrada,
+                    domingoEntradaManana, domingoSalidaManana, domingoEntradaTarde, domingoSalidaTarde, domingoToleranciaEntrada);
+
+                string Usuario = LoginUser.Usuario;
+                logs.InsertarLog("Horarios MOD", "Horario Update", Usuario, "Se a actualizado el Horario " + int.Parse(cbox_Horarios.SelectedValue.ToString()));
+
+                MessageBox.Show("Horario Actualizado correctamente");
+                // Deshabilitar el botón después de actualizar
+                diseñoIconButton1.Enabled = false;
+                ActualizarDataGridView(int.Parse(cbox_Horarios.SelectedValue.ToString()));
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar el Horario: " + ex.Message);
+                string Usuario = LoginUser.Usuario;
+                logs.InsertarLog("Horario MOD", "Err_Update", Usuario, ex.Message);
+            }
+        }
+
+        private void diseñoButton1_Click(object sender, EventArgs e)
+        {
+            Form_Menú menu = new Form_Menú();
+            menu.Show();
+            this.Close();
+        }
+
+        private void diseñoIconButton2_Click(object sender, EventArgs e)
+        {
+            Form_Agregar_Horario AgrHorario = new Form_Agregar_Horario();
+            AgrHorario.Show();
+            this.Close();
         }
     }
 }

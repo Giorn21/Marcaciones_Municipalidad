@@ -60,16 +60,11 @@ namespace Proyecto
             }
         }
 
-        private void btn_Volver_Click(object sender, EventArgs e)
+        private void diseñoButton1_Click(object sender, EventArgs e)
         {
             Form_Menú menu = new Form_Menú();
             menu.Show();
             this.Close();
-        }
-
-        private void dtv_Disp_Funcionarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

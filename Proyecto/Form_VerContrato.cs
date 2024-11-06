@@ -20,13 +20,6 @@ namespace Proyecto
             InitializeComponent();
         }
 
-        private void btn_Volver_Click(object sender, EventArgs e)
-        {
-            Form_Menú menu = new Form_Menú();
-            menu.Show();
-            this.Close();
-        }
-
         private void Form_VerContrato_Load(object sender, EventArgs e)
         {
             CargarDatos();
@@ -80,7 +73,14 @@ namespace Proyecto
             }
         }
 
-        private void btn_Agregar_Click(object sender, EventArgs e)
+        private void diseñoButton1_Click(object sender, EventArgs e)
+        {
+            Form_Menú menu = new Form_Menú();
+            menu.Show();
+            this.Close();
+        }
+
+        private void diseñoIconButton1_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show(
                     "¿Estás seguro de que deseas Agregar un nuevo contrato?",

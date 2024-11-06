@@ -26,14 +26,33 @@ namespace Proyecto
 
         }
 
-        private void btn_Cancelar_Click(object sender, EventArgs e)
+        private void MostrarResultados(List<Logs> logs)
         {
-            Form_Menú menu = new Form_Menú();
-            menu.Show();
+            Form_App_Logs formLogs = new Form_App_Logs(logs);
+            formLogs.Show();
             this.Close();
         }
 
-        private void btn_Aceptar_Click(object sender, EventArgs e)
+        private clsDatos_cboxBuscadorLogs cargadorDatos = new clsDatos_cboxBuscadorLogs();
+
+        private void Form_buscador_Logs_Load(object sender, EventArgs e)
+        {
+            DTP_Desde.Value = DateTime.Now.Date; 
+            DTP_Hasta.Value = DateTime.Now; 
+
+            try
+            {
+                // Cargar datos en los ComboBox
+                cbox_Proceso.DataSource = cargadorDatos.CargarProcesos();
+                cbox_Usuario.DataSource = cargadorDatos.CargarUsuarios();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar datos en ComboBox: " + ex.Message);
+            }
+        }
+
+        private void diseñoButton1_Click(object sender, EventArgs e)
         {
             DateTime desde = DTP_Desde.Value;
             DateTime hasta = DTP_Hasta.Value;
@@ -62,7 +81,14 @@ namespace Proyecto
             this.Close();
         }
 
-        private void btn_FullDate_Click(object sender, EventArgs e)
+        private void diseñoButton2_Click(object sender, EventArgs e)
+        {
+            Form_Menú menu = new Form_Menú();
+            menu.Show();
+            this.Close();
+        }
+
+        private void diseñoButton3_Click(object sender, EventArgs e)
         {
             DateTime desde = new DateTime(2023, 1, 1);
             DateTime hasta = DateTime.Now;
@@ -73,32 +99,6 @@ namespace Proyecto
             Form_App_Logs formLogs = new Form_App_Logs(logs);
             formLogs.Show();
             this.Close();
-        }
-
-        private void MostrarResultados(List<Logs> logs)
-        {
-            Form_App_Logs formLogs = new Form_App_Logs(logs);
-            formLogs.Show();
-            this.Close();
-        }
-
-        private clsDatos_cboxBuscadorLogs cargadorDatos = new clsDatos_cboxBuscadorLogs();
-
-        private void Form_buscador_Logs_Load(object sender, EventArgs e)
-        {
-            DTP_Desde.Value = DateTime.Now.Date; 
-            DTP_Hasta.Value = DateTime.Now; 
-
-            try
-            {
-                // Cargar datos en los ComboBox
-                cbox_Proceso.DataSource = cargadorDatos.CargarProcesos();
-                cbox_Usuario.DataSource = cargadorDatos.CargarUsuarios();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar datos en ComboBox: " + ex.Message);
-            }
         }
     }
 }

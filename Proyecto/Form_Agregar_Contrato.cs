@@ -27,14 +27,7 @@ namespace Proyecto
             }
         }
 
-        private void btn_Salir_Click(object sender, EventArgs e)
-        {
-            Form_VerContrato verContrato = new Form_VerContrato();
-            verContrato.Show();
-            this.Close();
-        }
-
-        private void btn_Agregar_Click(object sender, EventArgs e)
+        private void diseñoIconButton1_Click(object sender, EventArgs e)
         {
             clsAgregar_LogsApp logs = new clsAgregar_LogsApp();
             try
@@ -60,6 +53,13 @@ namespace Proyecto
                 MessageBox.Show("Error: " + ex.Message);
                 return;
             }
+        }
+
+        private void diseñoButton2_Click(object sender, EventArgs e)
+        {
+            Form_VerContrato verContrato = new Form_VerContrato();
+            verContrato.Show();
+            this.Close();
         }
     }
 }

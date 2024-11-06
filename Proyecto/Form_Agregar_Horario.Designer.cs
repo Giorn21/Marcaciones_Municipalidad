@@ -71,8 +71,6 @@
             this.dtp_D_EnTarde = new System.Windows.Forms.DateTimePicker();
             this.dtp_D_SaMañana = new System.Windows.Forms.DateTimePicker();
             this.dtp_D_EnMañana = new System.Windows.Forms.DateTimePicker();
-            this.btn_Salir = new System.Windows.Forms.Button();
-            this.btn_Agregar = new System.Windows.Forms.Button();
             this.numUP_D_ToleSa = new System.Windows.Forms.NumericUpDown();
             this.numUP_S_ToleSa = new System.Windows.Forms.NumericUpDown();
             this.numUP_V_ToleSa = new System.Windows.Forms.NumericUpDown();
@@ -94,7 +92,9 @@
             this.lbl_SalidaTarde = new System.Windows.Forms.Label();
             this.lbl_ToleEntrada = new System.Windows.Forms.Label();
             this.lbl_ToleSalida = new System.Windows.Forms.Label();
-            this.btn_Limpiar = new System.Windows.Forms.Button();
+            this.diseñoIconButton1 = new Proyecto.Resources.DiseñoIconButton();
+            this.diseñoButton2 = new Proyecto.Resources.DiseñoButton();
+            this.diseñoButton1 = new Proyecto.Resources.DiseñoButton();
             ((System.ComponentModel.ISupportInitialize)(this.numUP_L_ToleEn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUP_M_ToleEn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUP_X_ToleEn)).BeginInit();
@@ -115,6 +115,7 @@
             // 
             this.lbl_Titulo.AutoSize = true;
             this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.ForeColor = System.Drawing.Color.White;
             this.lbl_Titulo.Location = new System.Drawing.Point(267, 9);
             this.lbl_Titulo.Name = "lbl_Titulo";
             this.lbl_Titulo.Size = new System.Drawing.Size(309, 33);
@@ -135,6 +136,7 @@
             // 
             this.lbl_Lunes.AutoSize = true;
             this.lbl_Lunes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Lunes.ForeColor = System.Drawing.Color.White;
             this.lbl_Lunes.Location = new System.Drawing.Point(29, 125);
             this.lbl_Lunes.Name = "lbl_Lunes";
             this.lbl_Lunes.Size = new System.Drawing.Size(53, 20);
@@ -145,6 +147,7 @@
             // 
             this.lbl_Martes.AutoSize = true;
             this.lbl_Martes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Martes.ForeColor = System.Drawing.Color.White;
             this.lbl_Martes.Location = new System.Drawing.Point(24, 171);
             this.lbl_Martes.Name = "lbl_Martes";
             this.lbl_Martes.Size = new System.Drawing.Size(58, 20);
@@ -155,6 +158,7 @@
             // 
             this.lbl_Miercoles.AutoSize = true;
             this.lbl_Miercoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Miercoles.ForeColor = System.Drawing.Color.White;
             this.lbl_Miercoles.Location = new System.Drawing.Point(6, 213);
             this.lbl_Miercoles.Name = "lbl_Miercoles";
             this.lbl_Miercoles.Size = new System.Drawing.Size(76, 20);
@@ -165,6 +169,7 @@
             // 
             this.lbl_Jueves.AutoSize = true;
             this.lbl_Jueves.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Jueves.ForeColor = System.Drawing.Color.White;
             this.lbl_Jueves.Location = new System.Drawing.Point(23, 258);
             this.lbl_Jueves.Name = "lbl_Jueves";
             this.lbl_Jueves.Size = new System.Drawing.Size(59, 20);
@@ -175,6 +180,7 @@
             // 
             this.lbl_Viernes.AutoSize = true;
             this.lbl_Viernes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Viernes.ForeColor = System.Drawing.Color.White;
             this.lbl_Viernes.Location = new System.Drawing.Point(19, 303);
             this.lbl_Viernes.Name = "lbl_Viernes";
             this.lbl_Viernes.Size = new System.Drawing.Size(63, 20);
@@ -185,6 +191,7 @@
             // 
             this.lbl_Sabado.AutoSize = true;
             this.lbl_Sabado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Sabado.ForeColor = System.Drawing.Color.White;
             this.lbl_Sabado.Location = new System.Drawing.Point(17, 345);
             this.lbl_Sabado.Name = "lbl_Sabado";
             this.lbl_Sabado.Size = new System.Drawing.Size(65, 20);
@@ -195,6 +202,7 @@
             // 
             this.lbl_Domingo.AutoSize = true;
             this.lbl_Domingo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Domingo.ForeColor = System.Drawing.Color.White;
             this.lbl_Domingo.Location = new System.Drawing.Point(9, 389);
             this.lbl_Domingo.Name = "lbl_Domingo";
             this.lbl_Domingo.Size = new System.Drawing.Size(73, 20);
@@ -527,30 +535,6 @@
             this.dtp_D_EnMañana.TabIndex = 38;
             this.dtp_D_EnMañana.Value = new System.DateTime(2024, 10, 22, 0, 0, 0, 0);
             // 
-            // btn_Salir
-            // 
-            this.btn_Salir.BackColor = System.Drawing.Color.LightCoral;
-            this.btn_Salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salir.Location = new System.Drawing.Point(7, 468);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(75, 28);
-            this.btn_Salir.TabIndex = 43;
-            this.btn_Salir.Text = "Salir";
-            this.btn_Salir.UseVisualStyleBackColor = false;
-            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
-            // 
-            // btn_Agregar
-            // 
-            this.btn_Agregar.BackColor = System.Drawing.Color.GreenYellow;
-            this.btn_Agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Agregar.Location = new System.Drawing.Point(693, 457);
-            this.btn_Agregar.Name = "btn_Agregar";
-            this.btn_Agregar.Size = new System.Drawing.Size(96, 39);
-            this.btn_Agregar.TabIndex = 44;
-            this.btn_Agregar.Text = "Agregar";
-            this.btn_Agregar.UseVisualStyleBackColor = false;
-            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
-            // 
             // numUP_D_ToleSa
             // 
             this.numUP_D_ToleSa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -612,6 +596,7 @@
             this.check_L_Asis.AutoSize = true;
             this.check_L_Asis.Checked = true;
             this.check_L_Asis.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.check_L_Asis.Cursor = System.Windows.Forms.Cursors.Hand;
             this.check_L_Asis.Location = new System.Drawing.Point(121, 127);
             this.check_L_Asis.Margin = new System.Windows.Forms.Padding(5);
             this.check_L_Asis.Name = "check_L_Asis";
@@ -625,6 +610,7 @@
             this.check_M_Asis.AutoSize = true;
             this.check_M_Asis.Checked = true;
             this.check_M_Asis.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.check_M_Asis.Cursor = System.Windows.Forms.Cursors.Hand;
             this.check_M_Asis.Location = new System.Drawing.Point(121, 170);
             this.check_M_Asis.Name = "check_M_Asis";
             this.check_M_Asis.Size = new System.Drawing.Size(15, 14);
@@ -637,6 +623,7 @@
             this.check_X_Asis.AutoSize = true;
             this.check_X_Asis.Checked = true;
             this.check_X_Asis.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.check_X_Asis.Cursor = System.Windows.Forms.Cursors.Hand;
             this.check_X_Asis.Location = new System.Drawing.Point(121, 215);
             this.check_X_Asis.Name = "check_X_Asis";
             this.check_X_Asis.Size = new System.Drawing.Size(15, 14);
@@ -649,6 +636,7 @@
             this.check_S_Asis.AutoSize = true;
             this.check_S_Asis.Checked = true;
             this.check_S_Asis.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.check_S_Asis.Cursor = System.Windows.Forms.Cursors.Hand;
             this.check_S_Asis.Location = new System.Drawing.Point(121, 346);
             this.check_S_Asis.Name = "check_S_Asis";
             this.check_S_Asis.Size = new System.Drawing.Size(15, 14);
@@ -661,6 +649,7 @@
             this.check_V_Asis.AutoSize = true;
             this.check_V_Asis.Checked = true;
             this.check_V_Asis.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.check_V_Asis.Cursor = System.Windows.Forms.Cursors.Hand;
             this.check_V_Asis.Location = new System.Drawing.Point(121, 303);
             this.check_V_Asis.Name = "check_V_Asis";
             this.check_V_Asis.Size = new System.Drawing.Size(15, 14);
@@ -673,6 +662,7 @@
             this.check_J_Asis.AutoSize = true;
             this.check_J_Asis.Checked = true;
             this.check_J_Asis.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.check_J_Asis.Cursor = System.Windows.Forms.Cursors.Hand;
             this.check_J_Asis.Location = new System.Drawing.Point(121, 261);
             this.check_J_Asis.Name = "check_J_Asis";
             this.check_J_Asis.Size = new System.Drawing.Size(15, 14);
@@ -685,6 +675,7 @@
             this.check_D_Asis.AutoSize = true;
             this.check_D_Asis.Checked = true;
             this.check_D_Asis.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.check_D_Asis.Cursor = System.Windows.Forms.Cursors.Hand;
             this.check_D_Asis.Location = new System.Drawing.Point(121, 391);
             this.check_D_Asis.Name = "check_D_Asis";
             this.check_D_Asis.Size = new System.Drawing.Size(15, 14);
@@ -696,6 +687,7 @@
             // 
             this.lbl_Asistencia.AutoSize = true;
             this.lbl_Asistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Asistencia.ForeColor = System.Drawing.Color.White;
             this.lbl_Asistencia.Location = new System.Drawing.Point(98, 86);
             this.lbl_Asistencia.Name = "lbl_Asistencia";
             this.lbl_Asistencia.Size = new System.Drawing.Size(69, 16);
@@ -706,6 +698,7 @@
             // 
             this.lbl_EntradaMañana.AutoSize = true;
             this.lbl_EntradaMañana.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_EntradaMañana.ForeColor = System.Drawing.Color.White;
             this.lbl_EntradaMañana.Location = new System.Drawing.Point(185, 85);
             this.lbl_EntradaMañana.Name = "lbl_EntradaMañana";
             this.lbl_EntradaMañana.Size = new System.Drawing.Size(97, 30);
@@ -716,6 +709,7 @@
             // 
             this.lbl_SalidaMañana.AutoSize = true;
             this.lbl_SalidaMañana.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SalidaMañana.ForeColor = System.Drawing.Color.White;
             this.lbl_SalidaMañana.Location = new System.Drawing.Point(306, 86);
             this.lbl_SalidaMañana.Name = "lbl_SalidaMañana";
             this.lbl_SalidaMañana.Size = new System.Drawing.Size(89, 30);
@@ -726,6 +720,7 @@
             // 
             this.lbl_EntradaTarde.AutoSize = true;
             this.lbl_EntradaTarde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_EntradaTarde.ForeColor = System.Drawing.Color.White;
             this.lbl_EntradaTarde.Location = new System.Drawing.Point(429, 85);
             this.lbl_EntradaTarde.Name = "lbl_EntradaTarde";
             this.lbl_EntradaTarde.Size = new System.Drawing.Size(97, 30);
@@ -736,6 +731,7 @@
             // 
             this.lbl_SalidaTarde.AutoSize = true;
             this.lbl_SalidaTarde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SalidaTarde.ForeColor = System.Drawing.Color.White;
             this.lbl_SalidaTarde.Location = new System.Drawing.Point(552, 85);
             this.lbl_SalidaTarde.Name = "lbl_SalidaTarde";
             this.lbl_SalidaTarde.Size = new System.Drawing.Size(89, 30);
@@ -746,6 +742,7 @@
             // 
             this.lbl_ToleEntrada.AutoSize = true;
             this.lbl_ToleEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ToleEntrada.ForeColor = System.Drawing.Color.White;
             this.lbl_ToleEntrada.Location = new System.Drawing.Point(669, 85);
             this.lbl_ToleEntrada.Name = "lbl_ToleEntrada";
             this.lbl_ToleEntrada.Size = new System.Drawing.Size(65, 30);
@@ -756,30 +753,91 @@
             // 
             this.lbl_ToleSalida.AutoSize = true;
             this.lbl_ToleSalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ToleSalida.ForeColor = System.Drawing.Color.White;
             this.lbl_ToleSalida.Location = new System.Drawing.Point(742, 85);
             this.lbl_ToleSalida.Name = "lbl_ToleSalida";
             this.lbl_ToleSalida.Size = new System.Drawing.Size(65, 30);
             this.lbl_ToleSalida.TabIndex = 67;
             this.lbl_ToleSalida.Text = "Tolerancia\r\nSalida\r\n";
             // 
-            // btn_Limpiar
+            // diseñoIconButton1
             // 
-            this.btn_Limpiar.BackColor = System.Drawing.Color.Yellow;
-            this.btn_Limpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Limpiar.Location = new System.Drawing.Point(186, 468);
-            this.btn_Limpiar.Name = "btn_Limpiar";
-            this.btn_Limpiar.Size = new System.Drawing.Size(110, 28);
-            this.btn_Limpiar.TabIndex = 72;
-            this.btn_Limpiar.Text = "Limpiar Todo";
-            this.btn_Limpiar.UseVisualStyleBackColor = false;
-            this.btn_Limpiar.Click += new System.EventHandler(this.btn_Limpiar_Click);
+            this.diseñoIconButton1.BackColor = System.Drawing.Color.OliveDrab;
+            this.diseñoIconButton1.BackgroundColor = System.Drawing.Color.OliveDrab;
+            this.diseñoIconButton1.BorderColor = System.Drawing.Color.Green;
+            this.diseñoIconButton1.BorderRadius = 25;
+            this.diseñoIconButton1.BorderSize = 3;
+            this.diseñoIconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.diseñoIconButton1.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.diseñoIconButton1.FlatAppearance.BorderSize = 3;
+            this.diseñoIconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.diseñoIconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diseñoIconButton1.ForeColor = System.Drawing.Color.White;
+            this.diseñoIconButton1.IconChar = FontAwesome.Sharp.IconChar.ClockFour;
+            this.diseñoIconButton1.IconColor = System.Drawing.Color.White;
+            this.diseñoIconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.diseñoIconButton1.IconSize = 25;
+            this.diseñoIconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.diseñoIconButton1.Location = new System.Drawing.Point(673, 442);
+            this.diseñoIconButton1.Name = "diseñoIconButton1";
+            this.diseñoIconButton1.Size = new System.Drawing.Size(116, 48);
+            this.diseñoIconButton1.TabIndex = 73;
+            this.diseñoIconButton1.Text = "Ingresar Horario";
+            this.diseñoIconButton1.TextColor = System.Drawing.Color.White;
+            this.diseñoIconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.diseñoIconButton1.UseVisualStyleBackColor = false;
+            this.diseñoIconButton1.Click += new System.EventHandler(this.diseñoIconButton1_Click);
+            // 
+            // diseñoButton2
+            // 
+            this.diseñoButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.diseñoButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.diseñoButton2.BorderColor = System.Drawing.Color.Gold;
+            this.diseñoButton2.BorderRadius = 25;
+            this.diseñoButton2.BorderSize = 1;
+            this.diseñoButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.diseñoButton2.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.diseñoButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.diseñoButton2.ForeColor = System.Drawing.Color.White;
+            this.diseñoButton2.Location = new System.Drawing.Point(186, 462);
+            this.diseñoButton2.Name = "diseñoButton2";
+            this.diseñoButton2.Size = new System.Drawing.Size(92, 28);
+            this.diseñoButton2.TabIndex = 74;
+            this.diseñoButton2.Text = "Limpiar";
+            this.diseñoButton2.TextColor = System.Drawing.Color.White;
+            this.diseñoButton2.UseVisualStyleBackColor = false;
+            this.diseñoButton2.Click += new System.EventHandler(this.diseñoButton2_Click);
+            // 
+            // diseñoButton1
+            // 
+            this.diseñoButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.diseñoButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.diseñoButton1.BorderColor = System.Drawing.Color.Gray;
+            this.diseñoButton1.BorderRadius = 40;
+            this.diseñoButton1.BorderSize = 0;
+            this.diseñoButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.diseñoButton1.FlatAppearance.BorderSize = 0;
+            this.diseñoButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.diseñoButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diseñoButton1.ForeColor = System.Drawing.Color.White;
+            this.diseñoButton1.Location = new System.Drawing.Point(13, 450);
+            this.diseñoButton1.Name = "diseñoButton1";
+            this.diseñoButton1.Size = new System.Drawing.Size(85, 40);
+            this.diseñoButton1.TabIndex = 75;
+            this.diseñoButton1.Text = "Volver ";
+            this.diseñoButton1.TextColor = System.Drawing.Color.White;
+            this.diseñoButton1.UseVisualStyleBackColor = true;
+            this.diseñoButton1.Click += new System.EventHandler(this.diseñoButton1_Click);
             // 
             // Form_Agregar_Horario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 502);
-            this.Controls.Add(this.btn_Limpiar);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.ClientSize = new System.Drawing.Size(824, 502);
+            this.Controls.Add(this.diseñoButton1);
+            this.Controls.Add(this.diseñoButton2);
+            this.Controls.Add(this.diseñoIconButton1);
             this.Controls.Add(this.lbl_ToleSalida);
             this.Controls.Add(this.lbl_EntradaTarde);
             this.Controls.Add(this.lbl_SalidaTarde);
@@ -801,8 +859,6 @@
             this.Controls.Add(this.numUP_X_ToleSa);
             this.Controls.Add(this.numUP_M_ToleSa);
             this.Controls.Add(this.numUP_L_ToleSa);
-            this.Controls.Add(this.btn_Agregar);
-            this.Controls.Add(this.btn_Salir);
             this.Controls.Add(this.numUP_D_ToleEn);
             this.Controls.Add(this.dtp_D_SaTarde);
             this.Controls.Add(this.dtp_D_EnTarde);
@@ -846,6 +902,7 @@
             this.Controls.Add(this.lbl_Lunes);
             this.Controls.Add(this.dtp_L_EnMañana);
             this.Controls.Add(this.lbl_Titulo);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "Form_Agregar_Horario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Agregar__Horario";
@@ -914,8 +971,6 @@
         private System.Windows.Forms.DateTimePicker dtp_D_EnTarde;
         private System.Windows.Forms.DateTimePicker dtp_D_SaMañana;
         private System.Windows.Forms.DateTimePicker dtp_D_EnMañana;
-        private System.Windows.Forms.Button btn_Salir;
-        private System.Windows.Forms.Button btn_Agregar;
         private System.Windows.Forms.NumericUpDown numUP_D_ToleSa;
         private System.Windows.Forms.NumericUpDown numUP_S_ToleSa;
         private System.Windows.Forms.NumericUpDown numUP_V_ToleSa;
@@ -937,6 +992,8 @@
         private System.Windows.Forms.Label lbl_SalidaTarde;
         private System.Windows.Forms.Label lbl_ToleEntrada;
         private System.Windows.Forms.Label lbl_ToleSalida;
-        private System.Windows.Forms.Button btn_Limpiar;
+        private Resources.DiseñoIconButton diseñoIconButton1;
+        private Resources.DiseñoButton diseñoButton2;
+        private Resources.DiseñoButton diseñoButton1;
     }
 }

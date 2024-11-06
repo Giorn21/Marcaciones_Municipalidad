@@ -21,13 +21,6 @@ namespace Proyecto
             InitializeComponent();
         }
 
-        private void btn_Volver_Click(object sender, EventArgs e)
-        {
-            Form_Menú Menu = new Form_Menú();
-            Menu.Show();
-            this.Close();
-        }
-
         private void Form_VerBiometria_Load(object sender, EventArgs e)
         {
             CargarDatos();
@@ -59,6 +52,13 @@ namespace Proyecto
             {
                 MessageBox.Show("Error al cargar los datos: " + ex.Message);
             }
+        }
+
+        private void diseñoButton1_Click(object sender, EventArgs e)
+        {
+            Form_Menú Menu = new Form_Menú();
+            Menu.Show();
+            this.Close();
         }
     }
 }

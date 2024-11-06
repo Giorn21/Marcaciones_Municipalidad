@@ -20,13 +20,6 @@ namespace Proyecto
             InitializeComponent();
         }
 
-        private void btn_Volver_Click(object sender, EventArgs e)
-        {
-            Form_Menú menu = new Form_Menú();
-            menu.Show();
-            this.Close();
-        }
-
         private void CargarDatos()
         {
             dtv_TipoUnidad.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -65,7 +58,12 @@ namespace Proyecto
             CargarDatos();
         }
 
-        private void btn_Agregar_Click(object sender, EventArgs e)
+        private void dtv_TipoUnidad_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void diseñoIconButton1_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show(
                     "¿Estás seguro de que deseas Agregar una nueva Unidad?",
@@ -80,9 +78,16 @@ namespace Proyecto
                 AgrUnidades.Show();
                 this.Close();
             }
-            
         }
-        private void dtv_TipoUnidad_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+
+        private void diseñoButton1_Click(object sender, EventArgs e)
+        {
+            Form_Menú menu = new Form_Menú();
+            menu.Show();
+            this.Close();
+        }
+
+        private void dtv_TipoUnidad_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
