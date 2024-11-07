@@ -31,7 +31,7 @@ namespace Proyecto
             try
             {
                 // Obtener la lista de Dispositivos funcionarios
-                Disp_funcionarios = clsDataGrid.ObtenerDispFuncionarios(1, 19022833);
+                Disp_funcionarios = clsDataGrid.ObtenerDispFuncionarios();
 
                 // Limpiar las filas, sin modificar las columnas
                 dtv_Disp_Funcionarios.Rows.Clear();
@@ -44,7 +44,7 @@ namespace Proyecto
                     row.CreateCells(dtv_Disp_Funcionarios);
 
                     // Asignar valores a las celdas correspondientes
-                    row.Cells[0].Value = Disp_funcionario.IdDispositivo;
+                    row.Cells[0].Value = Disp_funcionario.Descripcion;
                     row.Cells[1].Value = Disp_funcionario.IdEmpleado;
                     row.Cells[2].Value = Disp_funcionario.Sync;
 

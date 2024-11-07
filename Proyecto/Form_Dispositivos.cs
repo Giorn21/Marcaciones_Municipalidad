@@ -29,7 +29,7 @@ namespace Proyecto
             try
             {
                 // Obtener la lista de Dispositivos funcionarios
-                dispositivo = clsDataGrid.ObtenerDispositivos(1);
+                dispositivo = clsDataGrid.ObtenerDispositivos();
 
                 // Limpiar las filas, sin modificar las columnas
                 dtv_Dispositivos.Rows.Clear();

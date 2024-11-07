@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using DataLayer;
 using System.Data.Common;
 using System.Runtime.Remoting.Contexts;
+using Microsoft.SqlServer.Server;
 
 namespace common
 {
@@ -49,7 +50,7 @@ namespace common
             this.host = Credenciales.Host;
         }
         #endregion
-        public List<Disp_Funcionario> ObtenerDispFuncionarios(int idDispositivo, int idEmpleado)
+        public List<Disp_Funcionario> ObtenerDispFuncionarios()
         {
             var disp_Funcionarios = new List<Disp_Funcionario>();
             DB.Conectar();  // Abre la conexión a la base de datos
@@ -57,11 +58,7 @@ namespace common
             try
             {
                 // Crear el comando para ejecutar el procedimiento almacenado
-                DB.CrearComando("DispositivosFuncionarioSelProc @IdDispositivo, @IdEmpleado");
-
-                // Agregar los parámetros requeridos por el procedimiento almacenado
-                DB.AsignarParametroEntero("@IdDispositivo", idDispositivo);
-                DB.AsignarParametroEntero("@IdEmpleado", idEmpleado);
+                DB.CrearComando("DispositivosFuncionarioSelProc");
 
                 // Ejecutar el comando y obtener el resultado
                 DbDataReader dr = DB.EjecutarConsulta();
@@ -76,7 +73,7 @@ namespace common
                     Disp_Funcionario disp_Funcionario = new Disp_Funcionario();
                     {
                         // Comprobación de DBNull antes de la conversión
-                        disp_Funcionario.IdDispositivo = row["IdDispositivo"] != DBNull.Value ? Convert.ToInt32(row["IdDispositivo"]) : 0;
+                        disp_Funcionario.Descripcion = row["Descripcion"] != DBNull.Value ? Convert.ToString(row["Descripcion"]) : "";
                         disp_Funcionario.IdEmpleado = row["IdEmpleado"] != DBNull.Value ? Convert.ToInt32(row["IdEmpleado"]) : 0;
                         disp_Funcionario.Sync = row["Sync"] != DBNull.Value ? Convert.ToByte(row["Sync"]) : (byte)0;
                     };

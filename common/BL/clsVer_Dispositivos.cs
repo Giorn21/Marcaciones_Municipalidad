@@ -46,7 +46,7 @@ namespace common
         }
         #endregion
 
-        public List<Dispositivo> ObtenerDispositivos(int idDispositivo)
+        public List<Dispositivo> ObtenerDispositivos()
         {
             var dispositivos = new List<Dispositivo>();
             DB.Conectar();  // Abre la conexión a la base de datos
@@ -54,9 +54,7 @@ namespace common
             try
             {
                 // Crear el comando para ejecutar el procedimiento almacenado
-                DB.CrearComando("DispositivosSelProc @IdDispositivo");
-
-                DB.AsignarParametroEntero("@IdDispositivo", idDispositivo);
+                DB.CrearComando("DispositivosSelProc");
 
                 // Ejecutar el comando y obtener el resultado
                 DbDataReader dr = DB.EjecutarConsulta();
