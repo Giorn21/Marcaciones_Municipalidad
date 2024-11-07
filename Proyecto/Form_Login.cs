@@ -19,9 +19,11 @@ namespace Proyecto
         {
             InitializeComponent();
 
+#if DEBUG
             //despues borrar
             txt_Usuario.Text = "admin";
             txt_Contrasena.Text = "admin000";
+#endif
         }
 
         private void diseñoIconButton1_Click(object sender, EventArgs e)

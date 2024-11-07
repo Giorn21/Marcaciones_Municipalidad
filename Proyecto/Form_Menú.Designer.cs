@@ -134,11 +134,11 @@
             this.diseñoIconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.diseñoIconButton8.IconSize = 30;
             this.diseñoIconButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.diseñoIconButton8.Location = new System.Drawing.Point(417, 337);
+            this.diseñoIconButton8.Location = new System.Drawing.Point(393, 337);
             this.diseñoIconButton8.Name = "diseñoIconButton8";
-            this.diseñoIconButton8.Size = new System.Drawing.Size(91, 40);
+            this.diseñoIconButton8.Size = new System.Drawing.Size(115, 40);
             this.diseñoIconButton8.TabIndex = 7;
-            this.diseñoIconButton8.Text = "Volver al Login";
+            this.diseñoIconButton8.Text = "Cerrar Sesión";
             this.diseñoIconButton8.TextColor = System.Drawing.Color.White;
             this.diseñoIconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.diseñoIconButton8.UseVisualStyleBackColor = true;
@@ -356,9 +356,12 @@
             this.Controls.Add(this.diseñoIconButton2);
             this.Controls.Add(this.diseñoIconButton1);
             this.Controls.Add(this.lbl_TituloMenu);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_Menú";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Menu";
+            this.Text = "Menú";
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -48,10 +48,10 @@
             this.col_IdEmpleado,
             this.col_Sync});
             this.dtv_Disp_Funcionarios.GridColor = System.Drawing.Color.Black;
-            this.dtv_Disp_Funcionarios.Location = new System.Drawing.Point(12, 100);
+            this.dtv_Disp_Funcionarios.Location = new System.Drawing.Point(12, 101);
             this.dtv_Disp_Funcionarios.Name = "dtv_Disp_Funcionarios";
             this.dtv_Disp_Funcionarios.ReadOnly = true;
-            this.dtv_Disp_Funcionarios.Size = new System.Drawing.Size(558, 243);
+            this.dtv_Disp_Funcionarios.Size = new System.Drawing.Size(558, 236);
             this.dtv_Disp_Funcionarios.TabIndex = 9;
             this.dtv_Disp_Funcionarios.TabStop = false;
             // 
@@ -75,14 +75,14 @@
             // 
             // lbl_Titulo
             // 
-            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Titulo.ForeColor = System.Drawing.Color.White;
-            this.lbl_Titulo.Location = new System.Drawing.Point(174, 9);
+            this.lbl_Titulo.Location = new System.Drawing.Point(12, 9);
             this.lbl_Titulo.Name = "lbl_Titulo";
-            this.lbl_Titulo.Size = new System.Drawing.Size(396, 88);
+            this.lbl_Titulo.Size = new System.Drawing.Size(558, 75);
             this.lbl_Titulo.TabIndex = 10;
-            this.lbl_Titulo.Text = "Ver Funcionarios con Dispositivos Asignado\r\ns";
-            this.lbl_Titulo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_Titulo.Text = "Ver Funcionarios con Dispositivos ";
+            this.lbl_Titulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // diseñoButton1
             // 
@@ -96,7 +96,7 @@
             this.diseñoButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.diseñoButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.diseñoButton1.ForeColor = System.Drawing.Color.White;
-            this.diseñoButton1.Location = new System.Drawing.Point(12, 12);
+            this.diseñoButton1.Location = new System.Drawing.Point(12, 360);
             this.diseñoButton1.Name = "diseñoButton1";
             this.diseñoButton1.Size = new System.Drawing.Size(114, 39);
             this.diseñoButton1.TabIndex = 0;
@@ -110,13 +110,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
-            this.ClientSize = new System.Drawing.Size(582, 352);
+            this.ClientSize = new System.Drawing.Size(582, 411);
             this.Controls.Add(this.diseñoButton1);
             this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.dtv_Disp_Funcionarios);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_Disp_Funcionario";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Disp_Funcionario";
+            this.Text = "Funcionarios con Dispositivo";
             this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtv_Disp_Funcionarios)).EndInit();
             this.ResumeLayout(false);

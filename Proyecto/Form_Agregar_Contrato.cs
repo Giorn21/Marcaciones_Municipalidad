@@ -47,6 +47,10 @@ namespace Proyecto
                 txt_TipoContrato.Clear();
                 txt_Descripcion.Clear();
 
+                Form_VerContrato contrato = new Form_VerContrato();
+                contrato.Show();
+                this.Close();
+
             }
             catch (Exception ex)
             {

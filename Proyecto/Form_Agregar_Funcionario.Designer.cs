@@ -67,6 +67,9 @@
             // 
             // tbc_Agregar_Funcionario
             // 
+            this.tbc_Agregar_Funcionario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbc_Agregar_Funcionario.Controls.Add(this.tabP_Datos_Personales);
             this.tbc_Agregar_Funcionario.Controls.Add(this.tabP_Horarios);
             this.tbc_Agregar_Funcionario.Cursor = System.Windows.Forms.Cursors.Default;
@@ -109,6 +112,7 @@
             // 
             // cbox_IdUnidad
             // 
+            this.cbox_IdUnidad.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cbox_IdUnidad.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbox_IdUnidad.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbox_IdUnidad.FormattingEnabled = true;
@@ -121,6 +125,7 @@
             // 
             // cbox_IdDispositivo
             // 
+            this.cbox_IdDispositivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cbox_IdDispositivo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbox_IdDispositivo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbox_IdDispositivo.FormattingEnabled = true;
@@ -133,6 +138,7 @@
             // 
             // cbox_Tipo_Cargo
             // 
+            this.cbox_Tipo_Cargo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbox_Tipo_Cargo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbox_Tipo_Cargo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbox_Tipo_Cargo.FormattingEnabled = true;
@@ -145,6 +151,7 @@
             // 
             // cbox_Tipo_Contrato
             // 
+            this.cbox_Tipo_Contrato.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.cbox_Tipo_Contrato.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbox_Tipo_Contrato.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbox_Tipo_Contrato.FormattingEnabled = true;
@@ -157,6 +164,7 @@
             // 
             // lbl_Id_Dispositivo
             // 
+            this.lbl_Id_Dispositivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Id_Dispositivo.AutoSize = true;
             this.lbl_Id_Dispositivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Id_Dispositivo.ForeColor = System.Drawing.Color.White;
@@ -168,17 +176,19 @@
             // 
             // lbl_Id_Unidad
             // 
+            this.lbl_Id_Unidad.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_Id_Unidad.AutoSize = true;
             this.lbl_Id_Unidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Id_Unidad.ForeColor = System.Drawing.Color.White;
             this.lbl_Id_Unidad.Location = new System.Drawing.Point(549, 130);
             this.lbl_Id_Unidad.Name = "lbl_Id_Unidad";
-            this.lbl_Id_Unidad.Size = new System.Drawing.Size(44, 16);
+            this.lbl_Id_Unidad.Size = new System.Drawing.Size(93, 16);
             this.lbl_Id_Unidad.TabIndex = 16;
-            this.lbl_Id_Unidad.Text = "Cargo";
+            this.lbl_Id_Unidad.Text = "Departamento";
             // 
             // lbl_Cargo
             // 
+            this.lbl_Cargo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Cargo.AutoSize = true;
             this.lbl_Cargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Cargo.ForeColor = System.Drawing.Color.White;
@@ -190,6 +200,7 @@
             // 
             // lbl_Tipo_Contrato
             // 
+            this.lbl_Tipo_Contrato.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbl_Tipo_Contrato.AutoSize = true;
             this.lbl_Tipo_Contrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Tipo_Contrato.ForeColor = System.Drawing.Color.White;
@@ -201,6 +212,7 @@
             // 
             // txt_Email
             // 
+            this.txt_Email.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_Email.Location = new System.Drawing.Point(298, 149);
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(176, 22);
@@ -208,6 +220,7 @@
             // 
             // lbl_Email
             // 
+            this.lbl_Email.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_Email.AutoSize = true;
             this.lbl_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Email.ForeColor = System.Drawing.Color.White;
@@ -219,6 +232,7 @@
             // 
             // txt_Apellido_Materno
             // 
+            this.txt_Apellido_Materno.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt_Apellido_Materno.Location = new System.Drawing.Point(294, 52);
             this.txt_Apellido_Materno.Name = "txt_Apellido_Materno";
             this.txt_Apellido_Materno.Size = new System.Drawing.Size(176, 22);
@@ -226,6 +240,7 @@
             // 
             // lbl_Apellido_Materno
             // 
+            this.lbl_Apellido_Materno.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_Apellido_Materno.AutoSize = true;
             this.lbl_Apellido_Materno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Apellido_Materno.ForeColor = System.Drawing.Color.White;
@@ -237,6 +252,7 @@
             // 
             // txt_Apellido_Paterno
             // 
+            this.txt_Apellido_Paterno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txt_Apellido_Paterno.Location = new System.Drawing.Point(28, 254);
             this.txt_Apellido_Paterno.Name = "txt_Apellido_Paterno";
             this.txt_Apellido_Paterno.Size = new System.Drawing.Size(176, 22);
@@ -244,6 +260,7 @@
             // 
             // lbl_Apellido_Paterno
             // 
+            this.lbl_Apellido_Paterno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_Apellido_Paterno.AutoSize = true;
             this.lbl_Apellido_Paterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Apellido_Paterno.ForeColor = System.Drawing.Color.White;
@@ -255,6 +272,7 @@
             // 
             // txt_Nombre
             // 
+            this.txt_Nombre.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txt_Nombre.Location = new System.Drawing.Point(28, 149);
             this.txt_Nombre.Name = "txt_Nombre";
             this.txt_Nombre.Size = new System.Drawing.Size(176, 22);
@@ -262,6 +280,7 @@
             // 
             // lbl_Nombre
             // 
+            this.lbl_Nombre.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Nombre.AutoSize = true;
             this.lbl_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Nombre.ForeColor = System.Drawing.Color.White;
@@ -320,6 +339,9 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.CornflowerBlue;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
@@ -351,6 +373,7 @@
             // 
             // lbl_Titulo
             // 
+            this.lbl_Titulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_Titulo.AutoSize = true;
             this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Titulo.ForeColor = System.Drawing.SystemColors.Window;
@@ -362,6 +385,7 @@
             // 
             // lbl_FechaTiempoReal
             // 
+            this.lbl_FechaTiempoReal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_FechaTiempoReal.AutoSize = true;
             this.lbl_FechaTiempoReal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_FechaTiempoReal.ForeColor = System.Drawing.SystemColors.Window;
@@ -373,6 +397,7 @@
             // 
             // lbl_Fecha
             // 
+            this.lbl_Fecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Fecha.AutoSize = true;
             this.lbl_Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Fecha.ForeColor = System.Drawing.SystemColors.Window;
@@ -384,6 +409,7 @@
             // 
             // diseñoButton1
             // 
+            this.diseñoButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.diseñoButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
             this.diseñoButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
             this.diseñoButton1.BorderColor = System.Drawing.Color.Gray;
@@ -405,6 +431,7 @@
             // 
             // diseñoButton2
             // 
+            this.diseñoButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.diseñoButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
             this.diseñoButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
             this.diseñoButton2.BorderColor = System.Drawing.Color.Gold;
@@ -425,6 +452,7 @@
             // 
             // diseñoIconButton1
             // 
+            this.diseñoIconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.diseñoIconButton1.BackColor = System.Drawing.Color.OliveDrab;
             this.diseñoIconButton1.BackgroundColor = System.Drawing.Color.OliveDrab;
             this.diseñoIconButton1.BorderColor = System.Drawing.Color.Green;
@@ -466,9 +494,12 @@
             this.Controls.Add(this.tbc_Agregar_Funcionario);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_Agregar_Funcionario";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form_Agregar_Funcionario";
+            this.Text = "Nuevo Funcionario";
             this.Load += new System.EventHandler(this.Form_Agregar_Funcionario_Load);
             this.tbc_Agregar_Funcionario.ResumeLayout(false);
             this.tabP_Datos_Personales.ResumeLayout(false);

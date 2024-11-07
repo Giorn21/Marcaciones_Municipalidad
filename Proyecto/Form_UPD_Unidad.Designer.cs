@@ -221,9 +221,12 @@
             this.Controls.Add(this.txt_Telefono);
             this.Controls.Add(this.txt_Email);
             this.Controls.Add(this.txt_Descripcion);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_UPD_Unidad";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form_UPD_Unidad";
+            this.Text = "Actualizar Unidad";
             this.Load += new System.EventHandler(this.Form_UPD_Unidad_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

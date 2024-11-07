@@ -119,18 +119,18 @@
             // 
             this.diseñoButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
             this.diseñoButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
-            this.diseñoButton2.BorderColor = System.Drawing.Color.Red;
+            this.diseñoButton2.BorderColor = System.Drawing.Color.Gray;
             this.diseñoButton2.BorderRadius = 40;
             this.diseñoButton2.BorderSize = 0;
             this.diseñoButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.diseñoButton2.FlatAppearance.BorderSize = 0;
             this.diseñoButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.diseñoButton2.ForeColor = System.Drawing.Color.White;
-            this.diseñoButton2.Location = new System.Drawing.Point(3, 283);
+            this.diseñoButton2.Location = new System.Drawing.Point(12, 287);
             this.diseñoButton2.Name = "diseñoButton2";
-            this.diseñoButton2.Size = new System.Drawing.Size(101, 40);
+            this.diseñoButton2.Size = new System.Drawing.Size(67, 36);
             this.diseñoButton2.TabIndex = 3;
-            this.diseñoButton2.Text = "Cancelar y Volver";
+            this.diseñoButton2.Text = "Volver";
             this.diseñoButton2.TextColor = System.Drawing.Color.White;
             this.diseñoButton2.UseVisualStyleBackColor = true;
             this.diseñoButton2.Click += new System.EventHandler(this.diseñoButton2_Click);
@@ -148,9 +148,12 @@
             this.Controls.Add(this.txt_Descripcion);
             this.Controls.Add(this.txt_TipoContrato);
             this.Controls.Add(this.lbl_Titulo);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_Agregar_Contrato";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form_Agregar_Contrato";
+            this.Text = "Nuevo Contrato";
             this.ResumeLayout(false);
             this.PerformLayout();
 

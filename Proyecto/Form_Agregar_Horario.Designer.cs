@@ -114,11 +114,11 @@
             // lbl_Titulo
             // 
             this.lbl_Titulo.AutoSize = true;
-            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Titulo.ForeColor = System.Drawing.Color.White;
-            this.lbl_Titulo.Location = new System.Drawing.Point(267, 9);
+            this.lbl_Titulo.Location = new System.Drawing.Point(205, 9);
             this.lbl_Titulo.Name = "lbl_Titulo";
-            this.lbl_Titulo.Size = new System.Drawing.Size(309, 33);
+            this.lbl_Titulo.Size = new System.Drawing.Size(396, 42);
             this.lbl_Titulo.TabIndex = 0;
             this.lbl_Titulo.Text = "Agregar nuevo Horario";
             // 
@@ -799,7 +799,7 @@
             this.diseñoButton2.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
             this.diseñoButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.diseñoButton2.ForeColor = System.Drawing.Color.White;
-            this.diseñoButton2.Location = new System.Drawing.Point(186, 462);
+            this.diseñoButton2.Location = new System.Drawing.Point(555, 462);
             this.diseñoButton2.Name = "diseñoButton2";
             this.diseñoButton2.Size = new System.Drawing.Size(92, 28);
             this.diseñoButton2.TabIndex = 52;
@@ -903,9 +903,12 @@
             this.Controls.Add(this.dtp_L_EnMañana);
             this.Controls.Add(this.lbl_Titulo);
             this.ForeColor = System.Drawing.Color.White;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_Agregar_Horario";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form_Agregar__Horario";
+            this.Text = "Nuevo Horario";
             this.Load += new System.EventHandler(this.Form_Agregar_Horario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numUP_L_ToleEn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUP_M_ToleEn)).EndInit();

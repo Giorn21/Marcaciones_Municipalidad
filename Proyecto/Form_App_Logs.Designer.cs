@@ -106,9 +106,9 @@
             this.check_Login.ForeColor = System.Drawing.Color.White;
             this.check_Login.Location = new System.Drawing.Point(12, 80);
             this.check_Login.Name = "check_Login";
-            this.check_Login.Size = new System.Drawing.Size(208, 24);
+            this.check_Login.Size = new System.Drawing.Size(100, 24);
             this.check_Login.TabIndex = 0;
-            this.check_Login.Text = "Dejar de ver Accion Login";
+            this.check_Login.Text = "ver Logins";
             this.check_Login.UseVisualStyleBackColor = true;
             this.check_Login.CheckedChanged += new System.EventHandler(this.check_Login_CheckedChanged);
             // 
@@ -116,9 +116,9 @@
             // 
             this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Titulo.ForeColor = System.Drawing.Color.White;
-            this.lbl_Titulo.Location = new System.Drawing.Point(411, 12);
+            this.lbl_Titulo.Location = new System.Drawing.Point(215, 29);
             this.lbl_Titulo.Name = "lbl_Titulo";
-            this.lbl_Titulo.Size = new System.Drawing.Size(377, 89);
+            this.lbl_Titulo.Size = new System.Drawing.Size(561, 62);
             this.lbl_Titulo.TabIndex = 13;
             this.lbl_Titulo.Text = "Bitácora de Acciones realizadas ";
             // 
@@ -134,7 +134,7 @@
             this.diseñoButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.diseñoButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.diseñoButton1.ForeColor = System.Drawing.Color.White;
-            this.diseñoButton1.Location = new System.Drawing.Point(12, 12);
+            this.diseñoButton1.Location = new System.Drawing.Point(12, 419);
             this.diseñoButton1.Name = "diseñoButton1";
             this.diseñoButton1.Size = new System.Drawing.Size(114, 39);
             this.diseñoButton1.TabIndex = 1;
@@ -148,14 +148,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
-            this.ClientSize = new System.Drawing.Size(800, 408);
+            this.ClientSize = new System.Drawing.Size(800, 470);
             this.Controls.Add(this.diseñoButton1);
             this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.check_Login);
             this.Controls.Add(this.dtv_LogsApp);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_App_Logs";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "App_Logs";
+            this.Text = "Ver Logs";
             this.Load += new System.EventHandler(this.Form_App_Logs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtv_LogsApp)).EndInit();
             this.ResumeLayout(false);

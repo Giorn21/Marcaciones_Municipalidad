@@ -149,9 +149,12 @@
             this.Controls.Add(this.txt_Descripcion);
             this.Controls.Add(this.txt_TipoContrato);
             this.Controls.Add(this.lbl_Titulo);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_UPD_Contrato";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form_UPD_Contrato";
+            this.Text = "Actualizar Contrato";
             this.ResumeLayout(false);
             this.PerformLayout();
 

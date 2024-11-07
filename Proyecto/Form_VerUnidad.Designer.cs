@@ -183,9 +183,12 @@
             this.Controls.Add(this.diseñoIconButton1);
             this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.dtv_TipoUnidad);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_VerUnidad";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form_VerUnidad";
+            this.Text = "Ver Unidad";
             this.Load += new System.EventHandler(this.Form_VerUnidad_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtv_TipoUnidad)).EndInit();
             this.ResumeLayout(false);

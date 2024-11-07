@@ -222,9 +222,12 @@
             this.Controls.Add(this.txt_Telefono);
             this.Controls.Add(this.txt_Email);
             this.Controls.Add(this.txt_Descripcion);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_Agregar_Unidades";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form_Agregar_Unidades";
+            this.Text = "Nueva Unidad";
             this.Load += new System.EventHandler(this.Form_Agregar_Unidades_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

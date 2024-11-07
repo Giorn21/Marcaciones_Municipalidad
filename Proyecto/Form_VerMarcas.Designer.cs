@@ -106,9 +106,12 @@
             this.Controls.Add(this.diseñoButton1);
             this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.dtv_TipoMarcas);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_VerMarcas";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form_VerMarcas";
+            this.Text = "Ver Marcas";
             this.Load += new System.EventHandler(this.Form_VerMarcas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtv_TipoMarcas)).EndInit();
             this.ResumeLayout(false);

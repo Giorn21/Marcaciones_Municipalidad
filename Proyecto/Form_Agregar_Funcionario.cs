@@ -205,6 +205,10 @@ namespace Proyecto
                     MessageBox.Show("Usuario registrado exitosamente.");
                     string Usuario = LoginUser.Usuario;
                     logs.InsertarLog("funcionarios", "Agr Nuevo", Usuario, "Se a agregado un nuevo funcionario a la base de datos.");
+
+                    Form_VerFuncionarios funcionarios = new Form_VerFuncionarios();
+                    funcionarios.Show();
+                    this.Close();
                 }
 
             }

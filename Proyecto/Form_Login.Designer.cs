@@ -174,7 +174,10 @@
             this.Controls.Add(this.lbl_pass);
             this.Controls.Add(this.lbl_usuario);
             this.ForeColor = System.Drawing.Color.Snow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_Login";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.TransparencyKey = System.Drawing.Color.Black;

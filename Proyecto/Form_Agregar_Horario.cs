@@ -197,10 +197,15 @@ namespace Proyecto
                     horario.InsertarHorario(hor, totalHorasSemanales, NombreHorario);
                     string Usuario = LoginUser.Usuario;
                     logs.InsertarLog("Horario MOD", "Agr Nuevo", Usuario, "Se agrego un nuevo Horario a la Base De Datos");
+
+                    Form_VerHorario VerHorario = new Form_VerHorario();
+                    VerHorario.Show();
+                    this.Close();
                 }
                 else
                 {
                     MessageBox.Show("Se a cancelado el Ingreso de un Nuevo Horario");
+                    return;
                 }
 
             }

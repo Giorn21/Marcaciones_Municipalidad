@@ -60,7 +60,7 @@
             this.col_LastActivityLog,
             this.col_LastActivityOP});
             this.dtv_Dispositivos.GridColor = System.Drawing.Color.Black;
-            this.dtv_Dispositivos.Location = new System.Drawing.Point(12, 69);
+            this.dtv_Dispositivos.Location = new System.Drawing.Point(12, 81);
             this.dtv_Dispositivos.Name = "dtv_Dispositivos";
             this.dtv_Dispositivos.ReadOnly = true;
             this.dtv_Dispositivos.Size = new System.Drawing.Size(869, 310);
@@ -126,7 +126,7 @@
             this.lbl_Titulo.AutoSize = true;
             this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Titulo.ForeColor = System.Drawing.Color.White;
-            this.lbl_Titulo.Location = new System.Drawing.Point(492, 9);
+            this.lbl_Titulo.Location = new System.Drawing.Point(271, 9);
             this.lbl_Titulo.Name = "lbl_Titulo";
             this.lbl_Titulo.Size = new System.Drawing.Size(357, 42);
             this.lbl_Titulo.TabIndex = 10;
@@ -144,7 +144,7 @@
             this.diseñoButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.diseñoButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.diseñoButton1.ForeColor = System.Drawing.Color.White;
-            this.diseñoButton1.Location = new System.Drawing.Point(12, 12);
+            this.diseñoButton1.Location = new System.Drawing.Point(12, 412);
             this.diseñoButton1.Name = "diseñoButton1";
             this.diseñoButton1.Size = new System.Drawing.Size(114, 39);
             this.diseñoButton1.TabIndex = 0;
@@ -158,13 +158,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
-            this.ClientSize = new System.Drawing.Size(893, 392);
+            this.ClientSize = new System.Drawing.Size(893, 463);
             this.Controls.Add(this.diseñoButton1);
             this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.dtv_Dispositivos);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_Dispositivos";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dispositivos";
+            this.Text = "Ver Dispositivos";
             this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtv_Dispositivos)).EndInit();
             this.ResumeLayout(false);

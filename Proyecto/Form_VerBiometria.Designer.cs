@@ -106,9 +106,12 @@
             this.Controls.Add(this.diseñoButton1);
             this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.dtv_Biometria);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_VerBiometria";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form_VerBiometria";
+            this.Text = "Ver Biometria";
             this.Load += new System.EventHandler(this.Form_VerBiometria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtv_Biometria)).EndInit();
             this.ResumeLayout(false);

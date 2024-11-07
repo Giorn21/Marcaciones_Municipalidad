@@ -384,7 +384,7 @@ namespace Proyecto
                     domingoEntradaManana, domingoSalidaManana, domingoEntradaTarde, domingoSalidaTarde, domingoToleranciaEntrada);
 
                 string Usuario = LoginUser.Usuario;
-                logs.InsertarLog("Horarios MOD", "Horario Update", Usuario, "Se a actualizado el Horario " + int.Parse(cbox_Horarios.SelectedValue.ToString()));
+                logs.InsertarLog("Horario MOD", "Horario Update", Usuario, "Se a actualizado el Horario " + int.Parse(cbox_Horarios.SelectedValue.ToString()));
 
                 MessageBox.Show("Horario Actualizado correctamente");
                 // Deshabilitar el botón después de actualizar

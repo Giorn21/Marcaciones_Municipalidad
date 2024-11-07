@@ -54,6 +54,9 @@
             // 
             this.dtv_BaseDatos.AllowUserToAddRows = false;
             this.dtv_BaseDatos.AllowUserToDeleteRows = false;
+            this.dtv_BaseDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtv_BaseDatos.BackgroundColor = System.Drawing.Color.CornflowerBlue;
             this.dtv_BaseDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtv_BaseDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -149,7 +152,7 @@
             // 
             this.txt_Buscador.Location = new System.Drawing.Point(56, 95);
             this.txt_Buscador.Name = "txt_Buscador";
-            this.txt_Buscador.Size = new System.Drawing.Size(198, 20);
+            this.txt_Buscador.Size = new System.Drawing.Size(252, 20);
             this.txt_Buscador.TabIndex = 0;
             this.txt_Buscador.TextChanged += new System.EventHandler(this.txt_Buscador_TextChanged);
             this.txt_Buscador.Enter += new System.EventHandler(this.txt_Buscador_Enter);
@@ -170,6 +173,7 @@
             // 
             // diseñoIconButton1
             // 
+            this.diseñoIconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.diseñoIconButton1.BackColor = System.Drawing.Color.OliveDrab;
             this.diseñoIconButton1.BackgroundColor = System.Drawing.Color.OliveDrab;
             this.diseñoIconButton1.BorderColor = System.Drawing.Color.Green;
@@ -187,7 +191,7 @@
             this.diseñoIconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.diseñoIconButton1.IconSize = 35;
             this.diseñoIconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.diseñoIconButton1.Location = new System.Drawing.Point(274, 84);
+            this.diseñoIconButton1.Location = new System.Drawing.Point(937, 514);
             this.diseñoIconButton1.Name = "diseñoIconButton1";
             this.diseñoIconButton1.Size = new System.Drawing.Size(125, 41);
             this.diseñoIconButton1.TabIndex = 1;
@@ -199,6 +203,7 @@
             // 
             // diseñoIconButton2
             // 
+            this.diseñoIconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.diseñoIconButton2.BackColor = System.Drawing.Color.IndianRed;
             this.diseñoIconButton2.BackgroundColor = System.Drawing.Color.IndianRed;
             this.diseñoIconButton2.BorderColor = System.Drawing.Color.Red;
@@ -215,7 +220,7 @@
             this.diseñoIconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.diseñoIconButton2.IconSize = 35;
             this.diseñoIconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.diseñoIconButton2.Location = new System.Drawing.Point(428, 84);
+            this.diseñoIconButton2.Location = new System.Drawing.Point(765, 514);
             this.diseñoIconButton2.Name = "diseñoIconButton2";
             this.diseñoIconButton2.Size = new System.Drawing.Size(125, 41);
             this.diseñoIconButton2.TabIndex = 2;
@@ -241,6 +246,7 @@
             // 
             // diseñoButton1
             // 
+            this.diseñoButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.diseñoButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
             this.diseñoButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
             this.diseñoButton1.BorderColor = System.Drawing.Color.Gray;
@@ -251,7 +257,7 @@
             this.diseñoButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.diseñoButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.diseñoButton1.ForeColor = System.Drawing.Color.White;
-            this.diseñoButton1.Location = new System.Drawing.Point(12, 9);
+            this.diseñoButton1.Location = new System.Drawing.Point(12, 516);
             this.diseñoButton1.Name = "diseñoButton1";
             this.diseñoButton1.Size = new System.Drawing.Size(114, 39);
             this.diseñoButton1.TabIndex = 3;
@@ -265,7 +271,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
-            this.ClientSize = new System.Drawing.Size(1074, 503);
+            this.ClientSize = new System.Drawing.Size(1074, 580);
             this.Controls.Add(this.diseñoButton1);
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.diseñoIconButton2);
@@ -273,9 +279,12 @@
             this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.txt_Buscador);
             this.Controls.Add(this.dtv_BaseDatos);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_VerFuncionarios";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Funcionarios";
+            this.Text = "Ver Funcionarios";
             this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtv_BaseDatos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();

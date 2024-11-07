@@ -184,7 +184,7 @@
             this.diseñoButton2.Name = "diseñoButton2";
             this.diseñoButton2.Size = new System.Drawing.Size(101, 40);
             this.diseñoButton2.TabIndex = 7;
-            this.diseñoButton2.Text = "Cancelar y Volver";
+            this.diseñoButton2.Text = "Volver";
             this.diseñoButton2.TextColor = System.Drawing.Color.White;
             this.diseñoButton2.UseVisualStyleBackColor = true;
             this.diseñoButton2.Click += new System.EventHandler(this.diseñoButton2_Click);
@@ -230,9 +230,12 @@
             this.Controls.Add(this.txt_Descripcion);
             this.Controls.Add(this.lbl_Titulo);
             this.ForeColor = System.Drawing.Color.White;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_buscador_Logs";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form_buscador_Logs";
+            this.Text = "Buscador Logs";
             this.Load += new System.EventHandler(this.Form_buscador_Logs_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

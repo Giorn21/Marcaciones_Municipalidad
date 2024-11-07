@@ -56,18 +56,35 @@ namespace common
             {
               
                 DB.Conectar();
-                DbCommand cmd = DB.CrearComando("sp_AgregarMarcacionManual");
-                cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.Add(new SqlParameter("@ID", id));
-                cmd.Parameters.Add(new SqlParameter("@Fecha", fecha));
-                cmd.Parameters.Add(new SqlParameter("@Hora", hora));
-                cmd.Parameters.Add(new SqlParameter("@TipoMarca", tipoMarca));
-                cmd.Parameters.Add(new SqlParameter("@Comentario", comentario));
+                // Verificar si el ID existe en la base de datos
+                DbCommand checkCmd = DB.CrearComando("SELECT COUNT(1) FROM Registro WHERE Id = @ID");
+                checkCmd.Parameters.Add(new SqlParameter("@ID", id));
 
-                DB.EjecutarComando();
+                int idCount = Convert.ToInt32(checkCmd.ExecuteScalar());
 
-                MessageBox.Show("Marcación manual agregada exitosamente.");
+                if (idCount == 0)
+                {
+                    MessageBox.Show("El ID proporcionado no existe en la base de datos.");
+                    return;
+                }
+                else 
+                {
+
+                    DbCommand cmd = DB.CrearComando("sp_AgregarMarcacionManual");
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(new SqlParameter("@ID", id));
+                    cmd.Parameters.Add(new SqlParameter("@Fecha", fecha));
+                    cmd.Parameters.Add(new SqlParameter("@Hora", hora));
+                    cmd.Parameters.Add(new SqlParameter("@TipoMarca", tipoMarca));
+                    cmd.Parameters.Add(new SqlParameter("@Comentario", comentario));
+
+                    DB.EjecutarComando();
+
+                    MessageBox.Show("Marcación manual agregada exitosamente.");
+                }
+
             }
             catch (Exception ex)
             {

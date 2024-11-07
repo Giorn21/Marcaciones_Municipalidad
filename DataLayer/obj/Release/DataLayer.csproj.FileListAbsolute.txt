@@ -1,0 +1,6 @@
+C:\Users\informatica\source\repos\Proyecto\DataLayer\bin\Release\DataLayer.dll
+C:\Users\informatica\source\repos\Proyecto\DataLayer\bin\Release\DataLayer.pdb
+C:\Users\informatica\source\repos\Proyecto\DataLayer\obj\Release\DataLayer.csproj.AssemblyReference.cache
+C:\Users\informatica\source\repos\Proyecto\DataLayer\obj\Release\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\informatica\source\repos\Proyecto\DataLayer\obj\Release\DataLayer.dll
+C:\Users\informatica\source\repos\Proyecto\DataLayer\obj\Release\DataLayer.pdb

@@ -138,11 +138,10 @@ namespace Proyecto
 
                 marcasManual.InsertarMarcacionManual(id, fecha, hora, tipoMarca, comentario);
 
-                txt_ID.Clear();
-                txt_Hora.Clear();
-                rtxt_Comentario.Clear();
-                rbtn_Entrada.Checked = false;
-                rbtn_Salida.Checked = false;
+                Form_VerMarcacion_Manual marcacion_Manual = new Form_VerMarcacion_Manual();
+                marcacion_Manual.Show();
+                this.Close();
+
             }
             catch (Exception ex)
             {
@@ -158,11 +157,6 @@ namespace Proyecto
             Form_VerMarcacion_Manual MarcacionesManual = new Form_VerMarcacion_Manual();
             MarcacionesManual.Show();
             this.Close();
-        }
-
-        private void txt_Hora_Leave(object sender, EventArgs e)
-        {
-
         }
     }
 }

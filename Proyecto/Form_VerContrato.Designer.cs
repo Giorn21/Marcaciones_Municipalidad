@@ -151,9 +151,12 @@
             this.Controls.Add(this.diseñoButton1);
             this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.dtv_TipoContrato);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_VerContrato";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form_TipoContrato";
+            this.Text = "Ver Contratos";
             this.Load += new System.EventHandler(this.Form_VerContrato_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtv_TipoContrato)).EndInit();
             this.ResumeLayout(false);
