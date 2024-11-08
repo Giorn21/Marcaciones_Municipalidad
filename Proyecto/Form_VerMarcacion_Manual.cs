@@ -59,7 +59,7 @@ namespace Proyecto
                     row.Cells[2].Value = M.Apellido;
                     row.Cells[3].Value = M.fecha;
                     row.Cells[4].Value = M.hora;
-                    row.Cells[5].Value = M.TipoMarca;
+                    row.Cells[5].Value = M.Descripcion;
                     row.Cells[6].Value = M.Comentario;
 
                     dtv_Marcaciones_Manuales.Rows.Add(row);

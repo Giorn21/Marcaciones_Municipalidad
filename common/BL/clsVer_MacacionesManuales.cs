@@ -69,7 +69,7 @@ namespace common
                         Apellido = row["ApellidoPaterno"] != DBNull.Value ? row["ApellidoPaterno"].ToString() : "Sin Apellido",
                         fecha = row["Fecha"] != DBNull.Value ? Convert.ToDateTime(row["Fecha"]).ToString("dd/MM/yyyy") : "Sin Fecha",
                         hora = row["Hora"] != DBNull.Value ? row["Hora"].ToString() : "no tiene hora asignada",
-                        TipoMarca = row["TipoMarca"] != DBNull.Value ? Convert.ToInt32(row["TipoMarca"]) : 0,
+                        Descripcion = row["Descripcion"] != DBNull.Value ? Convert.ToString(row["Descripcion"]) : "",
                         Comentario = row["Comentario"] != DBNull.Value ? row["Comentario"].ToString() : "Sin comentario",
                     };
 

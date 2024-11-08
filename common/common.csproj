@@ -52,6 +52,7 @@
     <Compile Include="BL\clsAgregar_LogsApp.cs" />
     <Compile Include="BL\clsAgregar_TipoMarcasManual.cs" />
     <Compile Include="BL\clsAgregar_Unidad.cs" />
+    <Compile Include="BL\clsAyuda_ID_Nombres.cs" />
     <Compile Include="BL\clsBuscadorLogs.cs" />
     <Compile Include="BL\clsDatos_cboxAgrUnidad.cs" />
     <Compile Include="BL\clsDatos_cboxBuscadorLogs.cs" />

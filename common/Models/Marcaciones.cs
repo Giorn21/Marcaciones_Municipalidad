@@ -15,6 +15,7 @@ namespace common
         public string fecha { get; set; }
         public string hora { get; set; } 
         public int TipoMarca { get; set; }
+        public string Descripcion { get; set; }
         public string Comentario { get; set; }
     }
 

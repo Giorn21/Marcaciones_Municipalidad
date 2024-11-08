@@ -62,3 +62,4 @@ C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.Co
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.Up2Date
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.exe
 C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\informatica\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.Form_ID_Permitidas.resources

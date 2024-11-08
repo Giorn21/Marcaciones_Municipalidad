@@ -42,7 +42,7 @@ namespace Proyecto
                     row.Cells[2].Value = M.Apellido;
                     row.Cells[3].Value = M.fecha;
                     row.Cells[4].Value = M.hora;
-                    row.Cells[5].Value = M.TipoMarca;
+                    row.Cells[5].Value = M.Descripcion;
 
                     dtv_Marcaciones.Rows.Add(row);
                 }
@@ -82,7 +82,7 @@ namespace Proyecto
                     row.Cells[2].Value = M.Apellido;
                     row.Cells[3].Value = M.fecha;
                     row.Cells[4].Value = M.hora;
-                    row.Cells[5].Value = M.TipoMarca;
+                    row.Cells[5].Value = M.Descripcion;
 
                     dtv_Marcaciones.Rows.Add(row);
                 }
@@ -123,7 +123,7 @@ namespace Proyecto
                 row.Cells[2].Value = R.Apellido;
                 row.Cells[3].Value = R.fecha;
                 row.Cells[4].Value = R.hora;
-                row.Cells[5].Value = R.TipoMarca;
+                row.Cells[5].Value = R.Descripcion;
 
                 dtv_Marcaciones.Rows.Add(row);
             }

@@ -158,5 +158,11 @@ namespace Proyecto
             MarcacionesManual.Show();
             this.Close();
         }
+
+        private void diseñoIconButton2_Click(object sender, EventArgs e)
+        {
+            Form_ID_Permitidas AyudaID = new Form_ID_Permitidas();
+            AyudaID.Show();
+        }
     }
 }

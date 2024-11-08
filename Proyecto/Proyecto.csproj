@@ -74,6 +74,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_ID_Permitidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ID_Permitidas.Designer.cs">
+      <DependentUpon>Form_ID_Permitidas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -255,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Disp_Funcionario.resx">
       <DependentUpon>Form_Disp_Funcionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ID_Permitidas.resx">
+      <DependentUpon>Form_ID_Permitidas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_UPD_Contrato.resx">
       <DependentUpon>Form_UPD_Contrato.cs</DependentUpon>

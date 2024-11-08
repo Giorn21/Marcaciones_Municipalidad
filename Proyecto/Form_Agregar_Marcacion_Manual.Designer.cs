@@ -41,6 +41,7 @@
             this.diseñoButton1 = new Proyecto.Resources.DiseñoButton();
             this.diseñoIconButton1 = new Proyecto.Resources.DiseñoIconButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.diseñoIconButton2 = new Proyecto.Resources.DiseñoIconButton();
             this.SuspendLayout();
             // 
             // lbl_ID
@@ -206,12 +207,34 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Agregar Marcacion Manual";
             // 
+            // diseñoIconButton2
+            // 
+            this.diseñoIconButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.diseñoIconButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.diseñoIconButton2.BorderRadius = 40;
+            this.diseñoIconButton2.BorderSize = 0;
+            this.diseñoIconButton2.FlatAppearance.BorderSize = 0;
+            this.diseñoIconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.diseñoIconButton2.ForeColor = System.Drawing.Color.White;
+            this.diseñoIconButton2.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.diseñoIconButton2.IconColor = System.Drawing.Color.White;
+            this.diseñoIconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.diseñoIconButton2.IconSize = 20;
+            this.diseñoIconButton2.Location = new System.Drawing.Point(151, 68);
+            this.diseñoIconButton2.Name = "diseñoIconButton2";
+            this.diseñoIconButton2.Size = new System.Drawing.Size(34, 32);
+            this.diseñoIconButton2.TabIndex = 12;
+            this.diseñoIconButton2.TextColor = System.Drawing.Color.White;
+            this.diseñoIconButton2.UseVisualStyleBackColor = true;
+            this.diseñoIconButton2.Click += new System.EventHandler(this.diseñoIconButton2_Click);
+            // 
             // Form_Agregar_Marcacion_Manual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
             this.ClientSize = new System.Drawing.Size(447, 434);
+            this.Controls.Add(this.diseñoIconButton2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.diseñoButton1);
             this.Controls.Add(this.diseñoIconButton1);
@@ -251,5 +274,6 @@
         private Resources.DiseñoIconButton diseñoIconButton1;
         private Resources.DiseñoButton diseñoButton1;
         private System.Windows.Forms.Label label1;
+        private Resources.DiseñoIconButton diseñoIconButton2;
     }
 }
